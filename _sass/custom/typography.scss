@@ -1,0 +1,100 @@
+@import url('https://fast.fonts.net/cssapi/d3307112-e606-4348-a27f-d1d1801f3af6.css');
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+  font-family: $family-secondary;
+  font-size: 16px;
+  line-height: 24px;
+  color: $secondary;
+}
+
+.text-light {
+  color: $black;
+}
+
+.h1 {
+  font-family: $family-primary;
+  font-size: 48px; //32 mobile
+  line-height: 40px; //32 mobile
+  color: $white;
+  text-shadow: 0 0 5px rgba($black, .2);
+  text-transform: uppercase;
+  letter-spacing: 1px; //3 mobile
+
+  @include media-breakpoint-up(md) {
+    font-size: 80px; //32 mobile
+    line-height: 72px; //32 mobile
+    text-shadow: 0 0 10px rgba($black, .2);
+    letter-spacing: 2px; //10 mobile
+  }
+}
+
+.h2 {
+  font-family: $family-primary;
+  font-size: 26px;
+  line-height: 124px;
+  color: $primary;
+  letter-spacing: .81px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 1.33px;
+  }
+}
+
+.text-brown {
+  color: $border-color;
+}
+
+.h3 {
+  font-family: $family-terciary;
+  font-size: 18px;
+  line-height: 18px;
+  color: $primary;
+  letter-spacing: 1.12px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 1.25px;
+  }
+}
+
+.h4 {
+  font-family: $family-primary;
+  font-size: 16px;
+  line-height: 24px;
+  color: $border-color;
+  letter-spacing: 1px;
+}
+
+.blog-sidebar-heading {
+  font-family: $family-terciary;
+  font-size: 16px;
+  line-height: 20px;
+  color: $border-color;
+  letter-spacing: 1px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+    letter-spacing: 1.25px;
+  }
+}
+
+.blog-subtitle {
+  font-family: $family-primary;
+  font-size: 16px;
+  line-height: 16px;
+  color: $primary;
+  letter-spacing: .5px;
+}
+
+.blog-subheading {
+  font-family: $family-primary;
+  font-size: 16px;
+  line-height: 24px;
+  color: $primary;
+  letter-spacing: .5px;
+}
