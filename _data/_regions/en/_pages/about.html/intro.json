@@ -1,5 +1,15 @@
 [
   {
-    "_template": "2_col"
+    "_template": "2_col",
+    "advanced_options": {
+    },
+    "style": "light text-primary",
+    "background_image": {
+      "mask_color": "",
+      "mask_opacity": "0"
+    },
+    "container_classes": "",
+    "col1_type": "html",
+    "col2_type": "image"
   }
 ]
