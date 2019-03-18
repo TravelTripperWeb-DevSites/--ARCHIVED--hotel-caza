@@ -1,0 +1,30 @@
+.navbar {
+  height: 112px;
+  background-color: $primary;
+
+  &.is-fixed-top {
+    height: 112px;
+  }
+
+  .navbar-brand {
+    max-width: 116px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .nav {
+      &__logo {
+        img {
+          height: auto;
+        }
+      }
+
+      &__link {
+        font-size: 14px;
+        color: $white;
+        letter-spacing: .58px;
+      }
+    }
+  }
+}
