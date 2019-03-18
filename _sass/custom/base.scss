@@ -9,48 +9,22 @@ p {
   margin-bottom: 32px;
   line-height: 24px;
 
-  &.blue-text {
+  &.text-blue {
     color: $primary;
   }
 }
 
-&.caption {
+.text-caption {
   font-size: 12px;
   line-height: 16px;
   color: $secondary;
 }
 
 .container {
-  max-width: 1143px;
+  max-width: 1224px;
 }
 
 // Custom margins & Paddings
-
-.mb-96 {
-  margin-bottom: 48px !important;
-
-  @include media-breakpoint-up(md) {
-    margin-bottom: 96px !important;
-  }
-}
-
-.mt-96 {
-  margin-top: 48px !important;
-  @include media-breakpoint-up(md) {
-    margin-top: 96px !important;
-  }
-}
-
-.sec-intro {
-  @include media-breakpoint-up(md) {
-    max-width: 520px;
-    margin: 0 auto;
-  }
-}
-
-a:not([href]):not([tabindex]) {
-  opacity: .4;
-}
 
 .skip-main {
   position: absolute;

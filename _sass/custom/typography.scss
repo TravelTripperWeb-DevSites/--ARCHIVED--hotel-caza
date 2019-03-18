@@ -1,6 +1,6 @@
 @import url('https://fast.fonts.net/cssapi/d3307112-e606-4348-a27f-d1d1801f3af6.css');
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 
 body {
   font-family: $family-secondary;
@@ -26,6 +26,7 @@ body {
     font-size: 80px; //32 mobile
     line-height: 72px; //32 mobile
     text-shadow: 0 0 10px rgba($black, .2);
+    text-transform: uppercase;
     letter-spacing: 2px; //10 mobile
   }
 }
@@ -35,6 +36,7 @@ body {
   font-size: 26px;
   line-height: 124px;
   color: $primary;
+  text-transform: uppercase;
   letter-spacing: .81px;
 
   @include media-breakpoint-up(md) {
@@ -45,7 +47,7 @@ body {
 }
 
 .text-brown {
-  color: $border-color;
+  color: $beige;
 }
 
 .h3 {
@@ -53,6 +55,7 @@ body {
   font-size: 18px;
   line-height: 18px;
   color: $primary;
+  text-transform: uppercase;
   letter-spacing: 1.12px;
 
   @include media-breakpoint-up(md) {
@@ -66,7 +69,8 @@ body {
   font-family: $family-primary;
   font-size: 16px;
   line-height: 24px;
-  color: $border-color;
+  color: $beige;
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
@@ -74,7 +78,8 @@ body {
   font-family: $family-terciary;
   font-size: 16px;
   line-height: 20px;
-  color: $border-color;
+  color: $beige;
+  text-transform: uppercase;
   letter-spacing: 1px;
 
   @include media-breakpoint-up(md) {
@@ -88,6 +93,7 @@ body {
   font-size: 16px;
   line-height: 16px;
   color: $primary;
+  text-transform: uppercase;
   letter-spacing: .5px;
 }
 
@@ -96,5 +102,20 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: $primary;
+  text-transform: uppercase;
   letter-spacing: .5px;
+}
+
+.text-quote {
+  font-family: $family-primary;
+  font-size: 24px;
+  line-height: 32px;
+  color: $beige;
+}
+
+.text-rate {
+  font-family: $family-primary;
+  font-size: 16px;
+  line-height: 24px;
+  color: $beige;
 }
