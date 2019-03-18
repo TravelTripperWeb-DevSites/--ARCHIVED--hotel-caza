@@ -13,17 +13,55 @@
       height: auto;
     }
 
-    .nav {
-      &__logo {
-        img {
-          height: auto;
-        }
+    .nav__logo {
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  .nav {
+    &__link {
+      position: relative;
+      margin: 0 20px;
+      padding: 2px 0;
+      overflow: hidden;
+      font-family: $family-primary;
+      font-size: 14px;
+      color: $white;
+      letter-spacing: .58px;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+
+      &:before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        height: 2px;
+        content: '';
+        background: $secondary;
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
       }
 
-      &__link {
-        font-size: 14px;
+      &:hover {
         color: $white;
-        letter-spacing: .58px;
+        text-decoration: none;
+        background-color: transparent;
+
+        &:before {
+          background: $button-color;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
       }
     }
   }
