@@ -2,6 +2,7 @@
   {
     "_template": "2_col",
     "advanced_options": {
+      "custom_classes": "col-image-detail"
     },
     "style": "light text-primary",
     "background_image": {
