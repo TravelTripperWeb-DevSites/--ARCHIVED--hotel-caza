@@ -4,6 +4,9 @@
       "content": "do you caza?",
       "_template": "header"
     },
-    "_template": "hero"
+    "_template": "hero",
+    "hero_html": {
+      "content": "<p>our hotel</p>"
+    }
   }
 ]
