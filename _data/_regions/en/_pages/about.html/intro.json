@@ -10,6 +10,9 @@
     },
     "container_classes": "",
     "col1_type": "html",
-    "col2_type": "image"
+    "col2_type": "image",
+    "col1_html": {
+      "content": "<p>sadasdasdsadadasd</p>"
+    }
   }
 ]
