@@ -15,11 +15,11 @@
     @include make-col-ready;
     padding-top: 30px;
     padding-bottom: 30px;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(3.7);
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding-right: 24px;
       padding-left: 24px;
     }
@@ -52,11 +52,11 @@
 
   &__links {
     @include make-col-ready;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(3.8);
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding-right: 24px;
       padding-left: 24px;
     }
@@ -68,7 +68,7 @@
       margin: 0;
       padding: 30px 0;
       border-top: solid 1px $light-green;
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         border-top: 0;
       }
       li {
@@ -96,12 +96,12 @@
 
   &__newsletter {
     @include make-col-ready;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(4.5);
       order: 3;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding-right: 24px;
       padding-left: 24px;
     }
@@ -120,7 +120,7 @@
     &__content {
       padding: 30px 0;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         padding: 30px 0 30px 50px;
       }
 
