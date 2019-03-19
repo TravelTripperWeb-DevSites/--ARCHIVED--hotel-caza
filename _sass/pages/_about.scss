@@ -4,8 +4,6 @@
 .col-img-detail {
   @include make-container;
   @include make-container-max-widths;
-  padding-top: 72px;
-  padding-bottom: 72px;
   &__wrap {
     @include make-row;
   }
@@ -42,5 +40,32 @@
       }
     }
   }
+}
 
+.col-amenities {
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 92px;
+    right: 0;
+    bottom: 92px;
+    left: 0;
+    display: block;
+    width: 100%;
+    @include make-container-max-widths;
+    margin: 0 auto;
+    content: '';
+    border: 1px solid $beige;
+  }
+
+  .logo-amenities {
+    padding-top: 22px;
+    text-align: center;
+    img {
+      z-index: 2;
+      width: 100%;
+      max-width: 120px;
+      margin: 0 auto;
+    }
+  }
 }
