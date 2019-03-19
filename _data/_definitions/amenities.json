@@ -7,6 +7,11 @@
     "type": "text",
     "localizable": true
   },
+  "category": {
+    "required": true,
+    "type": "select",
+    "options": ["fun","hotel","business","other"]
+  },
   "images": {
     "type": "image",
     "required": true
