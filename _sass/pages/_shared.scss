@@ -1,2 +1,16 @@
 // Shared Page Elements
 // ==========================================================================
+.hero {
+  height: 376px;
+  &__body {
+    order: 1;
+  }
+  &__title {
+    order: 2;
+  }
+
+  .h3 {
+    margin-bottom: 20px;
+    color: $white;
+  }
+}

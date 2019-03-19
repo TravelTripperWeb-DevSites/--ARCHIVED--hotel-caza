@@ -1,0 +1,23 @@
+{
+  "name": {
+    "required": true,
+    "localizable": true
+  },
+  "description": {
+    "type": "text",
+    "localizable": true
+  },
+  "category": {
+    "required": true,
+    "type": "select",
+    "options": ["fun","hotel","business","other"]
+  },
+  "images": {
+    "type": "image",
+    "required": true
+  },
+  "order": {
+    "type": "integer",
+    "required": true
+  }
+}

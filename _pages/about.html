@@ -1,8 +1,7 @@
 ---
-layout: generic
+layout: default
 title_localized:
- en: Our Hotel
- es: Sobre
+ en: Our Hotel 
 meta_description_localized:
   en:
 permalink_localized:
@@ -10,3 +9,26 @@ permalink_localized:
 meta_tags:
   robots:
 ---
+
+{% region hero, type:hero %}
+
+<div class="light-bg tb-padding">
+  <div class="col-img-detail">
+    <div class="col-img-detail__wrap">
+      <div class="col-img-detail__detail">
+        <div class="box">
+          {% region intro_two_col, type:html %}
+        </div>
+      </div>
+      <div class="col-img-detail__image">
+        {% region intro_two_col_image, type:image %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-amenities">
+  <div class="logo-amenities">
+      <img src="/assets/img/logo-dark.png" alt="hotel logo" class="logo-amenities">
+  </div>
+</div>
