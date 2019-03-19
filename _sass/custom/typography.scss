@@ -119,3 +119,22 @@ body {
   line-height: 24px;
   color: $beige;
 }
+
+
+//background colors
+.light-bg {
+  background-color: $light-grey;
+}
+.panache-bg {
+  background-color: $light-green;
+}
+.chablis-bg {
+  background-color: $light-orange;
+}
+.yellow-bg {
+  background-color: $button-color;
+}
+.blue-bg,
+.dark-bg {
+  background-color: $primary;
+}
