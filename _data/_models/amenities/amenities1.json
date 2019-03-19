@@ -6,7 +6,7 @@
   "description_localized": {
     "en": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
   },
-  "images": [
+  "images":
     {
       "name": "Icon-Movie-nights@2x",
       "content_type": "image/png",
@@ -29,5 +29,5 @@
       "caption": "",
       "description": ""
     }
-  ]
+  
 }

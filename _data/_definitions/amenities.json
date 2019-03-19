@@ -9,7 +9,7 @@
   },
   "images": {
     "type": "image",
-    "multiple": true
+    "required": true
   },
   "order": {
     "type": "integer",
