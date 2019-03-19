@@ -1,7 +1,7 @@
 ---
 layout: default
 title_localized:
- en: Our Hotel 
+ en: Our Hotel
 meta_description_localized:
   en:
 permalink_localized:
@@ -27,8 +27,164 @@ meta_tags:
   </div>
 </div>
 
+{% assign amenities = site.data._models.amenities | sort: order %}
 <div class="col-amenities">
   <div class="logo-amenities">
       <img src="/assets/img/logo-dark.png" alt="hotel logo" class="logo-amenities">
   </div>
+  <div class="col-amenities__items">
+    <div class="col-amenities__items__wrap">
+      <div class="col-amenities__items__heading">
+        <p class="h2">Fun amenities unique to our hotel</p>
+      </div>
+      <div class="col-amenities__items__slider">
+        <div class="amenities-slider">
+          {% for amenity in amenities %}
+          {% if amenity.category == "fun" %}
+            <div class="slide-item1">
+             <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+             <p class="h3">{{ amenity.name }}</p>
+             <p>{{ amenity.description }}</p>
+            </div>
+           {% endif %}
+           {% endfor %}
+        </div>
+        <div class="slider-control">
+          <div class="slide-prev">Prev</div>
+          <div class="slider-nav">
+
+              <span>1<br></span>
+              <span>1<br></span>
+              <span>1<br></span>
+              <span>1<br></span>
+          </div>
+          <div class="slide-next">Next</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chablis-bg">
+    <div class="col-amenities__items">
+      <div class="col-amenities__items__wrap">
+        <div class="col-amenities__items__heading">
+          <p class="h2">hotel amenities</p>
+        </div>
+        <div class="col-amenities__items__slider">
+          <div class="amenities-slider">
+            {% for amenity in amenities %}
+            {% if amenity.category == "hotel" %}
+             <div class="slide-item">
+              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+              <p class="h3">{{ amenity.name }}</p>
+              <p>{{ amenity.description }}</p>
+             </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+          <div class="slider-control">
+            <div class="slide-prev">Prev</div>
+            <div class="slider-nav">
+
+                <span>1</span>
+                <span>1</span>
+                <span>1</span>
+                <span>1</span>
+            </div>
+            <div class="slide-next">Next</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panache-bg">
+    <div class="col-amenities__items">
+      <div class="col-amenities__items__wrap">
+        <div class="col-amenities__items__heading">
+          <p class="h2">business amenities</p>
+        </div>
+        <div class="col-amenities__items__slider">
+          <div class="amenities-slider">
+            {% for amenity in amenities %}
+            {% if amenity.category == "business" %}
+             <div class="slide-item">
+              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+              <p class="h3">{{ amenity.name }}</p>
+              <p>{{ amenity.description }}</p>
+             </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="light-bg pb-5">
+    <div class="col-amenities__items">
+      <div class="col-amenities__items__wrap">
+        <div class="col-amenities__items__heading">
+          <p class="h2">Fun amenities unique to our hotel</p>
+        </div>
+        <div class="col-amenities__items__slider">
+          <div class="amenities-slider">
+            {% for amenity in amenities %}
+            {% if amenity.category == "other" %}
+             <div class="slide-item">
+              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+              <p class="h3">{{ amenity.name }}</p>
+              <p>{{ amenity.description }}</p>
+             </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<script>
+
+  var forEachloop = function (array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+      callback.call(scope, i, array[i]); // passes back stuff we need
+    }
+  };
+  // tiny-slider initialisation
+  var sliders = document.querySelectorAll('.amenities-slider');
+  forEachloop(sliders, function (index, value) { 
+    var cont = value.nextElementSibling.children[1];
+    let slider = tns({
+      container: value,
+      navPosition: "bottom",
+      navContainer: cont,
+      items: 1,
+      loop: false,
+      responsive: {
+        640: {
+          edgePadding: 20,
+          gutter: 20,
+          items: 2
+        },
+        700: {
+          items: 3
+        },
+        900: {
+          items: 4
+        }
+      }
+    });
+
+    if(value.closest('.tns-outer').nextElementSibling) {
+      value.closest('.tns-outer').nextElementSibling.children[0].onclick = function() {
+        slider.goTo('prev');
+      }
+      value.closest('.tns-outer').nextElementSibling.children[2].onclick = function() {
+        slider.goTo('next');
+      }
+    }
+  });
+</script>

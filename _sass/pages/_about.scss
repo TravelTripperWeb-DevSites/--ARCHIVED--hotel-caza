@@ -27,6 +27,8 @@
     }
     display: flex;
     align-items: center;
+    padding: 0;
+
     .box {
       padding: 50px 50px 20px;
       background-color: $white;
@@ -47,26 +49,74 @@
   &:after {
     position: absolute;
     top: 92px;
-    right: 0;
-    bottom: 92px;
-    left: 0;
+    right: 22px;
+    bottom: 52px;
+    left: 22px;
     display: block;
-    width: 100%;
+    width: calc(100% - 44px);
+    max-width: 100%;
     @include make-container-max-widths;
     margin: 0 auto;
     content: '';
     border: 1px solid $beige;
+
+    @include media-breakpoint-up(md) {
+      right: 0;
+      bottom: 92px;
+      left: 0;
+      width: 100%;
+    }
   }
 
   .logo-amenities {
+    position: relative;
     z-index: 2;
     padding-top: 22px;
     text-align: center;
+
     img {
       z-index: 2;
       width: 100%;
       max-width: 120px;
       margin: 0 auto;
     }
+  }
+  &__items {
+    @include make-container;
+    @include make-container-max-widths;
+
+    &__wrap {
+      @include make-row;
+    }
+
+    &__heading {
+      @include make-col-ready;
+      padding: 52px 10px 32px ;
+      text-align: center;
+    }
+    &__slider {
+      z-index: 2;
+      display: block;
+      padding: 20px 55px;
+      overflow: hidden;
+      text-align: center;
+
+      img {
+        max-height: 104px;
+        margin: 0 auto;
+      }
+
+      .amenities-slider {
+        margin: 0 auto;
+
+        p {
+          color: $primary;
+        }
+        .h3 {
+          padding: 20px;
+        }
+      }
+    }
+
   }
 }
