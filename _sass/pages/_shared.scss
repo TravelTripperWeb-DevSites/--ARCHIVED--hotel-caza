@@ -14,3 +14,85 @@
     color: $white;
   }
 }
+
+
+.form-control {
+  height: auto;
+  margin-bottom: 32px;
+  padding: 12px 0;
+  font-family: $family-secondary;
+  font-size: 14px;
+  font-weight: 300;
+  color: $primary;
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px $primary;
+  border-radius: 0;
+
+  &:focus {
+    color: $primary;
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 1px $primary;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $primary;
+  }
+}
+
+.form-check {
+  .form-check-input {
+    opacity: 0;
+  }
+
+  .form-check-label {
+    font-family: $family-secondary;
+    font-size: 12px;
+    color: $primary;
+  }
+
+  .custom-control-input {
+    &:checked {
+      outline: none;
+      box-shadow: none;
+      ~ .custom-control-label {
+        &:before {
+          background-color: $primary;
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    &:focus {
+      ~ .custom-control-label {
+        &:before {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .custom-control-label {
+    vertical-align: middle;
+    
+    &:before {
+      top: 0;
+      left: -1.25rem;
+      background-color: transparent;
+      border: solid 1px $primary;
+    }
+
+    &:after {
+      top: 0;
+      left: -1.25rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+  }
+}
