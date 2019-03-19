@@ -16,20 +16,27 @@ main:
       label: Gallery
     - page_id: _pages/contact.html
       label: Contact
-    # - url_localized:
-    #     en: https://www.google.com
-    #     es: https://www.google.es
-    #   label_localized:
-    #     en: g-US
-    #     es: g-ES
-    #   target: _NEW
-    # - label_localized:
-    #     en: Group
-    #     es: Group (ES)
-    #   folder: true
-    #   items:
-    #     - page_id: _pages/about.html
-    #     - url: /test/
-    #       label_localized:
-    #         en: Test
-    #         es: Prueba
+footer:
+  depth: 1
+  name: Footer Menu
+  items:
+    - page_id: _pages/about.html
+      label: Our Hotel
+    - page_id: _pages/rooms.html
+      label: Rooms
+    - page_id: _pages/offers.html
+      label: Offers
+    - page_id: _pages/location.html
+      label: Location
+    - page_id: _pages/blog.html
+      label: Blog
+    - page_id: _pages/gallery.html
+      label: Gallery
+    - page_id: _pages/contact.html
+      label: Contact
+    - page_id: _pages/press.html
+      label: Press
+    - page_id: _pages/reviews.html
+      label: Reviews
+    - page_id: _pages/Accessibility.html
+      label: accessibility
