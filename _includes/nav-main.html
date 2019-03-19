@@ -1,0 +1,38 @@
+{% comment %}
+  note the nav.is-fixed-top must immediately precede div.main for div.main top-margin to work property
+{% endcomment %}
+
+<nav class="navbar is-fixed-top nav--main" id="js-navbar--main">
+  <div class="container-fluid p-0">
+    <a class="navbar-brand" href="/">
+      <span class="nav__logo"
+        data-live-edit-settings='hotel_settings'
+        data-live-edit-settings-field='logo'
+        data-live-editable-type='image'
+      >
+        {% if site.data.hotel_settings.logo and site.data.hotel_settings.logo.url and site.data.hotel_settings.logo.url != '' %}
+          {% assign logo_url = site.data.hotel_settings.logo.url_xsmall | default: site.data.hotel_settings.logo.url %}
+          <img src="{{logo_url}}" alt="{{site.data.hotel_settings.logo.alt | default: 'Logo' }}" />
+        {% else %}
+          <span class="condensed-hotel-name">{{site.data.hotel_settings.name}}</span>
+        {% endif %}
+      </span>
+    </a>
+  <ul class="nav d-none d-lg-flex align-items-center text-uppercase flex-grow-1 justify-content-end pr-3">
+    {% assign items = site.data._menus.main.items %}
+    {% include nav/nav-item-list.html items=items %}
+  </ul>
+  <a role="button" aria-label="menu" aria-expanded="false" data-target="navMenu" class="navbar__burger d-lg-none">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <div class="">
+     <a href="https://{{site.data.hotel_settings._portal_id}}.reztrip.com/" role="button" class="btn btn--outline" show-booking-widget>Book</a>
+  </div>
+  <ul class="nav--device" navMenu>
+    {% assign items = site.data._menus.main.items %}
+    {% include nav/nav-item-list.html items=items %}
+  </ul>
+
+</nav>
