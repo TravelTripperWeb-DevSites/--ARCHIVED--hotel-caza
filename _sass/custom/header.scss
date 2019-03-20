@@ -1,4 +1,5 @@
 .navbar {
+  width: auto;
   height: 112px;
   padding-right: 15px;
   padding-left: 15px;
@@ -15,7 +16,21 @@
     transition: all .3s;
 
     @include media-breakpoint-up(md) {
+      height: 84px;
+    }
+    @include media-breakpoint-up(lg) {
       height: 112px;
+    }
+
+    &+.main {
+      padding-top: 64px;
+
+      @include media-breakpoint-up(md) {
+        padding-top: 84px;
+      }
+      @include media-breakpoint-up(lg) {
+        padding-top: 112px;
+      }
     }
   }
 
@@ -91,7 +106,7 @@
         background-color: $primary;
 
         @include media-breakpoint-up(md) {
-          top: 112px;
+          top: $navbar-main-height;
         }
       }
     }

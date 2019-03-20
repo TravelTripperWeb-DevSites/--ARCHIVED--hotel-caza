@@ -1,7 +1,7 @@
 [
   {
     "advanced_options": {
-      "custom_classes": "hero-home"
+      "custom_classes": "hero--home"
     },
     "hero_image": {
       "image": {

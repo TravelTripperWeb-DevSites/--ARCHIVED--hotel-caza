@@ -8,11 +8,20 @@ meta_tags:
   robots:
 ---
 
-<section class='container'>
-  <div class='row text-center'>
-    <div class='col '>
-      <h1 class="h1">Edit this file</h1>
-      <p>This content is written directly into the index.html home page. You should replace it with editable regions and/or standard components</p>
+<div class="light-bg tb-padding home-intro">
+  <div class="col-img-detail">
+    <div class="col-img-detail__wrap">
+      <div class="col-img-detail__detail">
+        <div class="box">
+          {% region intro_two_col, type:html %}
+        </div>
+        <div class="decorative">
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png" alt="Dumplings">
+        </div>
+      </div>
+      <div class="col-img-detail__image">
+        {% region intro_two_col_image, type:image %}
+      </div>
     </div>
   </div>
-</section>
+</div>

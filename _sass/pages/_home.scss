@@ -1,0 +1,31 @@
+// Home Page Elements
+// ==========================================================================
+
+.hero {
+  &--home {
+    height: calc(100vh - 112px);
+
+    @include media-breakpoint-up(md) {
+      height: calc(100vh - 64px);
+    }
+
+    .btn {
+      margin-top: 24px;
+    }
+  }
+}
+
+.home-intro {
+  .decorative {
+    position: absolute;
+    top: -90px;
+    left: -55%;
+    z-index: 0;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    img {
+      max-width: 470px;
+    }
+  }
+}
