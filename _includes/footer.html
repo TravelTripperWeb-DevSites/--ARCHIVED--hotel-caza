@@ -1,1 +1,27 @@
 {% comment %} Intentionally left blank. But do not override - we may add system-wide footer content here later.{% endcomment %}
+
+<div class="footer__primary">
+  <div class="footer__primary__row">
+    <div class="footer__address">
+      <p><span class="subheading">Address</span><span><a href="">495 Beach Street San Francisco,<br>California, 94133</a></span></p>
+      <p><span class="subheading">Email</span><span><a href="mailto:res-hi-sf-wharf@ihg.com">res-hi-sf-wharf@ihg.com</a></span></p>
+      <p><span class="subheading">Phone</span><span><a href="tel:0861 444 435">0861 444 435</a></span></p>
+    </div>
+    <div class="footer__links">
+      {% assign footer-items = site.data._menus.footer.items %}
+        <ul>
+          {% for item in footer-items %}
+            {% assign url = item.url %}
+            {% assign text = item.label %}
+            <li><a href="{{url}}" {% if url contains 'http' %}target="_blank"{% endif %}>{{text}}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+    <div class="footer__newsletter">
+      <div class="footer__newsletter__content">
+        <p>Subscribe, follow & stay updated</p>
+        {% include forms/jotform/newsletter.html %}
+      </div>
+    </div>
+  </div>
+</div>

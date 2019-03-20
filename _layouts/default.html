@@ -2,17 +2,17 @@
 <html lang="{{ site.active_lang | slice: 0,2 | default: "en" }}" class="no-js">
 
 {% comment %}
-This default layout should generally not be overridden. 
+This default layout should generally not be overridden.
 It contains all of the page structure that should work for any site and ensures SEO properties and scripts are properly included.
 {% endcomment %}
 
 <head>
   {% include head.html %}
-  
-  {% include scripts.html %}  
+
+  {% include scripts.html %}
 
   {% include head/custom.html %}
-  
+
 </head>
 
 <body>
@@ -31,8 +31,8 @@ It contains all of the page structure that should work for any site and ensures 
   <div class='main'>
     {{ content }}
   </div>
-  
-  <footer >
+
+  <footer class="footer">
     {% include footer.html %}
     {% include footer/custom.html %}
   </footer>

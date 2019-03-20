@@ -84,6 +84,12 @@
   &__items {
     @include make-container;
     @include make-container-max-widths;
+    position: relative;
+    z-index: 3;
+    padding: 0 40px;
+    @include media-breakpoint-up(md) {
+      padding: 0 15px;
+    }
 
     &__wrap {
       @include make-row;
@@ -91,29 +97,41 @@
 
     &__heading {
       @include make-col-ready;
-      padding: 52px 10px 32px ;
+      padding: 15px;
       text-align: center;
+      @include media-breakpoint-up(md) {
+        padding: 52px 15px 32px;
+      }
     }
     &__slider {
       z-index: 2;
       display: block;
-      padding: 20px 55px;
+      padding: 20px 55px 40px;
       overflow: hidden;
       text-align: center;
+      @include media-breakpoint-up(md) {
+         padding: 20px 55px;
+      }
 
       img {
-        max-height: 104px;
+        max-height: 88px;
         margin: 0 auto;
+
+        @include media-breakpoint-up(md) {
+          max-height: 104px;
+        }
       }
 
       .amenities-slider {
         margin: 0 auto;
-
         p {
           color: $primary;
         }
         .h3 {
-          padding: 20px;
+          padding: 10px;
+          @include media-breakpoint-up(md) {
+            padding: 20px;
+          }
         }
       }
     }

@@ -39,26 +39,23 @@ meta_tags:
       </div>
       <div class="col-amenities__items__slider">
         <div class="amenities-slider">
-          {% for amenity in amenities %}
-          {% if amenity.category == "fun" %}
+          {% assign fun_amenities = amenities | where: 'category', 'fun' %}
+          {% for amenity in fun_amenities %}
             <div class="slide-item1">
              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
              <p class="h3">{{ amenity.name }}</p>
              <p>{{ amenity.description }}</p>
             </div>
-           {% endif %}
            {% endfor %}
         </div>
         <div class="slider-control">
-          <div class="slide-prev">Prev</div>
+          <div class="slide-prev"><span></span></div>
           <div class="slider-nav">
-
-              <span>1<br></span>
-              <span>1<br></span>
-              <span>1<br></span>
-              <span>1<br></span>
+              {% for amenity in fun_amenities %}
+              <span></span>
+              {% endfor %}
           </div>
-          <div class="slide-next">Next</div>
+          <div class="slide-next"><span></span></div>
         </div>
       </div>
     </div>
@@ -72,26 +69,23 @@ meta_tags:
         </div>
         <div class="col-amenities__items__slider">
           <div class="amenities-slider">
-            {% for amenity in amenities %}
-            {% if amenity.category == "hotel" %}
-             <div class="slide-item">
-              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-              <p class="h3">{{ amenity.name }}</p>
-              <p>{{ amenity.description }}</p>
-             </div>
-            {% endif %}
-            {% endfor %}
+            {% assign hotel_amenities = amenities | where: 'category', 'hotel' %}
+            {% for amenity in hotel_amenities %}
+              <div class="slide-item1">
+               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+               <p class="h3">{{ amenity.name }}</p>
+               <p>{{ amenity.description }}</p>
+              </div>
+             {% endfor %}
           </div>
           <div class="slider-control">
-            <div class="slide-prev">Prev</div>
+            <div class="slide-prev"><span></span></div>
             <div class="slider-nav">
-
-                <span>1</span>
-                <span>1</span>
-                <span>1</span>
-                <span>1</span>
+                {% for amenity in fun_amenities %}
+                <span></span>
+                {% endfor %}
             </div>
-            <div class="slide-next">Next</div>
+            <div class="slide-next"><span></span></div>
           </div>
         </div>
       </div>
@@ -106,15 +100,23 @@ meta_tags:
         </div>
         <div class="col-amenities__items__slider">
           <div class="amenities-slider">
-            {% for amenity in amenities %}
-            {% if amenity.category == "business" %}
-             <div class="slide-item">
-              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-              <p class="h3">{{ amenity.name }}</p>
-              <p>{{ amenity.description }}</p>
-             </div>
-            {% endif %}
-            {% endfor %}
+            {% assign business_amenities = amenities | where: 'category', 'business' %}
+            {% for amenity in business_amenities %}
+              <div class="slide-item1">
+               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+               <p class="h3">{{ amenity.name }}</p>
+               <p>{{ amenity.description }}</p>
+              </div>
+             {% endfor %}
+          </div>
+          <div class="slider-control">
+            <div class="slide-prev"><span></span></div>
+            <div class="slider-nav">
+                {% for amenity in fun_amenities %}
+                <span></span>
+                {% endfor %}
+            </div>
+            <div class="slide-next"><span></span></div>
           </div>
         </div>
       </div>
@@ -125,19 +127,27 @@ meta_tags:
     <div class="col-amenities__items">
       <div class="col-amenities__items__wrap">
         <div class="col-amenities__items__heading">
-          <p class="h2">Fun amenities unique to our hotel</p>
+          <p class="h2">… and last, but not least</p>
         </div>
         <div class="col-amenities__items__slider">
           <div class="amenities-slider">
-            {% for amenity in amenities %}
-            {% if amenity.category == "other" %}
-             <div class="slide-item">
-              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-              <p class="h3">{{ amenity.name }}</p>
-              <p>{{ amenity.description }}</p>
-             </div>
-            {% endif %}
-            {% endfor %}
+            {% assign other_amenities = amenities | where: 'category', 'fun' %}
+            {% for amenity in other_amenities %}
+              <div class="slide-item1">
+               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+               <p class="h3">{{ amenity.name }}</p>
+               <p>{{ amenity.description }}</p>
+              </div>
+             {% endfor %}
+          </div>
+          <div class="slider-control">
+            <div class="slide-prev"><span></span></div>
+            <div class="slider-nav">
+                {% for amenity in fun_amenities %}
+                <span></span>
+                {% endfor %}
+            </div>
+            <div class="slide-next"><span></span></div>
           </div>
         </div>
       </div>
@@ -155,12 +165,16 @@ meta_tags:
   };
   // tiny-slider initialisation
   var sliders = document.querySelectorAll('.amenities-slider');
-  forEachloop(sliders, function (index, value) { 
+  forEachloop(sliders, function (index, value) {
     var cont = value.nextElementSibling.children[1];
+    var prevSlide = value.nextElementSibling.children[0];
+    var nextSlide = value.nextElementSibling.children[2];
     let slider = tns({
       container: value,
       navPosition: "bottom",
       navContainer: cont,
+      prevButton: prevSlide,
+      nextButton: nextSlide,
       items: 1,
       loop: false,
       responsive: {
