@@ -208,7 +208,9 @@
     @include make-container;
     @include make-container-max-widths;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
   }
 }
