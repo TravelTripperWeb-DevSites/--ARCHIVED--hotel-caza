@@ -186,3 +186,29 @@
     background-size: 50% 50%;
   }
 }
+
+//cta banner
+.cta-banner {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  max-height: 600px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include make-container;
+    @include make-container-max-widths;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
