@@ -22,21 +22,42 @@ footer:
   items:
     - page_id: _pages/about.html
       label: Our Hotel
+      url: /about/
     - page_id: _pages/rooms.html
       label: Rooms
+      url: /rooms/
     - page_id: _pages/offers.html
       label: Offers
+      url: /offers/
     - page_id: _pages/location.html
       label: Location
+      url: /location/
     - page_id: _pages/blog.html
       label: Blog
+      url: /blog/
     - page_id: _pages/gallery.html
       label: Gallery
+      url: /gallery/
     - page_id: _pages/contact.html
       label: Contact
+      url: /contact/
     - page_id: _pages/press.html
       label: Press
+      url: /press/
     - page_id: _pages/reviews.html
       label: Reviews
+      url: /reviews/
     - page_id: _pages/Accessibility.html
-      label: accessibility
+      label: Accessibility
+      url: /accessibility/
+
+footer-bottom:
+  depth: 1
+  name: Footer Bottom Menu
+  items:
+    - page_id: _pages/privacy.html
+      label: Privacy Policy
+      url: /privacy/
+    - page_id: _pages/terms.html
+      label: Terms & Conditions
+      url: /terms/

@@ -31,10 +31,14 @@
     <div class="footer__secondary__row">
       <div class="footer__copyrights">
         <p>&copy; {{ "now" | date: "%Y" }} {{ site.data.hotel_settings.name }}. All Rights Reserved.</p>
-        <ul class="footer__links-bottom">
-          <li><a href="/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="/terms/">Terms & Conditions</a></li>
-        </ul>
+        {% assign footer-items = site.data._menus.footer-bottom.items %}
+          <ul class="footer__links-bottom">
+            {% for item in footer-items %}
+              {% assign url = item.url %}
+              {% assign text = item.label %}
+              <li><a href="{{url}}" {% if url contains 'http' %}target="_blank"{% endif %}>{{text}}</a></li>
+            {% endfor %}
+          </ul>
       </div>
       <div class="footer__highgate">
         <a href="">
