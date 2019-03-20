@@ -1,10 +1,13 @@
 // Shared Page Elements
 // ==========================================================================
+
 .hero {
   height: 376px;
+
   &__body {
     order: 1;
   }
+
   &__title {
     order: 2;
   }
@@ -14,7 +17,93 @@
     color: $white;
   }
 }
+//slider control
+.slider-control {
+  display: flex;
+  justify-content: center;
 
+  div {
+    margin: 0 5px;
+  }
+}
+
+.slide-next,
+.slide-prev {
+  width: 40px;
+  height: 20px;
+  text-align: right;
+
+  span {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 13px;
+    margin-left: auto;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:after {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 100%;
+      content: '';
+      border-top: 1px solid $secondary;
+    }
+
+    &:before {
+      position: absolute;
+      left: 3px;
+      display: block;
+      width: 13px;
+      height: 13px;
+      content: '';
+      border-top: 1px solid $secondary;
+      border-left: 1px solid $secondary;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      width: 36px;
+    }
+  }
+
+  &.slide-next {
+    text-align: left;
+
+    span {
+      margin-right: auto;
+      margin-left: 0;
+
+      &:before {
+        right: 3px;
+        left: auto;
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+
+.slider-nav {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin: 4px 8px;
+    background-color: $grey;
+    transition: all 0.3s ease-in-out;
+
+    &.tns-nav-active {
+      width: 13px;
+      height: 13px;
+      background-color: $secondary;
+    }
+  }
+}
 
 .form-control {
   height: auto;
@@ -58,6 +147,7 @@
     &:checked {
       outline: none;
       box-shadow: none;
+
       ~ .custom-control-label {
         &:before {
           background-color: $primary;
@@ -66,33 +156,33 @@
         }
       }
     }
+  }
 
-    &:focus {
-      ~ .custom-control-label {
-        &:before {
-          outline: none;
-          box-shadow: none;
-        }
+  &:focus {
+    ~ .custom-control-label {
+      &:before {
+        outline: none;
+        box-shadow: none;
       }
     }
   }
+}
 
-  .custom-control-label {
-    vertical-align: middle;
-    
-    &:before {
-      top: 0;
-      left: -1.25rem;
-      background-color: transparent;
-      border: solid 1px $primary;
-    }
+.custom-control-label {
+  vertical-align: middle;
 
-    &:after {
-      top: 0;
-      left: -1.25rem;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 50% 50%;
-    }
+  &:before {
+    top: 0;
+    left: -1.25rem;
+    background-color: transparent;
+    border: solid 1px $primary;
+  }
+
+  &:after {
+    top: 0;
+    left: -1.25rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
   }
 }

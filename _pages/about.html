@@ -1,7 +1,7 @@
 ---
 layout: default
 title_localized:
- en: Our Hotel 
+ en: Our Hotel
 meta_description_localized:
   en:
 permalink_localized:
@@ -27,8 +27,178 @@ meta_tags:
   </div>
 </div>
 
+{% assign amenities = site.data._models.amenities | sort: order %}
 <div class="col-amenities">
   <div class="logo-amenities">
       <img src="/assets/img/logo-dark.png" alt="hotel logo" class="logo-amenities">
   </div>
+  <div class="col-amenities__items">
+    <div class="col-amenities__items__wrap">
+      <div class="col-amenities__items__heading">
+        <p class="h2">Fun amenities unique to our hotel</p>
+      </div>
+      <div class="col-amenities__items__slider">
+        <div class="amenities-slider">
+          {% assign fun_amenities = amenities | where: 'category', 'fun' %}
+          {% for amenity in fun_amenities %}
+            <div class="slide-item1">
+             <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+             <p class="h3">{{ amenity.name }}</p>
+             <p>{{ amenity.description }}</p>
+            </div>
+           {% endfor %}
+        </div>
+        <div class="slider-control">
+          <div class="slide-prev"><span></span></div>
+          <div class="slider-nav">
+              {% for amenity in fun_amenities %}
+              <span></span>
+              {% endfor %}
+          </div>
+          <div class="slide-next"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chablis-bg">
+    <div class="col-amenities__items">
+      <div class="col-amenities__items__wrap">
+        <div class="col-amenities__items__heading">
+          <p class="h2">hotel amenities</p>
+        </div>
+        <div class="col-amenities__items__slider">
+          <div class="amenities-slider">
+            {% assign hotel_amenities = amenities | where: 'category', 'hotel' %}
+            {% for amenity in hotel_amenities %}
+              <div class="slide-item1">
+               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+               <p class="h3">{{ amenity.name }}</p>
+               <p>{{ amenity.description }}</p>
+              </div>
+             {% endfor %}
+          </div>
+          <div class="slider-control">
+            <div class="slide-prev"><span></span></div>
+            <div class="slider-nav">
+                {% for amenity in fun_amenities %}
+                <span></span>
+                {% endfor %}
+            </div>
+            <div class="slide-next"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panache-bg">
+    <div class="col-amenities__items">
+      <div class="col-amenities__items__wrap">
+        <div class="col-amenities__items__heading">
+          <p class="h2">business amenities</p>
+        </div>
+        <div class="col-amenities__items__slider">
+          <div class="amenities-slider">
+            {% assign business_amenities = amenities | where: 'category', 'business' %}
+            {% for amenity in business_amenities %}
+              <div class="slide-item1">
+               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+               <p class="h3">{{ amenity.name }}</p>
+               <p>{{ amenity.description }}</p>
+              </div>
+             {% endfor %}
+          </div>
+          <div class="slider-control">
+            <div class="slide-prev"><span></span></div>
+            <div class="slider-nav">
+                {% for amenity in fun_amenities %}
+                <span></span>
+                {% endfor %}
+            </div>
+            <div class="slide-next"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="light-bg pb-5">
+    <div class="col-amenities__items">
+      <div class="col-amenities__items__wrap">
+        <div class="col-amenities__items__heading">
+          <p class="h2">… and last, but not least</p>
+        </div>
+        <div class="col-amenities__items__slider">
+          <div class="amenities-slider">
+            {% assign other_amenities = amenities | where: 'category', 'fun' %}
+            {% for amenity in other_amenities %}
+              <div class="slide-item1">
+               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+               <p class="h3">{{ amenity.name }}</p>
+               <p>{{ amenity.description }}</p>
+              </div>
+             {% endfor %}
+          </div>
+          <div class="slider-control">
+            <div class="slide-prev"><span></span></div>
+            <div class="slider-nav">
+                {% for amenity in fun_amenities %}
+                <span></span>
+                {% endfor %}
+            </div>
+            <div class="slide-next"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<script>
+
+  var forEachloop = function (array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+      callback.call(scope, i, array[i]); // passes back stuff we need
+    }
+  };
+  // tiny-slider initialisation
+  var sliders = document.querySelectorAll('.amenities-slider');
+  forEachloop(sliders, function (index, value) {
+    var cont = value.nextElementSibling.children[1];
+    var prevSlide = value.nextElementSibling.children[0];
+    var nextSlide = value.nextElementSibling.children[2];
+    let slider = tns({
+      container: value,
+      navPosition: "bottom",
+      navContainer: cont,
+      prevButton: prevSlide,
+      nextButton: nextSlide,
+      items: 1,
+      loop: false,
+      responsive: {
+        640: {
+          edgePadding: 20,
+          gutter: 20,
+          items: 2
+        },
+        700: {
+          items: 3
+        },
+        900: {
+          items: 4
+        }
+      }
+    });
+
+    // if(value.closest('.tns-outer').nextElementSibling) {
+    //   value.closest('.tns-outer').nextElementSibling.children[0].onclick = function() {
+    //     slider.goTo('prev');
+    //   }
+    //   value.closest('.tns-outer').nextElementSibling.children[2].onclick = function() {
+    //     slider.goTo('next');
+    //   }
+    // }
+  });
+</script>
