@@ -27,7 +27,8 @@
           "description": ""
         },
         "mask_opacity": "0"
-      }
+      },
+      "content": "<p>asd dsad</p>"
     }
   }
 ]
