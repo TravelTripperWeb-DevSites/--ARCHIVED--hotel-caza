@@ -200,3 +200,14 @@
     background-size: 50% 50%;
   }
 }
+
+//cta banner
+.cta-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    height: 600px;
+  }
+}
