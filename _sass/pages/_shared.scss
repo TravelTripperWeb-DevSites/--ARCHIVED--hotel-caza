@@ -210,4 +210,7 @@
   @include media-breakpoint-up(md) {
     height: 600px;
   }
+  .btn {
+    margin-top: 40px;
+  }
 }
