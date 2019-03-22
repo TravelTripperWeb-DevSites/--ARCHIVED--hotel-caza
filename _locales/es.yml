@@ -1,0 +1,27 @@
+---
+es:
+  our_instangram: Instagram
+  header:
+    book_now_button: RESERVAR AHORA
+    language: Lingua
+  language_name: Español
+  brg:
+    label: Mejor tarifa
+    tonights_rate: La tasa de esta noche
+  rooms:
+    price_per_night: por Noche
+    buttons:
+      book: Reservar
+  dining:
+    buttons:
+      make_a_reservation: Hacer una reservación
+      view_menu: Ver menú
+      view_all: Ver todas las opciones de comida
+  offers:
+    buttons:
+      book_now: Reserve oferta
+      view_all: Ver todas las ofertas especiales
+  carousels:
+    next: "Next"
+    previous:  "Prev"    
+    

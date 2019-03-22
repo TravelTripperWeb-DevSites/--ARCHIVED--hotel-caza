@@ -3,15 +3,15 @@ twitter:
   username: Travel_Tripper
 facebook:
   username: traveltripper
-  app_id: 
-  publisher: 
-og_image: 
+  app_id:
+  publisher:
+og_image:
 instagram:
   username: TheManhattanClub
 social:
-  type: 
-  name: 
-  links: 
+  type:
+  name:
+  links:
 __EDITABLE_FIELDS__:
   instagram:
     label: Instagram Account
