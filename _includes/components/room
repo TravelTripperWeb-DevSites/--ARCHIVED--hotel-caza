@@ -1,0 +1,56 @@
+{% comment %}
+
+  Name:
+
+      Room with live rate
+
+  Description:
+
+      Display content from a room model with live-rates from reztrip
+
+  Usage:
+
+      Pass provider and video id through the include to render on page.
+          {% assign room = *RoomModelInstance* %}
+      eg. {% include components/room %}
+
+  TODO: Add microdata?
+
+{% endcomment %}
+
+<div class="c-room" data-reztrip-room-id="{{room.reztrip_room_id}}">
+  <div class="c-room__text-group">
+    <div class="c-room__text-group__wrap">
+      <div class="c-room__name">
+        <a class="h2" href="{{ room.id | permalink: model_dir: 'rooms' }}">{{ room.name }}</a>
+      </div>
+      <div class="c-room__rate">
+        Tonight’s Rate: <span  data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span>
+      </div>
+      <div class="c-room__size">
+        <span><i class="fal fa-bed"></i> {{ room.bed_types[0].name }}</span>
+        <span><i class="fal fa-arrows"></i> {{ room.size }}</span>
+      </div>
+
+      <div class="c-room__select">
+        <span>
+          <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary">View</a>
+        </span>
+        <span data-reztrip-room-book-now>
+          <a href="#" class="btn btn--secondary">Book Room</a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="c-room__image-group">
+    <div class="c-room__featured-image">
+      {% assign featured_image = room.featured_image | default: room.images[0] %}
+      {% include components/image image=featured_image max_width=600 %}
+    </div>
+    <div class="c-room__images">
+      {% assign sliderImages = room.images %}
+      {% assign sliderId = "room" | append: room.id | append: "slider" %}
+      {% include components/slider id=sliderId %}
+    </div>
+  </div>
+</div>

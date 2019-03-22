@@ -48,13 +48,13 @@
   }
 
   &__intro {
-    max-width: 960px;
-    margin: 0 auto;
+    @include make-container;
+    @include make-container-max-widths;
 
     &__left {
       @include make-col-ready;
       @include media-breakpoint-up(md) {
-        @include make-col(8);
+        @include make-col(7);
       }
 
       .h2 {
@@ -66,12 +66,46 @@
       @include make-col-ready;
       @include media-breakpoint-up(md) {
         @include make-col(4);
+        margin-left: auto;
+      }
+
+      .h4 {
+        margin-bottom: 14px;
       }
     }
   }
 
   &__row {
     @include make-row;
+    align-items: flex-end;
+  }
+
+  &__amenities {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin-left: 38px;
+    text-align: center;
+    list-style-type: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    img {
+      max-width: 32px;
+
+    }
+
+    span {
+      display: block;
+      margin: 12px auto 0;
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
 }

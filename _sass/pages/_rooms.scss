@@ -1,2 +1,126 @@
 // Rooms & Room Details Page Elements
 // ==========================================================================
+
+.c-room-list {
+  .c-room {
+    padding-bottom: 40px;
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 72px;
+    }
+
+    .ttweb-booking-button {
+      @extend .btn--secondary;
+      margin-left: 30px;
+      background-color: transparent !important;
+    }
+
+    &__image-group {
+      margin-bottom: -6px;
+      padding: 0 24px !important;
+      @include media-breakpoint-up(md) {
+        padding: 0 !important;
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(7);
+        padding: 0 15px !important;
+      }
+      .tns-outer .tns-nav button {
+        width: 12px !important;
+        height: 12px  !important;
+        margin: 0 5px  !important;
+        border: 0 !important;
+        border-radius: 50%  !important;
+      }
+    }
+
+    &__text-group {
+      padding: 0 24px !important;
+      @include media-breakpoint-up(md) {
+        padding: 0 15px !important;
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(5);
+        padding: 0 !important;
+      }
+
+      &__wrap {
+        z-index: 2;
+        padding: 24px;
+        background-color: $white;
+        @include media-breakpoint-up(lg) {
+          margin-right: 80px;
+          margin-left: -80px;
+          padding: 39px 48px;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .c-room__image-group {
+        order: 0;
+        @include media-breakpoint-up(md) {
+          order: 1;
+        }
+      }
+
+      .c-room__text-group {
+        order: 1;
+        @include media-breakpoint-up(md) {
+          order: 0;
+        }
+
+        &__wrap {
+          text-align: left !important;
+          @include media-breakpoint-up(lg) {
+            margin-right: -80px;
+            margin-left: 80px;
+          }
+        }
+      }
+    }
+
+    &__name {
+      font-weight: 400;
+    }
+
+    &__size {
+      padding-top: 16px;
+      font-size: 16px;
+
+      i {
+        font-size: 24px;
+        color: $beige;
+      }
+
+      span {
+        display: block;
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+        }
+
+        &:last-child {
+          @include media-breakpoint-up(md) {
+            padding-left: 20px;
+            border-left: 1px solid $gray-400;
+          }
+        }
+        padding-right: 20px;
+      }
+    }
+
+    &__select {
+      padding-top: 16px;
+    }
+
+    &__rate {
+      padding-top: 12px;
+      font-family: $family-primary;
+      font-size: 18px;
+      color: $beige;
+
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}
