@@ -1,21 +1,17 @@
-# Social Sharing
+---
 twitter:
   username: Travel_Tripper
 facebook:
   username: traveltripper
   app_id:
   publisher:
-og_image: # Open Graph/Twitter default site image
+og_image:
 instagram:
-  username: 
-
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
+  username: TheManhattanClub
 social:
-  type: # Person or Organization (defaults to Person)
-  name: # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
+  type:
+  name:
+  links:
 __EDITABLE_FIELDS__:
   instagram:
     label: Instagram Account
@@ -28,15 +24,15 @@ __EDITABLE_FIELDS__:
     label: Twitter Account
     type: nested
     multiple: false
-    fields: 
-      username: 
+    fields:
+      username:
         type: string
   facebook:
     label: Facebook Account
     type: nested
     multiple: false
-    fields: 
-      username: 
+    fields:
+      username:
         type: string
       app_id:
         type: string
@@ -45,19 +41,17 @@ __EDITABLE_FIELDS__:
   og_image:
     hint: Open Graph/Twitter default site image
     type: image
-  
   social:
     label: Social Profile
-    instructions: "For specifying social profiles: https://developers.google.com/structured-data/customize/social-profiles"
-
+    instructions: 'For specifying social profiles: https://developers.google.com/structured-data/customize/social-profiles'
     type: nested
     multiple: false
     fields:
-      type: 
+      type:
         type: select
         options:
-          - Person
-          - Organization
+        - Person
+        - Organization
       name:
         type: string
         hint: If the user or organization name differs from the site's name
