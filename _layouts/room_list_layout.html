@@ -3,6 +3,7 @@ layout: generic
 ---
 
 {% assign rooms = site.data._models.rooms | sort:"order" %}
+
 <section class="c-room-list tb-padding">
   {% for room in rooms %}
     {% include components/room %}

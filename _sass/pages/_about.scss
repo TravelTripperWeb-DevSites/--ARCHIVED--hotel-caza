@@ -10,7 +10,7 @@
 
   &__image {
     @include make-col-ready;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(6);
       padding: 0;
     }
@@ -24,7 +24,7 @@
   }
   &__detail {
     @include make-col-ready;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(6);
       padding: 0;
     }
@@ -36,9 +36,13 @@
       z-index: 1;
       padding: 40px 24px;
       background-color: $white;
-      @include media-breakpoint-up(md) {
-        margin-right: -73px;
+      @include media-breakpoint-up(lg) {
+        margin-right: -73px; 
         padding: 50px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-right: -73px;
+        margin-left: 73px;
       }
 
       p:last-child {
