@@ -1,0 +1,25 @@
+---
+it:
+  header:
+    book_now_button: PRENOTA ORA
+    language: Lingua
+    language_name: italiano
+  brg:
+    label: meglior tasso
+    tonights_rate: tasso di stasera
+  rooms:
+    price_per_night: x Notte
+    buttons:
+      book: PRENOTA QUESTA CAMERA    
+  dining:
+    buttons:
+      make_a_reservation: Make A Reservation
+      view_menu: View Menu
+      view_all: View All Dining Options
+  offers:
+    buttons:
+      book_now: Book Offer
+      view_all: View All Special Offers
+  carousels:
+    next: "Next"
+    previous:  "Prev"

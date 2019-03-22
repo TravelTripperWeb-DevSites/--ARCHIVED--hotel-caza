@@ -1,0 +1,25 @@
+---
+de:
+  header:
+    book_now_button: BUCHEN SIE JETZT
+    language: Language
+    language_name: German
+  brg:
+    label: Best Rate
+    tonights_rate: Heute Abend Rate
+  rooms:
+    price_per_night: / Night    
+    buttons:
+      book: Buchen Sie diesen Raum
+  dining:
+    buttons:
+      make_a_reservation: Make A Reservation
+      view_menu: View Menu
+      view_all: View All Dining Options
+  offers:
+    buttons:
+      book_now: Book Offer
+      view_all: View All Special Offers
+  carousels:
+    next: "Next"
+    previous:  "Prev"
