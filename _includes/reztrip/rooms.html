@@ -1,0 +1,35 @@
+<script type="text/javascript">
+  document.ready(function() {
+    ttwebHotel.ready(function() {
+      var reztripRooms = document.querySelectorAll("[data-reztrip-room-id]");
+      if (reztripRooms.length > 0) {
+
+        for (var r=0,rr=reztripRooms.length;r<rr;r++) {
+          var rtr = reztripRooms[r];
+          var roomId = rtr.getAttribute("data-reztrip-room-id")
+          var els = rtr.querySelectorAll("[data-reztrip-room-attribute=rate]")
+          for(var i=0,ii=els.length;i<ii;i++) {
+            var el = els[i];
+            // Replace with cross out rate
+            var coRate = TTRender.renderCrossOutRate(ttwebHotel, {
+              selectedRoom: roomId
+            }, el)
+          }
+                                                                  //implied  search: globalSearch
+          var bookingButton = TTRender.e(TTRender.BookingButton, {hotel: ttwebHotel, selectedRoom: roomId, label: "Book Now"}, null)
+          var bookNowEls = rtr.querySelectorAll("[data-reztrip-room-book-now]")
+          for(var i=0,ii=bookNowEls.length;i<ii;i++) {
+            var el = bookNowEls[i];
+            TTRender.renderInElement(el, bookingButton);
+          }
+        }
+
+
+      }
+
+    })
+  })
+
+
+
+</script>

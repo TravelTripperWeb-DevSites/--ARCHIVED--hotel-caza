@@ -1,2 +1,73 @@
 // Rooms & Room Details Page Elements
 // ==========================================================================
+.c-room-list {
+  .c-room {
+    padding-bottom: 72px;
+    
+    .ttweb-booking-button {
+      @extend .btn--secondary;
+      margin-left: 30px;
+      background-color: transparent !important;
+    }
+
+    &__image-group {
+      @include media-breakpoint-up(md) {
+        @include make-col(7);
+      }
+    }
+    &__text-group {
+      @include media-breakpoint-up(md) {
+        @include make-col(5);
+        &__wrap {
+          z-index: 2;
+          margin-right: 80px;
+          margin-left: -80px;
+          padding: 39px 48px;
+          background-color: $white;
+        }
+      }
+      padding: 0 !important;
+    }
+    &:nth-child(even) {
+      .c-room__text-group {
+        &__wrap {
+          text-align: left !important;
+          @include media-breakpoint-up(md) {
+            margin-right: -80px;
+            margin-left: 80px;
+          }
+        }
+      }
+    }
+    &__name {
+      font-weight: 400;
+    }
+    &__size {
+      padding-top: 16px;
+      font-size: 16px;
+      i {
+        font-size: 24px;
+        color: $beige;
+      }
+      span {
+        &:last-child {
+          padding-left: 20px;
+          border-left: 1px solid $gray-400;
+        }
+        padding-right: 20px;
+      }
+    }
+    &__select {
+      padding-top: 16px;
+    }
+    &__rate {
+      padding-top: 12px;
+      font-family: $family-primary;
+      font-size: 18px;
+      color: $beige;
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}
