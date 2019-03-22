@@ -24,6 +24,13 @@
         @include make-col(7);
         padding: 0 15px !important;
       }
+      .tns-outer .tns-nav button {
+        width: 12px !important;
+        height: 12px  !important;
+        margin: 0 5px  !important;
+        border: 0 !important;
+        border-radius: 50%  !important;
+      }
     }
 
     &__text-group {
