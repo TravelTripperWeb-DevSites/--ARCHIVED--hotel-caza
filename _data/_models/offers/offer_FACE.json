@@ -1,0 +1,37 @@
+{
+  "name_localized": {
+    "en": "Facebook Special",
+    "es": "Facebook Especial"
+  },
+  "short_description_localized": {
+    "en": "We're offering you a special rate for showing you like us. Don't forget to share that you're staying with us by clicking the facebook button anytime while making a booking. ",
+    "es": "Te ofrecemos una tarifa especial para mostrar que al igual que nosotros. No te olvides de compartir que te vas a quedar con nosotros haciendo clic en el botón de Facebook en cualquier momento al hacer la reserva."
+  },
+  "description_localized": {
+    "en": null,
+    "es": null
+  },
+  "image": {
+    "name": "Facebook-Special-",
+    "content_type": null,
+    "date_added": "2019-03-22-190451",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1553295891/unp6znpmmton2xpvjhbm.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1553295891/unp6znpmmton2xpvjhbm.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1553295891/unp6znpmmton2xpvjhbm.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1553295891/unp6znpmmton2xpvjhbm.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1553295891/unp6znpmmton2xpvjhbm.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1553295891/unp6znpmmton2xpvjhbm.jpg",
+    "width": 1280,
+    "height": 720,
+    "format": "jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1553295891/unp6znpmmton2xpvjhbm.jpg",
+    "resource_type": "image",
+    "size": 93697,
+    "caption": "",
+    "description": "",
+    "alt": "",
+    "original_url": "https://d31f902anbz5po.cloudfront.net/6/19431_1_master.jpg",
+    "git_file_name": "_assets/image_data/Facebook-Special-.json"
+  },
+  "reztrip_offer_id": "FACE"
+}
