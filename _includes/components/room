@@ -34,7 +34,7 @@
 
       <div class="c-room__select">
         <span>
-          <a href="/rooms/{{ room.id }}/" class="btn btn--secondary">View</a>
+          <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary">View</a>
         </span>
         <span data-reztrip-room-book-now>
           <a href="#" class="btn btn--secondary">Book Room</a>
