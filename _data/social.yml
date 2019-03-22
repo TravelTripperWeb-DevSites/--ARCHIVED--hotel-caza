@@ -1,0 +1,61 @@
+---
+twitter:
+  username: Travel_Tripper
+facebook:
+  username: traveltripper
+  app_id: 
+  publisher: 
+og_image: 
+instagram:
+  username: TheManhattanClub
+social:
+  type: 
+  name: 
+  links: 
+__EDITABLE_FIELDS__:
+  instagram:
+    label: Instagram Account
+    type: nested
+    multiple: false
+    fields:
+      username:
+        type: string
+  twitter:
+    label: Twitter Account
+    type: nested
+    multiple: false
+    fields:
+      username:
+        type: string
+  facebook:
+    label: Facebook Account
+    type: nested
+    multiple: false
+    fields:
+      username:
+        type: string
+      app_id:
+        type: string
+      publisher:
+        type: string
+  og_image:
+    hint: Open Graph/Twitter default site image
+    type: image
+  social:
+    label: Social Profile
+    instructions: 'For specifying social profiles: https://developers.google.com/structured-data/customize/social-profiles'
+    type: nested
+    multiple: false
+    fields:
+      type:
+        type: select
+        options:
+        - Person
+        - Organization
+      name:
+        type: string
+        hint: If the user or organization name differs from the site's name
+      links:
+        instructions: Full URLs for social media profiles
+        type: string
+        multiple: true
