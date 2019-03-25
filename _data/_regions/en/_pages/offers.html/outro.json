@@ -27,6 +27,9 @@
         "caption": "",
         "description": ""
       }
+    },
+    "hero_html": {
+      "content": "<p class=\"h1\">a stylish spot to hang your hat</p>"
     }
   }
 ]
