@@ -117,5 +117,19 @@
       background-color: transparent !important;
       box-shadow: none !important;
     }
+
+    &.white {
+      color: $white;
+
+      &:before {
+        background: $white;
+      }
+
+      &:hover {
+        &:before {
+          background: $white;
+        }
+      }
+    }
   }
 }

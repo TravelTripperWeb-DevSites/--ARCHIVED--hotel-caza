@@ -1,8 +1,10 @@
 // Rooms & Room Details Page Elements
 // ==========================================================================
 
-.c-room-list {
-  .c-room {
+.c-room-list,
+.c-offer-list {
+  .c-room,
+  .c-offer-item {
     padding-bottom: 40px;
     @include media-breakpoint-up(lg) {
       padding-bottom: 72px;
@@ -56,14 +58,16 @@
     }
 
     &:nth-child(even) {
-      .c-room__image-group {
+      .c-room__image-group,
+      .c-offer-item__image-group {
         order: 0;
         @include media-breakpoint-up(md) {
           order: 1;
         }
       }
 
-      .c-room__text-group {
+      .c-room__text-group,
+      .c-offer-item__text-group {
         order: 1;
         @include media-breakpoint-up(md) {
           order: 0;
@@ -121,6 +125,20 @@
       span {
         display: inline-block;
       }
+    }
+  }
+}
+
+.c-offer-item {
+  @include make-row;
+  &__text-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .h4 {
+      margin-top: 16px;
+      text-transform: none;
     }
   }
 }
