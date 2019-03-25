@@ -29,6 +29,10 @@
         "caption": "",
         "description": ""
       }
+    },
+    "hero_title": {
+      "content": "go to your fun place",
+      "_template": "header"
     }
   }
 ]
