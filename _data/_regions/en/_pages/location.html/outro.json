@@ -33,6 +33,9 @@
     "hero_title": {
       "content": "go to your fun place",
       "_template": "header"
+    },
+    "hero_html": {
+      "content": "<p><a class=\"btn btn--outline\" href=\"#\">Book Now</a></p>"
     }
   }
 ]
