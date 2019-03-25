@@ -3,7 +3,7 @@ layout: generic
 ---
 
 {% assign offers = site.data._models.offers | sort:"order" %}
-<section class="c-offer-list tb-paddin">
+<section class="c-offer-list tb-padding">
     {% for offer in offers %}
       {% include components/offer.html %}
     {% endfor %}
