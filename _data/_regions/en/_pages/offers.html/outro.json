@@ -30,6 +30,10 @@
     },
     "hero_html": {
       "content": "<p class=\"h1\">a stylish spot to hang your hat</p>"
+    },
+    "hero_title": {
+      "content": "view rooms",
+      "_template": "header"
     }
   }
 ]
