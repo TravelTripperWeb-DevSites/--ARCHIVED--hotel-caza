@@ -3,6 +3,10 @@
     "hero_html": {
       "content": "<p class=\"h3\">offers</p>"
     },
-    "_template": "hero"
+    "_template": "hero",
+    "hero_title": {
+      "content": "Caza Specials",
+      "_template": "header"
+    }
   }
 ]
