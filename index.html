@@ -58,32 +58,96 @@ meta_tags:
     </div>
   </div>
 
-  <!-- <div class="team-slider" data-tns-autoplay="false" data-tns-nav="false">
-    <div data-slide="{{forloop.index0}}">
-      <div class="team-section__carousel__image">
-        <a href="javascript:void(0);" class="team-section__carousel__image__view-bio open-lightbox" data-target="full-bio_{{forloop.index0}}">View Bio</a>
-        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png" alt="{{ detail.photo.alt }}">
+  <div class="rooms-slider" data-tns-autoplay="false" data-tns-nav="false">
+      <div class="rooms-slider__image">
+        <div class="rooms-slider__photo">
+          <img src="/assets/img/standard.jpg" alt="Standard">
+        </div>
+        <div class="rooms-slider__info">
+          <p class="h3">Standard</p>
+          <span class="tonight">Tonight’s Rate $198</span>
+          <a href="" class="btn btn--secondary white">View</a>
+          <a href="" class="btn btn--secondary white">Book Now</a>
+        </div>
       </div>
-      <div class="team-section__carousel__image">
-        <a href="javascript:void(0);" class="team-section__carousel__image__view-bio open-lightbox" data-target="full-bio_{{forloop.index0}}">View Bio</a>
-        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png" alt="{{ detail.photo.alt }}">
+      <div class="rooms-slider__image">
+        <div class="rooms-slider__photo">
+          <img src="/assets/img/standard.jpg" alt="Standard">
+        </div>
+        <div class="rooms-slider__info">
+          <p class="h3">Standard</p>
+          <span class="tonight">Tonight’s Rate $198</span>
+          <a href="" class="btn btn--secondary white">View</a>
+          <a href="" class="btn btn--secondary white">Book Now</a>
+        </div>
       </div>
-      <div class="team-section__carousel__image">
-        <a href="javascript:void(0);" class="team-section__carousel__image__view-bio open-lightbox" data-target="full-bio_{{forloop.index0}}">View Bio</a>
-        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png" alt="{{ detail.photo.alt }}">
+      <div class="rooms-slider__image">
+        <div class="rooms-slider__photo">
+          <img src="/assets/img/standard.jpg" alt="Standard">
+        </div>
+        <div class="rooms-slider__info">
+          <p class="h3">Standard</p>
+          <span class="tonight">Tonight’s Rate $198</span>
+          <a href="" class="btn btn--secondary white">View</a>
+          <a href="" class="btn btn--secondary white">Book Now</a>
+        </div>
       </div>
-      <div class="team-section__carousel__image">
-        <a href="javascript:void(0);" class="team-section__carousel__image__view-bio open-lightbox" data-target="full-bio_{{forloop.index0}}">View Bio</a>
-        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png" alt="{{ detail.photo.alt }}">
+      <div class="rooms-slider__image">
+        <div class="rooms-slider__photo">
+          <img src="/assets/img/standard.jpg" alt="Standard">
+        </div>
+        <div class="rooms-slider__info">
+          <p class="h3">Standard</p>
+          <span class="tonight">Tonight’s Rate $198</span>
+          <a href="" class="btn btn--secondary white">View</a>
+          <a href="" class="btn btn--secondary white">Book Now</a>
+        </div>
       </div>
-      <div class="team-section__carousel__image">
-        <a href="javascript:void(0);" class="team-section__carousel__image__view-bio open-lightbox" data-target="full-bio_{{forloop.index0}}">View Bio</a>
-        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png" alt="{{ detail.photo.alt }}">
+      <div class="rooms-slider__image">
+        <div class="rooms-slider__photo">
+          <img src="/assets/img/standard.jpg" alt="Standard">
+        </div>
+        <div class="rooms-slider__info">
+          <p class="h3">Standard</p>
+          <span class="tonight">Tonight’s Rate $198</span>
+          <a href="" class="btn btn--secondary white">View</a>
+          <a href="" class="btn btn--secondary white">Book Now</a>
+        </div>
       </div>
-      <div class="team-section__carousel__image">
-        <a href="javascript:void(0);" class="team-section__carousel__image__view-bio open-lightbox" data-target="full-bio_{{forloop.index0}}">View Bio</a>
-        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png" alt="{{ detail.photo.alt }}">
-      </div>
+  </div>
+
+  <div class="slider-control">
+    <div class="slide-prev"><span></span></div>
+    <div class="slider-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-  </div> -->
+    <div class="slide-next"><span></span></div>
+  </div>
 </section>
+
+<script type="text/javascript">
+
+  var slider = tns({
+    container: '.rooms-slider',
+    "items": 1,
+    "slideBy": "page",
+    "gutter": 12,
+    "mouseDrag": true,
+    "swipeAngle": false,
+    "speed": 400,
+    "nav": false,
+    "controls": false,
+    "edgePadding": 100,
+    responsive: {
+      640: {
+        "items": 1.1,
+        edgePadding: 100,
+        gutter: 80,
+      }
+    }
+  });
+  </script>
