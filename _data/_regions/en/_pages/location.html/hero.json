@@ -3,6 +3,10 @@
     "hero_html": {
       "content": "<p class=\"h3\">location</p>"
     },
-    "_template": "hero"
+    "_template": "hero",
+    "hero_title": {
+      "content": "your story starts here",
+      "_template": "header"
+    }
   }
 ]
