@@ -1,0 +1,70 @@
+<script type="text/javascript">
+
+  function decorateOffersWithAvailability(reztripOffers, search) {
+    ttwebHotel.Rt3Api.getAllSpecialRates().then(function(result) {
+      var offers = result.special_rates;
+      var offerHash = {}
+      for (var o=0,oo=offers.length;o<oo;o++) {
+        var offer = offers[o];
+        offerHash[offer.rate_plan_code] = offer;
+      }
+      console.log(offerHash)
+      for (var r=0,rr=reztripOffers.length;r<rr;r++) {
+        var rto = reztripOffers[r];
+        var offerId = rto.getAttribute("data-reztrip-offer-id")
+        var offer = offerHash[offerId];
+        if (offer) {
+          var available = TTRender.Offer.checkValidity(offer, ttwebHotel, search)
+          rto.setAttribute("data-reztrip-offer-available-for-search", available);
+        }
+      }
+    });
+  }
+
+  document.ready(function() {
+    ttwebHotel.ready(function() {
+      var reztripOffers = document.querySelectorAll("[data-reztrip-offer-id]");
+      if (reztripOffers.length > 0) {
+
+        decorateOffersWithAvailability(reztripOffers, TTWebGlobals.globalSearch);
+        TTWebGlobals.globalSearch.onLoad(function() {
+          decorateOffersWithAvailability(reztripOffers, TTWebGlobals.globalSearch);
+        })
+
+
+        for (var r=0,rr=reztripOffers.length;r<rr;r++) {
+          var rto = reztripOffers[r];
+          var offerId = rto.getAttribute("data-reztrip-offer-id")
+          var els = rto.querySelectorAll("[data-reztrip-offer-attribute=rate]")
+          //var tonightSearch = ttwebHotel.BookingSearch({}, "tonights-rate"); //create a new named search with static default dates
+          for(var i=0,ii=els.length;i<ii;i++) {
+            var el = els[i];
+            // Replace with cross out rate
+            // TODO should it always be "tonight" or replace it with search-based rate?
+            var coRate = TTRender.renderCrossOutRate(ttwebHotel, {
+              //search: tonightSearch,
+              rateCode: offerId
+            }, el)
+
+          }
+
+          var bookNowEls = rto.querySelectorAll("[data-reztrip-offer-book-now]")
+          for(var i=0,ii=bookNowEls.length;i<ii;i++) {
+            var el = bookNowEls[i];
+            TTRender.renderBookingButton(ttwebHotel, {
+              rateCode: offerId,
+              label: "BOOK"
+            }, el)
+          }
+
+          // Mark up rto root HTML with data-available based on availability
+
+
+        }
+
+
+      }
+      
+    })
+  })
+</script>
