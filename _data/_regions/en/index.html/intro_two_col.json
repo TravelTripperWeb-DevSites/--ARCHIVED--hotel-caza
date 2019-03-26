@@ -1,6 +1,6 @@
 [
   {
-    "content": "<p class=\"h2\">A stylish San Francisco escape that’s so much fun to share</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><a href=\"/about/\" class=\"btn btn--secondary\">Leran More</a>",
+    "content": "<p class=\"h2\">A stylish San Francisco escape that’s so much fun to share</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><a href=\"/about/\" class=\"btn btn--secondary\">Learn More</a>",
     "_template": "html"
   }
 ]
