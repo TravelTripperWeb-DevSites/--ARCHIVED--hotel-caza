@@ -104,6 +104,13 @@
       padding: 0 15px;
     }
 
+    &.home-amenities {
+      padding-bottom: 40px;
+      @include media-breakpoint-up(md) {
+        padding-bottom: 115px;
+      }
+    }
+
     &__wrap {
       @include make-row;
     }
@@ -119,11 +126,11 @@
     &__slider {
       z-index: 2;
       display: block;
-      padding: 20px 55px 40px;
+      padding: 20px 35px 40px;
       overflow: hidden;
       text-align: center;
       @include media-breakpoint-up(md) {
-         padding: 20px 55px;
+        padding: 20px 55px;
       }
 
       img {

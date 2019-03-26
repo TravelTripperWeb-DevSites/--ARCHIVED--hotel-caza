@@ -162,6 +162,124 @@
   }
 }
 
-.home-amenities {
-  padding-bottom: 72px important;
+.attractions {
+  padding-top: 72px;
+  overflow: hidden;
+
+  &__heading {
+    @include make-container;
+    max-width: 1064px;
+
+    .h2 {
+      position: relative;
+      display: inline;
+      margin: 0 auto;
+      background-color: $light-grey;
+
+      &:after {
+        position: absolute;
+        right: -100%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        border-bottom: solid 1px $primary;
+      }
+    }
+  }
+
+  &__list {
+    max-width: 1064px;
+    margin: 24px auto 0;
+    padding: 0 15px;
+    li {
+      display: inline-block;
+      margin-right: 48px;
+      list-style-type: none;
+      img {
+        max-height: 32px;
+        margin-right: 12px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        font-family: $family-primary;
+        font-size: 16px;
+        line-height: 24px;
+        color: $beige;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        vertical-align: middle;
+        transition: all .3s;
+
+        &:hover, &.active {
+          color: $primary !important;
+          span {
+            border-color: $primary;
+          }
+        }
+      }
+
+      span {
+        display: inline-block;
+        border-bottom: solid 1px transparent;
+        transition: all .3s;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-top: 35px;
+  }
+
+  &__item {
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+      width: 80%;
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      @include media-breakpoint-up(md) {
+        height: 600px;
+      }
+    }
+  }
+
+  &__copy {
+    padding: 25px 25px 40px;
+    background-color: $white;
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 50%;
+      right: -100px;
+      max-width: 420px;
+      padding: 55px 45px;
+      transform: translateY(-50%);
+    }
+
+    .h3 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .decorative {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    max-width: 265px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }

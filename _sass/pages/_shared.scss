@@ -104,7 +104,9 @@
   align-items: center;
 
   &.viewall {
-    display: block !important;
+    @include media-breakpoint-up(md) {
+      display: block !important;
+    }
   }
 
   span {
