@@ -117,18 +117,52 @@ meta_tags:
   </div>
 
   <div class="slider-control">
-    <div class="slide-prev"><span></span></div>
-    <div class="slider-nav">
+    <div class="slide-prev" id="roomSliderPrev"><span></span></div>
+    <div class="slider-nav" id="roomSlider">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <div class="slide-next"><span></span></div>
+    <div class="slide-next" id="roomSliderNext"><span></span></div>
   </div>
 </section>
 
+{% assign amenities = site.data._models.amenities | sort: order %}
+<div class="col-amenities">
+  <div class="panache-bg">
+    <div class="logo-amenities">
+        <img src="/assets/img/logo-dark.png" alt="hotel logo" class="logo-amenities">
+    </div>
+    <div class="col-amenities__items home-amenities">
+      <div class="col-amenities__items__wrap">
+        <div class="col-amenities__items__heading">
+          <p class="h2">Fun amenities unique to our hotel</p>
+        </div>
+        <div class="col-amenities__items__slider">
+          <div class="amenities-slider">
+            {% assign fun_amenities = amenities | where: 'category', 'fun' %}
+            {% for amenity in fun_amenities %}
+              <div class="slide-item1">
+               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+               <p class="h3">{{ amenity.name }}</p>
+               <p>{{ amenity.description }}</p>
+              </div>
+             {% endfor %}
+          </div>
+          <div class="slider-control">
+            <div class="slide-prev"><span></span></div>
+            <div class="viewall">
+              <a href="/about/" class="btn btn--secondary">View All Amenities</a>
+            </div>
+            <div class="slide-next"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script type="text/javascript">
 
   var slider = tns({
@@ -139,9 +173,10 @@ meta_tags:
     "mouseDrag": true,
     "swipeAngle": false,
     "speed": 400,
-    "nav": false,
-    "controls": false,
     "edgePadding": 100,
+    navContainer:"#roomSlider",
+    prevButton: "#roomSliderPrev",
+    nextButton: "#roomSliderNext",
     responsive: {
       640: {
         "items": 1.1,

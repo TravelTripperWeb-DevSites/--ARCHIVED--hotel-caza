@@ -99,9 +99,13 @@
   }
 }
 
-.slider-nav {
+.slider-nav, .viewall {
   display: flex;
   align-items: center;
+
+  &.viewall {
+    display: block !important;
+  }
 
   span {
     display: inline-block;
