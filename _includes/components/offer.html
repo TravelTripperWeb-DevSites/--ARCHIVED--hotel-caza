@@ -1,0 +1,46 @@
+{% comment %}
+
+Name:
+
+Offer with live rate
+
+Description:
+
+Display content from a offer model if active on reztrip
+
+Usage:
+
+Pass provider and video id through the include to render on page.
+{% assign offer = *OfferModelInstance* %}
+eg. {% include components/offer %}
+
+TODO: Add microdata?
+
+{% endcomment %}
+
+<div class="c-offer-item" data-reztrip-offer-id="{{offer.reztrip_offer_id}}">
+  <div class="c-offer-item__image-group">
+    {% include components/image image=offer.image max_width=600 %}
+  </div>
+  <div class="c-offer-item__text-group">
+    <div class="c-offer-item__text-group__wrap">
+      <div class="c-offer__name">
+        <a class="h2" href="{{ offer.id | permalink: model_dir: 'offers'}}">{{ offer.name }}</a>
+      </div>
+      <div class="c-offer__rate" data-reztrip-offer-attribute="rate">
+
+      </div>
+      <div class="c-offer-item__description">
+        <p class="h4">{{ offer.short_description }}</p>
+      </div>
+      <div class="c-offer-item__select">
+        <span>
+          <a href="/offers/{{ offer.id | downcase }}/" class="btn btn--secondary">View Offer</a>
+        </span>
+        <span data-reztrip-offer-book-now>
+         <a href="#" class="btn btn--secondary ml-3">{% t 'offers.buttons.book' %}</a>
+       </span>
+      </div>
+    </div>
+  </div>
+</div>
