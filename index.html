@@ -166,59 +166,106 @@ meta_tags:
 
 <div class="attractions">
   <div class="attractions__heading">
-    <p class="h2">Things to do near Hotel caza:</p>
+    <p class="h2"><span>Things to do near Hotel caza:</span></p>
   </div>
-
-  <ul class="nav--filter attractions__list">
+  <ul class="attractions-mobile">
     <li>
-      <a data-filter="attractions" class="filter--option active"><img src="/assets/img/attractions.svg" alt="Attractions"><span>Attractions</span></a>
+      <a href="javascript:void(0);" class="attractions-mobile__link active"><i class="icon-attractions"></i>Attractions <div class="toggler">Less <span class="fal fa-minus"></span></div></a>
+      <div class="attractions-mobile__content active">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions-mobile__info">
+          <p class="h3">Attractions Heading</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <a href="" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
     </li>
     <li>
-      <a data-filter="entertainment" class="filter--option"><img src="/assets/img/entertainment.svg" alt="Entertainment"><span>Entertainment</span></a>
+      <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-entertainment"></i>Entertainment<div class="toggler">More <span class="fal fa-plus"></span></div></a>
+      <div class="attractions-mobile__content">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions-mobile__info">
+          <p class="h3">Attractions Heading</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <a href="" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
     </li>
     <li>
-      <a data-filter="eat-drink" class="filter--option"><img src="/assets/img/eat-drink.svg" alt="Eat & Drink"><span>Eat & Drink</span></a>
+      <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-eat-drink"></i>Eat & Drink<div class="toggler">More <span class="fal fa-plus"></span></div></a>
+      <div class="attractions-mobile__content">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions-mobile__info">
+          <p class="h3">Attractions Heading</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <a href="" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
     </li>
     <li>
-      <a data-filter="shopping" class="filter--option"><img src="/assets/img/shopping.svg" alt="Shopping"><span>Shopping</span></a>
+      <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-shopping"></i>Shopping<div class="toggler">More <span class="fal fa-plus"></span></div></a>
+        <div class="attractions-mobile__content">
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+          <div class="attractions-mobile__info">
+            <p class="h3">Attractions Heading</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <a href="" class="btn btn--secondary">Discover More</a>
+          </div>
+        </div>
     </li>
   </ul>
-  <div class="attractions__content">
-    <div class="filter-item attractions__item" data-filter="attractions">
-      <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
-      <div class="attractions__copy">
-        <p class="h3">General attractions heading</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-        <a href="" class="btn btn--secondary">Discover More</a>
+  <div class="attractions__list">
+    <ul class="nav--filter attractions__nav">
+      <li>
+        <a data-filter="attractions" class="filter--option active"><i class="icon-attractions"></i><span>Attractions</span></a>
+      </li>
+      <li>
+        <a data-filter="entertainment" class="filter--option"><i class="icon-entertainment"></i><span>Entertainment</span></a>
+      </li>
+      <li>
+        <a data-filter="eat-drink" class="filter--option"><i class="icon-eat-drink"></i><span>Eat & Drink</span></a>
+      </li>
+      <li>
+        <a data-filter="shopping" class="filter--option"><i class="icon-shopping"></i><span>Shopping</span></a>
+      </li>
+    </ul>
+    <div class="attractions__content">
+      <div class="filter-item attractions__item" data-filter="attractions">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions__copy">
+          <p class="h3">General attractions heading</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <a href="" class="btn btn--secondary">Discover More</a>
+        </div>
       </div>
-    </div>
-    <div class="filter-item hidden attractions__item" data-filter="entertainment">
-      <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
-      <div class="attractions__copy">
-        <p class="h3">General Entertainment heading</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-        <a href="" class="btn btn--secondary">Discover More</a>
+      <div class="filter-item hidden attractions__item" data-filter="entertainment">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions__copy">
+          <p class="h3">General Entertainment heading</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <a href="" class="btn btn--secondary">Discover More</a>
+        </div>
       </div>
-    </div>
-    <div class="filter-item hidden attractions__item" data-filter="eat-drink">
-      <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
-      <div class="attractions__copy">
-        <p class="h3">General Eat & Drink heading</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-        <a href="" class="btn btn--secondary">Discover More</a>
+      <div class="filter-item hidden attractions__item" data-filter="eat-drink">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions__copy">
+          <p class="h3">General Eat & Drink heading</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <a href="" class="btn btn--secondary">Discover More</a>
+        </div>
       </div>
-    </div>
-    <div class="filter-item hidden attractions__item" data-filter="shopping">
-      <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
-      <div class="attractions__copy">
-        <p class="h3">General Shopping heading</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-        <a href="" class="btn btn--secondary">Discover More</a>
+      <div class="filter-item hidden attractions__item" data-filter="shopping">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions__copy">
+          <p class="h3">General Shopping heading</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <a href="" class="btn btn--secondary">Discover More</a>
+        </div>
       </div>
-    </div>
 
-    <div class="decorative">
-      <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553606408/cozxdl8yxbqcxm88fcj0.png" alt="Vespa">
+      <div class="decorative">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553606408/cozxdl8yxbqcxm88fcj0.png" alt="Vespa">
+      </div>
     </div>
   </div>
 </div>
@@ -233,16 +280,41 @@ meta_tags:
     "mouseDrag": true,
     "swipeAngle": false,
     "speed": 400,
-    "edgePadding": 100,
+    "edgePadding": 20,
     navContainer:"#roomSlider",
     prevButton: "#roomSliderPrev",
     nextButton: "#roomSliderNext",
     responsive: {
       640: {
-        "items": 1.1,
         edgePadding: 100,
         gutter: 80,
       }
     }
   });
+
+
+
+var acc = document.getElementsByClassName("attractions-mobile__link");
+var panel = document.getElementsByClassName('attractions-mobile__content');
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+        var setClasses = !this.classList.contains('active');
+        setClass(acc, 'active', 'remove');
+        setClass(panel, 'active', 'remove');
+
+        if (setClasses) {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("active");
+        }
+    }
+}
+
+console.log(toggler);
+
+function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+        els[i].classList[fnName](className);
+    }
+}
   </script>
