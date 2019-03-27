@@ -270,6 +270,50 @@ meta_tags:
   </div>
 </div>
 
+{% assign offers = site.data._models.offers | sort:"order" %}
+<div class="offers-cs">
+  <div class="offers-cs__inner">
+    <div class="offers-cs__row">
+      <div class="offers-cs__intro">
+        <p class="h2">Special offers dolorem ipsum quia dolor sit amet amor!</p>
+        <a href="/offers/" class="btn btn--secondary">View all offers</a>
+        <div class="slider-control">
+          <div class="slide-prev" id="offerSliderPrev"><span></span></div>
+          <div class="slider-nav" id="offerSlider">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          <div class="slide-next" id="offerSliderNext"><span></span></div>
+        </div>
+      </div>
+      <div class="offers-cs__slider">
+        <div class="offers-cs__slideitems">
+        {% for offer in offers %}
+          <div class="offers-cs__slider__item">
+            <div class="offers-cs__slider__pic">
+            {% include components/image image=offer.image %}
+            </div>
+
+            <div class="offers-cs__info">
+              <p class="h3">{{ offer.name }}</p>
+              <a href="/offers/{{ offer.id | downcase }}/" class="btn btn--secondary white">Details</a>
+              <a href="" class="btn btn--secondary white">Book Offer</a>
+            </div>
+
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="decorative">
+    <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553673967/bvgmibl85oh38zmazmde.png" alt="Offers">
+  </div>
+</div>
+
 <script type="text/javascript">
 
   var slider = tns({
@@ -285,13 +329,32 @@ meta_tags:
     prevButton: "#roomSliderPrev",
     nextButton: "#roomSliderNext",
     responsive: {
-      640: {
+      768: {
         edgePadding: 100,
         gutter: 80,
       }
     }
   });
 
+  var slider = tns({
+    container: '.offers-cs__slideitems',
+    "items": 1.1,
+    "slideBy": "page",
+    "gutter": 12,
+    "mouseDrag": true,
+    "swipeAngle": false,
+    "speed": 400,
+    "edgePadding": 0,
+    navContainer:"#offerSlider",
+    prevButton: "#offerSliderPrev",
+    nextButton: "#offerSliderNext",
+    responsive: {
+      640: {
+        "items": 1.5,
+        gutter: 24,
+      }
+    }
+  });
 
 
 var acc = document.getElementsByClassName("attractions-mobile__link");
