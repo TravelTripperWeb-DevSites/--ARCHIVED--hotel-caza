@@ -424,4 +424,19 @@ readyDoc(function () {
       }
     });
   });
+  var locSliders = document.querySelectorAll('.location-slider');
+  forEachloop(locSliders, function (index, value) {
+    var cont = value.nextElementSibling.children[1];
+    var prevSlide = value.nextElementSibling.children[0];
+    var nextSlide = value.nextElementSibling.children[2];
+    var slider = tns({
+      container: value,
+      navPosition: "bottom",
+      navContainer: cont,
+      prevButton: prevSlide,
+      nextButton: nextSlide,
+      items: 1,
+      loop: false
+    });
+  });
 }); // End of docready
