@@ -27,6 +27,10 @@
         "caption": "",
         "description": ""
       }
+    },
+    "hero_title": {
+      "content": "sitemap",
+      "_template": "header"
     }
   }
 ]
