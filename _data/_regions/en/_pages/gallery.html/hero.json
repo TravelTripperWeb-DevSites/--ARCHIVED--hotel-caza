@@ -26,6 +26,9 @@
         "description": ""
       }
     },
-    "_template": "hero"
+    "_template": "hero",
+    "hero_html": {
+      "content": "<p>GALLERY</p>"
+    }
   }
 ]
