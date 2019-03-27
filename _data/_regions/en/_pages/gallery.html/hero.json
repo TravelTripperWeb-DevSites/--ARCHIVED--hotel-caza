@@ -28,7 +28,7 @@
     },
     "_template": "hero",
     "hero_html": {
-      "content": "<p>GALLERY</p>"
+      "content": "<p class=\"h3\">GALLERY</p>"
     },
     "hero_title": {
       "content": "let&rsquo;s get visual!",
