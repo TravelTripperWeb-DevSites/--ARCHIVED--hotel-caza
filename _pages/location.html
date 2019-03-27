@@ -50,56 +50,34 @@ meta_tags:
         <a data-filter="shopping" class="filter--option"><i class="icon-shopping"></i><span>Shopping</span></a>
       </li>
     </ul>
+
+    {% assign attractions = site.data._models.attractions | sort: order %}
     <div class="c-map__tabs__content-group">
       <div class="filter-item c-map__tabs__content active"  data-filter="attractions">
         <div class="location-slider">
+          {% for attraction in attractions %}
           <div class="location-slider__item">
             <div class="location-slider__item__image">
-              <img src="http://res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="">
+              <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
             </div>
             <div class="location-slider__item__detail">
-              <p class="h3">fisherman’s wharf</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+              <p class="h3">{{ attraction.name }}</p>
+              {{ attraction.description }}
               <p>
-                <a class="btn btn--secondary">Show on Map</a>
-                <a class="btn btn--secondary">Get Directions</a>
+                <a href="https://www.google.com/maps?q={{ attraction.location.address | replace: ' ','+' }}&amp;ll={{ attraction.location.latitude }},{{ attraction.location.longitude }},12z" tabindex="-1" rel="nofollow" target="_blank" class="btn btn--secondary">Show on Map</a>
+                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
               </p>
             </div>
           </div>
-          <div class="location-slider__item">
-            <div class="location-slider__item__image">
-              <img src="http://res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="">
-            </div>
-            <div class="location-slider__item__detail">
-              <p class="h3">fisherman’s wharf</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-              <p>
-                <a class="btn btn--secondary">Show on Map</a>
-                <a class="btn btn--secondary">Get Directions</a>
-              </p>
-            </div>
-          </div>
-          <div class="location-slider__item">
-            <div class="location-slider__item__image">
-              <img src="http://res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="">
-            </div>
-            <div class="location-slider__item__detail">
-              <p class="h3">fisherman’s wharf</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-              <p>
-                <a class="btn btn--secondary">Show on Map</a>
-                <a class="btn btn--secondary">Get Directions</a>
-              </p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
+
         <div class="slider-control location-slider-control">
           <div class="slide-prev"><span></span></div>
           <div class="slider-nav">
+           {% for attraction in attractions %}
            <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
+           {% endfor %}
           </div>
           <div class="slide-next"><span></span></div>
         </div>
