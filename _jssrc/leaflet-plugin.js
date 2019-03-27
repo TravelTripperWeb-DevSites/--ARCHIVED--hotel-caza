@@ -37,7 +37,6 @@
  * @property {function} leafletMap.init - The baz function - Add more attraction (markers) to the map. and will display if map element has attribute [data-attractions="show"]
 
 */
-
 function leafletMap(options) {
   // Default options
   var defaults = {
@@ -180,6 +179,7 @@ function leafletMap(options) {
         showAttractionsHTMLList();
       }
     } // eof if mapID
+
   }; // Set class to attractions marker icon
 
 
@@ -259,6 +259,7 @@ function leafletMap(options) {
         }
       }, 300);
     } //end if
+
   }; // attach click event to all marker
 
 
@@ -380,63 +381,3 @@ function leafletMap(options) {
 }
 
 window.LeafletMap = leafletMap;
-'use strict';
-
-function readyDoc(fn) {
-  var d = document;
-  d.readyState == 'loading' ? d.addEventListener('DOMContentLoaded', fn) : fn();
-}
-// Amenities slider
-var forEachloop = function forEachloop(array, callback, scope) {
-  for (var i = 0; i < array.length; i++) {
-    callback.call(scope, i, array[i]); // passes back stuff we need
-  }
-};
-// tiny-slider initialisation
-readyDoc(function () {
-  // If DOM is ready
-
-  var sliders = document.querySelectorAll('.amenities-slider');
-  forEachloop(sliders, function (index, value) {
-    var cont = value.nextElementSibling.children[1];
-    var prevSlide = value.nextElementSibling.children[0];
-    var nextSlide = value.nextElementSibling.children[2];
-    var slider = tns({
-      container: value,
-      navPosition: "bottom",
-      navContainer: cont,
-      prevButton: prevSlide,
-      nextButton: nextSlide,
-      items: 1,
-      loop: false,
-      responsive: {
-        640: {
-          edgePadding: 20,
-          gutter: 20,
-          items: 2
-        },
-        700: {
-          items: 3
-        },
-        900: {
-          items: 4
-        }
-      }
-    });
-  });
-  var locSliders = document.querySelectorAll('.location-slider');
-  forEachloop(locSliders, function (index, value) {
-    var cont = value.nextElementSibling.children[1];
-    var prevSlide = value.nextElementSibling.children[0];
-    var nextSlide = value.nextElementSibling.children[2];
-    var slider = tns({
-      container: value,
-      navPosition: "bottom",
-      navContainer: cont,
-      prevButton: prevSlide,
-      nextButton: nextSlide,
-      items: 1,
-      loop: false
-    });
-  });
-}); // End of docready
