@@ -27,6 +27,10 @@
         "description": ""
       }
     },
-    "_template": "hero"
+    "_template": "hero",
+    "hero_title": {
+      "content": "Privacy Policy",
+      "_template": "header"
+    }
   }
 ]
