@@ -1,0 +1,39 @@
+{% assign gallery_items = '' %}
+<div class="filtered-galleries lightbox--gallery {{item.advanced_options.custom_classes}}" {% if item.advanced_options.custom_id and item.advanced_options.custom_id != "" %}id="{{item.advanced_options.custom_id}}"{% endif %} >
+  <ul class="gallery-nav nav--filter">
+    <li>
+      <a href="#{% t 'galleries.filters.all' %}">{% t 'galleries.filters.all' %}</a>
+    </li>
+    {% for gallery in item.galleries %}
+      {% assign selected_gallery = site.data._galleries[gallery.gallery]  %}
+      {% if selected_gallery != nil %}
+        <li>
+          <a href="#{{gallery.gallery}}">{{gallery.label | default: selected_gallery.name }}</a>
+        </li>
+
+        {% capture gallery_items %}
+          {{ gallery_items }}
+          <div id={{gallery.gallery}} class="container">
+            <div class="row">
+              <div class="col-12">
+                {{gallery.label}}
+              </div>
+            </div>
+            <div class="row">
+          {% for photo in selected_gallery.photos %}
+            <div class="filter-item col-md-3">
+              <div class="lightbox-item gallery-item">
+                <img src="{{photo.url_small}}" alt="{{photo.alt}}" data-large="{{photo.url_large}}" data-thumb="{{photo.url_thumb}}" class="objectfit" />
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        </div>
+        {% endcapture %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <div  class="gallery-items">
+    {{ gallery_items }}
+  </div>
+</div>
