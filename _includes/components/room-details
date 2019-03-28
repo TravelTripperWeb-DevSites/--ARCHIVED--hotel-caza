@@ -1,0 +1,113 @@
+{% assign room_detail = page.data %}
+
+{% comment %} Room images Slider {% endcomment %}
+
+<div class="room-image-carousel">
+  <div class="banner-carousel">
+    <!-- Slideshow -->
+    {% for pic in room_detail.images %}
+      <div>
+        <img src="{{ pic.url_xlarge }}" alt="{{ room_detail.name }}">
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="slider-control">
+    <div class="slide-prev" id="bannerSliderPrev"><span></span></div>
+    <div class="slider-nav" id="bannerSlider">
+      {% for pic in room_detail.images %}
+      <span></span>
+      {% endfor %}
+    </div>
+    <div class="slide-next" id="bannerSliderNext"><span></span></div>
+  </div>
+
+</div>
+
+<div data-reztrip-room-id="{{room_detail.reztrip_room_id}}">
+
+<div class="c-item-detail__text-group">
+  <div class="c-item-detail__text-group__wrap  tb-padding">
+    <div class="c-item-detail__text-group__headings">
+      <h1 class="h2">{{ room_detail.name }}</h1>
+      <p class="h4">Tonight’s Rate <span data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span></p>
+    </div>
+
+    <div class="c-item-detail__text-group__text">
+      <div class="room-info"><span><i class="fal fa-bed"></i> 1 King</span><span><i class="fal fa-arrows"></i> 300 sqft / 28 sqm</span></div>
+
+      <p>{{ room_detail.description }}</p>
+    </div>
+
+    <div class="c-item-detail__text-group__selector">
+      <span data-reztrip-room-book-now>
+       <a href="#" class="btn btn--primary ml-md-3">{% t 'rooms.buttons.check_availability' %}</a>
+      </span>
+    </div>
+
+  </div>
+</div>
+
+  {% comment %} Room Amenities {% endcomment %}
+
+  <div class="common-amenities">
+    <div class="common-amenities-container">
+      <div class="room-amenities">
+        <div class="h4">Amenities</div>
+        <ul class="amenities">
+          <li>
+            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256617/qmrlzvjj7ggeh1p9i88m.png" alt="Hi-speed Wifi">
+            <span>Hi-speed<br> Wifi</span>
+          </li>
+          <li>
+            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256615/tx6olwfeamyu9fpxshk5.png" alt="Minibar & Snacks">
+            <span>Minibar<br>& Snacks</span>
+          </li>
+          <li>
+            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/xpd0um4hcmnbspghs0gc.png" alt="Luxury Toiletries">
+            <span>Luxury<br>Toiletries</span>
+          </li>
+          <li>
+            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/ilzxbtoo2wrjbyshy29q.png" alt="Walk-in Rainshower">
+            <span>Walk-in<br>Rainshower</span>
+          </li>
+          <li>
+            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256617/qmrlzvjj7ggeh1p9i88m.png" alt="Hi-speed Wifi">
+            <span>Hi-speed<br> Wifi</span>
+          </li>
+          <li>
+            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256615/tx6olwfeamyu9fpxshk5.png" alt="Minibar & Snacks">
+            <span>Minibar<br>& Snacks</span>
+          </li>
+          <li>
+            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/xpd0um4hcmnbspghs0gc.png" alt="Luxury Toiletries">
+            <span>Luxury<br>Toiletries</span>
+          </li>
+          <li>
+            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/ilzxbtoo2wrjbyshy29q.png" alt="Walk-in Rainshower">
+            <span>Walk-in<br>Rainshower</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="rooms-cs">
+    <div class="rooms-cs__intro">
+      <div class="rooms-cs__row">
+        <div class="rooms-cs__intro__left">
+          <p class="h2 mb-0">More rooms & suites</p>
+        </div>
+        <div class="rooms-cs__intro__right">
+          <a href="/rooms/" class="btn btn--secondary">View All Rooms</a>
+        </div>
+      </div>
+    </div>
+
+    {% include rooms-cross-sell.html %}
+
+  </section>
+
+  {% include offers-cross-sell.html %}
+
+</div>

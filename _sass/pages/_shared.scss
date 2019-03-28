@@ -46,6 +46,7 @@
   width: 40px;
   height: 20px;
   text-align: right;
+  cursor: pointer;
 
   span {
     position: relative;
@@ -114,8 +115,9 @@
     width: 7px;
     height: 7px;
     margin: 4px 8px;
+    cursor: pointer;
     background-color: $grey;
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out;
 
     &.tns-nav-active {
       width: 13px;
@@ -322,6 +324,43 @@
   }
 }
 
+// Amenites list
+.room-amenities {
+  .h4 {
+    margin-bottom: 14px;
+  }
+
+  .amenities {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-right: 38px;
+      margin-bottom: 20px;
+      text-align: center;
+      list-style-type: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        max-width: 32px;
+
+      }
+
+      span {
+        display: block;
+        margin: 12px auto 0;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}
 
 // Icon fonts
 

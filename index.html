@@ -26,6 +26,8 @@ meta_tags:
   </div>
 </div>
 
+{% assign rooms = site.data._models.rooms | sort:"order" %}
+
 <section class="rooms-cs">
   <div class="rooms-cs__intro">
     <div class="rooms-cs__row">
@@ -35,98 +37,33 @@ meta_tags:
         <a href="/rooms/" class="btn btn--secondary">View All Rooms</a>
       </div>
       <div class="rooms-cs__intro__right">
-        <div class="h4">Amenities</div>
-        <ul class="rooms-cs__amenities">
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256617/qmrlzvjj7ggeh1p9i88m.png" alt="Hi-speed Wifi">
-            <span>Hi-speed<br> Wifi</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256615/tx6olwfeamyu9fpxshk5.png" alt="Minibar & Snacks">
-            <span>Minibar<br>& Snacks</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/xpd0um4hcmnbspghs0gc.png" alt="Luxury Toiletries">
-            <span>Luxury<br>Toiletries</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/ilzxbtoo2wrjbyshy29q.png" alt="Walk-in Rainshower">
-            <span>Walk-in<br>Rainshower</span>
-          </li>
-        </ul>
+        <div class="room-amenities">
+          <div class="h4">Amenities</div>
+          <ul class="amenities">
+            <li>
+              <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256617/qmrlzvjj7ggeh1p9i88m.png" alt="Hi-speed Wifi">
+              <span>Hi-speed<br> Wifi</span>
+            </li>
+            <li>
+              <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256615/tx6olwfeamyu9fpxshk5.png" alt="Minibar & Snacks">
+              <span>Minibar<br>& Snacks</span>
+            </li>
+            <li>
+              <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/xpd0um4hcmnbspghs0gc.png" alt="Luxury Toiletries">
+              <span>Luxury<br>Toiletries</span>
+            </li>
+            <li>
+              <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/ilzxbtoo2wrjbyshy29q.png" alt="Walk-in Rainshower">
+              <span>Walk-in<br>Rainshower</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="rooms-slider" data-tns-autoplay="false" data-tns-nav="false">
-      <div class="rooms-slider__image">
-        <div class="rooms-slider__photo">
-          <img src="/assets/img/standard.jpg" alt="Standard">
-        </div>
-        <div class="rooms-slider__info">
-          <p class="h3">Standard</p>
-          <span class="tonight">Tonight’s Rate $198</span>
-          <a href="" class="btn btn--secondary white">View</a>
-          <a href="" class="btn btn--secondary white">Book Now</a>
-        </div>
-      </div>
-      <div class="rooms-slider__image">
-        <div class="rooms-slider__photo">
-          <img src="/assets/img/standard.jpg" alt="Standard">
-        </div>
-        <div class="rooms-slider__info">
-          <p class="h3">Standard</p>
-          <span class="tonight">Tonight’s Rate $198</span>
-          <a href="" class="btn btn--secondary white">View</a>
-          <a href="" class="btn btn--secondary white">Book Now</a>
-        </div>
-      </div>
-      <div class="rooms-slider__image">
-        <div class="rooms-slider__photo">
-          <img src="/assets/img/standard.jpg" alt="Standard">
-        </div>
-        <div class="rooms-slider__info">
-          <p class="h3">Standard</p>
-          <span class="tonight">Tonight’s Rate $198</span>
-          <a href="" class="btn btn--secondary white">View</a>
-          <a href="" class="btn btn--secondary white">Book Now</a>
-        </div>
-      </div>
-      <div class="rooms-slider__image">
-        <div class="rooms-slider__photo">
-          <img src="/assets/img/standard.jpg" alt="Standard">
-        </div>
-        <div class="rooms-slider__info">
-          <p class="h3">Standard</p>
-          <span class="tonight">Tonight’s Rate $198</span>
-          <a href="" class="btn btn--secondary white">View</a>
-          <a href="" class="btn btn--secondary white">Book Now</a>
-        </div>
-      </div>
-      <div class="rooms-slider__image">
-        <div class="rooms-slider__photo">
-          <img src="/assets/img/standard.jpg" alt="Standard">
-        </div>
-        <div class="rooms-slider__info">
-          <p class="h3">Standard</p>
-          <span class="tonight">Tonight’s Rate $198</span>
-          <a href="" class="btn btn--secondary white">View</a>
-          <a href="" class="btn btn--secondary white">Book Now</a>
-        </div>
-      </div>
-  </div>
+  {% include rooms-cross-sell.html %}
 
-  <div class="slider-control">
-    <div class="slide-prev" id="roomSliderPrev"><span></span></div>
-    <div class="slider-nav" id="roomSlider">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <div class="slide-next" id="roomSliderNext"><span></span></div>
-  </div>
 </section>
 
 {% assign amenities = site.data._models.amenities | sort: order %}
@@ -153,9 +90,15 @@ meta_tags:
           </div>
           <div class="slider-control">
             <div class="slide-prev"><span></span></div>
-            <div class="viewall">
-              <a href="/about/#amenities" class="btn btn--secondary">View All Amenities</a>
+            <div class="slide-nav" style="display:block !important;">
+              {% for amenity in fun_amenities %}
+              <span></span>
+               {% endfor %}
+               <div class="viewall">
+                 <a href="/about/#amenities" class="btn btn--secondary">View All Amenities</a>
+               </div>
             </div>
+
             <div class="slide-next"><span></span></div>
           </div>
         </div>
@@ -270,114 +213,4 @@ meta_tags:
   </div>
 </div>
 
-{% assign offers = site.data._models.offers | sort:"order" %}
-<div class="offers-cs">
-  <div class="offers-cs__inner">
-    <div class="offers-cs__row">
-      <div class="offers-cs__intro">
-        <p class="h2">Special offers dolorem ipsum quia dolor sit amet amor!</p>
-        <a href="/offers/" class="btn btn--secondary">View all offers</a>
-        <div class="slider-control">
-          <div class="slide-prev" id="offerSliderPrev"><span></span></div>
-          <div class="slider-nav" id="offerSlider">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-          <div class="slide-next" id="offerSliderNext"><span></span></div>
-        </div>
-      </div>
-      <div class="offers-cs__slider">
-        <div class="offers-cs__slideitems">
-        {% for offer in offers %}
-          <div class="offers-cs__slider__item">
-            <div class="offers-cs__slider__pic">
-            {% include components/image image=offer.image %}
-            </div>
-
-            <div class="offers-cs__info">
-              <p class="h3">{{ offer.name }}</p>
-              <a href="/offers/{{ offer.id | downcase }}/" class="btn btn--secondary white">Details</a>
-              <a href="" class="btn btn--secondary white">Book Offer</a>
-            </div>
-
-          </div>
-        {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="decorative">
-    <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553673967/bvgmibl85oh38zmazmde.png" alt="Offers">
-  </div>
-</div>
-
-<script type="text/javascript">
-
-  var slider = tns({
-    container: '.rooms-slider',
-    "items": 1,
-    "slideBy": "page",
-    "gutter": 12,
-    "mouseDrag": true,
-    "swipeAngle": false,
-    "speed": 400,
-    "edgePadding": 20,
-    navContainer:"#roomSlider",
-    prevButton: "#roomSliderPrev",
-    nextButton: "#roomSliderNext",
-    responsive: {
-      768: {
-        edgePadding: 100,
-        gutter: 80,
-      }
-    }
-  });
-
-  var slider = tns({
-    container: '.offers-cs__slideitems',
-    "items": 1.1,
-    "slideBy": "page",
-    "gutter": 12,
-    "mouseDrag": true,
-    "swipeAngle": false,
-    "speed": 400,
-    "edgePadding": 0,
-    navContainer:"#offerSlider",
-    prevButton: "#offerSliderPrev",
-    nextButton: "#offerSliderNext",
-    responsive: {
-      640: {
-        "items": 1.5,
-        gutter: 24,
-      }
-    }
-  });
-
-
-var acc = document.getElementsByClassName("attractions-mobile__link");
-var panel = document.getElementsByClassName('attractions-mobile__content');
-
-for (var i = 0; i < acc.length; i++) {
-    acc[i].onclick = function() {
-        var setClasses = !this.classList.contains('active');
-        setClass(acc, 'active', 'remove');
-        setClass(panel, 'active', 'remove');
-
-        if (setClasses) {
-            this.classList.toggle("active");
-            this.nextElementSibling.classList.toggle("active");
-        }
-    }
-}
-
-console.log(toggler);
-
-function setClass(els, className, fnName) {
-    for (var i = 0; i < els.length; i++) {
-        els[i].classList[fnName](className);
-    }
-}
-  </script>
+{% include offers-cross-sell.html %}
