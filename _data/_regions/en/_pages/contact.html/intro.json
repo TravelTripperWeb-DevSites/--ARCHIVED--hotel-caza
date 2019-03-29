@@ -2,7 +2,7 @@
   {
     "_template": "2_col",
     "col1_html": {
-      "content": "<p class=\"h3\">Our Address</p>\n<p>495 Beach Street, San Francisco, California, 94133</p>\n<p><a class=\"btn btn--primary\" title=\"get directions\" href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">get directions</a></p>\n<p class=\"h3\">Reservations</p>\n<p>0861 444 435</p>\n<p>&nbsp;</p>\n<p class=\"h3\">email</p>\n<p>res-hi-sf-wharf@ihg.com&nbsp;</p>\n<p>For further assistance feel free to fill out the form below or call the hotel directly</p>"
+      "content": "<p class=\"h3\">Our Address</p>\n<p>495 Beach Street, San Francisco, California, 94133</p>\n<p><a class=\"btn btn--primary\" title=\"get directions\" href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">get directions</a></p>\n<p class=\"h3\">Reservations</p>\n<p>0861 444 435</p>\n<p class=\"h3\">email</p>\n<p>res-hi-sf-wharf@ihg.com</p>\n<p>For further assistance feel free to fill out the form below or call the hotel directly</p>"
     },
     "advanced_options": {
     },
