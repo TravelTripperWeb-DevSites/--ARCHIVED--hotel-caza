@@ -2,7 +2,7 @@
   {
     "_template": "2_col",
     "col1_html": {
-      "content": "<p class=\"h3\">Our Address</p>"
+      "content": "<p class=\"h3\">Our Address</p>\n<p>495 Beach Street, San Francisco, California, 94133</p>\n<p>get directions</p>\n<p class=\"h3\">Reservations</p>\n<p>0861 444 435</p>\n<p>For further assistance feel free to fill out the form below or call the hotel directly</p>"
     }
   }
 ]
