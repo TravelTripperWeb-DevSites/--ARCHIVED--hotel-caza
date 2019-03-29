@@ -56,3 +56,39 @@ a {
     border-radius: 15px;
   }
 }
+
+// Top Banner
+
+.top-banner {
+  position: absolute;
+  top: 112px;
+  z-index: 9;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  background-color: $white;
+  @include media-breakpoint-down(md) {
+    top: 84px;
+  }
+  @include media-breakpoint-down(xs) {
+    top: 64px;
+  }
+  a,
+  p {
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: middle;
+  }
+
+  p {
+    font-family: $family-primary;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $beige;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 2px;
+    }
+  }
+}

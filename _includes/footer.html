@@ -9,9 +9,9 @@
       </div>
     </div>
     <div class="footer__address">
-      <p><span class="subheading">Address</span><span><a href="">495 Beach Street San Francisco,<br>California, 94133</a></span></p>
-      <p><span class="subheading">Email</span><span><a href="mailto:res-hi-sf-wharf@ihg.com">res-hi-sf-wharf@ihg.com</a></span></p>
-      <p><span class="subheading">Phone</span><span><a href="tel:0861 444 435">0861 444 435</a></span></p>
+      <p><span class="subheading">Address</span><span><a href="">{{ site.data.hotel_settings.address.street1 }} {{ site.data.hotel_settings.address.state }},<br>{{ site.data.hotel_settings.address.city }}, {{ site.data.hotel_settings.address.zip_code }}</a></span></p>
+      <p><span class="subheading">Email</span><span><a href="mailto:{{ site.data.hotel_settings.email }}">{{ site.data.hotel_settings.email }}</a></span></p>
+      <p><span class="subheading">Phone</span><span><a href="tel:{{ site.data.hotel_settings.phone_number }}">{{ site.data.hotel_settings.phone_number }}</a></span></p>
     </div>
     <div class="footer__links">
       {% assign footer-items = site.data._menus.footer.items %}
