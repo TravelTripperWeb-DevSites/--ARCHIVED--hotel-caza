@@ -2,7 +2,7 @@
 jotform:
   contact-id:
   rfp-id:
-  newsletter-id:
+  newsletter-id: 90871862184465
 
 
 __EDITABLE_FIELDS__:
@@ -10,7 +10,7 @@ __EDITABLE_FIELDS__:
     type: nested
     multiple: false
     fields:
-      contact-id: 
+      contact-id:
         type: string
       rfp-id:
         type: string
