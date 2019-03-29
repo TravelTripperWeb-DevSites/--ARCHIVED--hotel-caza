@@ -27,6 +27,9 @@
         "description": ""
       }
     },
-    "_template": "hero"
+    "_template": "hero",
+    "hero_html": {
+      "content": "<p class=\"h3\">contact&nbsp;</p>"
+    }
   }
 ]
