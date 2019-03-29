@@ -1,0 +1,18 @@
+# Forms
+jotform:
+  contact-id:
+  rfp-id:
+  newsletter-id:
+
+
+__EDITABLE_FIELDS__:
+  jotform:
+    type: nested
+    multiple: false
+    fields:
+      contact-id: 
+        type: string
+      rfp-id:
+        type: string
+      newsletter-id:
+        type: string
