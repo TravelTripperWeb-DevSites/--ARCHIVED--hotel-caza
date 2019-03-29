@@ -131,6 +131,8 @@
 }
 
 .c-offer-list {
+  @include make-container;
+  @include make-container-max-widths;
   padding-bottom: 0 !important;
   .c-offer-item {
     @include make-row;

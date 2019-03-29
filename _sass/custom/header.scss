@@ -110,6 +110,19 @@
         }
       }
     }
+
+    &__social {
+      display: flex;
+      align-items: center;
+
+      a {
+        width: 40px;
+        height: 40px;
+        color: $primary;
+        background-color: $white;
+        border-radius: 50%;
+      }
+    }
   }
 
   &.sticky {
