@@ -30,6 +30,10 @@
     "_template": "hero",
     "hero_html": {
       "content": "<p class=\"h3\">contact&nbsp;</p>"
+    },
+    "hero_title": {
+      "content": "don&rsquo;t be shy!",
+      "_template": "header"
     }
   }
 ]
