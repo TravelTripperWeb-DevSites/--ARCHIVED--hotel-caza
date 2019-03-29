@@ -29,7 +29,7 @@
       }
     },
     "hero_html": {
-      "content": "<p><a class=\"btn btn--outline\" href=\"../rooms/\">view rooms</a></p>"
+      "content": "<p><a class=\"btn btn--white\" href=\"../rooms/\">view rooms</a></p>"
     },
     "hero_title": {
       "content": "a stylish spot <br />to hang your hat",
