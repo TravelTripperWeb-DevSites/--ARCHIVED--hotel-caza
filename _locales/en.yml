@@ -27,6 +27,7 @@ en:
     price_per_night: / Night
     buttons:
       book: Book This Room
+      check_availability: Check Availability
   dining:
     buttons:
       make_a_reservation: Make a Reservation

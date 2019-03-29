@@ -106,7 +106,7 @@
         background-color: $primary;
 
         @include media-breakpoint-up(md) {
-          top: $navbar-main-height;
+          top: 84px;
         }
       }
     }

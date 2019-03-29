@@ -31,7 +31,7 @@
     "skip_h1": true,
     "_template": "hero",
     "hero_html": {
-      "content": "<p class=\"h1\">go to your fun place</p>\n<p><a class=\"btn btn--outline\" href=\"#\">Book Now</a></p>"
+      "content": "<p class=\"h1\">go to your fun place</p>\n<p><a class=\"btn btn--white\" href=\"#\">Book Now</a></p>"
     }
   }
 ]

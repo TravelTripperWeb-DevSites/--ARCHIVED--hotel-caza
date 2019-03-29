@@ -1,0 +1,31 @@
+
+{% assign rooms = site.data._models.rooms | sort:"order" %}
+
+<div class="rooms-slider">
+  {% for room in rooms %}
+    <div class="rooms-slider__image" data-reztrip-room-id="{{room.reztrip_room_id}}">
+      <div class="rooms-slider__photo">
+        {% assign featured_image = room.featured_image | default: room.images[0] %}
+        {% include components/image image=featured_image max_width=600 %}
+      </div>
+      <div class="rooms-slider__info">
+        <p class="h3">{{ room.name }}</p>
+        <div class="tonight">Tonight’s Rate <span data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span></div>
+        <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary white">View</a>
+        <span data-reztrip-room-book-now>
+          <a href="" class="btn btn--secondary white">Book Now</a>
+        <span>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="slider-control">
+  <div class="slide-prev" id="roomSliderPrev"><span></span></div>
+  <div class="slider-nav" id="roomSlider">
+    {% for room in rooms %}
+    <span></span>
+    {% endfor %}
+  </div>
+  <div class="slide-next" id="roomSliderNext"><span></span></div>
+</div>

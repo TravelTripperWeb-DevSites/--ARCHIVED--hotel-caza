@@ -28,6 +28,25 @@
     }
   }
 
+  &--white {
+    min-width: 145px;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: $secondary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $white;
+    border: solid 1px $white;
+
+    &:hover, &:focus, &:active {
+      color: $primary;
+      background-color: $button-color;
+      border-color: $button-color;
+      box-shadow: none;
+    }
+  }
+
   &--outline  {
     min-width: 104px;
     padding: 4px 15px;

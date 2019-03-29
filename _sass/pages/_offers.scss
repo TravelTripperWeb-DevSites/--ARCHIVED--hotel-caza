@@ -24,6 +24,10 @@
       .h2 {
         padding-bottom: 16px;
       }
+
+      .ttweb-cross-out-rate {
+        display: inline-block;
+      }
     }
 
     &__selector {
@@ -31,12 +35,49 @@
       @include media-breakpoint-up(md) {
         @include make-col(3);
       }
+
+      .ttweb-booking-button {
+        @extend .btn--primary;
+      }
     }
 
     &__text {
       @include make-col-ready;
       @include media-breakpoint-up(md) {
         @include make-col(5);
+      }
+
+      .room-info {
+        margin-top: 15px;
+
+        @include media-breakpoint-up(md) {
+          margin-top: 0;
+        }
+        span {
+          display: flex;
+          margin-bottom: 15px;
+
+          @include media-breakpoint-up(sm) {
+            display: inline-flex;
+            padding-right: 30px;
+            padding-left: 30px;
+            border-right: solid 1px $grey;
+          }
+
+          i {
+            margin-right: 5px;
+            font-size: 24px;
+            color: $beige;
+          }
+
+          &:first-child {
+            padding-left: 0;
+          }
+
+          &:last-child {
+            border: 0;
+          }
+        }
       }
     }
   }
