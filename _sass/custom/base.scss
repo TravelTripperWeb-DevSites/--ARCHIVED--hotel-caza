@@ -28,6 +28,12 @@ a {
   max-width: 1224px;
 }
 
+.bg-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
 // Custom margins & Paddings
 
 .skip-main {

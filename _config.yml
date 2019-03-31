@@ -75,6 +75,9 @@ page_gen:
 - data: offers
   template: offer_layout
   dir: offers
+- data: 'posts'
+  template: 'blog_layout'
+  dir: 'blog'
 plugins_dir:
 - _plugins-38
 - _plugins

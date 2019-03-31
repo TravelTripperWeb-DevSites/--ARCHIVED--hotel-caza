@@ -1,0 +1,46 @@
+{
+  "title": {
+    "label": "Post Title",
+    "required": true,
+    "localizable": true
+  },
+  "hidden": {
+    "label": "Hidden",
+    "hint": "Hide this post from being published?"
+  },
+  "image": {
+    "label": "Featured Image",
+    "type": "image",
+    "required": false
+  },
+  "meta_description": {
+    "label": "Meta Description",
+    "type": "text",
+    "localizable": true
+  },
+  "url_friendly_name": {
+    "label": "URL Friendly Name",
+    "type": "url_slug",
+    "localizable": true
+  },
+  "date": {
+    "label": "Date Posted",
+    "type": "date",
+    "required": true
+  },
+  "post_content": {
+    "label": "Post Content",
+    "type": "richtext",
+    "required": true,
+    "localizable": true
+  },
+  "post_excerpt": {
+    "label": "Excerpt",
+    "type": "text",
+    "localizable": true
+  },
+  "blog_category": {
+    "type": "open_select",
+    "options": "blog_categories"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "blog_category": "NYC Attractions and Events",
+  "title_localized": {
+    "en": "Come Celebrate 50 Years of the US Open in NYC!"
+  },
+  "meta_description_localized": {
+    "en": "Come and Celebrate the Tennis Championship of the Year with the US Open in NYC"
+  },
+  "url_friendly_name_localized": {
+    "en": "come-celebrate-50-years-of-the-us-open-in-nyc"
+  },
+  "date": "2018-08-01T18:30:00.000Z",
+  "post_content_localized": {
+    "en": "<p><strong>Come and Celebrate the Tennis Championship of the Year with the US Open in NYC</strong></p>\n<p>It&rsquo;s hard to beat the final Grand Slam tennis championship of the year in terms of annual attendance. Taking place in 2018 from Monday, August 27 through Sunday, September 9 at the Billie Jean King National Tennis Center, the <a title=\"US Open in NYC\" href=\"https://www.usopen.org/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">US Open in NYC</a> is expected to draw approximately 700,000 fans to Flushing Meadows.</p>\n<p>Tickets are on sale all summer, and although reserved seating for the marquee court at Arthur Ashe Stadium can be limited, most attendees say that the best way to truly experience this phenomenal event is with a &ldquo;Grounds Pass&rdquo;, allowing access to all of the other courts at the Center.</p>\n<p>No ticket? Don&rsquo;t worry! New York City fully embraces being the home of the final tennis championship of the year and the excitement cannot be held within the gates of the Center. There are other fun events like <a title=\"US Open Community Day\" href=\"https://www.nycgo.com/articles/things-you-need-to-know-about-the-us-open\" target=\"_blank\" rel=\"noopener noreferrer\">US Open Community Day</a> which opens up the grounds for free, allowing all to watch the doubles and juniors compete. Also, the entire week leading up to the tournament has been lovingly dubbed &ldquo;<a title=\"Fan Week\" href=\"https://www.usopen.org/en_US/visit/a_z.html\" target=\"_blank\" rel=\"noopener noreferrer\">Fan Week</a>&rdquo;, with many free events highlighting the lively atmosphere of this &ldquo;only in New York&rdquo; tennis event!</p>\n<p>If you don&rsquo;t plan on going to Flushing Meadows, they&rsquo;re many other ways to catch the action. Bars and restaurants throughout the city host boisterous viewing parties and tennis becomes larger-than-life on the big screen at <a title=\"US Open Live\" href=\"http://nymag.com/news/sports/36435/\" target=\"_blank\" rel=\"noopener noreferrer\">US Open Live</a> in Madison Square Park and Rockefeller Center.</p>\n<p>Why not celebrate the final tennis championship in Grand Slam style with us at The Manhattan Club. Located with convenient access to all of these tennis-inspired attractions, the luxurious comfort of our suites will provide you with the perfect home base for your own personal US Open adventure.</p>"
+  },
+  "image": {
+    "name": "us-open",
+    "content_type": "image/png",
+    "date_added": "2019-03-14-063051",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1552559451/o2fnq0hfnukmgogbqcji.png",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1552559451/o2fnq0hfnukmgogbqcji.png",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1552559451/o2fnq0hfnukmgogbqcji.png",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1552559451/o2fnq0hfnukmgogbqcji.png",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1552559451/o2fnq0hfnukmgogbqcji.png",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1552559451/o2fnq0hfnukmgogbqcji.png",
+    "width": 320,
+    "height": 213,
+    "format": "png",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1552559451/o2fnq0hfnukmgogbqcji.png",
+    "resource_type": "image",
+    "size": 194058,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1552559451/o2fnq0hfnukmgogbqcji.png",
+    "file_size": null,
+    "alt": "Us Open",
+    "caption": "",
+    "description": ""
+  }
+}
