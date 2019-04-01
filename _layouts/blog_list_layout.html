@@ -3,47 +3,7 @@ layout: generic
 ---
 
 <section class="blog">
-<!-- Categories and Search for mobile divices -->
-  <div class="mobile-cat-search">
-    <ul class="nav--filter mobile-cat-search__tabs">
-      <li>
-        <a data-filter="categories" class="filter--option"><span>Categories</span><i class="fal fa-chevron-down"></i></a>
-      </li>
-      <li>
-        <a data-filter="search" class="filter--option"><span>Search</span><i class="fal fa-chevron-down"></i></a>
-      </li>
-    </ul>
-    <div class="categories-wrap filter-item hidden" data-filter="categories">
-      <ul class="categories-list">
-        {% assign categories = site.data._definition_options.blog_categories %}
-        {% for category in categories %}
-        <li>
-          <a href="/blog/category/{{categorylist.url_friendly_name}}/">{{ category }}
-            {% assign count = 0 %}
-            {% for postcount in site.data._models.posts %}
-              {% if postcount.blog_category == category %}
-                {% capture count  %}
-                  {{ count  | plus: '1' }}
-                {% endcapture %}
-              {% endif %}
-            {% endfor %}
-            <span>({{count}})</span>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="blog__search-wrap filter-item hidden" data-filter="search">
-      <div class="blog__search">
-        <form class="search-form" action="/blog/search/" method="get">
-          <input type="text" class="blog__search__box" name="query" id="search-box" placeholder="Enter search keyword(s)" aria-label="Search blogs">
-          <button type="submit" class="blog__search__btn" aria-label="Click to search">
-            <i class="fal fa-search"></i>
-          </button>
-      </form>
-      </div>
-    </div>
-  </div>
+  {% include mobile-cat-search.html %}
   <div class="blog__container">
     <div class="blog__row">
       <div class="blog__list">
@@ -65,8 +25,12 @@ layout: generic
               <a href="/blog/{{post.blog_category | replace: ' ', '-' | replace: '&', ''}}" class="blog__category">{{ post.blog_category }}</a>
             </div>
             <div tabindex="0">
-              {% if post.post_excerpt != "" %}
-              {{ post.post_excerpt }}
+              {% assign excerpt = post.post_excerpt %}
+              {% if excerpt == '' or excerpt == nil %}
+                {% assign excerpt = post.post_content | strip_html | truncatewords: 40  %}
+              {% endif %}
+              {% if excerpt and excerpt != '' %}
+                <p>{{ excerpt }}</p>
               {% endif %}
             </div>
             <div class="btn-holder">
