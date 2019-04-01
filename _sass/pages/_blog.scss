@@ -72,7 +72,7 @@
   &__list {
     @include make-col-ready;
     margin-top: 40px;
-    
+
     @include media-breakpoint-up(md) {
       @include make-col(7.3);
       margin-top: 72px;
@@ -568,7 +568,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 16px 15px;
+        padding: 16px 24px;
         font-size: 16px;
         color: $beige;
         text-transform: uppercase;
@@ -576,6 +576,13 @@
 
         i {
           font-size: 14px;
+          transition: all .3s;
+        }
+
+        &.active {
+          i {
+            transform: rotate(180deg);
+          }
         }
       }
     }
