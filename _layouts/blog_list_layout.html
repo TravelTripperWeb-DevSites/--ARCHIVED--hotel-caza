@@ -3,51 +3,97 @@ layout: generic
 ---
 
 <section class="blog">
-  <div class="blog__row">
-    <div class="blog__list">
-      {% for post in site.data._models.posts %}
-      <div class="blog__item">
-        <figure class="blog__image">
-          <a href="/blog/{{ post.url_friendly_name }}" tabindex="-1">
-            <img src="{{ post.image.url_medium }}" alt="{{ post.title }}">
+<!-- Categories and Search for mobile divices -->
+  <div class="mobile-cat-search">
+    <ul class="nav--filter mobile-cat-search__tabs">
+      <li>
+        <a data-filter="categories" class="filter--option"><span>Categories</span><i class="fal fa-chevron-down"></i></a>
+      </li>
+      <li>
+        <a data-filter="search" class="filter--option"><span>Search</span><i class="fal fa-chevron-down"></i></a>
+      </li>
+    </ul>
+    <div class="categories-wrap filter-item hidden" data-filter="categories">
+      <ul class="categories-list">
+        {% assign categories = site.data._definition_options.blog_categories %}
+        {% for category in categories %}
+        <li>
+          <a href="/blog/category/{{categorylist.url_friendly_name}}/">{{ category }}
+            {% assign count = 0 %}
+            {% for postcount in site.data._models.posts %}
+              {% if postcount.blog_category == category %}
+                {% capture count  %}
+                  {{ count  | plus: '1' }}
+                {% endcapture %}
+              {% endif %}
+            {% endfor %}
+            <span>({{count}})</span>
           </a>
-        </figure>
-        <div class="blog__item__body">
-          <h2 class="h2">
-            <a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a>
-          </h2>
-          <div class="blog__info">
-            <span class="blog__date" tabindex="0">
-              {{ post.date | date: '%B %d, %Y' }}
-            </span>
-            <a href="/blog/{{post.blog_category | replace: ' ', '-' | replace: '&', ''}}" class="blog__category">{{ post.blog_category }}</a>
-          </div>
-          <div tabindex="0">
-            {% if post.post_excerpt != "" %}
-            {{ post.post_excerpt }}
-            {% endif %}
-          </div>
-          <div class="btn-holder">
-            <a class="btn btn--secondary" href="/blog/{{ post.url_friendly_name }}/">Read More</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="blog__search-wrap filter-item hidden" data-filter="search">
+      <div class="blog__search">
+        <form class="search-form" action="/blog/search/" method="get">
+          <input type="text" class="blog__search__box" name="query" id="search-box" placeholder="Enter search keyword(s)" aria-label="Search blogs">
+          <button type="submit" class="blog__search__btn" aria-label="Click to search">
+            <i class="fal fa-search"></i>
+          </button>
+      </form>
+      </div>
+    </div>
+  </div>
+  <div class="blog__container">
+    <div class="blog__row">
+      <div class="blog__list">
+        {% for post in site.data._models.posts %}
+        <div class="blog__item">
+          <figure class="blog__image">
+            <a href="/blog/{{ post.url_friendly_name }}" tabindex="-1">
+              <img src="{{ post.image.url_medium }}" alt="{{ post.title }}">
+            </a>
+          </figure>
+          <div class="blog__item__body">
+            <h2 class="h2">
+              <a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a>
+            </h2>
+            <div class="blog__info">
+              <span class="blog__date" tabindex="0">
+                {{ post.date | date: '%B %d, %Y' }}
+              </span>
+              <a href="/blog/{{post.blog_category | replace: ' ', '-' | replace: '&', ''}}" class="blog__category">{{ post.blog_category }}</a>
+            </div>
+            <div tabindex="0">
+              {% if post.post_excerpt != "" %}
+              {{ post.post_excerpt }}
+              {% endif %}
+            </div>
+            <div class="btn-holder">
+              <a class="btn btn--secondary" href="/blog/{{ post.url_friendly_name }}/">Read More</a>
+            </div>
           </div>
         </div>
-      </div>
-      {% endfor %}
+        {% endfor %}
 
-      {% if data_paginator.total_pages > 1 %}
-      <div class="page-number" tabindex="0">Page: {{ data_paginator.page }} of {{ data_paginator.total_pages }}</div>
-        <ul class="pagination">
-          <li class="page-item {% if data_paginator.previous_page %}{% else %}disabled{% endif %}">
-            <a class="secondary-cta" href="{% if data_paginator.previous_page %}{{ data_paginator.previous_page_path }}{% else %}javascript:void(0);{% endif %}" title="Prevous page">Previous</a>
-          </li>
-          <li class="page-item {% if data_paginator.next_page %}{% else %}disabled{% endif %}">
-            <a class="secondary-cta" href="{% if data_paginator.next_page %}{{ data_paginator.next_page_path }}{% else %}javascript:void(0);{% endif %}" title="Next page">Next</a>
-          </li>
-        </ul>
-      {% endif %}
-    </div>
-    <div class="blog__aside">
-      {% include blog-sidebar.html %}
+        {% if data_paginator.total_pages > 1 %}
+        <div class="page-number" tabindex="0">Page: {{ data_paginator.page }} of {{ data_paginator.total_pages }}</div>
+          <ul class="pagination">
+            <li class="page-item {% if data_paginator.previous_page %}{% else %}disabled{% endif %}">
+              <a class="secondary-cta" href="{% if data_paginator.previous_page %}{{ data_paginator.previous_page_path }}{% else %}javascript:void(0);{% endif %}" title="Prevous page">Previous</a>
+            </li>
+            <li class="page-item {% if data_paginator.next_page %}{% else %}disabled{% endif %}">
+              <a class="secondary-cta" href="{% if data_paginator.next_page %}{{ data_paginator.next_page_path }}{% else %}javascript:void(0);{% endif %}" title="Next page">Next</a>
+            </li>
+          </ul>
+        {% endif %}
+      </div>
+      <div class="blog__aside">
+        {% include blog-sidebar.html %}
+      </div>
     </div>
   </div>
 </section>
+
+{% region cta_banner, type:hero %}
+{% include components/instagram %}

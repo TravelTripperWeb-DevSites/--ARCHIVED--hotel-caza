@@ -1,11 +1,11 @@
 <div class="sps sps--abv">
-  <div class="blog__search-wrap">
-    <p class="heading-5" tabindex="0">Search</p>
+  <div class="blog__search-wrap d-none d-md-block">
+    <p class="blog-sidebar-heading mb-2" tabindex="0">Search</p>
     <div class="blog__search">
       <form class="search-form" action="/blog/search/" method="get">
         <input type="text" class="blog__search__box" name="query" id="search-box" placeholder="Enter search keyword(s)" aria-label="Search blogs">
         <button type="submit" class="blog__search__btn" aria-label="Click to search">
-          <i class="fa fa-search"></i>
+          <i class="fal fa-search"></i>
         </button>
     </form>
     </div>
@@ -13,15 +13,15 @@
 
   <div class="blog__others">
 
-    <p class="heading-5" tabindex="0">Recent Posts</p>
+    <p class="blog-sidebar-heading" tabindex="0">Recent Posts</p>
 
     {% for recentpost in site.data._models.posts | limit: 5 %}
     {% if recentpost.url_friendly_name != page.url_friendly_name %}
     <div class="blog__others__item">
       <a href="/blog/{{recentpost.url_friendly_name }}/">
-        <figure style="background-image:url('{{recentpost.blogimage.url_xsmall}}');" class="bg-cover"></figure>
+        <figure style="background-image:url('{{recentpost.image.url_xsmall}}');" class="bg-cover"></figure>
         <div class="blog__others__item__right">
-          <p class="heading-6" tabindex="0">{{recentpost.title  | truncate: 25 }}</p>
+          <p class="blog-subtitle" tabindex="0">{{recentpost.title  | truncate: 35 }}</p>
           <div class="blog__info">
             <span class="blog__date" tabindex="0">
               {% assign d = recentpost.date | date: "%-d" %}
@@ -37,24 +37,31 @@
     {% endfor %}
   </div>
 
-  <p class="heading-5" tabindex="0">Categories <span class="toggle-arrow"><i class="fa fa-angle-down"></i></span></p>
+  <div class="categories-wrap d-none d-md-block">
+    <p class="blog-sidebar-heading" tabindex="0">Categories</p>
 
-  <ul class="categories-list">
-    {% assign categories = site.data._models.category %}
-    {% for categorylist in categories %}
-    <li>
-      <a href="/blog/category/{{categorylist.url_friendly_name}}/">{{categorylist.title}}
-        {% assign count = 0 %}
-        {% for postcount in site.data._models.blog %}
-          {% if postcount.category.title == categorylist.title %}
-            {% capture count  %}
-              {{ count  | plus: '1' }}
-            {% endcapture %}
-          {% endif %}
-        {% endfor %}
-        <span>({{count}})</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+    <ul class="categories-list">
+      {% assign categories = site.data._definition_options.blog_categories %}
+      {% for category in categories %}
+      <li>
+        <a href="/blog/category/{{categorylist.url_friendly_name}}/">{{ category }}
+          {% assign count = 0 %}
+          {% for postcount in site.data._models.posts %}
+            {% if postcount.blog_category == category %}
+              {% capture count  %}
+                {{ count  | plus: '1' }}
+              {% endcapture %}
+            {% endif %}
+          {% endfor %}
+          <span>({{count}})</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="blog__subscribe">
+    <p>SUBSCRIBE TO THE hotel caza BLOG</p>
+    {% include forms/jotform/blog-subscribe.html %}
+  </div>
 </div>
