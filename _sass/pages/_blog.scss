@@ -71,8 +71,11 @@
   }
   &__list {
     @include make-col-ready;
+    margin-top: 40px;
+    
     @include media-breakpoint-up(md) {
       @include make-col(7.3);
+      margin-top: 72px;
     }
   }
   &__item {
@@ -81,13 +84,6 @@
 
     @include media-breakpoint-up(md) {
       margin-bottom: 72px;
-    }
-
-    &:first-child {
-      margin-top: 40px;
-      @include media-breakpoint-up(md) {
-        margin-top: 72px;
-      }
     }
 
     &__body {
