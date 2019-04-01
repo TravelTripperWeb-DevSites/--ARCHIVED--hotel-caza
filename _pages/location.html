@@ -38,25 +38,27 @@ meta_tags:
     <div class="c-map__tabs">
       <ul class="nav--filter">
       <li>
-        <a data-filter="attractions" class="filter--option active"><i class="icon-attractions"></i><span>Attractions</span></a>
+        <a data-category="Attractions" data-filter="attractions" class="filter--option"><i class="icon-attractions"></i><span>Attractions</span></a>
       </li>
       <li>
-        <a data-filter="entertainment" class="filter--option"><i class="icon-entertainment"></i><span>Entertainment</span></a>
+        <a data-category="Entertainment" data-filter="entertainment" class="filter--option"><i class="icon-entertainment"></i><span>Entertainment</span></a>
       </li>
       <li>
-        <a data-filter="eat-drink" class="filter--option"><i class="icon-eat-drink"></i><span>Eat & Drink</span></a>
+        <a data-category="Eat & Drink" data-filter="eat-drink" class="filter--option"><i class="icon-eat-drink"></i><span>Eat & Drink</span></a>
       </li>
       <li>
-        <a data-filter="shopping" class="filter--option"><i class="icon-shopping"></i><span>Shopping</span></a>
+        <a data-category="Shopping" data-filter="shopping" class="filter--option"><i class="icon-shopping"></i><span>Shopping</span></a>
       </li>
     </ul>
 
-    {% assign attractions = site.data._models.attractions | sort: order %}
+    {% assign attractions = site.data._models.attractions | sort: id %}
     <div class="c-map__tabs__content-group">
       <div class="filter-item c-map__tabs__content active"  data-filter="attractions">
         <div class="location-slider" id="attraction_slider">
+          {% assign indexitem = 0 %}
           {% for attraction in attractions %}
-          <div class="location-slider__item">
+          {% if attraction.category == "Attractions" %}
+          <div class="location-slider__item" data-slider-index="{{ indexitem }}" data-category="Attractions" data-mappable-item="{{ forloop.index0 }}">
             <div class="location-slider__item__image">
               <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
             </div>
@@ -69,6 +71,8 @@ meta_tags:
               </p>
             </div>
           </div>
+          {% assign indexitem = indexitem | plus: 1 %}
+          {% endif %}
           {% endfor %}
         </div>
 
@@ -76,7 +80,9 @@ meta_tags:
           <div class="slide-prev"><span></span></div>
           <div class="slider-nav">
            {% for attraction in attractions %}
+           {% if attraction.category == "Attractions" %}
            <span></span>
+           {% endif %}
            {% endfor %}
           </div>
           <div class="slide-next"><span></span></div>
@@ -84,8 +90,10 @@ meta_tags:
       </div>
       <div class="filter-item c-map__tabs__content hidden"  data-filter="entertainment">
         <div class="location-slider" id="entertainment_slider">
+          {% assign indexitem = 0 %}
           {% for attraction in attractions %}
-          <div class="location-slider__item">
+          {% if attraction.category == "Entertainment" %}
+          <div class="location-slider__item" data-slider-index="{{ indexitem }}" data-slider-index="{{ indexitem }}" data-category="Entertainment" data-mappable-item="{{ forloop.index0 }}">
             <div class="location-slider__item__image">
               <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
             </div>
@@ -98,6 +106,8 @@ meta_tags:
               </p>
             </div>
           </div>
+          {% assign indexitem = indexitem | plus: 1 %}
+          {% endif %}
           {% endfor %}
         </div>
 
@@ -105,7 +115,9 @@ meta_tags:
           <div class="slide-prev"><span></span></div>
           <div class="slider-nav">
            {% for attraction in attractions %}
+           {% if attraction.category == "Entertainment" %}
            <span></span>
+           {% endif %}
            {% endfor %}
           </div>
           <div class="slide-next"><span></span></div>
@@ -113,8 +125,10 @@ meta_tags:
       </div>
       <div class="filter-item c-map__tabs__content hidden"  data-filter="eat-drink">
         <div class="location-slider" id="eatdrink_slider">
+          {% assign indexitem = 0 %}
           {% for attraction in attractions %}
-          <div class="location-slider__item">
+          {% if attraction.category == "Eat & Drink" %}
+          <div class="location-slider__item" data-slider-index="{{ indexitem }}" data-category="Entertainment" data-mappable-item="{{ forloop.index0 }}">
             <div class="location-slider__item__image">
               <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
             </div>
@@ -127,6 +141,8 @@ meta_tags:
               </p>
             </div>
           </div>
+          {% assign indexitem = indexitem | plus: 1 %}
+          {% endif %}
           {% endfor %}
         </div>
 
@@ -134,7 +150,9 @@ meta_tags:
           <div class="slide-prev"><span></span></div>
           <div class="slider-nav">
            {% for attraction in attractions %}
+           {% if attraction.category == "Eat & Drink" %}
            <span></span>
+           {% endif %}
            {% endfor %}
           </div>
           <div class="slide-next"><span></span></div>
@@ -142,8 +160,10 @@ meta_tags:
       </div>
       <div class="filter-item c-map__tabs__content hidden"  data-filter="shopping">
         <div class="location-slider" id="shopping_slider">
+          {% assign indexitem = 0 %}
           {% for attraction in attractions %}
-          <div class="location-slider__item">
+          {% if attraction.category == "Shopping" %}
+          <div class="location-slider__item" data-category="Shopping" data-mappable-item="{{ forloop.index0 }}">
             <div class="location-slider__item__image">
               <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
             </div>
@@ -156,6 +176,8 @@ meta_tags:
               </p>
             </div>
           </div>
+          {% assign indexitem = indexitem | plus: 1 %}
+          {% endif %}
           {% endfor %}
         </div>
 
@@ -163,7 +185,9 @@ meta_tags:
           <div class="slide-prev"><span></span></div>
           <div class="slider-nav">
            {% for attraction in attractions %}
+           {% if attraction.category == "Shopping" %}
            <span></span>
+           {% endif %}
            {% endfor %}
           </div>
           <div class="slide-next"><span></span></div>
@@ -176,7 +200,7 @@ meta_tags:
 
 
 <script type="text/javascript">
-{% assign mapitems = site.data._models.attractions | sort: 'order' %}
+{% assign mapitems = site.data._models.attractions | sort: id %}
   var attractions = [];
   attractions = [
    {% for mapitem in mapitems %}[ '{{ mapitem.name | escape | replace :'&#39;',''}}', {{ mapitem.location.latitude }}, {{ mapitem.location.longitude }}, '{{ mapitem.category }}','{{ mapitem.location.address | split:','| shift | join: ','  | escape | replace :'&#39;','' }}','{{ mapitem.location.google_place.website }}','{{ mapitem.image.url_thumb }}'] {% unless forloop.last %},
@@ -218,18 +242,20 @@ meta_tags:
      }
 
      function targetSlider() {
-       var markerItem = this.options.marker_item - 1;
+       var markerItem = this.options.marker_item-1;
+       var sliderIndex = document.querySelector('div[data-mappable-item="'+markerItem+'"]').dataset.sliderIndex;
+       console.log(this.options.marker_item + ' - '+sliderIndex);
        var markerCategory = this.options.alt;
        var sliderCat = document.getElementById(markerCategory);
 
        if (markerCategory == "Attractions") {
-         slider.attraction_slider.goTo(markerItem);
+         slider.attraction_slider.goTo(sliderIndex);
        }else if(markerCategory == "Entertainment"){
-         slider.entertainment_slider.goTo(markerItem);
+         slider.entertainment_slider.goTo(sliderIndex);
        }else if(markerCategory == "Eat & Drink"){
-         slider.eatdrink_slider.goTo(markerItem);
+         slider.eatdrink_slider.goTo(sliderIndex);
        }else {
-         slider.shopping_slider.goTo(markerItem);
+         slider.shopping_slider.goTo(sliderIndex);
        }
      }
   </script>

@@ -312,8 +312,9 @@ function leafletMap(options) {
 
 
   var handleCategory = function handleCategory(e) {
+    e.stopPropagation();
     var selectedCategory = e.target.dataset.category;
-    var allcategory = document.querySelectorAll('.attractions-filter');
+    var allcategory = document.querySelectorAll('a.attractions-filter');
     allcategory.forEach(function(cat) {
       cat.classList.remove('active');
     });
@@ -336,7 +337,7 @@ function leafletMap(options) {
       if (settings.fitBounds) {
         map.fitBounds(bound);
       }
-    }, 300);
+    }, 400);
   };
 
   var handleSingleAttraction = function handleSingleAttraction(e) {
