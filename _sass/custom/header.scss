@@ -21,16 +21,16 @@
     @include media-breakpoint-up(lg) {
       height: 112px;
     }
+  }
 
-    &+.main {
-      padding-top: 64px;
+  &+.main {
+    padding-top: 64px;
 
-      @include media-breakpoint-up(md) {
-        padding-top: 84px;
-      }
-      @include media-breakpoint-up(lg) {
-        padding-top: 112px;
-      }
+    @include media-breakpoint-up(md) {
+      padding-top: 84px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 112px;
     }
   }
 
@@ -114,13 +114,28 @@
     &__social {
       display: flex;
       align-items: center;
+      justify-content: center;
+      margin-top: 25px;
 
       a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 40px;
         height: 40px;
-        color: $primary;
+        margin: 0 12px;
         background-color: $white;
         border-radius: 50%;
+
+        &:hover {
+          text-decoration: none !important;
+          background-color: $button-color;
+        }
+
+        i {
+          font-size: 22px;
+          color: $primary;
+        }
       }
     }
   }
@@ -213,5 +228,16 @@
         }
       }
     }
+  }
+}
+
+.main {
+  padding-top: 64px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 84px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 112px;
   }
 }

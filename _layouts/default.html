@@ -26,9 +26,14 @@ It contains all of the page structure that should work for any site and ensures 
     {{ site.data.analytics.custom_body  }}
   {% endif %}
 
-  {% include nav-main.html %}
+  <a class="skip-main" href="#main">Skip to main content</a>
 
-  <div class='main'>
+  {% include nav-main.html %}
+  {% if page.url == '/' %}
+    {% include top-banner.html %}
+  {% endif %}
+
+  <div class='main' id="main">
     {{ content }}
   </div>
 

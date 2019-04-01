@@ -1,0 +1,60 @@
+<div class="sps sps--abv">
+  <div class="blog__search-wrap">
+    <p class="heading-5" tabindex="0">Search</p>
+    <div class="blog__search">
+      <form class="search-form" action="/blog/search/" method="get">
+        <input type="text" class="blog__search__box" name="query" id="search-box" placeholder="Enter search keyword(s)" aria-label="Search blogs">
+        <button type="submit" class="blog__search__btn" aria-label="Click to search">
+          <i class="fa fa-search"></i>
+        </button>
+    </form>
+    </div>
+  </div>
+
+  <div class="blog__others">
+
+    <p class="heading-5" tabindex="0">Recent Posts</p>
+
+    {% for recentpost in site.data._models.posts | limit: 5 %}
+    {% if recentpost.url_friendly_name != page.url_friendly_name %}
+    <div class="blog__others__item">
+      <a href="/blog/{{recentpost.url_friendly_name }}/">
+        <figure style="background-image:url('{{recentpost.blogimage.url_xsmall}}');" class="bg-cover"></figure>
+        <div class="blog__others__item__right">
+          <p class="heading-6" tabindex="0">{{recentpost.title  | truncate: 25 }}</p>
+          <div class="blog__info">
+            <span class="blog__date" tabindex="0">
+              {% assign d = recentpost.date | date: "%-d" %}
+              {{ recentpost.date | date: "%B" }}
+              {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+              {{ recentpost.date | date: "%Y" }}
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <p class="heading-5" tabindex="0">Categories <span class="toggle-arrow"><i class="fa fa-angle-down"></i></span></p>
+
+  <ul class="categories-list">
+    {% assign categories = site.data._models.category %}
+    {% for categorylist in categories %}
+    <li>
+      <a href="/blog/category/{{categorylist.url_friendly_name}}/">{{categorylist.title}}
+        {% assign count = 0 %}
+        {% for postcount in site.data._models.blog %}
+          {% if postcount.category.title == categorylist.title %}
+            {% capture count  %}
+              {{ count  | plus: '1' }}
+            {% endcapture %}
+          {% endif %}
+        {% endfor %}
+        <span>({{count}})</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -12,6 +12,7 @@ main:
       label: Location
     - page_id: _pages/blog.html
       label: Blog
+      url: /blog/
     - page_id: _pages/gallery.html
       label: Gallery
     - page_id: _pages/contact.html
