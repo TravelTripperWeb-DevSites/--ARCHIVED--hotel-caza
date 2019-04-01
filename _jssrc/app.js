@@ -3,13 +3,13 @@ function readyDoc(fn) {
  (d.readyState == 'loading') ? d.addEventListener('DOMContentLoaded', fn): fn();
 }
 // Amenities slider
-var forEachloop = function (array, callback, scope) {
+var forEachloop = (array, callback, scope) => {
   for (var i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]); // passes back stuff we need
   }
 };
 // tiny-slider initialisation
-readyDoc(function(){// If DOM is ready
+readyDoc(() => {// If DOM is ready
   if(document.getElementsByClassName("amenities-slider")[0]) {
     var sliders = document.querySelectorAll('.amenities-slider');
     forEachloop(sliders, function (index, value) {
@@ -40,23 +40,29 @@ readyDoc(function(){// If DOM is ready
       });
     });
   }
-  if(document.getElementsByClassName("location-slider")[0]) {
-    var locSliders = document.querySelectorAll('.location-slider');
-    forEachloop(locSliders, function (index, value) {
-      var cont = value.nextElementSibling.children[1];
-      var prevSlide = value.nextElementSibling.children[0];
-      var nextSlide = value.nextElementSibling.children[2];
-      let slider = tns({
-        container: value,
-        navPosition: "bottom",
-        navContainer: cont,
-        prevButton: prevSlide,
-        nextButton: nextSlide,
-        items: 1,
-        loop: false
-      });
-    });
-  }
+  // if(document.getElementsByClassName("location-slider")[0]) {
+  //   var locSliders = document.querySelectorAll('.location-slider');
+  //   forEachloop(locSliders, function (index, value) {
+  //     var cont = value.nextElementSibling.children[1];
+  //     var prevSlide = value.nextElementSibling.children[0];
+  //     var nextSlide = value.nextElementSibling.children[2];
+  //     var slider = tns({
+  //       container: value,
+  //       navPosition: "bottom",
+  //       navContainer: cont,
+  //       prevButton: prevSlide,
+  //       nextButton: nextSlide,
+  //       items: 1,
+  //       loop: false
+  //     });
+  //   });
+  //   console.log(slider.getInfo());
+  // }
+  //map sliders
+
+
+
+
   if(document.getElementsByClassName("rooms-slider")[0]) {
     var roomSlider = tns({
       container: '.rooms-slider',
@@ -130,8 +136,6 @@ readyDoc(function(){// If DOM is ready
           }
       }
   }
-
-  console.log(toggler);
 
   function setClass(els, className, fnName) {
       for (var i = 0; i < els.length; i++) {

@@ -54,7 +54,7 @@ meta_tags:
     {% assign attractions = site.data._models.attractions | sort: order %}
     <div class="c-map__tabs__content-group">
       <div class="filter-item c-map__tabs__content active"  data-filter="attractions">
-        <div class="location-slider">
+        <div class="location-slider" id="attraction_slider">
           {% for attraction in attractions %}
           <div class="location-slider__item">
             <div class="location-slider__item__image">
@@ -83,32 +83,153 @@ meta_tags:
         </div>
       </div>
       <div class="filter-item c-map__tabs__content hidden"  data-filter="entertainment">
-         asd
+        <div class="location-slider" id="entertainment_slider">
+          {% for attraction in attractions %}
+          <div class="location-slider__item">
+            <div class="location-slider__item__image">
+              <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+            </div>
+            <div class="location-slider__item__detail">
+              <p class="h3">{{ attraction.name }}</p>
+              {{ attraction.description }}
+              <p>
+                <a href="https://www.google.com/maps?q={{ attraction.location.address | replace: ' ','+' }}&amp;ll={{ attraction.location.latitude }},{{ attraction.location.longitude }},12z" tabindex="-1" rel="nofollow" target="_blank" class="btn btn--secondary">Show on Map</a>
+                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="slider-control location-slider-control">
+          <div class="slide-prev"><span></span></div>
+          <div class="slider-nav">
+           {% for attraction in attractions %}
+           <span></span>
+           {% endfor %}
+          </div>
+          <div class="slide-next"><span></span></div>
+        </div>
       </div>
       <div class="filter-item c-map__tabs__content hidden"  data-filter="eat-drink">
-         asd
+        <div class="location-slider" id="eatdrink_slider">
+          {% for attraction in attractions %}
+          <div class="location-slider__item">
+            <div class="location-slider__item__image">
+              <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+            </div>
+            <div class="location-slider__item__detail">
+              <p class="h3">{{ attraction.name }}</p>
+              {{ attraction.description }}
+              <p>
+                <a href="https://www.google.com/maps?q={{ attraction.location.address | replace: ' ','+' }}&amp;ll={{ attraction.location.latitude }},{{ attraction.location.longitude }},12z" tabindex="-1" rel="nofollow" target="_blank" class="btn btn--secondary">Show on Map</a>
+                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="slider-control location-slider-control">
+          <div class="slide-prev"><span></span></div>
+          <div class="slider-nav">
+           {% for attraction in attractions %}
+           <span></span>
+           {% endfor %}
+          </div>
+          <div class="slide-next"><span></span></div>
+        </div>
       </div>
       <div class="filter-item c-map__tabs__content hidden"  data-filter="shopping">
-         asd
+        <div class="location-slider" id="shopping_slider">
+          {% for attraction in attractions %}
+          <div class="location-slider__item">
+            <div class="location-slider__item__image">
+              <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+            </div>
+            <div class="location-slider__item__detail">
+              <p class="h3">{{ attraction.name }}</p>
+              {{ attraction.description }}
+              <p>
+                <a href="https://www.google.com/maps?q={{ attraction.location.address | replace: ' ','+' }}&amp;ll={{ attraction.location.latitude }},{{ attraction.location.longitude }},12z" tabindex="-1" rel="nofollow" target="_blank" class="btn btn--secondary">Show on Map</a>
+                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="slider-control location-slider-control">
+          <div class="slide-prev"><span></span></div>
+          <div class="slider-nav">
+           {% for attraction in attractions %}
+           <span></span>
+           {% endfor %}
+          </div>
+          <div class="slide-next"><span></span></div>
+        </div>
       </div>
     </div>
     </div>
   </div>
 </div>
-<script>
- // Our markers for example only
- var attractions = [
-   //hint ['title', lat, long, 'category','Address or detail','External web link' ]
-   ['Marcellino Ristorante', 33.498956, -111.928475, 'restaurants','7114 E Stetson Dr,<br> Scottsdale, AZ 85251, USA','http://marcellinoristorante.com/'] ,['Salt River Fields', 33.545258, -111.884422, 'attractions','7555 N Pima Rd, <br>Scottsdale, AZ 85258, USA','https://saltriverfields.com'] ,['Desert Botanical Gardens', 33.460598, -111.947776, 'attractions','1201 N Galvin Pkwy,<br> Phoenix, AZ 85008, USA','https://www.dbg.org'] ,['Camelback Mountain', 33.515059, -111.961913, 'attractions','Phoenix, AZ 85018, USA','https://www.phoenix.gov/parks/trails/locations/camelback-mountain'] ,['AZ/88', 33.492750, -111.923056, 'restaurants','7353 E Scottsdale Mall,<br> Scottsdale, AZ 85251, USA','#'] ,['Don & Charlie’s', 33.501912, -111.920203, 'restaurants','7501 E Camelback Rd, <br>Scottsdale, AZ 85251, USA','http://donandcharlies.com/Don & Charlie’s'] ,['Casino Arizona', 33.454380, -111.885694, 'attractions','524 N 92nd St,<br> Scottsdale, AZ 85256, USA','https://www.casinoarizona.com/'] ,['Postino', 33.506946, -111.925779, 'restaurants','4821 N Scottsdale Rd, <br>Scottsdale, AZ 85251, USA','https://www.postinowinecafe.com/ '] ,['Grazie Pizzeria & Wine Bar', 33.493165, -111.931031, 'restaurants','6952 E Main St,<br> Scottsdale, AZ 85251, USA','http://grazie.us/'] ,['Daily Dose', 33.494340, -111.926499, 'restaurants','4020 N Scottsdale Rd # 101,<br> Scottsdale, AZ 85251, USA','http://www.dailydosegrill.com/'] ,['Salt River Fields', 33.545258, -111.884422, 'attractions','7555 N Pima Rd,<br> Scottsdale, AZ 85258, USA','https://saltriverfields.com/'] ,['Talking Stick Resort & Casino ', 33.540113, -111.869849, 'attractions','9800 Talking Stick Way<br>, Scottsdale, AZ 85256, USA','#'] ,['Citizen Public House', 33.498027, -111.928016, 'restaurants','7111 E 5th Ave,<br> Scottsdale, AZ 85251, USA','https://www.citizenpublichouse.com/'] ,['Scottsdale Fashion Square', 33.502748, -111.929341, 'shopping','7014 E Camelback Rd,<br> Scottsdale, AZ 85251, USA','http://www.fashionsquare.com/'] ,['Malee’s Thai Bistro', 33.492969, -111.927783, 'restaurants','7131 E Main St, <br>Scottsdale, AZ 85251, USA','http://www.maleesonmain.com/'] ,['Downtown Phoenix ', 33.488985, -111.928892, 'attractions','Phoenix, AZ, USA','http://dtphx.org/'] ,['TPC Scottsdale', 33.640576, -111.908868, 'attractions','17020 N Hayden Rd,<br> Scottsdale, AZ 85255, USA','#'] ,['Brat Haus', 33.490025, -111.926282, 'restaurants','3622 N Scottsdale Rd <br> Scottsdale, AZ <br> 85281','http://www.brathausaz.com/'] ,['Tempe Marketplace', 33.431813, -111.904185, 'shopping','2000 E Rio Salado Pkwy,<br> Tempe, AZ 85281, USA','http://www.tempemarketplace.com/'] ,['Pasta Brioni', 33.500356, -111.918608, 'restaurants','4416 N Miller Rd, <br>Scottsdale, AZ 85251, USA','http://pastabrioni.com/'] ,['The House Brasserie', 33.493370, -111.931245, 'restaurants','6936 E Main St,<br> Scottsdale, AZ 85251, USA','https://www.thehousebrasserie.com/'] ,['Kierland Commons', 33.624519, -111.928656, 'shopping','15205 N Kierland Blvd #150,<br> Scottsdale, AZ 85254, USA','http://www.kierlandcommons.com/'] ,['Hula’s Modern Tiki', 33.493811, -111.925641, 'restaurants','7213 E 1st Ave, <br>Scottsdale, AZ 85251, USA','http://www.hulasmoderntiki.com/'] ,['Roaring Fork', 33.508679, -111.926689, 'restaurants','4800 N Scottsdale Rd,<br> Scottsdale, AZ 85251, USA','http://roaringfork.com/scottsdale/'] ,['Entertainment District', 33.540113, -111.869849, 'attractions','Scottsdale, AZ 85251, USA','https://www.experiencescottsdale.com/nightlife/'] ,['Sky Harbor International Airport', 33.437269, -112.007788, 'attractions','3400 E Sky Harbor Blvd, Phoenix, <br />AZ 85034, USA','https://www.skyharbor.com/'] ,['P.F. Chang’s', 33.501832, -111.928078, 'restaurants','7135 E Camelback Rd., Ste 101,<br> Scottsdale, AZ 85251, United States','https://www.pfchangs.com/'] ,['Virtu Honest Craft', 33.490704, -111.927992, 'restaurants','3701 N Marshall Way, <br>Scottsdale, AZ 85251, USA','http://www.virtuscottsdale.com/'] ,['Scottsdale Stadium', 33.489133, -111.920529, 'attractions','7408 E Osborn Rd, <br>Scottsdale, AZ 85251, USA','http://www.scottsdaleaz.gov/scottsdale-stadium'] ,['Culinary Dropout', 33.501877, -111.927323, 'restaurants','7135 E Camelback Rd #125,<br> Scottsdale, AZ 85251, USA','http://www.culinarydropout.com/location/scottsdale/'] ,['Cien Agaves', 33.494216, -111.925338, 'restaurants','7228 E 1st Ave,<br> Scottsdale, AZ 85251, USA','https://www.cienagaves.com/'] ,['Old Town Scottsdale', 33.483715, -111.918786, 'attractions','Scottsdale, AZ, USA','https://www.visitphoenix.com/listing/old-town-scottsdale/4247/'] ,['David Wright House', 33.501413, -111.969056, 'attractions','4505 N Rubicon Ave, <br>Phoenix, AZ 85018, USA','http://davidwrighthouse.org/'] ,['Cowboy Ciao', 33.499170, -111.927425, 'restaurants','7133 E Stetson Dr, <br>Scottsdale, AZ 85251, USA','http://cowboyciao.com/'] ,['Morning Squeeze', 33.497738, -111.925904, 'restaurants','4233 N Scottsdale Rd, <br>Scottsdale, AZ 85251, USA','http://morningsqueeze.com/'] ,['Biltmore Fashion Park', 33.510874, -112.027937, 'shopping','2502 E Camelback Rd,<br> Phoenix, AZ 85016, USA','http://www.shopbiltmore.com/'] ,['Scottsdale Quarter', 33.623303, -111.923110, 'shopping','15059 N Scottsdale Rd,<br> Scottsdale,  AZ 85254, USA','https://scottsdalequarter.com/'] ,['Phoenix Zoo', 33.449821, -111.949203, 'attractions','455 N Galvin Pkwy,<br> Phoenix, AZ 85008, USA','http://www.phoenixzoo.org/'] ,['RA Sushi', 33.491978, -111.925902, 'restaurants','3815 N Scottsdale Rd,<br> Scottsdale, AZ 85251, USA','https://rasushi.com/old-town/'] ,['The Mission Old Town', 33.491877, -111.924256, 'restaurants','3815 N Brown Ave, <br>Scottsdale, AZ 85251, USA','https://www.themissionaz.com/'] ,['The Scott Grill ', 33.508855, -111.924906, 'restaurants','<br>4925 N Scottsdale Rd,<br> Scottsdale, AZ 85251, USA','https://scottsbarandgrill.com'] ,['Bandera', 33.492427, -111.925805, 'restaurants','3821 N Scottsdale Rd, <br>Scottsdale, AZ 85251, USA','http://banderarestaurants.com/locations/scottsdale/'] ,['Cafe Monarch', 33.494221, -111.931456, 'restaurants','6934 E 1st Ave #102,<br> Scottsdale, AZ 85251, USA','https://www.cafemonarch.com/'] ,['Scottsdale Waterfront', 33.501592, -111.927612, 'attractions','7135 E Camelback Rd #165,<br> Scottsdale, AZ 85251, USA','http://scottsdalewaterfrontshopping.com/'] ,['Olive & Ivy', 33.500190, -111.928394, 'restaurants','7135 E Camelback Rd #195,<br> Scottsdale, AZ 85251, USA','https://www.foxrc.com/restaurants/olive-ivy-restaurant-marketplace/'] ,['Artwalk District', 33.493279, -111.929253, 'attractions','E Main St,<br> Scottsdale, AZ 85251, USA','http://scottsdalegalleries.com/about/map/']
- ];
+
+
+<script type="text/javascript">
+{% assign mapitems = site.data._models.attractions | sort: 'order' %}
+  var attractions = [];
+  attractions = [
+   {% for mapitem in mapitems %}[ '{{ mapitem.name | escape | replace :'&#39;',''}}', {{ mapitem.location.latitude }}, {{ mapitem.location.longitude }}, '{{ mapitem.category }}','{{ mapitem.location.address | split:','| shift | join: ','  | escape | replace :'&#39;','' }}','{{ mapitem.location.google_place.website }}','{{ mapitem.image.url_thumb }}'] {% unless forloop.last %},
+   {% endunless %}{% endfor %} ];
 </script>
 <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
+<script src="/assets/js/leaflet-plugin.js"></script>
 <script type="text/javascript">
      var leaflet = LeafletMap({
        target: document.getElementById('leafletmap'),
-       fitBounds: true,
+       hotelTitle: '{{ site.data.hotel_settings.name }}',
+       hotelAddress: '{{ site.data.hotel_settings.address.street1 }}, {{ site.data.hotel_settings.address.city }} {{ site.data.hotel_settings.address.state }}{{ site.data.hotel_settings.address.zip_code }}',
+       hotelLat: {{ site.data.hotel_settings.latitude }},
+       hotelLong: {{ site.data.hotel_settings.longitude }},
+       zoom: 16,
        markerSize: [56, 56],
-       attractionsList: attractions
+       attractionsList: attractions,
+       markerClickAction: targetSlider
      });
      leaflet.init();
+
+     if(document.getElementsByClassName("location-slider")[0]) {
+       var slider = {};
+       var locSliders = document.querySelectorAll('.location-slider');
+       forEachloop(locSliders, function (index, value) {
+         var cont = value.nextElementSibling.children[1];
+         var prevSlide = value.nextElementSibling.children[0];
+         var nextSlide = value.nextElementSibling.children[2];
+         slider[value.attributes.id.nodeValue] = tns({
+           container: value,
+           navPosition: "bottom",
+           navContainer: cont,
+           prevButton: prevSlide,
+           nextButton: nextSlide,
+           items: 1,
+           loop: false
+         });
+       });
+     }
+
+     function targetSlider() {
+       var markerItem = this.options.marker_item - 1;
+       var markerCategory = this.options.alt;
+       var sliderCat = document.getElementById(markerCategory);
+
+       if (markerCategory == "Attractions") {
+         slider.attraction_slider.goTo(markerItem);
+       }else if(markerCategory == "Entertainment"){
+         slider.entertainment_slider.goTo(markerItem);
+       }else if(markerCategory == "Eat & Drink"){
+         slider.eatdrink_slider.goTo(markerItem);
+       }else {
+         slider.shopping_slider.goTo(markerItem);
+       }
+     }
   </script>

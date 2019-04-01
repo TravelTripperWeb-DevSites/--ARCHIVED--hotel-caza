@@ -34,12 +34,14 @@
     min-height: 400px;
     @include media-breakpoint-up(md) {
       @include make-col(7.4);
+      height: 728px;
     }
   }
 
   &__tabs {
     @include make-col-ready;
     min-height: 400px;
+    background-color: $primary;
     @include media-breakpoint-up(md) {
       @include make-col(4.6);
       padding: 0;
@@ -59,7 +61,8 @@
       margin: 0;
       padding: 0;
       list-style-type: none;
-
+      background-color: $white;
+      
       li {
         flex: 1 auto;
         text-align: center;
@@ -149,6 +152,7 @@
   background-color: $primary !important;
 }
 .leaflet-popup-content-wrapper {
+  max-width: 200px;
   padding: 10px;
   border-radius: 0 !important;
   color: $white;
