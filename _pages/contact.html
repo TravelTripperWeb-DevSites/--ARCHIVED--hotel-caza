@@ -14,12 +14,21 @@ published_localized:
 
 ---
 
-<div class="light-bg tb-padding home-intro">
+<div class="light-bg tb-padding home-intro contact-intro">
   <div class="col-img-detail">
     <div class="col-img-detail__wrap">
       <div class="col-img-detail__detail">
         <div class="box">
-          {% region intro_two_col, type:html %}
+          <p class="h4">Our Address</p>
+          <p>495 Beach Street, San Francisco, California, 94133</p>
+          <p><a href="#" class="btn--primary">get directions</a></p>
+          <div class="contact-info">
+            <span><p class="h4">Reservations</p>
+            <a href="tel:0861-444-435" title="Reservations">0861 444 435</a></span>
+            <span><p class="h4">email</p>
+            <a href="mailto:res-hi-sf-wharf@ihg.com" title="Email">res-hi-sf-wharf@ihg.com</a></span>
+          </div>
+          <p>For further assistance feel free to fill out the form below or call the hotel directly</p>
         </div>
       </div>
       <div class="col-img-detail__image">
@@ -27,4 +36,74 @@ published_localized:
       </div>
     </div>
   </div>
+</div>
+
+<div class="contact-form">
+  <p class="h2">contact form</p>
+  <p>Required fields are marked *</p>
+    <form>
+    <div class="contact-form__wrapper">
+      <div class="form-group contact-form__half-col">
+        <label>Name</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your first name">
+      </div>
+      <div class="form-group contact-form__half-col">
+        <label>Surname</label>
+        <input type="text" class="form-control" id="inputPassword4" placeholder="Enter your surname*">
+      </div>
+    </div>
+
+    <div class="contact-form__wrapper">
+      <div class="form-group contact-form__half-col">
+        <label>Phone number</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your telephone number*">
+      </div>
+      <div class="form-group contact-form__half-col">
+        <label>email address</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your email address*">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="contact-form__wrapper">
+        <div class="contact-form__five-col">
+          <label>Arrive</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="contact-form__five-col">
+          <label>Depart</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="contact-form__five-col">
+          <label></label>
+          <input type="number" class="form-control" id="inputZip" placeholder="Rooms">
+        </div>
+        <div class="contact-form__five-col">
+          <label></label>
+          <input type="number" class="form-control" id="inputZip" placeholder="Adults">
+        </div>
+        <div class="contact-form__five-col">
+          <label></label>
+          <input type="number" class="form-control" id="inputZip" placeholder="Children">
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form__wrapper">
+      <div class="contact-form__full-col">
+        <label>Your Message</label>
+        <textarea name="name" class="form-control" placeholder="Type your message*" cols="40" rows="8"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-check">
+        <input type="checkbox" class="" id="agree">
+        <label class="form-check-label" for="agree">
+          I agree to the Terms of Use & Privacy Policy
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn--primary submit-contact">Submit</button>
+  </form>
 </div>
