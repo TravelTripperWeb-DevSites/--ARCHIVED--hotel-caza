@@ -7,8 +7,10 @@ layout: generic
   <div class="blog__container">
     <div class="blog__row">
       <div class="blog__list">
-        {% for post in site.data._models.posts %}
-        <div class="blog__item">
+        {% assign blog-posts = site.data._models.posts | sort: 'date' | reverse %}
+        {% for post in blog-posts %}
+        {% if post.category == page.category %}
+        <div class="blog__item filter-item" data-filter="{{ post.blog_category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
           <figure class="blog__image">
             <a href="/blog/{{ post.url_friendly_name }}" tabindex="-1">
               <img src="{{ post.image.url_medium }}" alt="{{ post.title }}">
@@ -22,7 +24,7 @@ layout: generic
               <span class="blog__date" tabindex="0">
                 {{ post.date | date: '%B %d, %Y' }}
               </span>
-              <a href="/blog/{{post.blog_category | replace: ' ', '-' | replace: '&', ''}}" class="blog__category">{{ post.blog_category }}</a>
+              <a href="/blog/?c={{ post.blog_category | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category }}</a>
             </div>
             <div tabindex="0">
               {% assign excerpt = post.post_excerpt %}
@@ -38,6 +40,7 @@ layout: generic
             </div>
           </div>
         </div>
+        {% endif %}
         {% endfor %}
 
         {% if data_paginator.total_pages > 1 %}

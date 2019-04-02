@@ -72,9 +72,11 @@
   &__list {
     @include make-col-ready;
     margin-top: 40px;
+    padding-right: 24px;
+    padding-left: 24px;
 
     @include media-breakpoint-up(md) {
-      @include make-col(7.3);
+      @include make-col(7.5);
       margin-top: 72px;
     }
   }
@@ -101,12 +103,6 @@
         &:hover {
           text-decoration: none;
         }
-      }
-    }
-    p {
-      margin-bottom: 25px;
-      a {
-        font-weight: bold;
       }
     }
   }
@@ -145,6 +141,7 @@
     font-family: $family-primary;
     line-height: normal;
     color: $beige;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all .3s;
@@ -398,13 +395,12 @@
   &--single {
     .blog__item {
       background-color: transparent;
-      .heading-2 {
-        margin-bottom: 15px;
-        line-height: normal;
+      .h2 {
+        margin-bottom: 20px;
         color: $primary;
       }
-      h4 {
-        margin-bottom: 20px;
+      .h4 {
+        margin-bottom: 15px;
         color: $primary;
         a {
           color: $primary;
@@ -412,31 +408,59 @@
       }
       p {
         a {
-          color: $primary;
+          color: $beige;
+          text-decoration: underline;
         }
       }
       img {
         width: 100%;
         height: auto;
       }
+
+      .blog__info {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__social {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px 0 0;
+      border-top: solid 1px $secondary;
+
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        align-items: center;
+      }
     }
   }
   &__share {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: solid 1px $grey;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
     span {
       display: inline-block;
       font-family: $family-primary;
-      color: $black;
+      font-size: 14px;
+      color: $secondary;
+      text-transform: uppercase;
+      letter-spacing: 1.75px;
     }
     a {
       display: inline-block;
-      padding:  5px;
-      font-size: 14px;
-      color: $black;
+      width: 24px;
+      height: 24px;
+      margin-left: 20px;
+      font-size: 11px;
+      color: $primary;
+      text-align: center;
+      background-color: $white;
+      border-radius: 50%;
       &:hover {
-        color: $primary;
+        color: $white;
+        background-color: $primary;
       }
     }
   }

@@ -13,7 +13,7 @@
         {% assign categories = site.data._definition_options.blog_categories %}
         {% for category in categories %}
         <li>
-          <a href="/blog/category/{{categorylist.url_friendly_name}}/">{{ category }}
+          <a href="/blog/?c={{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category }}
             {% assign count = 0 %}
             {% for postcount in site.data._models.posts %}
               {% if postcount.blog_category == category %}

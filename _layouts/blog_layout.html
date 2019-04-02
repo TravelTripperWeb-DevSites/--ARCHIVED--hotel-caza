@@ -4,7 +4,7 @@ layout: default
 
 {% assign post = page.data %}
 
-<section class="hero " style="background-image: url('post.image.url_xlarge');"></section>
+<section class="hero hero--blog" style="background-image: url('{{ post.image.url_xlarge }}');"></section>
 
 <section class="blog blog--single">
   <div class="blog__container">
@@ -12,7 +12,7 @@ layout: default
       <div class="blog__list">
         <div class="blog__item">
           <h1 class="h2" tabindex="0">{{ post.title }}</h1>
-          <h2 class="blog__info">
+          <div class="blog__info">
             <span class="blog__date" tabindex="0">
               {% assign d = post.date | date: "%-d" %}
               {{ post.date | date: "%B" }}
@@ -20,24 +20,26 @@ layout: default
               {{ post.date | date: "%Y" }}
             </span>
   					{% if post.blog_category %}
-  					<a href="/blog/{{post.blog_category | replace: ' ', '-' | replace: '&', ''}}" class="blog__category">{{ post.blog_category }}</a>
+  					<a href="/blog/?c={{ post.blog_category | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category }}</a>
   					{% endif %}
-          </h2>
+          </div>
 
           <!-- <figure class="blog__image">
             <img src="{{ post.blogimage.url_medium }}" alt="{{ post.title }}">
           </figure> -->
 
           <div tabindex="0">
-            {{ post.content }}
+            {{ post.post_content }}
           </div>
 
-          <div class="blog__share">
-            {% include social-share.html %}
-          </div>
+          <div class="blog--single__social">
+            <div class="blog__share">
+              {% include social-share.html %}
+            </div>
 
-          <div class="btn-holder">
-            <a href="/blog/" class="primary-btn">See all blog posts</a>
+            <div class="btn-holder">
+              <a href="/blog/" class="btn btn--secondary">See all blog posts</a>
+            </div>
           </div>
         </div>
       </div>

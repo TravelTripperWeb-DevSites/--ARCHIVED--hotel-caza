@@ -15,7 +15,8 @@
 
     <p class="blog-sidebar-heading" tabindex="0">Recent Posts</p>
 
-    {% for recentpost in site.data._models.posts | limit: 5 %}
+    {% assign recentposts = site.data._models.posts | sort: 'date' | reverse %}
+    {% for recentpost in recentposts | limit: 5 %}
     {% if recentpost.url_friendly_name != page.url_friendly_name %}
     <div class="blog__others__item">
       <a href="/blog/{{recentpost.url_friendly_name }}/">
@@ -37,6 +38,13 @@
     {% endfor %}
   </div>
 
+  <select class="custom-select form-control" id="js-categoryfilter" style="display:none;">
+        <option selected value="all">Choose a Category</option>
+        {% for category in site.data._definition_options.blog_categories %}
+          <option value="{{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">category</option>
+        {% endfor %}
+      </select>
+
   <div class="categories-wrap d-none d-md-block">
     <p class="blog-sidebar-heading" tabindex="0">Categories</p>
 
@@ -44,7 +52,7 @@
       {% assign categories = site.data._definition_options.blog_categories %}
       {% for category in categories %}
       <li>
-        <a href="/blog/category/{{categorylist.url_friendly_name}}/">{{ category }}
+        <a href="/blog/?c={{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category }}
           {% assign count = 0 %}
           {% for postcount in site.data._models.posts %}
             {% if postcount.blog_category == category %}

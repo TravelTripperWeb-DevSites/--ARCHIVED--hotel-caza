@@ -30,6 +30,13 @@
     margin-bottom: 20px;
     color: $white;
   }
+
+  &--blog {
+    height: 272px;
+    @include media-breakpoint-up(md) {
+      height: 700px;
+    }
+  }
 }
 //slider control
 .slider-control {

@@ -524,3 +524,71 @@ readyDoc(function () {
     }
   }
 }); // End of docready
+
+// Blog category filter
+
+document.ready(function () {
+  var optionFilter = document.getElementById('js-categoryfilter');
+  if (optionFilter) {
+    filterSetup(optionFilter);
+  }
+
+  function displayItems(filterValue, allItems) {
+    var filteredItems = allItems.filter(function (image) {
+      return image.getAttribute('data-filter') === filterValue;
+    });
+    var hiddenItems = allItems.filter(function (image) {
+      return image.classList.contains('hidden');
+    });
+
+    if (filterValue === 'all') {
+      hiddenItems.forEach(function (image) {
+        fade(image, 'in', 500);
+      });
+    } else {
+      allItems.forEach(function (image) {
+        image.classList.add('hidden');
+      });
+
+      filteredItems.forEach(function (image) {
+        fade(image, 'in', 500);
+      });
+    }
+  }
+
+  function filterSetup(filter) {
+    var allItems = [].slice.call(document.getElementsByClassName('filter-item'));
+    var filterValue = void 0;
+
+    function getUrlVars() {
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+        vars[key] = value;
+      });
+      return vars;
+    }
+
+    if (getUrlVars()["c"]) {
+      var cat = getUrlVars()["c"];
+      var categoryOptions = [].slice.call(document.getElementById('js-categoryfilter').getElementsByTagName("option"));
+      categoryOptions.forEach(function (option) {
+        option.removeAttribute("selected");
+        if (option.value === cat) {
+          option.setAttribute("selected", true);
+        }
+        displayItems(cat, allItems);
+      });
+    }
+
+    filter.onchange = function (event) {
+      displayItems(event.target.value, allItems);
+    };
+  }
+});
+
+// Pinterest Share
+
+function pinterestShare(img, desc) {
+  window.open("//www.pinterest.com/pin/create/button/" + "?url=" + window.location.href + "&media=" + img + "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
+  return false;
+}
