@@ -274,6 +274,41 @@ meta_tags:
 </div>
 
 
+
+{% assign around = site.data._models.getting-around | sort: order %}
+<div class="col-amenities pb-5 light-bg" id="amenities">
+  <div class="logo-amenities">
+      <p class="h2"><span>Getting Around</span></p>
+  </div>
+  <div class="col-amenities__items">
+    <div class="col-amenities__items__wrap">
+
+      <div class="col-amenities__items__slider">
+        <div class="amenities-slider">
+          {% for amenity in around %}
+            <div class="slide-item1">
+             <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+             <p class="h3">{{ amenity.name }}</p>
+             <p>{{ amenity.description }}</p>
+            </div>
+           {% endfor %}
+        </div>
+        <div class="slider-control">
+          <div class="slide-prev"><span></span></div>
+          <div class="slider-nav">
+              {% for amenity in around %}
+              <span></span>
+              {% endfor %}
+          </div>
+          <div class="slide-next"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script type="text/javascript">
 {% assign mapitems = site.data._models.attractions | sort: 'id' %}
   var attractions = [];
