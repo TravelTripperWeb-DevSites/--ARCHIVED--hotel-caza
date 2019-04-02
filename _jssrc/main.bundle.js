@@ -43,26 +43,6 @@ readyDoc(function () {
       });
     });
   }
-  // if(document.getElementsByClassName("location-slider")[0]) {
-  //   var locSliders = document.querySelectorAll('.location-slider');
-  //   forEachloop(locSliders, function (index, value) {
-  //     var cont = value.nextElementSibling.children[1];
-  //     var prevSlide = value.nextElementSibling.children[0];
-  //     var nextSlide = value.nextElementSibling.children[2];
-  //     var slider = tns({
-  //       container: value,
-  //       navPosition: "bottom",
-  //       navContainer: cont,
-  //       prevButton: prevSlide,
-  //       nextButton: nextSlide,
-  //       items: 1,
-  //       loop: false
-  //     });
-  //   });
-  //   console.log(slider.getInfo());
-  // }
-  //map sliders
-
 
   if (document.getElementsByClassName("rooms-slider")[0]) {
     var roomSlider = tns({
@@ -126,11 +106,29 @@ readyDoc(function () {
   var panel = document.getElementsByClassName('attractions-mobile__content');
 
   for (var i = 0; i < acc.length; i++) {
-    acc[i].onclick = function () {
+
+    acc[i].onclick = function (e) {
+      for (var i = 0; i < acc.length; i++) {
+        if (this != acc[i]) {
+          acc[i].children[1].children[0].innerHTML = "More";
+          acc[i].children[1].children[1].classList.remove('fa-minus');
+          acc[i].children[1].children[1].classList.add('fa-plus');
+        }
+      }
+
       var setClasses = !this.classList.contains('active');
       setClass(acc, 'active', 'remove');
       setClass(panel, 'active', 'remove');
-
+      if (this.children[1].children[0].innerHTML == "More") {
+        this.children[1].children[0].innerHTML = "Less";
+        this.children[1].children[1].classList.add('fa-minus');
+        this.children[1].children[1].classList.remove('fa-plus');
+      } else {
+        this.children[1].children[0].innerHTML = "More";
+        this.children[1].children[1].classList.add('fa-plus');
+        this.children[1].children[1].classList.remove('fa-minus');
+        this.children[1].children[1].classList.remove('fa-minus');
+      }
       if (setClasses) {
         this.classList.toggle("active");
         this.nextElementSibling.classList.toggle("active");

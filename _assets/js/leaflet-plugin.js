@@ -114,7 +114,7 @@ function leafletMap(options) {
 
 
   if (!String.prototype.trim) {
-    String.prototype.trim = function () {
+    String.prototype.trim = function() {
       return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
     };
   } //
@@ -133,7 +133,7 @@ function leafletMap(options) {
 
   var settings = extend(defaults, options || {});
 
-  publicMethods.init = function () {
+  publicMethods.init = function() {
     var mapID = settings.target;
     var isAttractions = mapID.dataset.attractions || false;
 
@@ -148,7 +148,7 @@ function leafletMap(options) {
         scrollWheelZoom: settings.scrollWheelZoom
       }); // Enable/Disable scrolling zoom map after clicking on it
 
-      map.on('click', function () {
+      map.on('click', function() {
         if (!settings.scrollWheelZoom && settings.scrollOnClick) {
           if (map.scrollWheelZoom.enabled()) {
             // if scroll is already enabled then clicking should disable it
@@ -170,7 +170,7 @@ function leafletMap(options) {
         title: settings.hotelTitle,
         alt: 'Hotel Map Marker',
         icon: hotelIcon
-      }).bindPopup("<div class=\"map-loc-detail\"><h4><a target='_blank' rel='nofollow' href='http://maps.google.com/?q="+settings.hotelTitle+"+"+settings.hotelAddress+"'>".concat(settings.hotelTitle, "</a></h4> ").concat(settings.hotelAddress)+"</div>").addTo(map);
+      }).bindPopup("<div class=\"map-loc-detail\"><h4><a target='_blank' rel='nofollow' href='http://maps.google.com/?q=" + settings.hotelTitle + "+" + settings.hotelAddress + "'>".concat(settings.hotelTitle, "</a></h4> ").concat(settings.hotelAddress) + "</div>").addTo(map);
 
       if (isAttractions) {
         loadAttractionMarkers(map, marker, settings);
@@ -211,7 +211,7 @@ function leafletMap(options) {
         if (options.googleLink) {
           infoText = "<a href=\"http://maps.google.com/maps?q=".concat(attractionsArray[i][0], "+").concat(attractionsArray[i][4], "\" target=\"_blank\"><h4>").concat(attractionsArray[i][0], "</h4>").concat(attractionsArray[i][4], "</a>");
         } else if (!options.websiteLink && options.getDirectionBtn) {
-          infoText = "<img src=\""+attractionsArray[i][6]+"\" alt=\""+attractionsArray[i][0]+"\"><div class=\"map-loc-detail\"><h4>".concat(attractionsArray[i][0], "</h4>").concat("\n<a class=\"btnDirection\" href=\"http://maps.google.com/maps?q=").concat(encodeURIComponent(attractionsArray[i][0]).replace(/ /g, '+'), "+").concat(encodeURIComponent(attractionsArray[i][4]).replace(/ /g, '+'), "\" target=\"_blank\">").concat(options.getDirectionBtnLabel, "</a></div>");
+          infoText = "<img src=\"" + attractionsArray[i][6] + "\" alt=\"" + attractionsArray[i][0] + "\"><div class=\"map-loc-detail\"><h4>".concat(attractionsArray[i][0], "</h4>").concat("\n<a class=\"btnDirection\" href=\"http://maps.google.com/maps?q=").concat(encodeURIComponent(attractionsArray[i][0]).replace(/ /g, '+'), "+").concat(encodeURIComponent(attractionsArray[i][4]).replace(/ /g, '+'), "\" target=\"_blank\">").concat(options.getDirectionBtnLabel, "</a></div>");
         } else if (options.websiteLink && !options.getDirectionBtn) {
           infoText = "<h4><a href=\"".concat(attractionsArray[i][5], "\">").concat(attractionsArray[i][0], "</a></h4>").concat(attractionsArray[i][4]);
         } else if (options.websiteLink && options.getDirectionBtn) {
@@ -252,7 +252,7 @@ function leafletMap(options) {
       } //end for
 
 
-      setTimeout(function () {
+      setTimeout(function() {
         if (settings.fitBounds) {
           map.fitBounds(bound); // fit bounds of all marker in map
         }
@@ -284,7 +284,7 @@ function leafletMap(options) {
         mapcategoryFilterEle.insertAdjacentHTML('beforeend', "<li class=\"nav-item\"><a class=\"nav-link active\" data-category='all'>Sites & Attractions</a></li>"); // after add all categories
 
         for (var i = 0, ii = categories.length; i < ii; i++) {
-          if( categories[i] !== 'all') {
+          if (categories[i] !== 'all') {
 
             mapcategoryFilterEle.insertAdjacentHTML('beforeend', "<li class=\"nav-item ".concat(categories[i].toLowerCase().trim(), "\"><a class=\"nav-link\" data-category=\"").concat(categories[i], "\"> ").concat(categories[i], "</a></li>"));
           }
@@ -299,7 +299,7 @@ function leafletMap(options) {
 
     if (mapCategoryHtmlListEle) {
       // loop attractions category and print
-      Object.keys(attractionsfilter).forEach(function (key1, value1) {
+      Object.keys(attractionsfilter).forEach(function(key1, value1) {
         mapCategoryHtmlListEle.insertAdjacentHTML('beforeend', '<div data-mappable-category="' + key1 + '"><h3>' + key1 + '</h3><ul class="attraction-lists list-' + key1 + '"></ul></div>');
 
         for (var i = 0; i < attractionsfilter[key1].length; i++) {
@@ -312,13 +312,17 @@ function leafletMap(options) {
 
 
   var handleCategory = function handleCategory(e) {
-    e.stopPropagation();
-    var selectedCategory = e.target.dataset.category;
-    var allcategory = document.querySelectorAll('a.attractions-filter');
-    allcategory.forEach(function(cat) {
-      cat.classList.remove('active');
-    });
-    e.target.classList.add('active');
+
+    if (e.target !== e.currentTarget) {
+      var selectedCategory = e.target.parentElement.dataset.category;
+    } else {
+      var selectedCategory = e.target.dataset.category;
+    }
+    // var allcategory = document.querySelectorAll('a.attractions-filter');
+    // allcategory.forEach(function(cat) {
+    //   cat.classList.remove('active');
+    // });
+    // e.target.classList.add('active');
     bound.length = 0; //reset bounds
 
     bound.push([settings.hotelLat, settings.hotelLong]); // keep hotel marker in all category
@@ -333,16 +337,17 @@ function leafletMap(options) {
       }
     }
 
-    setTimeout(function () {
+    setTimeout(function() {
       if (settings.fitBounds) {
         map.fitBounds(bound);
       }
-    }, 400);
+    }, 200);
   };
 
   var handleSingleAttraction = function handleSingleAttraction(e) {
     var categoryitem = e.target.dataset.mappableCategory;
     var itemID = e.target.dataset.mappableItem;
+    //console.dir(itemID);
     var all_markericon = document.querySelectorAll('.map-circle-icon.active');
 
     for (var m = 0; m < all_markericon.length; m++) {
@@ -367,23 +372,24 @@ function leafletMap(options) {
     }
   };
 
-  window.onload = function () {
+  window.onload = function() {
     var category_ele = document.querySelectorAll('[data-category]');
     var marker_li_ele = document.querySelectorAll('[data-mappable-item]');
-    Array.from(category_ele).forEach(function (item) {
-      return item.addEventListener('click', handleCategory);
+    Array.from(category_ele).forEach(function(item) {
+      item.onclick = handleCategory;
+      return item;
     });
-    Array.from(marker_li_ele).forEach(function (item) {
-      return item.addEventListener('click', handleSingleAttraction);
+    Array.from(marker_li_ele).forEach(function(item) {
+      item.onclick = handleSingleAttraction;
+      return item;
     });
 
     if (settings.hoverActive) {
-      Array.from(marker_li_ele).forEach(function (item) {
+      Array.from(marker_li_ele).forEach(function(item) {
         return item.addEventListener('mouseover', handleSingleAttraction);
       });
     }
   }; // Return all public methods
-
 
   return publicMethods;
 }
