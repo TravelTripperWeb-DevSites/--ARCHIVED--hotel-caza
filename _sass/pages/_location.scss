@@ -220,3 +220,10 @@
 .leaflet-popup-tip {
   background-color: $primary;
 }
+
+.location-around {
+  padding-bottom: 42px !important;
+  @include media-breakpoint-up(md) {
+    padding-bottom: 102px !important;
+  } 
+}
