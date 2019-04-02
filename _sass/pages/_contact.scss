@@ -9,11 +9,19 @@
     }
 
     .contact-info {
+      margin-bottom: 32px;
       @include media-breakpoint-up(md) {
         display: flex;
-        span {
-          margin-right: 58px;
-          margin-bottom: 32px;
+      }
+
+      span {
+        display: block;
+        &:first-child {
+          margin-bottom: 20px;
+          @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+            padding-right: 58px;
+          }
         }
       }
     }
@@ -21,14 +29,17 @@
 }
 
 .contact-form {
-  @include make-container;
   max-width: 856px;
   margin: 0 auto;
-  padding: 0;
+
   &__wrapper {
     @include make-row;
     align-items: flex-end;
     margin: 0;
+  }
+
+  .h2 {
+    margin-bottom: 15px;
   }
 
   &__half-col {
@@ -67,10 +78,8 @@
 
   label {
     display: inline-block;
-    padding-bottom: 8px;
     font-family: $family-primary;
     font-size: 12px;
-    font-weight: 400;
     line-height: 24px;
     color: $primary;
     text-transform: uppercase;
@@ -78,20 +87,26 @@
   }
 
   .form-control {
+    padding: 9px 0;
     color: $secondary;
     border-bottom: solid 1px $secondary;
 
     &::placeholder {
       color: $secondary;
     }
-  }
 
-  input[type=number] {
-    padding: 12px;
-    background: transparent;
-    border: 1px solid $secondary;
-    &::placeholder {
-      color: $secondary;
+    &.input-date {
+      
+    }
+
+    &.input-small {
+      padding-right: 12px;
+      padding-left: 12px;
+      background: transparent;
+      border: 1px solid $secondary;
+      &::placeholder {
+        color: $secondary;
+      }
     }
   }
 
