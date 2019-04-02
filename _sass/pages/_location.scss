@@ -3,18 +3,23 @@
 
 .c-map {
   @include make-container;
-  max-width: calc(100% - 108px);
+  max-width: 100%;
   margin-right: auto;
   margin-left: 0;
-  padding: 71px 0 0;
+  padding: 43px 0 0;
   background-color: $white;
-
+  @include media-breakpoint-up(lg) {
+    padding: 71px 0 0;
+    max-width: calc(100% - 108px);
+  }
   .attractions__heading {
     max-width: 1145px;
     margin-right: 0;
     margin-left: auto;
-    padding: 0 0 43px;
-
+    padding: 0 22px 10px;
+    @include media-breakpoint-up(md) {
+      padding: 0 0 43px;
+    }
     .h2 {
       z-index: 2;
 
@@ -24,9 +29,43 @@
     }
   }
 
+  &__list-view {
+    display: flex;
+    margin-bottom: 24px;
+    figure {
+      flex: 0 0 100%;
+      max-width: 104px;
+      height: 88px;
+
+      img {
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__detail {
+      padding: 15px;
+      color: $white;
+      .h3 {
+        color: $white;
+      }
+      .btn {
+        color: $button-color;
+        &:before {
+          background-color: $button-color;
+
+        }
+      }
+    }
+  }
+
   &__wrap {
     @include make-row;
     margin: 0;
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
   }
 
   &__leaflet {
@@ -34,12 +73,14 @@
     min-height: 400px;
     @include media-breakpoint-up(md) {
       @include make-col(7.4);
+      height: 728px;
     }
   }
 
   &__tabs {
     @include make-col-ready;
     min-height: 400px;
+    background-color: $primary;
     @include media-breakpoint-up(md) {
       @include make-col(4.6);
       padding: 0;
@@ -59,6 +100,7 @@
       margin: 0;
       padding: 0;
       list-style-type: none;
+      background-color: $white;
 
       li {
         flex: 1 auto;
@@ -67,12 +109,20 @@
         i {
           display: block;
           font-size: 26px;
+          pointer-events: none;
         }
 
         a {
           display: block;
           padding: 31px 10px;
 
+          span {
+            display: none;
+            pointer-events: none;
+            @include media-breakpoint-up(lg) {
+              display: inline-block;
+            }
+          }
           &.active {
             color: $white;
 
@@ -95,8 +145,11 @@
 
     &__image {
       width: 100%;
-      height: 296px;
+      height: 196px;
       overflow: hidden;
+      @include media-breakpoint-up(lg) {
+        height: 296px;
+      }
 
       img {
         min-width: 100%;
@@ -149,6 +202,7 @@
   background-color: $primary !important;
 }
 .leaflet-popup-content-wrapper {
+  max-width: 200px;
   padding: 10px;
   border-radius: 0 !important;
   color: $white;

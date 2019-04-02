@@ -31,6 +31,10 @@
 .contact-form {
   max-width: 856px;
   margin: 0 auto;
+  padding: 0 9px 40px;
+  @include media-breakpoint-up(md) {
+    padding: 0 9px 72px;
+  }
 
   &__wrapper {
     @include make-row;
@@ -86,17 +90,25 @@
     letter-spacing: .75px;
   }
 
+  .form-date-group {
+    position: relative;
+  }
+
+  i {
+    position: absolute;
+    top: 11px;
+    right: 4px;
+    color: $grey;
+  }
+
   .form-control {
+    margin-bottom: 16px;
     padding: 9px 0;
     color: $secondary;
     border-bottom: solid 1px $secondary;
 
     &::placeholder {
       color: $secondary;
-    }
-
-    &.input-date {
-      
     }
 
     &.input-small {
@@ -111,11 +123,18 @@
   }
 
   textarea {
-    padding: 12px;
-    border: 1px solid $secondary;
+    &.form-control {
+      margin-top: 10px;
+      padding: 12px;
+      border: 1px solid $secondary;
+    }
   }
 
-  .submit-contact {
-    margin-left: 1.25rem;
+  .form-check {
+    label {
+      line-height: normal;
+      text-transform: none;
+      letter-spacing: normal;
+    }
   }
 }

@@ -3,13 +3,13 @@ function readyDoc(fn) {
  (d.readyState == 'loading') ? d.addEventListener('DOMContentLoaded', fn): fn();
 }
 // Amenities slider
-var forEachloop = function (array, callback, scope) {
+var forEachloop = (array, callback, scope) => {
   for (var i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]); // passes back stuff we need
   }
 };
 // tiny-slider initialisation
-readyDoc(function(){// If DOM is ready
+readyDoc(() => {// If DOM is ready
   if(document.getElementsByClassName("amenities-slider")[0]) {
     var sliders = document.querySelectorAll('.amenities-slider');
     forEachloop(sliders, function (index, value) {
@@ -40,23 +40,10 @@ readyDoc(function(){// If DOM is ready
       });
     });
   }
-  if(document.getElementsByClassName("location-slider")[0]) {
-    var locSliders = document.querySelectorAll('.location-slider');
-    forEachloop(locSliders, function (index, value) {
-      var cont = value.nextElementSibling.children[1];
-      var prevSlide = value.nextElementSibling.children[0];
-      var nextSlide = value.nextElementSibling.children[2];
-      let slider = tns({
-        container: value,
-        navPosition: "bottom",
-        navContainer: cont,
-        prevButton: prevSlide,
-        nextButton: nextSlide,
-        items: 1,
-        loop: false
-      });
-    });
-  }
+
+
+
+
   if(document.getElementsByClassName("rooms-slider")[0]) {
     var roomSlider = tns({
       container: '.rooms-slider',
@@ -119,19 +106,35 @@ readyDoc(function(){// If DOM is ready
   var panel = document.getElementsByClassName('attractions-mobile__content');
 
   for (var i = 0; i < acc.length; i++) {
-      acc[i].onclick = function() {
+
+      acc[i].onclick = function(e) {
+        for (var i = 0; i < acc.length; i++) {
+          if(this != acc[i]){
+            acc[i].children[1].children[0].innerHTML = "More";
+            acc[i].children[1].children[1].classList.remove('fa-minus');
+            acc[i].children[1].children[1].classList.add('fa-plus');
+          }
+        }
+
           var setClasses = !this.classList.contains('active');
           setClass(acc, 'active', 'remove');
           setClass(panel, 'active', 'remove');
-
+          if(this.children[1].children[0].innerHTML == "More") {
+            this.children[1].children[0].innerHTML = "Less";
+            this.children[1].children[1].classList.add('fa-minus');
+            this.children[1].children[1].classList.remove('fa-plus');
+          }else {
+            this.children[1].children[0].innerHTML = "More";
+            this.children[1].children[1].classList.add('fa-plus');
+            this.children[1].children[1].classList.remove('fa-minus');
+            this.children[1].children[1].classList.remove('fa-minus');
+          }
           if (setClasses) {
               this.classList.toggle("active");
               this.nextElementSibling.classList.toggle("active");
           }
       }
   }
-
-  console.log(toggler);
 
   function setClass(els, className, fnName) {
       for (var i = 0; i < els.length; i++) {
