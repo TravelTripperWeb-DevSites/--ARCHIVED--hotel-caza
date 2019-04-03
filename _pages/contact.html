@@ -20,13 +20,13 @@ published_localized:
       <div class="col-img-detail__detail">
         <div class="box">
           <p class="h4">Our Address</p>
-          <p>495 Beach Street, San Francisco, California, 94133</p>
-          <p><a href="#" class="btn--primary">get directions</a></p>
+          <p>{{ site.data.hotel_settings.address.street1 }}, {{ site.data.hotel_settings.address.state }}, {{ site.data.hotel_settings.address.city }}, {{ site.data.hotel_settings.address.zip_code }}</p>
+          <p><a href="{{ site.data.hotel_settings.get_directions_url }}" rel="nofollow" target="_blank" class="btn--primary">get directions</a></p>
           <div class="contact-info">
             <span><p class="h4">Reservations</p>
-            <a href="tel:0861-444-435" title="Reservations">0861 444 435</a></span>
+            <a href="tel:{{ site.data.hotel_settings.phone_number }}">{{ site.data.hotel_settings.phone_number }}</a></span>
             <span><p class="h4">email</p>
-            <a href="mailto:res-hi-sf-wharf@ihg.com" title="Email">res-hi-sf-wharf@ihg.com</a></span>
+            <a href="mailto:{{ site.data.hotel_settings.email }}">{{ site.data.hotel_settings.email }}</a></span>
           </div>
           <p>For further assistance feel free to fill out the form below or call the hotel directly</p>
         </div>
