@@ -10,8 +10,6 @@ main:
       label: Offers
     - page_id: _pages/location.html
       label: Location
-    - page_id: _pages/blog.html
-      label: Blog
     - page_id: _pages/gallery.html
       label: Gallery
     - page_id: _pages/contact.html
