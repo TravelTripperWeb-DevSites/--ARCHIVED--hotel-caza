@@ -1,0 +1,18 @@
+{
+  "name": {
+    "required": true,
+    "localizable": true
+  },
+  "description": {
+    "type": "text",
+    "localizable": true
+  },
+  "images": {
+    "type": "image",
+    "required": true
+  },
+  "order": {
+    "type": "integer",
+    "required": true
+  }
+}

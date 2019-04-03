@@ -35,7 +35,7 @@
       "_template": "header"
     },
     "hero_html": {
-      "content": "<p><a class=\"btn btn--outline\" href=\"#\">Book Now</a></p>"
+      "content": "<p><a class=\"btn btn--white\" href=\"#\">Book Now</a></p>"
     }
   }
 ]
