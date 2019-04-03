@@ -30,6 +30,13 @@
     margin-bottom: 20px;
     color: $white;
   }
+
+  &--blog {
+    height: 272px;
+    @include media-breakpoint-up(md) {
+      height: 700px;
+    }
+  }
 }
 //slider control
 .slider-control {
@@ -163,6 +170,10 @@
     font-family: $family-secondary;
     font-size: 12px;
     color: $primary;
+
+    a {
+      text-decoration: underline;
+    }
   }
 
   .custom-control-input {
@@ -174,6 +185,17 @@
         &:before {
           background-color: $primary;
           outline: none;
+          box-shadow: none;
+        }
+        &:after {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='white' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+        }
+      }
+    }
+
+    &:not(:checked) {
+      ~ .custom-control-label {
+        &:before {
           box-shadow: none;
         }
       }
@@ -322,6 +344,466 @@
       }
     }
   }
+}
+
+.rooms-cs {
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 55px;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    background-color: $white;
+
+    @include media-breakpoint-up(lg) {
+      right: 108px;
+    }
+  }
+
+  &__intro {
+    @include make-container;
+    @include make-container-max-widths;
+
+    &__left {
+      @include make-col-ready;
+      padding-right: 24px;
+      padding-left: 24px;
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(xl) {
+        @include make-col(7);
+      }
+
+      .h2 {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__right {
+      @include make-col-ready;
+      margin-top: 40px;
+      padding-right: 24px;
+      padding-left: 24px;
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(6);
+      }
+
+      @include media-breakpoint-up(xl) {
+        @include make-col(4);
+        margin-top: 0;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__row {
+    @include make-row;
+    align-items: flex-end;
+  }
+
+  .slider-control {
+    margin-top: 35px;
+  }
+}
+
+// Rooms Cross-sell
+
+.rooms-slider {
+  margin-top: 50px;
+
+  &__image {
+    position: relative;
+  }
+
+  &__photo {
+    position: relative;
+    max-height: 544px;
+
+    img {
+      position: relative;
+      width: 100%;
+      max-height: 544px;
+      object-fit: cover;
+    }
+
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      width: 100%;
+      height: 120px;
+      content: '';
+      background-image: linear-gradient(180deg, rgba($black, 0) 0%, rgba($black, .8) 100%);
+    }
+  }
+
+  &__info {
+    position: absolute;
+    right: 15px;
+    bottom: 25px;
+    left: 16px;
+    z-index: 5;
+
+    @include media-breakpoint-up(md) {
+      left: 28px;
+    }
+
+    .tonight {
+      display: inline-block;
+      margin-right: 35px;
+      font-size: 14px;
+      font-weight: 600;
+      color: $white;
+
+      @include media-breakpoint-up(md) {
+        margin-right: 55px;
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    .h3 {
+      margin-bottom: 10px;
+      color: $white;
+    }
+
+    .ttweb-booking-button {
+      @extend .btn--secondary;
+      @extend .white;
+      margin-left: 24px;
+      background-color: transparent !important;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+// Attractions
+
+.attractions {
+  padding-top: 40px;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 72px;
+  }
+
+  &__heading {
+    @include make-container;
+    max-width: 1064px;
+
+    .h2 {
+      position: relative;
+      margin: 0 auto;
+      overflow: hidden;
+      line-height: normal;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        left: 0;
+        z-index: -1;
+        content: '';
+        border-bottom: solid 1px $primary;
+      }
+
+      span {
+        display: inline;
+        background-color: $light-grey;
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    max-width: 1064px;
+    margin: 24px auto 0;
+    padding: 0 15px;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      list-style-type: none;
+
+      @include media-breakpoint-up(lg) {
+        margin-right: 48px;
+      }
+
+      i {
+        display: inline-block;
+        margin-right: 12px;
+        font-size: 28px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        font-family: $family-primary;
+        font-size: 14px;
+        line-height: 24px;
+        color: $beige;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        vertical-align: middle;
+        transition: all .3s;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 16px;
+        }
+
+        &:hover, &.active {
+          color: $primary !important;
+          text-decoration: none;
+          span {
+            border-color: $primary;
+          }
+
+          i {
+            &:before {
+              color: $primary;
+            }
+          }
+        }
+      }
+
+      span {
+        display: inline-block;
+        border-bottom: solid 1px transparent;
+        transition: all .3s;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-top: 35px;
+  }
+
+  &__item {
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+      width: 80%;
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      @include media-breakpoint-up(md) {
+        height: 600px;
+      }
+    }
+  }
+
+  &__copy {
+    padding: 25px 25px 40px;
+    background-color: $white;
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 50%;
+      right: -100px;
+      max-width: 420px;
+      padding: 55px 45px;
+      transform: translateY(-50%);
+    }
+
+    .h3 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .decorative {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    z-index: -1;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      max-width: 160px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 265px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Offers Cross-sell
+.offers-cs {
+  @include make-container;
+  position: relative;
+  padding-right: 0;
+  padding-bottom: 40px;
+  padding-left: 0;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  &__inner {
+    position: relative;
+    margin-left: auto;
+    padding: 40px 0 90px 9px;
+    background-color: $cross-sell-bg;
+
+    @include media-breakpoint-up(md) {
+      max-width: 80%;
+      padding: 72px 0 72px 50px;
+    }
+  }
+
+  &__row {
+    @include make-row;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .slider-control {
+    justify-content: flex-start;
+    margin-top: 40px;
+
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      bottom: 45px;
+    }
+
+    .slide-prev {
+      width: auto;
+      text-align: left;
+    }
+
+    .slider-nav {
+      span {
+        background-color: rgba($secondary, .5);
+
+        &.tns-nav-active {
+          background-color: rgba($secondary, 1);
+        }
+      }
+    }
+  }
+
+  &__intro {
+    @include make-col-ready;
+    position: static;
+    margin-bottom: 40px;
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+      margin-bottom: 0;
+    }
+
+    .h2 {
+      margin-bottom: 32px;
+      padding-right: 15px;
+
+      @include media-breakpoint-up(lg) {
+        max-width: 200px;
+      }
+    }
+  }
+
+  &__slider {
+    @include make-col-ready;
+    padding-right: 0;
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(9);
+    }
+
+    &__item {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 192px;
+        object-fit: cover;
+
+        @include media-breakpoint-up(md) {
+          height: 360px;
+        }
+      }
+    }
+
+    &__pic {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 6px;
+        left: auto;
+        width: 100%;
+        height: 120px;
+        content: '';
+        background-image: linear-gradient(180deg, rgba($black, 0) 0%, rgba($black, .8) 100%);
+      }
+    }
+  }
+
+  .decorative {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    z-index: -1;
+    display: none;
+    max-width: 390px;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    right: 15px;
+    bottom: 25px;
+    left: 16px;
+    z-index: 5;
+
+    @include media-breakpoint-up(md) {
+      left: 28px;
+    }
+
+    .h3 {
+      margin-bottom: 10px;
+      color: $white;
+    }
+  }
+
 }
 
 // Amenites list

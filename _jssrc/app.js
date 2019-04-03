@@ -142,4 +142,79 @@ readyDoc(() => {// If DOM is ready
       }
   }
 
+
+
+
 });// End of docready
+
+// Blog category filter
+
+document.ready(() => {
+  const optionFilter = document.getElementById('js-categoryfilter');
+  if (optionFilter) {
+    filterSetup(optionFilter);
+  }
+
+
+  function displayItems(filterValue, allItems) {
+    const filteredItems = allItems.filter(image => image.getAttribute('data-filter') === filterValue);
+    const hiddenItems = allItems.filter(image => image.classList.contains('hidden'));
+
+    if (filterValue === 'all') {
+      hiddenItems.forEach((image) => {
+        fade(image, 'in', 500);
+      });
+    } else {
+      allItems.forEach((image) => {
+        image.classList.add('hidden');
+      });
+
+
+      filteredItems.forEach((image) => {
+        fade(image, 'in', 500);
+      });
+    }
+  }
+
+  function filterSetup(filter) {
+    const allItems = [].slice.call(
+      document.getElementsByClassName('filter-item'),
+    );
+    let filterValue;
+
+    function getUrlVars() {
+      let vars = {};
+      let parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+        vars[key] = value;
+      });
+      return vars;
+    }
+
+    if (getUrlVars()["c"]) {
+      const cat = getUrlVars()["c"];
+      const categoryOptions = [].slice.call(document.getElementById('js-categoryfilter').getElementsByTagName("option"));
+      categoryOptions.forEach((option) => {
+        option.removeAttribute("selected");
+        if (option.value === cat) {
+          option.setAttribute("selected", true);
+        }
+        displayItems(cat, allItems);
+      });
+    }
+
+    filter.onchange = function(event) {
+      displayItems(event.target.value, allItems);
+    }
+  }
+
+});
+
+// Pinterest Share
+
+function pinterestShare(img, desc) {
+  window.open("//www.pinterest.com/pin/create/button/" +
+    "?url=" + window.location.href +
+    "&media=" + img +
+    "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
+  return false;
+}

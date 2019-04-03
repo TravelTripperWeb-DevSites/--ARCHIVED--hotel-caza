@@ -23,6 +23,7 @@
 
     &:hover, &:focus, &:active {
       color: $button-color;
+      text-decoration: none;
       background-color: $primary;
       border-color: $primary;
       box-shadow: none;

@@ -1,8 +1,9 @@
 # Forms
 jotform:
-  contact-id:
+  contact-id: 90921253120445
   rfp-id:
   newsletter-id: 90871862184465
+  blog-subscription-id: 90902642667462
 
 
 __EDITABLE_FIELDS__:
