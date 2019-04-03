@@ -3,7 +3,9 @@
   <div class="offers-cs__inner">
     <div class="offers-cs__row">
       <div class="offers-cs__intro">
+        {% regionblock offers_title, type:header %}
         <p class="h2">Special offers dolorem ipsum quia dolor sit amet amor!</p>
+        {% endregionblock %}
         <a href="/offers/" class="btn btn--secondary">View all offers</a>
         <div class="slider-control">
           <div class="slide-prev" id="offerSliderPrev"><span></span></div>
@@ -23,7 +25,7 @@
             {% include components/image image=offer.image %}
             </div>
             <div class="offers-cs__info">
-              <p class="h3">{{ offer.name }}</p>
+              <p class="h3" tabindex="0">{{ offer.name }}</p>
               <a href="/offers/{{ offer.id | downcase }}/" class="btn btn--secondary white">Details</a>
               <a href="" class="btn btn--secondary white">Book Offer</a>
             </div>

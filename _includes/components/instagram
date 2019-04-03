@@ -13,7 +13,7 @@
     </div>
     <div class="row  c-instagram-feed__profile-link">
       <a href="https://www.instagram.com/{{handle}}/" target="_blank" title="@{{handle}}">
-        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553241043/dug4imvvc7xtuyayeq1c.png">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553241043/dug4imvvc7xtuyayeq1c.png" alt="Hotel Caza">
       </a>
     </div>
     <div class="row  c-instagram-feed__list">

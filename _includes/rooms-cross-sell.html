@@ -9,8 +9,8 @@
         {% include components/image image=featured_image max_width=600 %}
       </div>
       <div class="rooms-slider__info">
-        <p class="h3">{{ room.name }}</p>
-        <div class="tonight">Tonight’s Rate <span data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span></div>
+        <p class="h3" tabindex="0">{{ room.name }}</p>
+        <div class="tonight" tabindex="0">Tonight’s Rate <span data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span></div>
         <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary white">View</a>
         <span data-reztrip-room-book-now>
           <a href="" class="btn btn--secondary white">Book Now</a>
