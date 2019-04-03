@@ -1,18 +1,73 @@
 <form action="https://submit.jotform.me/submit/{{ site.data.forms.jotform.contact-id }}/" method="post" name="form_{{ site.data.forms.jotform.contact-id }}"
     id="{{ site.data.forms.jotform.contact-id }}" accept-charset="utf-8">
-    <input type="hidden" name="formID" value="{{ site.data.forms.jotform.contact-id }}">
-    <label>Name*</label>
-    <input type="text" id="input_3" name="q3_input3" placeholder="Your Name" required>
-    <label>Email Address*</label>
-    <input type="email" id="input_4" name="q4_input4" placeholder="Your Email" required>
-    <label>Message</label>
-    <textarea id="input_5" name="q5_input5" cols="40" rows="8"></textarea>
-    <button type="submit" id="input_2">Submit</button>
-    <input type="hidden" id="simple_spc" name="simple_spc" value="{{ site.data.forms.jotform.contact-id }}">
+  <input type="hidden" name="formID" value="{{ site.data.forms.jotform.contact-id }}">
+  <div class="contact-form__wrapper">
+    <div class="form-group contact-form__half-col">
+      <label>Name</label>
+      <input type="text" class="form-control" name="q3_name" placeholder="Enter your first name" required aria-label="Enter your first name">
+    </div>
+    <div class="form-group contact-form__half-col">
+      <label>Surname</label>
+      <input type="text" class="form-control" name="q4_surname" placeholder="Enter your surname*" required aria-label="Enter your surname">
+    </div>
+  </div>
 
-    <script type="text/javascript">
-        document.getElementById("si" + "mple" + "_spc").value = "{{ site.data.forms.jotform.contact-id }}-{{ site.data.forms.jotform.contact-id }}";
-    </script>
+  <div class="contact-form__wrapper">
+    <div class="form-group contact-form__half-col">
+      <label>Phone number</label>
+      <input type="text" class="form-control" name="q5_phoneNumber" placeholder="Enter your telephone number*" required aria-label="Enter your telephone number">
+    </div>
+    <div class="form-group contact-form__half-col">
+      <label>Email address</label>
+      <input type="email" class="form-control" name="q6_emailAddress" placeholder="Enter your email address*" required aria-label="Enter your email address">
+    </div>
+  </div>
+
+  <div class="contact-form__wrapper">
+    <div class="form-group contact-form__five-col">
+      <label>Arrive</label>
+      <div class="form-date-group">
+        <input type="date" class="form-control" name="q7_arrive" aria-label="Enter arrival date"><i class="fal fa-calendar-alt"></i>
+      </div>
+    </div>
+    <div class="form-group contact-form__five-col">
+      <label>Depart</label>
+      <div class="form-date-group">
+        <input type="date" class="form-control" name="q8_depart" aria-label="Enter departure date"><i class="fal fa-calendar-alt"></i>
+      </div>
+    </div>
+    <div class="form-group contact-form__five-col">
+      <input type="number" class="form-control input-small" name="q9_rooms" placeholder="Rooms" aria-label="Enter number of rooms">
+    </div>
+    <div class="form-group contact-form__five-col">
+      <input type="number" class="form-control input-small" name="q10_adults" placeholder="Adults" aria-label="Enter number of adults">
+    </div>
+    <div class="form-group contact-form__five-col">
+      <input type="number" class="form-control input-small" name="q11_children" placeholder="Children" aria-label="Enter number of children">
+    </div>
+  </div>
+
+  <div class="contact-form__wrapper">
+    <div class="contact-form__full-col">
+      <label>Your Message</label>
+      <textarea class="form-control" name="q12_yourMessage" placeholder="Type your message*" cols="40" rows="8" required aria-label="Enter your message"></textarea>
+    </div>
+  </div>
+
+  <div class="contact-form__wrapper">
+    <div class="form-group contact-form__full-col">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input custom-control-input" name="q13_iAgree[]" id="agree" value="Agree" aria-label="Select checkbox to agree the Terms of Use & Privacy Policy">
+        <label class="form-check-label custom-control-label" for="agree">
+          I agree to the <a href="/terms/">Terms of Use</a> & <a href="/privacy/">Privacy Policy</a>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form__wrapper">
+    <div class="form-group contact-form__full-col">
+      <button type="submit" class="btn btn--primary submit-contact" aria-label="Click to submit form">Submit</button>
+    </div>
+  </div>
 </form>
-
-<script type="text/javascript">JotForm.ownerView=true;</script>
