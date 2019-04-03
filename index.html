@@ -12,7 +12,7 @@ meta_tags:
   <div class="col-img-detail">
     <div class="col-img-detail__wrap">
       <div class="col-img-detail__detail">
-        <div class="box">
+        <div class="box" tabindex="0">
           {% region intro_two_col, type:html %}
         </div>
         <div class="decorative">
@@ -32,13 +32,21 @@ meta_tags:
   <div class="rooms-cs__intro">
     <div class="rooms-cs__row">
       <div class="rooms-cs__intro__left">
-        <p class="h2">Welcome to your happy place</p>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        {% regionblock rooms_intro_title, type:header %}
+        <p class="h2" tabindex="0">Welcome to your happy place</p>
+        {% endregionblock %}
+        {% regionblock rooms_intro_description, type:text %}
+        <p tabindex="0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        {% endregionblock %}
+        {% regionblock rooms_intro_button, type:text %}
         <a href="/rooms/" class="btn btn--secondary">View All Rooms</a>
+        {% endregionblock %}
       </div>
       <div class="rooms-cs__intro__right">
         <div class="room-amenities">
-          <div class="h4">Amenities</div>
+          {% regionblock room_amenities_title, type:header %}
+          <div class="h4" tabindex="0">Amenities</div>
+          {% endregionblock %}
           <ul class="amenities">
             <li>
               <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256617/qmrlzvjj7ggeh1p9i88m.png" alt="Hi-speed Wifi">
@@ -75,7 +83,9 @@ meta_tags:
     <div class="col-amenities__items home-amenities">
       <div class="col-amenities__items__wrap">
         <div class="col-amenities__items__heading">
-          <p class="h2">Fun amenities unique to our hotel</p>
+          {% regionblock amenities_title, type:header %}
+          <p class="h2" tabindex="0">Fun amenities unique to our hotel</p>
+          {% endregionblock %}
         </div>
         <div class="col-amenities__items__slider">
           <div class="amenities-slider">
@@ -83,8 +93,8 @@ meta_tags:
             {% for amenity in fun_amenities %}
               <div class="slide-item1">
                <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-               <p class="h3">{{ amenity.name }}</p>
-               <p>{{ amenity.description }}</p>
+               <p class="h3" tabindex="0">{{ amenity.name }}</p>
+               <p tabindex="0">{{ amenity.description }}</p>
               </div>
              {% endfor %}
           </div>
@@ -98,7 +108,6 @@ meta_tags:
                  <a href="/about/#amenities" class="btn btn--secondary">View All Amenities</a>
                </div>
             </div>
-
             <div class="slide-next"><span></span></div>
           </div>
         </div>
@@ -109,7 +118,9 @@ meta_tags:
 
 <div class="attractions">
   <div class="attractions__heading">
-    <p class="h2"><span>Things to do near Hotel caza:</span></p>
+    {% regionblock attractions_title, type:header %}
+    <p class="h2" tabindex="0"><span>Things to do near Hotel caza:</span></p>
+    {% endregionblock %}
   </div>
   <ul class="attractions-mobile">
     <li>
@@ -117,8 +128,8 @@ meta_tags:
       <div class="attractions-mobile__content active">
         <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
         <div class="attractions-mobile__info">
-          <p class="h3">Attractions Heading</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <p class="h3" tabindex="0">Attractions Heading</p>
+          <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
           <a href="" class="btn btn--secondary">Discover More</a>
         </div>
       </div>
@@ -128,8 +139,8 @@ meta_tags:
       <div class="attractions-mobile__content">
         <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
         <div class="attractions-mobile__info">
-          <p class="h3">Attractions Heading</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <p class="h3" tabindex="0">Attractions Heading</p>
+          <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
           <a href="" class="btn btn--secondary">Discover More</a>
         </div>
       </div>
@@ -139,8 +150,8 @@ meta_tags:
       <div class="attractions-mobile__content">
         <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
         <div class="attractions-mobile__info">
-          <p class="h3">Attractions Heading</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <p class="h3" tabindex="0">Attractions Heading</p>
+          <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
           <a href="" class="btn btn--secondary">Discover More</a>
         </div>
       </div>
@@ -150,8 +161,8 @@ meta_tags:
         <div class="attractions-mobile__content">
           <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
           <div class="attractions-mobile__info">
-            <p class="h3">Attractions Heading</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <p class="h3" tabindex="0">Attractions Heading</p>
+            <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
             <a href="" class="btn btn--secondary">Discover More</a>
           </div>
         </div>
@@ -176,16 +187,16 @@ meta_tags:
       <div class="filter-item attractions__item" data-filter="attractions">
         <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
         <div class="attractions__copy">
-          <p class="h3">General attractions heading</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <p class="h3" tabindex="0">General attractions heading</p>
+          <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
           <a href="" class="btn btn--secondary">Discover More</a>
         </div>
       </div>
       <div class="filter-item hidden attractions__item" data-filter="entertainment">
         <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
         <div class="attractions__copy">
-          <p class="h3">General Entertainment heading</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <p class="h3" tabindex="0">General Entertainment heading</p>
+          <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
           <a href="" class="btn btn--secondary">Discover More</a>
         </div>
       </div>
@@ -200,8 +211,8 @@ meta_tags:
       <div class="filter-item hidden attractions__item" data-filter="shopping">
         <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
         <div class="attractions__copy">
-          <p class="h3">General Shopping heading</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          <p class="h3" tabindex="0">General Shopping heading</p>
+          <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  nostrud exercitation ullamco laboris nisi ut aliquip.</p>
           <a href="" class="btn btn--secondary">Discover More</a>
         </div>
       </div>

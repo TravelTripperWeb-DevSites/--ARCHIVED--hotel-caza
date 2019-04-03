@@ -16,7 +16,7 @@ meta_tags:
   <div class="col-img-detail">
     <div class="col-img-detail__wrap">
       <div class="col-img-detail__detail">
-        <div class="box">
+        <div class="box" tabindex="0">
           {% region intro_two_col, type:html %}
         </div>
       </div>
@@ -34,8 +34,10 @@ meta_tags:
   </div>
   <div class="col-amenities__items">
     <div class="col-amenities__items__wrap">
-      <div class="col-amenities__items__heading">
+      <div class="col-amenities__items__heading" tabindex="0">
+        {% regionblock amenities_title_one, type:header %}
         <p class="h2">Fun amenities unique to our hotel</p>
+        {% endregionblock %}
       </div>
       <div class="col-amenities__items__slider">
         <div class="amenities-slider">
@@ -43,8 +45,8 @@ meta_tags:
           {% for amenity in fun_amenities %}
             <div class="slide-item1">
              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-             <p class="h3">{{ amenity.name }}</p>
-             <p>{{ amenity.description }}</p>
+             <p class="h3" tabindex="0">{{ amenity.name }}</p>
+             <p tabindex="0">{{ amenity.description }}</p>
             </div>
            {% endfor %}
         </div>
@@ -64,8 +66,10 @@ meta_tags:
   <div class="chablis-bg">
     <div class="col-amenities__items">
       <div class="col-amenities__items__wrap">
-        <div class="col-amenities__items__heading">
+        <div class="col-amenities__items__heading" tabindex="0">
+          {% regionblock amenities_title_two, type:header %}
           <p class="h2">hotel amenities</p>
+          {% endregionblock %}
         </div>
         <div class="col-amenities__items__slider">
           <div class="amenities-slider">
@@ -95,8 +99,10 @@ meta_tags:
   <div class="panache-bg">
     <div class="col-amenities__items">
       <div class="col-amenities__items__wrap">
-        <div class="col-amenities__items__heading">
+        <div class="col-amenities__items__heading" tabindex="0">
+          {% regionblock amenities_title_three, type:header %}
           <p class="h2">business amenities</p>
+          {% endregionblock %}
         </div>
         <div class="col-amenities__items__slider">
           <div class="amenities-slider">
@@ -104,8 +110,8 @@ meta_tags:
             {% for amenity in business_amenities %}
               <div class="slide-item1">
                <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-               <p class="h3">{{ amenity.name }}</p>
-               <p>{{ amenity.description }}</p>
+               <p class="h3" tabindex="0">{{ amenity.name }}</p>
+               <p tabindex="0">{{ amenity.description }}</p>
               </div>
              {% endfor %}
           </div>
@@ -126,8 +132,10 @@ meta_tags:
   <div class="light-bg pb-4 pb-md-5">
     <div class="col-amenities__items">
       <div class="col-amenities__items__wrap">
-        <div class="col-amenities__items__heading">
+        <div class="col-amenities__items__heading" tabindex="0">
+          {% regionblock amenities_title_four, type:header %}
           <p class="h2">… and last, but not least</p>
+          {% endregionblock %}
         </div>
         <div class="col-amenities__items__slider">
           <div class="amenities-slider">
@@ -135,8 +143,8 @@ meta_tags:
             {% for amenity in other_amenities %}
               <div class="slide-item1">
                <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-               <p class="h3">{{ amenity.name }}</p>
-               <p>{{ amenity.description }}</p>
+               <p class="h3" tabindex="0">{{ amenity.name }}</p>
+               <p tabindex="0">{{ amenity.description }}</p>
               </div>
              {% endfor %}
           </div>
