@@ -132,3 +132,29 @@
     padding: 0;
   }
 }
+
+.lightbox {
+  z-index: 99999;
+  .image-container {
+    display: flex;
+  }
+
+  .thumb-list {
+    list-style: none;
+
+    li {
+      width: 100%;
+      max-width: 100px;
+    }
+  }
+}
+
+#tt-region-gallery {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 26px;
+    padding-bottom: 96px;
+  }
+}

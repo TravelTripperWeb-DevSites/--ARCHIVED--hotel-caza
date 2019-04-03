@@ -682,6 +682,23 @@
     }
   }
 
+  &__header {
+    max-width: 880px;
+    padding: 0 15px 40px;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px 50px;
+    }
+
+    .h2 {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
   &__row {
     @include make-row;
     margin-right: 0;
@@ -804,6 +821,23 @@
     }
   }
 
+  &--more {
+    .offers-cs__slider {
+      @include make-col(12);
+    }
+
+    .slider-control {
+      position: static;
+      margin-top: 30px;
+    }
+
+    .offers-cs__inner {
+      padding-bottom: 40px;
+      @include media-breakpoint-up(md) {
+        padding-bottom: 72px;
+      }
+    }
+  }
 }
 
 // Amenites list
