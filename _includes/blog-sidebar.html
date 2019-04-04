@@ -1,4 +1,46 @@
 <div class="sps sps--abv">
+<!-- Related Posts Mobile -->
+{% if page.url != "/blog/" and page.url != "/blog/search/" %}
+  <div class="blog blog--related d-block d-md-none">
+    <div class="blog__container">
+      <p class="blog-sidebar-heading" tabindex="0">Related Stories</p>
+      <div class="blog__related">
+        {% assign relatedposts = site.data._models.posts | sort: 'date' | reverse %}
+        {% assign count = 0 %}
+        {% for relatedpost in relatedposts %}
+        {% if relatedpost.blog_category == post.blog_category and count < 6 %}
+        {% if relatedpost.url_friendly_name != post.url_friendly_name %}
+        {% assign count = count | plus: 1 %}
+        <div class="blog__related__item">
+          <a href="/blog/{{relatedpost.url_friendly_name }}/" tabindex="-1">
+            <figure style="background-image:url('{{relatedpost.image.url_xsmall}}');" class="bg-cover"></figure>
+            <div class="blog__related__item__right">
+              <p class="blog-subtitle" tabindex="0">{{relatedpost.title  | truncate: 35 }}</p>
+              <div class="blog__info">
+                <span class="blog__date" tabindex="0">
+                  {% assign d = relatedpost.date | date: "%-d" %}
+                  {{ relatedpost.date | date: "%B" }}
+                  {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+                  {{ relatedpost.date | date: "%Y" }}
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Blog Categories and Search Mobile -->
+  {% if page.url != "/blog/" %}
+  {% include blog-mobile-cat-search.html %}
+  {% endif %}
+
+  <!-- Blog Posts Search Desktop  -->
   <div class="blog__search-wrap d-none d-md-block">
     <p class="blog-sidebar-heading mb-2" tabindex="0">Search</p>
     <div class="blog__search">
@@ -11,15 +53,14 @@
     </div>
   </div>
 
+<!-- Blog Recent Posts -->
   <div class="blog__others">
-
     <p class="blog-sidebar-heading" tabindex="0">Recent Posts</p>
-
     {% assign recentposts = site.data._models.posts | sort: 'date' | reverse %}
     {% for recentpost in recentposts | limit: 5 %}
     {% if recentpost.url_friendly_name != page.url_friendly_name %}
     <div class="blog__others__item">
-      <a href="/blog/{{recentpost.url_friendly_name }}/">
+      <a href="/blog/{{recentpost.url_friendly_name }}/" tabindex="-1">
         <figure style="background-image:url('{{recentpost.image.url_xsmall}}');" class="bg-cover"></figure>
         <div class="blog__others__item__right">
           <p class="blog-subtitle" tabindex="0">{{recentpost.title  | truncate: 35 }}</p>
@@ -39,11 +80,13 @@
   </div>
 
   <select class="custom-select form-control" id="js-categoryfilter" style="display:none;">
-        <option selected value="all">Choose a Category</option>
-        {% for category in site.data._definition_options.blog_categories %}
-          <option value="{{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">category</option>
-        {% endfor %}
-      </select>
+    <option selected value="all">Choose a Category</option>
+    {% for category in site.data._definition_options.blog_categories %}
+    <option value="{{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">category</option>
+    {% endfor %}
+  </select>
+
+  <!-- Blog Categories Desktop -->
 
   <div class="categories-wrap d-none d-md-block">
     <p class="blog-sidebar-heading" tabindex="0">Categories</p>
@@ -68,8 +111,10 @@
     </ul>
   </div>
 
+  <!-- Blog Subscription -->
+
   <div class="blog__subscribe">
-    <p>SUBSCRIBE TO THE hotel caza BLOG</p>
+    <p tabindex="0">SUBSCRIBE TO THE hotel caza BLOG</p>
     {% include forms/jotform/blog-subscribe.html %}
   </div>
 </div>

@@ -16,7 +16,7 @@
       {{ gallery_items }}
       <div id={{ gallery.gallery }} class="container gallery">
         <div class="gallery__wrap">
-          <p class="h3">{{ gallery.label }}</p>
+          <p class="h3" tabindex="0">{{ gallery.label }}</p>
           <div class="gallery__inner">
             <div class="">
               {% for photo in selected_gallery.photos %}

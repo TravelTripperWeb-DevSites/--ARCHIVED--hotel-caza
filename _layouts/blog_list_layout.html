@@ -3,7 +3,9 @@ layout: generic
 ---
 
 <section class="blog">
-  {% include mobile-cat-search.html %}
+  <!-- Blog Categories and Search Mobile -->
+  {% include blog-mobile-cat-search.html %}
+  <!-- End Blog Categories and Search Mobile -->
   <div class="blog__container">
     <div class="blog__row">
       <div class="blog__list">
@@ -42,18 +44,6 @@ layout: generic
         </div>
         {% endif %}
         {% endfor %}
-
-        {% if data_paginator.total_pages > 1 %}
-        <div class="page-number" tabindex="0">Page: {{ data_paginator.page }} of {{ data_paginator.total_pages }}</div>
-          <ul class="pagination">
-            <li class="page-item {% if data_paginator.previous_page %}{% else %}disabled{% endif %}">
-              <a class="secondary-cta" href="{% if data_paginator.previous_page %}{{ data_paginator.previous_page_path }}{% else %}javascript:void(0);{% endif %}" title="Prevous page">Previous</a>
-            </li>
-            <li class="page-item {% if data_paginator.next_page %}{% else %}disabled{% endif %}">
-              <a class="secondary-cta" href="{% if data_paginator.next_page %}{{ data_paginator.next_page_path }}{% else %}javascript:void(0);{% endif %}" title="Next page">Next</a>
-            </li>
-          </ul>
-        {% endif %}
       </div>
       <div class="blog__aside">
         {% include blog-sidebar.html %}

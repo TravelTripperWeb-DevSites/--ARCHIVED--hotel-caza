@@ -19,16 +19,16 @@ published_localized:
     <div class="col-img-detail__wrap">
       <div class="col-img-detail__detail">
         <div class="box">
-          <p class="h4">Our Address</p>
-          <p>{{ site.data.hotel_settings.address.street1 }}, {{ site.data.hotel_settings.address.state }}, {{ site.data.hotel_settings.address.city }}, {{ site.data.hotel_settings.address.zip_code }}</p>
+          <p class="h4" tabindex="0">Our Address</p>
+          <p tabindex="0">{{ site.data.hotel_settings.address.street1 }}, {{ site.data.hotel_settings.address.state }}, {{ site.data.hotel_settings.address.city }}, {{ site.data.hotel_settings.address.zip_code }}</p>
           <p><a href="{{ site.data.hotel_settings.get_directions_url }}" rel="nofollow" target="_blank" class="btn--primary">get directions</a></p>
           <div class="contact-info">
-            <span><p class="h4">Reservations</p>
+            <span><p class="h4" tabindex="0">Reservations</p>
             <a href="tel:{{ site.data.hotel_settings.phone_number }}">{{ site.data.hotel_settings.phone_number }}</a></span>
-            <span><p class="h4">email</p>
+            <span><p class="h4" tabindex="0">email</p>
             <a href="mailto:{{ site.data.hotel_settings.email }}">{{ site.data.hotel_settings.email }}</a></span>
           </div>
-          <p>For further assistance feel free to fill out the form below or call the hotel directly</p>
+          <p tabindex="0">For further assistance feel free to fill out the form below or call the hotel directly</p>
         </div>
       </div>
       <div class="col-img-detail__image">
@@ -40,8 +40,8 @@ published_localized:
 
 <div class="contact-form">
   <div class="contact-form__full-col">
-    <p class="h2">contact form</p>
-    <p>Required fields are marked *</p>
+    <p class="h2" tabindex="0">contact form</p>
+    <p tabindex="0">Required fields are marked *</p>
   </div>
   {% include forms/jotform/contact.html %}
 </div>

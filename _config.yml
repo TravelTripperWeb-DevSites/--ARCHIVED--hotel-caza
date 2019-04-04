@@ -8,7 +8,7 @@ repository:
 default_lang: en
 languages:
 - en
-- es
+#- es
 include:
 - _ttio_templates/bedrock/_permanent_pages
 - _pages

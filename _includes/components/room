@@ -24,10 +24,10 @@
       <div class="c-room__name">
         <a class="h2" href="{{ room.id | permalink: model_dir: 'rooms' }}">{{ room.name }}</a>
       </div>
-      <div class="c-room__rate">
+      <div class="c-room__rate" tabindex="0">
         Tonight’s Rate: <span  data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span>
       </div>
-      <div class="c-room__size">
+      <div class="c-room__size" tabindex="0">
         <span><i class="fal fa-bed"></i> {{ room.bed_types[0].name }}</span>
         <span><i class="fal fa-arrows"></i> {{ room.size }}</span>
       </div>
