@@ -5,6 +5,10 @@
   margin-bottom: 35px;
   text-align: center;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   .h3 {
     width: 100%;
     padding: 0 0 32px;
@@ -155,6 +159,6 @@
 
   @include media-breakpoint-up(md) {
     padding-top: 26px;
-    padding-bottom: 96px;
+    padding-bottom: 72px;
   }
 }

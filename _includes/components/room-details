@@ -29,14 +29,14 @@
 <div class="c-item-detail__text-group">
   <div class="c-item-detail__text-group__wrap  tb-padding">
     <div class="c-item-detail__text-group__headings">
-      <h1 class="h2">{{ room_detail.name }}</h1>
-      <p class="h4">Tonight’s Rate <span data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span></p>
+      <h1 class="h2" tabindex="0">{{ room_detail.name }}</h1>
+      <p class="h4" tabindex="0">Tonight’s Rate <span data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span></p>
     </div>
 
     <div class="c-item-detail__text-group__text">
-      <div class="room-info"><span><i class="fal fa-bed"></i> 1 King</span><span><i class="fal fa-arrows"></i> 300 sqft / 28 sqm</span></div>
+      <div class="room-info" tabindex="0"><span><i class="fal fa-bed"></i> 1 King</span><span><i class="fal fa-arrows"></i> 300 sqft / 28 sqm</span></div>
 
-      <p>{{ room_detail.description }}</p>
+      <p tabindex="0">{{ room_detail.description }}</p>
     </div>
 
     <div class="c-item-detail__text-group__selector">
@@ -53,8 +53,8 @@
   <div class="common-amenities">
     <div class="common-amenities-container">
       <div class="room-amenities">
-        <div class="h4">Amenities</div>
-        <ul class="amenities">
+        <div class="h4" tabindex="0">Amenities</div>
+        <ul class="amenities" tabindex="0">
           <li>
             <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256617/qmrlzvjj7ggeh1p9i88m.png" alt="Hi-speed Wifi">
             <span>Hi-speed<br> Wifi</span>
@@ -96,7 +96,7 @@
     <div class="rooms-cs__intro">
       <div class="rooms-cs__row">
         <div class="rooms-cs__intro__left">
-          <p class="h2 mb-0">More rooms & suites</p>
+          <p class="h2 mb-0" tabindex="0">More rooms & suites</p>
         </div>
         <div class="rooms-cs__intro__right">
           <a href="/rooms/" class="btn btn--secondary">View All Rooms</a>

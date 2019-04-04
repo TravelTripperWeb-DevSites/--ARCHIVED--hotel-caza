@@ -14,7 +14,7 @@ meta_tags:
   <div class="col-img-detail">
     <div class="col-img-detail__wrap">
       <div class="col-img-detail__detail">
-        <div class="box">
+        <div class="box" tabindex="0">
           {% region intro_two_col, type:html %}
         </div>
         <div class="decorative">
@@ -32,20 +32,20 @@ meta_tags:
 
 <div class="c-map">
   <div class="attractions__heading">
-    <p class="h2"><span>Things to do near Hotel caza:</span></p>
+    <p class="h2" tabindex="0"><span>Things to do near Hotel caza:</span></p>
   </div>
   <ul class="attractions-mobile">
     <li>
       <a href="javascript:void(0);" class="attractions-mobile__link active"><i class="icon-attractions"></i>Attractions <div class="toggler"><small>Less</small> <span class="fal fa-minus"></span></div></a>
-      <div class="attractions-mobile__content active">
+      <div class="attractions-mobile__content active" role="listbox">
         {% for attraction in attractions %}
           {% if attraction.category == "Attractions" %}
-            <div class="c-map__list-view">
+            <div class="c-map__list-view" role="option">
               <figure>
                 <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
               </figure>
               <div class="c-map__list-view__detail">
-                <p class="h3">{{ attraction.name }}</p>
+                <p class="h3" tabindex="0">{{ attraction.name }}</p>
                 <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
               </div>
             </div>
@@ -55,15 +55,15 @@ meta_tags:
     </li>
     <li>
       <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-entertainment"></i>Entertainment<div class="toggler"><small>More</small> <span class="fal fa-plus"></span></div></a>
-      <div class="attractions-mobile__content">
+      <div class="attractions-mobile__content" role="listbox">
         {% for attraction in attractions %}
           {% if attraction.category == "Entertainment" %}
-            <div class="c-map__list-view">
+            <div class="c-map__list-view" role="option">
               <figure>
                 <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
               </figure>
               <div class="c-map__list-view__detail">
-                <p class="h3">{{ attraction.name }}</p>
+                <p class="h3" tabindex="0">{{ attraction.name }}</p>
                 <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
               </div>
             </div>
@@ -73,15 +73,15 @@ meta_tags:
     </li>
     <li>
       <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-eat-drink"></i>Eat & Drink<div class="toggler"><small>More</small> <span class="fal fa-plus"></span></div></a>
-      <div class="attractions-mobile__content">
+      <div class="attractions-mobile__content" role="listbox">
         {% for attraction in attractions %}
           {% if attraction.category == "Eat & Drink" %}
-            <div class="c-map__list-view">
+            <div class="c-map__list-view" role="option">
               <figure>
                 <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
               </figure>
               <div class="c-map__list-view__detail">
-                <p class="h3">{{ attraction.name }}</p>
+                <p class="h3" tabindex="0">{{ attraction.name }}</p>
                 <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
               </div>
             </div>
@@ -91,15 +91,15 @@ meta_tags:
     </li>
     <li>
       <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-shopping"></i>Shopping<div class="toggler"><small>More</small> <span class="fal fa-plus"></span></div></a>
-        <div class="attractions-mobile__content">
+        <div class="attractions-mobile__content" role="listbox">
           {% for attraction in attractions %}
             {% if attraction.category == "Shopping" %}
-              <div class="c-map__list-view">
+              <div class="c-map__list-view" role="option">
                 <figure>
                   <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
                 </figure>
                 <div class="c-map__list-view__detail">
-                  <p class="h3">{{ attraction.name }}</p>
+                  <p class="h3" tabindex="0">{{ attraction.name }}</p>
                   <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
                 </div>
               </div>
@@ -109,7 +109,7 @@ meta_tags:
     </li>
   </ul>
   <div class="c-map__wrap">
-    <div class="c-map__leaflet" id="leafletmap" data-attractions="show"></div>
+    <div class="c-map__leaflet" id="leafletmap" data-attractions="show" tabindex="-1"></div>
     <div class="c-map__tabs">
       <ul class="nav--filter">
       <li>
@@ -138,8 +138,8 @@ meta_tags:
               <img data-mappable-category="Attractions" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
             </div>
             <div class="location-slider__item__detail">
-              <p class="h3">{{ attraction.name }}</p>
-              {{ attraction.description }}
+              <p class="h3" tabindex="0">{{ attraction.name }}</p>
+              <div tabindex="0">{{ attraction.description }}</div>
               <p>
                 <a data-mappable-category="Attractions" data-mappable-item="{{ indexitem }}" class="btn btn--secondary">Show on Map</a>
                 <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
@@ -152,7 +152,7 @@ meta_tags:
         </div>
 
         <div class="slider-control location-slider-control">
-          <div class="slide-prev"><span></span></div>
+          <div class="slide-prev"><span tabindex="0"></span></div>
           <div class="slider-nav">
            {% for attraction in attractions %}
            {% if attraction.category == "Attractions" %}
@@ -160,7 +160,7 @@ meta_tags:
            {% endif %}
            {% endfor %}
           </div>
-          <div class="slide-next"><span></span></div>
+          <div class="slide-next"><span tabindex="0"></span></div>
         </div>
       </div>
       <div class="filter-item c-map__tabs__content hidden"  data-filter="entertainment">
@@ -174,7 +174,7 @@ meta_tags:
             </div>
             <div class="location-slider__item__detail">
               <p class="h3">{{ attraction.name }}</p>
-              {{ attraction.description }}
+              <div tabindex="0">{{ attraction.description }}</div>
               <p>
                 <a data-mappable-category="Entertainment" data-mappable-item="{{ indexitem }}" tabindex="-1" rel="nofollow" class="btn btn--secondary">Show on Map</a>
                 <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
@@ -187,7 +187,7 @@ meta_tags:
         </div>
 
         <div class="slider-control location-slider-control">
-          <div class="slide-prev"><span></span></div>
+          <div class="slide-prev"><span tabindex="0"></span></div>
           <div class="slider-nav">
            {% for attraction in attractions %}
            {% if attraction.category == "Entertainment" %}
@@ -195,7 +195,7 @@ meta_tags:
            {% endif %}
            {% endfor %}
           </div>
-          <div class="slide-next"><span></span></div>
+          <div class="slide-next"><span tabindex="0"></span></div>
         </div>
       </div>
       <div class="filter-item c-map__tabs__content hidden"  data-filter="eat-drink">
@@ -208,8 +208,8 @@ meta_tags:
               <img data-mappable-category="Eat & Drink" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
             </div>
             <div class="location-slider__item__detail">
-              <p class="h3">{{ attraction.name }}</p>
-              {{ attraction.description }}
+              <p class="h3" tabindex="0">{{ attraction.name }}</p>
+              <div tabindex="0">{{ attraction.description }}</div>
               <p>
                 <a data-mappable-category="Eat & Drink" data-mappable-item="{{ indexitem }}" tabindex="-1" rel="nofollow" class="btn btn--secondary">Show on Map</a>
                 <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
@@ -222,7 +222,7 @@ meta_tags:
         </div>
 
         <div class="slider-control location-slider-control">
-          <div class="slide-prev"><span></span></div>
+          <div class="slide-prev"><span tabindex="0"></span></div>
           <div class="slider-nav">
            {% for attraction in attractions %}
            {% if attraction.category == "Eat & Drink" %}
@@ -230,7 +230,7 @@ meta_tags:
            {% endif %}
            {% endfor %}
           </div>
-          <div class="slide-next"><span></span></div>
+          <div class="slide-next"><span tabindex="0"></span></div>
         </div>
       </div>
       <div class="filter-item c-map__tabs__content hidden"  data-filter="shopping">
@@ -243,8 +243,8 @@ meta_tags:
               <img  data-mappable-category="Shopping" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
             </div>
             <div class="location-slider__item__detail">
-              <p class="h3">{{ attraction.name }}</p>
-              {{ attraction.description }}
+              <p class="h3" tabindex="0">{{ attraction.name }}</p>
+              <div tabindex="0">{{ attraction.description }}</div>
               <p>
                 <a data-mappable-category="Shopping" data-mappable-item="{{ indexitem }}" tabindex="-1" rel="nofollow" class="btn btn--secondary">Show on Map</a>
                 <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
@@ -257,7 +257,7 @@ meta_tags:
         </div>
 
         <div class="slider-control location-slider-control">
-          <div class="slide-prev"><span></span></div>
+          <div class="slide-prev"><span tabindex="0"></span></div>
           <div class="slider-nav">
            {% for attraction in attractions %}
            {% if attraction.category == "Shopping" %}
@@ -265,7 +265,7 @@ meta_tags:
            {% endif %}
            {% endfor %}
           </div>
-          <div class="slide-next"><span></span></div>
+          <div class="slide-next"><span tabindex="0"></span></div>
         </div>
       </div>
     </div>
@@ -278,7 +278,7 @@ meta_tags:
 {% assign around = site.data._models.getting-around | sort: order %}
 <div class="col-amenities location-around light-bg" id="amenities">
   <div class="logo-amenities">
-      <p class="h2"><span>Getting Around</span></p>
+      <p class="h2" tabindex="0"><span>Getting Around</span></p>
   </div>
   <div class="col-amenities__items">
     <div class="col-amenities__items__wrap">
@@ -288,19 +288,19 @@ meta_tags:
           {% for amenity in around %}
             <div class="slide-item1">
              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-             <p class="h3">{{ amenity.name }}</p>
-             <p>{{ amenity.description }}</p>
+             <p class="h3" tabindex="0">{{ amenity.name }}</p>
+             <p tabindex="0">{{ amenity.description }}</p>
             </div>
            {% endfor %}
         </div>
         <div class="slider-control">
-          <div class="slide-prev"><span></span></div>
+          <div class="slide-prev"><span tabindex="0"></span></div>
           <div class="slider-nav">
               {% for amenity in around %}
               <span></span>
               {% endfor %}
           </div>
-          <div class="slide-next"><span></span></div>
+          <div class="slide-next"><span tabindex="0"></span></div>
         </div>
       </div>
     </div>
