@@ -32,7 +32,9 @@ meta_tags:
 
 <div class="c-map">
   <div class="attractions__heading">
+    {% regionblock attractions_heading, type:header %}
     <p class="h2" tabindex="0"><span>Things to do near Hotel caza:</span></p>
+    {% endregionblock %}
   </div>
   <ul class="attractions-mobile">
     <li>
@@ -278,7 +280,9 @@ meta_tags:
 {% assign around = site.data._models.getting-around | sort: order %}
 <div class="col-amenities location-around light-bg" id="amenities">
   <div class="logo-amenities">
+    {% regionblock amenities_heading, type:header %}
       <p class="h2" tabindex="0"><span>Getting Around</span></p>
+    {% endregionblock %}
   </div>
   <div class="col-amenities__items">
     <div class="col-amenities__items__wrap">

@@ -9,8 +9,10 @@ permalink: /blog/search/
     <div class="blog__row">
       <div class="blog__list">
         <div class="blog__item">
-            <p class="h2" tabindex="0">Search Results:</p>
-            <ul id="search-results" class="blog__results"></ul>
+          {% regionblock search_heading, type:header %}
+          <p class="h2" tabindex="0">Search Results:</p>
+          {% endregionblock %}
+          <ul id="search-results" class="blog__results"></ul>
         </div>
       </div>
       <div class="blog__aside">
