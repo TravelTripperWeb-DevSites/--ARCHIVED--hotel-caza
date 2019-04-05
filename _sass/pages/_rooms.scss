@@ -1,10 +1,46 @@
 // Rooms & Room Details Page Elements
 // ==========================================================================
 
-.c-room-list,
-.c-offer-list {
-  .c-room,
-  .c-offer-item {
+.room-filter {
+  @include make-container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  z-index: 3;
+  max-width: 1012px;
+  margin: -56px auto 0;
+  padding: 24px 15px;
+  text-align: center;
+  background-color: $white;
+  list-style-type: none;
+
+  p {
+    flex: 100%;
+  }
+
+  li {
+    padding: 5px 21px;
+  }
+
+  a {
+    font-size: 12px;
+    padding: 5px 0;
+    color: $black;
+    text-transform: uppercase;
+
+    &.active,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.c-offer-list,
+.c-room-list {
+  .c-offer-item,
+  .c-room {
     padding-bottom: 40px;
     @include media-breakpoint-up(lg) {
       padding-bottom: 72px;
@@ -26,12 +62,13 @@
         @include make-col(7);
         padding: 0 15px !important;
       }
+
       .tns-outer .tns-nav button {
         width: 12px !important;
-        height: 12px  !important;
-        margin: 0 5px  !important;
+        height: 12px !important;
+        margin: 0 5px !important;
         border: 0 !important;
-        border-radius: 50%  !important;
+        border-radius: 50% !important;
       }
     }
 
@@ -59,16 +96,16 @@
     }
 
     &:nth-child(even) {
-      .c-room__image-group,
-      .c-offer-item__image-group {
+      .c-offer-item__image-group,
+      .c-room__image-group {
         order: 0;
         @include media-breakpoint-up(md) {
           order: 1;
         }
       }
 
-      .c-room__text-group,
-      .c-offer-item__text-group {
+      .c-offer-item__text-group,
+      .c-room__text-group {
         order: 1;
         @include media-breakpoint-up(md) {
           order: 0;
@@ -134,8 +171,10 @@
   @include make-container;
   @include make-container-max-widths;
   padding-bottom: 0 !important;
+
   .c-offer-item {
     @include make-row;
+
     &__text-group {
       display: flex;
       flex-direction: column;
@@ -145,30 +184,26 @@
         margin-top: 16px;
         text-transform: none;
       }
-
     }
   }
 }
-
 // Room Details
 .room-image-carousel {
   position: relative;
+
   img {
     width: 100%;
     height: 272px;
     object-fit: cover;
-
     @include media-breakpoint-up(md) {
       height: 700px;
     }
   }
 
   .slider-control {
-
     .slider-nav {
       position: absolute;
       bottom: 10px;
-
       @include media-breakpoint-up(md) {
         bottom: 50px;
       }
@@ -190,7 +225,6 @@
       margin: 0;
       background-image: linear-gradient(270deg, rgba($black, 0) 0%, rgba($black, .4) 100%);
       outline: none;
-
       @include media-breakpoint-up(md) {
         width: 108px;
       }
@@ -200,12 +234,12 @@
         top: 50%;
         right: 2px;
         transform: translateY(-50%);
-
         @include media-breakpoint-up(md) {
           right: 22px;
         }
 
-        &:before, &:after {
+        &:after,
+        &:before {
           border-color: $white;
         }
       }
@@ -221,7 +255,6 @@
       margin: 0;
       background-image: linear-gradient(90deg, rgba($black, 0) 0%, rgba($black, .4) 100%);
       outline: none;
-
       @include media-breakpoint-up(md) {
         width: 108px;
       }
@@ -231,26 +264,24 @@
         top: 50%;
         left: 2px;
         transform: translateY(-50%);
-
         @include media-breakpoint-up(md) {
           left: 22px;
         }
 
-        &:before, &:after {
+        &:after,
+        &:before {
           border-color: $white;
         }
       }
     }
   }
 }
-
 // Room Amenities
 .common-amenities {
   position: relative;
   margin-bottom: 40px;
   padding-top: 50px;
   padding-bottom: 30px;
-
   @include media-breakpoint-up(md) {
     margin-bottom: 72px;
   }
@@ -259,6 +290,7 @@
     @include make-container;
     @include make-container-max-widths;
   }
+
   &:after {
     position: absolute;
     top: 0;
@@ -268,7 +300,6 @@
     z-index: -1;
     content: '';
     background-color: $white;
-
     @include media-breakpoint-up(lg) {
       right: 108px;
     }

@@ -42,8 +42,6 @@ readyDoc(() => {// If DOM is ready
   }
 
 
-
-
   if(document.getElementsByClassName("rooms-slider")[0]) {
     var roomSlider = tns({
       container: '.rooms-slider',
@@ -218,3 +216,5 @@ function pinterestShare(img, desc) {
     "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
   return false;
 }
+
+ 

@@ -4,10 +4,19 @@ layout: generic
 
 {% assign rooms = site.data._models.rooms | sort:"order" %}
 
-<section class="c-room-list tb-padding">
-  {% for room in rooms %}
-    {% include components/room %}
-  {% endfor %}
+ <section>
+  <ul class="room-filter nav--filter">
+    <p class="h4">Select A Room Type</p>
+    {% assign bedtypes = site.data._models.room_bed_types | sort:"order" %}
+    {% for filter in bedtypes %}
+    <li><a href="javascript:;" data-rel="{{ filter.name | replace:" ","_"  }}"  data-filter="{{ filter.name | replace:" ","_"  }}" class="filter filter--option">{{ filter.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="c-room-list tb-padding">
+    {% for room in rooms %}
+      {% include components/room %}
+    {% endfor %}
+  </div>
 </section>
 
 {{ content }}
