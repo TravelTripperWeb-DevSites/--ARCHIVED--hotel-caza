@@ -31,6 +31,7 @@
     "_template": "hero",
     "hero_html": {
       "content": "<p class=\"h1\">fun is an<br />amenity here</p>\n<p><a class=\"btn btn--primary\" href=\"offers/\">View Specials</a></p>"
-    }
+    },
+    "skip_h1": true
   }
 ]
