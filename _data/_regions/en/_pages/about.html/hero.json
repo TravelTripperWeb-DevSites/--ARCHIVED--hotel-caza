@@ -10,7 +10,7 @@
     },
     "advanced_options": {
     },
-    "skip_h1": true,
+    "skip_h1": false,
     "hero_image": {
       "image": {
         "name": "Blue-beach-loungers-hero",
