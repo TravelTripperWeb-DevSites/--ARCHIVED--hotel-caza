@@ -19,7 +19,7 @@ published_localized:
     <div class="col-img-detail__wrap">
       <div class="col-img-detail__detail">
         <div class="box">
-          <p class="h4" tabindex="0">Our Address</p>
+          <h2 class="h4" tabindex="0">Our Address</h2>
           <p tabindex="0">{{ site.data.hotel_settings.address.street1 }}, {{ site.data.hotel_settings.address.state }}, {{ site.data.hotel_settings.address.city }}, {{ site.data.hotel_settings.address.zip_code }}</p>
           <p><a href="{{ site.data.hotel_settings.get_directions_url }}" rel="nofollow" target="_blank" class="btn--primary">get directions</a></p>
           <div class="contact-info">
@@ -43,7 +43,7 @@ published_localized:
 <div class="contact-form">
   <div class="contact-form__full-col">
     {% regionblock contact_form_heading, type:header %}
-    <p class="h2" tabindex="0">contact form</p>
+    <h3 class="h2" tabindex="0">contact form</h3>
     {% endregionblock %}
     {% regionblock contact_form_note, type:text %}
     <p tabindex="0">Required fields are marked *</p>
