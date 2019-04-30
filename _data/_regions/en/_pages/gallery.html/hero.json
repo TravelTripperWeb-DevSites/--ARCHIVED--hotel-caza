@@ -33,6 +33,7 @@
     "hero_title": {
       "content": "let&rsquo;s get visual!",
       "_template": "header"
-    }
+    },
+    "skip_h1": true
   }
 ]
