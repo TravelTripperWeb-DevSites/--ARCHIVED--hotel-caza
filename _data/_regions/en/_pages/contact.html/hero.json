@@ -29,7 +29,7 @@
     },
     "_template": "hero",
     "hero_html": {
-      "content": "<p class=\"h3\">contact&nbsp;</p>"
+      "content": "<h1 class=\"h3\">contact&nbsp;</h1>"
     },
     "hero_title": {
       "content": "don&rsquo;t be shy!",
