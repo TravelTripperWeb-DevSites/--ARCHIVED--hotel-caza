@@ -33,6 +33,7 @@
     "hero_title": {
       "content": "time out time",
       "_template": "header"
-    }
+    },
+    "skip_h1": true
   }
 ]
