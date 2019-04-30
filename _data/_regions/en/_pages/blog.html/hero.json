@@ -6,7 +6,7 @@
     },
     "_template": "hero",
     "hero_html": {
-      "content": "<p class=\"h3\">hotel caza blog</p>"
+      "content": "<h1 class=\"h3\">hotel caza blog</h1>"
     },
     "advanced_options": {
     },
