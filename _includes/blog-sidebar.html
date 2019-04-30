@@ -3,7 +3,7 @@
 {% if page.url != "/blog/" and page.url != "/blog/search/" %}
   <div class="blog blog--related d-block d-md-none">
     <div class="blog__container">
-      <p class="blog-sidebar-heading" tabindex="0">Related Stories</p>
+      <h2 class="blog-sidebar-heading" tabindex="0">Related Stories</h2>
       <div class="blog__related">
         {% assign relatedposts = site.data._models.posts | sort: 'date' | reverse %}
         {% assign count = 0 %}
@@ -42,7 +42,7 @@
 
   <!-- Blog Posts Search Desktop  -->
   <div class="blog__search-wrap d-none d-md-block">
-    <p class="blog-sidebar-heading mb-2" tabindex="0">Search</p>
+    <h3 class="blog-sidebar-heading mb-2" tabindex="0">Search</h3>
     <div class="blog__search">
       <form class="search-form" action="/blog/search/" method="get">
         <input type="text" class="blog__search__box" name="query" id="search-box" placeholder="Enter search keyword(s)" aria-label="Search blogs">
@@ -55,7 +55,7 @@
 
 <!-- Blog Recent Posts -->
   <div class="blog__others">
-    <p class="blog-sidebar-heading" tabindex="0">Recent Posts</p>
+    <h4 class="blog-sidebar-heading" tabindex="0">Recent Posts</h4>
     {% assign recentposts = site.data._models.posts | sort: 'date' | reverse %}
     {% for recentpost in recentposts | limit: 5 %}
     {% if recentpost.url_friendly_name != page.url_friendly_name %}
@@ -89,7 +89,7 @@
   <!-- Blog Categories Desktop -->
 
   <div class="categories-wrap d-none d-md-block">
-    <p class="blog-sidebar-heading" tabindex="0">Categories</p>
+    <h5 class="blog-sidebar-heading" tabindex="0">Categories</h5>
 
     <ul class="categories-list">
       {% assign categories = site.data._definition_options.blog_categories %}
@@ -114,7 +114,7 @@
   <!-- Blog Subscription -->
 
   <div class="blog__subscribe">
-    <p tabindex="0">SUBSCRIBE TO THE hotel caza BLOG</p>
+    <h6 tabindex="0">SUBSCRIBE TO THE hotel caza BLOG</h6>
     {% include forms/jotform/blog-subscribe.html %}
   </div>
 </div>
