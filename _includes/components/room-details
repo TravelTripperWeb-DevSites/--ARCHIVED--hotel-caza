@@ -53,7 +53,7 @@
   <div class="common-amenities">
     <div class="common-amenities-container">
       <div class="room-amenities">
-        <div class="h4" tabindex="0">Amenities</div>
+        <h2 class="h4" tabindex="0">Amenities</h2>
         <ul class="amenities" tabindex="0">
           <li>
             <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256617/qmrlzvjj7ggeh1p9i88m.png" alt="Hi-speed Wifi">
@@ -96,7 +96,7 @@
     <div class="rooms-cs__intro">
       <div class="rooms-cs__row">
         <div class="rooms-cs__intro__left">
-          <p class="h2 mb-0" tabindex="0">More rooms & suites</p>
+          <h3 class="h2 mb-0" tabindex="0">More rooms & suites</h3>
         </div>
         <div class="rooms-cs__intro__right">
           <a href="/rooms/" class="btn btn--secondary">View All Rooms</a>
