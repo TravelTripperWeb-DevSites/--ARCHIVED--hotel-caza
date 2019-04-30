@@ -1,7 +1,7 @@
 [
   {
     "hero_html": {
-      "content": "<p class=\"h3\">location</p>"
+      "content": "<h1 class=\"h3\">location</h1>"
     },
     "_template": "hero",
     "hero_title": {
