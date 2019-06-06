@@ -132,6 +132,19 @@
         padding: 52px 15px 32px;
       }
     }
+
+    &__list {
+      ul{
+        max-width: 372px;
+        text-align: left;
+        margin: auto;
+        padding: 0;
+        li{
+          color: $primary;
+          line-height: 24px;
+        }
+      }
+    }
     &__slider {
       z-index: 2;
       display: block;
