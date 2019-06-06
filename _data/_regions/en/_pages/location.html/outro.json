@@ -31,11 +31,11 @@
       }
     },
     "hero_title": {
-      "content": "go to your fun place",
+      "content": "THE FUN STARTS HERE",
       "_template": "header"
     },
     "hero_html": {
-      "content": "<p><a class=\"btn btn--white\" href=\"#\">Book Now</a></p>"
+      "content": "<p><a class=\"btn btn--white\" href=\"JavaScript:void(0);\"  show-booking-widget>Book Now</a></p>"
     }
   }
 ]
