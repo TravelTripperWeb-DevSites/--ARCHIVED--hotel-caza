@@ -31,5 +31,83 @@
     "alt": "san-francisco",
     "caption": "",
     "description": ""
+  },
+  "location": {
+    "name": "94109",
+    "address": "San Francisco, CA 94109, USA",
+    "place_id": "ChIJy0ilcOmAhYARCLOo6oZQNxk",
+    "reference": "ChIJy0ilcOmAhYARCLOo6oZQNxk",
+    "latitude": 37.79297889999999,
+    "longitude": -122.42124239999998,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "94109",
+          "short_name": "94109",
+          "types": [
+            "postal_code"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94109</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "San Francisco, CA 94109, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.79297889999999,
+          "lng": -122.42124239999998
+        },
+        "viewport": {
+          "south": 37.7916299197085,
+          "west": -122.42259138029146,
+          "north": 37.7943278802915,
+          "east": -122.4198934197085
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+      "id": "79bed22941a617c171754378148cf1c08de83b62",
+      "name": "94109",
+      "place_id": "ChIJy0ilcOmAhYARCLOo6oZQNxk",
+      "reference": "ChIJy0ilcOmAhYARCLOo6oZQNxk",
+      "scope": "GOOGLE",
+      "types": [
+        "postal_code"
+      ],
+      "url": "https://maps.google.com/?q=94109&ftid=0x808580e970a548cb:0x19375086eaa8b308",
+      "utc_offset": -420,
+      "vicinity": "San Francisco",
+      "html_attributions": null
+    }
   }
 }
