@@ -1,10 +1,10 @@
 {
-  "order": 5,
+  "order": 8,
   "name_localized": {
-    "en": "Swimming Pool"
+    "en": "Fitness Center"
   },
   "description_localized": {
-    "en": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+    "en": "Make your health a priority in our Fitness Center. You can also head out for an exhilarating jog or walk along the Embarcadero and Fisherman’s Wharf, with views of the Golden Gate Bridge."
   },
   "category": "hotel",
   "images": {
