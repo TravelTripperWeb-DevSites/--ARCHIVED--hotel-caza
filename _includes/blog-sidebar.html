@@ -8,7 +8,7 @@
         {% assign relatedposts = site.data._models.posts | sort: 'date' | reverse %}
         {% assign count = 0 %}
         {% for relatedpost in relatedposts %}
-        {% if relatedpost.blog_category == post.blog_category and count < 6 %}
+        {% if relatedpost.blog_category.category_title == post.blog_category.category_title and count < 6 %}
         {% if relatedpost.url_friendly_name != post.url_friendly_name %}
         {% assign count = count | plus: 1 %}
         <div class="blog__related__item">
@@ -81,8 +81,8 @@
 
   <select class="custom-select form-control" id="js-categoryfilter" style="display:none;">
     <option selected value="all">Choose a Category</option>
-    {% for category in site.data._definition_options.blog_categories %}
-    <option value="{{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">category</option>
+    {% for category in site.data._models.blog_category %}
+    <option value="{{ category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{category.category_title}}</option>
     {% endfor %}
   </select>
 
@@ -92,13 +92,13 @@
     <h4 class="blog-sidebar-heading" tabindex="0">Categories</h4>
 
     <ul class="categories-list">
-      {% assign categories = site.data._definition_options.blog_categories %}
+      {% assign categories = site.data._models.blog_category %}
       {% for category in categories %}
       <li>
-        <a href="/blog/?c={{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category }}
+        <a href="/blog/?c={{ category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category.category_title }}
           {% assign count = 0 %}
           {% for postcount in site.data._models.posts %}
-            {% if postcount.blog_category == category %}
+            {% if postcount.blog_category.category_title == category.category_title %}
               {% capture count  %}
                 {{ count  | plus: '1' }}
               {% endcapture %}

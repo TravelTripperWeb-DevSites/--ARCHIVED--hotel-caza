@@ -158,6 +158,8 @@ document.ready(() => {
     const filteredItems = allItems.filter(image => image.getAttribute('data-filter') === filterValue);
     const hiddenItems = allItems.filter(image => image.classList.contains('hidden'));
 
+    document.getElementById("catDes_"+filterValue).style.display= "block";
+
     if (filterValue === 'all') {
       hiddenItems.forEach((image) => {
         fade(image, 'in', 500);
@@ -179,7 +181,6 @@ document.ready(() => {
       document.getElementsByClassName('filter-item'),
     );
     let filterValue;
-
     function getUrlVars() {
       let vars = {};
       let parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
@@ -216,5 +217,3 @@ function pinterestShare(img, desc) {
     "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
   return false;
 }
-
- 

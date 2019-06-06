@@ -1,0 +1,10 @@
+{
+  "category_title":{
+    "type": "text",
+    "localizable": true
+  },
+  "category_description": {
+    "type": "text",
+    "localizable": true
+  }
+}

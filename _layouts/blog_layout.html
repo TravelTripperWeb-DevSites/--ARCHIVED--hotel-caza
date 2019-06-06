@@ -18,8 +18,8 @@ layout: default
               {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
               {{ post.date | date: "%Y" }}
             </span>
-  					{% if post.blog_category %}
-  					<a href="/blog/?c={{ post.blog_category | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category }}</a>
+  					{% if post.blog_category.category_title %}
+  					<a href="/blog/?c={{ post.blog_category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category.category_title }}</a>
   					{% endif %}
           </div>
 
@@ -52,7 +52,7 @@ layout: default
       {% assign relatedposts = site.data._models.posts | sort: 'date' | reverse %}
       {% assign count = 0 %}
       {% for relatedpost in relatedposts %}
-      {% if relatedpost.blog_category == post.blog_category and count < 6 %}
+      {% if relatedpost.blog_category.category_title == post.blog_category.category_title and count < 6 %}
       {% if relatedpost.url_friendly_name != post.url_friendly_name %}
       {% assign count = count | plus: 1 %}
       <div class="blog__related__item">

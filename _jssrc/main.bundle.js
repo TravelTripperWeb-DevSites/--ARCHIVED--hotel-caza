@@ -159,6 +159,8 @@ document.ready(function () {
       return image.classList.contains('hidden');
     });
 
+    document.getElementById("catDes_" + filterValue).style.display = "block";
+
     if (filterValue === 'all') {
       hiddenItems.forEach(function (image) {
         fade(image, 'in', 500);
@@ -177,7 +179,6 @@ document.ready(function () {
   function filterSetup(filter) {
     var allItems = [].slice.call(document.getElementsByClassName('filter-item'));
     var filterValue = void 0;
-
     function getUrlVars() {
       var vars = {};
       var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {

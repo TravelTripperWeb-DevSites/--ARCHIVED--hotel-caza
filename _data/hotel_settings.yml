@@ -3,10 +3,10 @@ latitude: 37.806699
 longitude: -122.4172393
 map_zoom: 13
 name: Hotel Caza
-email: res-hi-sf-wharf@ihg.com
+email: reservations@hotelcaza.com
 phone_number: 0861 444 435
 address:
-  street1: '495 Beach Street'
+  street1: '1300 Columbus Avenue'
   state: 'San Francisco'
   city: 'California'
   zip_code: '94133'
@@ -66,4 +66,4 @@ logo:
   caption: ''
   description: ''
 phone: '0861 444 435'
-get_directions_url: https://goo.gl/maps/6gptUjJW5R32
+get_directions_url: https://goo.gl/maps/XEAS2owqby3j1v6N9

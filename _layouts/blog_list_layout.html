@@ -9,10 +9,21 @@ layout: generic
   <div class="blog__container">
     <div class="blog__row">
       <div class="blog__list">
+
+        <div class="blog__category-heading">
+          {% assign categories = site.data._models.blog_category %}
+          {% for category in categories %}
+          <div class="category-desctiotion" style="display: none" id="catDes_{{ category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
+            <h2 class="h2">{{category.category_title}}<h2>
+              <p>{{category.category_description}}</p>
+          </div>
+          {% endfor %}
+        </div>
+
         {% assign blog-posts = site.data._models.posts | sort: 'date' | reverse %}
         {% for post in blog-posts %}
-        {% if post.category == page.category %}
-        <div class="blog__item filter-item" data-filter="{{ post.blog_category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
+
+        <div class="blog__item filter-item" data-filter="{{ post.blog_category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
           <figure class="blog__image">
             <a href="/blog/{{ post.url_friendly_name }}" tabindex="-1">
               <img src="{{ post.image.url_medium }}" alt="{{ post.title }}">
@@ -26,7 +37,7 @@ layout: generic
               <span class="blog__date" tabindex="0">
                 {{ post.date | date: '%B %d, %Y' }}
               </span>
-              <a href="/blog/?c={{ post.blog_category | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category }}</a>
+              <a href="/blog/?c={{ post.blog_category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category.category_title }}</a>
             </div>
             <div tabindex="0">
               {% assign excerpt = post.post_excerpt %}
@@ -42,7 +53,7 @@ layout: generic
             </div>
           </div>
         </div>
-        {% endif %}
+
         {% endfor %}
       </div>
       <div class="blog__aside">

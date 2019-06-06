@@ -1,14 +1,14 @@
 {
   "name_localized": {
-    "en": "Business Package",
+    "en": "Book Now & Save",
     "es": "Empresas del paquete"
   },
   "short_description_localized": {
-    "en": "Includes Airport Transfer, Wi-Fi and daily Breakfast, for the business person that needs to focus on his meetings.",
+    "en": "Book early and save with our Advance Purchase Offer",
     "es": "Incluye Traslado al aeropuerto, Wi-Fi y desayuno"
   },
   "description_localized": {
-    "en": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam:</p><ul><li>Eaque ipsa quae ab illo inventore veritatis et quasi</li><li>Vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error</li><li>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</li></ul>",
+    "en": "<p>We like to reward those who plan in advance. Book early and save 15% off your nightly rate.</p>\n<ul>\n<li>Save up to 15% by locking in your reservation now.</li>\n</ul>\n<p>Offer must be booked at least 30 days in advance of arrival date. Full payment collected at the time of booking. Prepaid reservations are non-refundable, non-cancellable and cannot be combined with any other offer.</p>",
     "es": null
   },
   "image": {
@@ -29,9 +29,10 @@
     "size": 134141,
     "caption": "",
     "description": "",
-    "alt": "",
+    "alt": "Book Now & Save",
     "original_url": "https://d31f902anbz5po.cloudfront.net/6/6375_2_master.jpg",
     "git_file_name": "_assets/image_data/Business-Package-.json"
   },
-  "reztrip_offer_id": "BIZ"
+  "reztrip_offer_id": "BIZ",
+  "order": 1
 }

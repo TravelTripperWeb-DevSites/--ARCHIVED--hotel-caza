@@ -1,14 +1,14 @@
 {
   "name_localized": {
-    "en": "Non Refundable - Save 15%",
+    "en": "Park & Play",
     "es": "Non Refundable - Save 15%"
   },
   "short_description_localized": {
-    "en": "Book a non refundable rate and enjoy 15% off your stay",
+    "en": "Parking is on us. Enjoy our Best Available Rate and Valet Parking for One Car",
     "es": "Book a non refundable rate and enjoy 15% off your stay"
   },
   "description_localized": {
-    "en": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam:</p><ul><li>Eaque ipsa quae ab illo inventore veritatis et quasi</li><li>Vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error</li><li>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</li></ul>",
+    "en": "<p>Don&rsquo;t worry about your car while in San Francisco. Park once - play all vacation long with discounted parking each night of your stay.</p>\n<ul>\n<li>Parking for one standard sized vehicle.</li>\n<li>Unlimited in and out privileges during your stay.</li>\n</ul>",
     "es": null
   },
   "image": {
@@ -29,9 +29,10 @@
     "size": 241586,
     "caption": "",
     "description": "",
-    "alt": "",
+    "alt": "Park & Play",
     "original_url": "https://d31f902anbz5po.cloudfront.net/6/21259_3_master.png",
     "git_file_name": "_assets/image_data/Non-Refundable---Save-15--.json"
   },
-  "reztrip_offer_id": "adv"
+  "reztrip_offer_id": "adv",
+  "order": 4
 }
