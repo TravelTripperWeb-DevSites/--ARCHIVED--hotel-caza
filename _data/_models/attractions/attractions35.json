@@ -1,0 +1,143 @@
+{
+  "order": 2,
+  "name_localized": {
+    "en": "Mama’s on Washington Square"
+  },
+  "category": "Eat & Drink",
+  "seo_title_localized": {
+    "en": "Mama’s on Washington Square"
+  },
+  "description_localized": {
+    "en": "<p>Long lines form for the hearty breakfast &amp; light fare served at this cozy, veteran restaurant.</p>"
+  },
+  "image": {
+    "name": "mam",
+    "content_type": "image/jpeg",
+    "date_added": "2019-06-06-053838",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1559813918/baxccor5qrx47sg6wyw9.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1559813918/baxccor5qrx47sg6wyw9.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1559813918/baxccor5qrx47sg6wyw9.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1559813918/baxccor5qrx47sg6wyw9.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1559813918/baxccor5qrx47sg6wyw9.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1559813918/baxccor5qrx47sg6wyw9.jpg",
+    "width": 408,
+    "height": 612,
+    "format": "jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1559813918/baxccor5qrx47sg6wyw9.jpg",
+    "resource_type": "image",
+    "size": 88745,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1559813918/baxccor5qrx47sg6wyw9.jpg",
+    "file_size": null,
+    "alt": "mam",
+    "caption": "",
+    "description": ""
+  },
+  "location": {
+    "name": "1701 Stockton St",
+    "address": "1701 Stockton St, San Francisco, CA 94133, USA",
+    "place_id": "ChIJD_6d_vCAhYARZrcIyX1NJ_I",
+    "reference": "ChIJD_6d_vCAhYARZrcIyX1NJ_I",
+    "latitude": 37.8015323,
+    "longitude": -122.4095835,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "1701",
+          "short_name": "1701",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Stockton Street",
+          "short_name": "Stockton St",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "North Beach",
+          "short_name": "North Beach",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94133",
+          "short_name": "94133",
+          "types": [
+            "postal_code"
+          ]
+        },
+        {
+          "long_name": "2914",
+          "short_name": "2914",
+          "types": [
+            "postal_code_suffix"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"street-address\">1701 Stockton St</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94133-2914</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "1701 Stockton St, San Francisco, CA 94133, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.8015323,
+          "lng": -122.4095835
+        },
+        "viewport": {
+          "south": 37.8001958197085,
+          "west": -122.41085973029152,
+          "north": 37.8028937802915,
+          "east": -122.4081617697085
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "18193a5c01c4d7da5105252464a493fab98e3da6",
+      "name": "1701 Stockton St",
+      "place_id": "ChIJD_6d_vCAhYARZrcIyX1NJ_I",
+      "reference": "ChIJD_6d_vCAhYARZrcIyX1NJ_I",
+      "scope": "GOOGLE",
+      "types": [
+        "premise",
+        "establishment"
+      ],
+      "url": "https://maps.google.com/?q=1701+Stockton+St,+San+Francisco,+CA+94133,+USA&ftid=0x808580f0fe9dfe0f:0xf2274d7dc908b766",
+      "utc_offset": -420,
+      "vicinity": "San Francisco",
+      "html_attributions": null
+    }
+  }
+}
