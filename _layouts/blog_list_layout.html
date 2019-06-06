@@ -9,9 +9,16 @@ layout: generic
   <div class="blog__container">
     <div class="blog__row">
       <div class="blog__list">
+        <div class="blog__category-heading">
+          <h2 class="h2">Hotel Caza News<h2>
+          <p>Keep up with the latest Hotel Caza scoop, from special offers to the funnest amenities offered at our San Francisco retreat. Be the first to experience all that Hotel Caza has to offer with news, local explore guides, and more!</p>
+
+          <h2 class="h2">Hotel Caza News<h2>
+          <p>Keep up with the latest Hotel Caza scoop, from special offers to the funnest amenities offered at our San Francisco retreat. Be the first to experience all that Hotel Caza has to offer with news, local explore guides, and more!</p>
+        </div>
         {% assign blog-posts = site.data._models.posts | sort: 'date' | reverse %}
         {% for post in blog-posts %}
-        {% if post.category == page.category %}
+
         <div class="blog__item filter-item" data-filter="{{ post.blog_category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
           <figure class="blog__image">
             <a href="/blog/{{ post.url_friendly_name }}" tabindex="-1">
@@ -42,7 +49,7 @@ layout: generic
             </div>
           </div>
         </div>
-        {% endif %}
+
         {% endfor %}
       </div>
       <div class="blog__aside">
