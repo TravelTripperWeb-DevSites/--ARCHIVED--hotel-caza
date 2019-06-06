@@ -5,7 +5,7 @@
     },
     "_template": "hero",
     "hero_title": {
-      "content": "your story starts here",
+      "content": "Get Inspired",
       "_template": "header"
     },
     "advanced_options": {

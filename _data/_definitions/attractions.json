@@ -13,7 +13,7 @@
     },
     "category": {
       "type": "enum",
-      "options": [ "See & Do",
+      "options": [ "Attractions",
         "Entertainment",
         "Eat & Drink",
         "Shopping"
