@@ -1,14 +1,14 @@
 {
   "name_localized": {
-    "en": "Facebook Special",
+    "en": "AAA / AARP Discount",
     "es": "Facebook Especial"
   },
   "short_description_localized": {
-    "en": "We're offering you a special rate for showing you like us. Don't forget to share that you're staying with us by clicking the facebook button anytime while making a booking. ",
+    "en": "Enjoy members-only rates at Hotel Caza.",
     "es": "Te ofrecemos una tarifa especial para mostrar que al igual que nosotros. No te olvides de compartir que te vas a quedar con nosotros haciendo clic en el botón de Facebook en cualquier momento al hacer la reserva."
   },
   "description_localized": {
-    "en": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam:</p><ul><li>Eaque ipsa quae ab illo inventore veritatis et quasi</li><li>Vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error</li><li>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</li></ul>",
+    "en": "<p>Take advantage of your AAA / AARP rate discount when you book your next vacation with Hotel Caza, one of San Francisco&rsquo;s premier hotels located just steps from Fisherman&rsquo;s Wharf, North Beach, and the Embarcadero.</p>\n<ul>\n<li>AAA and AARP members save up to 10% off on our Best Available Rate.</li>\n</ul>\n<p>Must show valid AAA/AARP membership card upon check-in.</p>",
     "es": null
   },
   "image": {
@@ -29,9 +29,10 @@
     "size": 93697,
     "caption": "",
     "description": "",
-    "alt": "",
+    "alt": "AAA / AARP Discount",
     "original_url": "https://d31f902anbz5po.cloudfront.net/6/19431_1_master.jpg",
     "git_file_name": "_assets/image_data/Facebook-Special-.json"
   },
-  "reztrip_offer_id": "FACE"
+  "reztrip_offer_id": "FACE",
+  "order": 2
 }
