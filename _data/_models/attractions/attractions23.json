@@ -28,5 +28,256 @@
     "alt": "painter",
     "caption": "",
     "description": ""
+  },
+  "location": {
+    "name": "The Painted Ladies",
+    "address": "Steiner St &, Hayes St, San Francisco, CA 94117, USA",
+    "phone": "(415) 218-0259",
+    "place_id": "ChIJuX92JKWAhYARxVmeb8DQIYQ",
+    "reference": "ChIJuX92JKWAhYARxVmeb8DQIYQ",
+    "latitude": 37.77625929999999,
+    "longitude": -122.43275800000004,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "Hayes Street",
+          "short_name": "Hayes St",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Western Addition",
+          "short_name": "Western Addition",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94117",
+          "short_name": "94117",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "adr_address": "Steiner St &amp;, <span class=\"street-address\">Hayes St</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94117</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "Steiner St &, Hayes St, San Francisco, CA 94117, USA",
+      "formatted_phone_number": "(415) 218-0259",
+      "geometry": {
+        "location": {
+          "lat": 37.77625929999999,
+          "lng": -122.43275800000004
+        },
+        "viewport": {
+          "south": 37.77489851970849,
+          "west": -122.43422263029152,
+          "north": 37.77759648029149,
+          "east": -122.4315246697085
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "9267b5a99c1402ea9432a740e50fa8693a39e917",
+      "international_phone_number": "+1 415-218-0259",
+      "name": "The Painted Ladies",
+      "opening_hours": {
+        "open_now": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560063600000
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "photos": [
+        {
+          "height": 1440,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113162949037101012118/photos\">Josh Brown</a>"
+          ],
+          "width": 2560
+        },
+        {
+          "height": 2920,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114443454663150378142/photos\">Marcus Wong</a>"
+          ],
+          "width": 5184
+        },
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/118254361957836041104/photos\">Erol Kaftanoğlu</a>"
+          ],
+          "width": 4048
+        },
+        {
+          "height": 1198,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104740790335845124391/photos\">Julien Dubois</a>"
+          ],
+          "width": 1598
+        },
+        {
+          "height": 1357,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107815136763040000816/photos\">Bruno de Blic</a>"
+          ],
+          "width": 2048
+        },
+        {
+          "height": 3264,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117302670912846820263/photos\">Miki G</a>"
+          ],
+          "width": 1836
+        },
+        {
+          "height": 2448,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115590706856082006420/photos\">Alejandro Rodriguez Mann</a>"
+          ],
+          "width": 3264
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106638228211515620566/photos\">Larissa Aradj</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 1960,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105258556364357815606/photos\">Екатерина Цванг</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115053034485380040184/photos\">Keith McWilliams</a>"
+          ],
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJuX92JKWAhYARxVmeb8DQIYQ",
+      "plus_code": {
+        "compound_code": "QHG8+GV Western Addition, San Francisco, CA, United States",
+        "global_code": "849VQHG8+GV"
+      },
+      "rating": 4.4,
+      "reference": "ChIJuX92JKWAhYARxVmeb8DQIYQ",
+      "reviews": [
+        {
+          "author_name": "Lance G",
+          "author_url": "https://www.google.com/maps/contrib/111682302943693332378/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh6.googleusercontent.com/-IHqU5tue9ug/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reOK13N7UwctwPYdvEHvAT-dwLyDg/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+          "rating": 3,
+          "relative_time_description": "a week ago",
+          "text": "There's not too much to say - it's a row of cute character homes painted up in different pastel shades. They're located right across from Alamo Square Park, which is a great spot to sit, relax, and enjoy a great view of the city. \n\nIf you're a tourist like I was, you'll probably want to stop here so that you can take a photo or two, admire the scenery, and puzzle over just how people from San Francisco manage to regularly drive and park on those obscenely steep hills.",
+          "time": 1559172234
+        },
+        {
+          "author_name": "Geo Fucile",
+          "author_url": "https://www.google.com/maps/contrib/103230378816075261990/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh4.googleusercontent.com/-N3F3drwPLFk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rep_qsrMKYJKjeH13HUIpNkfm9sZg/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+          "rating": 4,
+          "relative_time_description": "in the last week",
+          "text": "A nice run of old Victorian houses, but they look like most of the old Victorian houses in the city that have made it threw everything that the city has thrown at them threw out the years. While there take a minute and walk around Alamo Square Park right across the street from them. Which is also the city's largest unmarked grave. The mass grave was started as a result of the 1906 earthquake. It is still unknown exactly how many of the city's residents where placed here",
+          "time": 1559556454
+        },
+        {
+          "author_name": "Luke Mastrantonio",
+          "author_url": "https://www.google.com/maps/contrib/108812082758736552338/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-yqTrEkCwLxc/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rc_IgmvzPLfYZRFkCxTBhFORWbegg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 3,
+          "relative_time_description": "a week ago",
+          "text": "Was a nice group of 7 houses next to each other that is well maintained and adjacent to a reasonably large park. I can't say you'd spend a lot of time there, the houses are that impressive and the colours don't pop - just a bunch of Pastel colours on some pretty standard homes. I guess if you're a Full House fan you might enjoy it more.\n\nShame the owners can't open their blinds because of all the tourists taking photos, especially given the \"attraction\" is not at all what I expected.",
+          "time": 1558847881
+        },
+        {
+          "author_name": "Ann Marie",
+          "author_url": "https://www.google.com/maps/contrib/112887833449116621372/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-uG2pI8WZ4so/AAAAAAAAAAI/AAAAAAAARE8/is6OBtefPi4/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a month ago",
+          "text": "What an awesome tour. They took us around the city to very interesting places some of which were Twin Peaks, great views of the city. Union Square, Chinatown, Lombard Street, the Painted Lady homes that were used in the opening of Full House and a view of the Golden Gate bridge. Our tour guide was Dave and he was full of fun facts, we had wine, beer and snacks. We were a group of 6 women and we all had things in common and to chat about. Well worth your time and money.",
+          "time": 1557079855
+        },
+        {
+          "author_name": "Pawash Priyank",
+          "author_url": "https://www.google.com/maps/contrib/100807379595775905473/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-d4KXWq_UQo0/AAAAAAAAAAI/AAAAAAAB16k/npCsm5C-NRA/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "in the last week",
+          "text": "Picture says it all. The view through these painted ladies from top of park having downtown San Francisco just behind makes it one of top destination in Bay Area. One should certainly make a stop here. Many just assumes to not stop while passing by but the mesmerizing view is only possible if you climb up the park and watch as shown in pic attached. Amazing!!",
+          "time": 1559282820
+        }
+      ],
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "url": "https://maps.google.com/?cid=9521120612162886085",
+      "user_ratings_total": 10904,
+      "utc_offset": -420,
+      "vicinity": "Steiner St &, Hayes Street, San Francisco",
+      "website": "http://sfrecpark.org/destination/alamo-square/",
+      "html_attributions": null
+    }
   }
 }
