@@ -1,0 +1,272 @@
+{
+  "order": 12,
+  "name_localized": {
+    "en": "Financial District"
+  },
+  "seo_title_localized": {
+    "en": "Financial District"
+  },
+  "category": "Attractions",
+  "description_localized": {
+    "en": "<p>Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry.</p>"
+  },
+  "image": {
+    "name": "financial",
+    "content_type": "image/jpeg",
+    "date_added": "2019-06-06-051507",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1559812508/uir1ww6or0bhbuvrpyzj.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1559812508/uir1ww6or0bhbuvrpyzj.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1559812508/uir1ww6or0bhbuvrpyzj.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1559812508/uir1ww6or0bhbuvrpyzj.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1559812508/uir1ww6or0bhbuvrpyzj.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1559812508/uir1ww6or0bhbuvrpyzj.jpg",
+    "width": 408,
+    "height": 272,
+    "format": "jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1559812508/uir1ww6or0bhbuvrpyzj.jpg",
+    "resource_type": "image",
+    "size": 44122,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1559812508/uir1ww6or0bhbuvrpyzj.jpg",
+    "file_size": null,
+    "alt": "financial",
+    "caption": "",
+    "description": ""
+  },
+  "location": {
+    "name": "San Francisco Station",
+    "address": "700 4th St, San Francisco, CA 94107, USA",
+    "phone": "(800) 660-4287",
+    "place_id": "ChIJFQYlk9Z_j4AR2IMIzaEcYbc",
+    "reference": "ChIJFQYlk9Z_j4AR2IMIzaEcYbc",
+    "latitude": 37.77667109999999,
+    "longitude": -122.3948431,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "700",
+          "short_name": "700",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "4th Street",
+          "short_name": "4th St",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Mission Bay",
+          "short_name": "Mission Bay",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94107",
+          "short_name": "94107",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"street-address\">700 4th St</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94107</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "700 4th St, San Francisco, CA 94107, USA",
+      "formatted_phone_number": "(800) 660-4287",
+      "geometry": {
+        "location": {
+          "lat": 37.77667109999999,
+          "lng": -122.3948431
+        },
+        "viewport": {
+          "south": 37.7752008697085,
+          "west": -122.39621148029153,
+          "north": 37.7778988302915,
+          "east": -122.3935135197085
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/train-71.png",
+      "id": "b1e921441fbae50eeb2d324bc48e3ac4d17c33e1",
+      "international_phone_number": "+1 800-660-4287",
+      "name": "San Francisco Station",
+      "photos": [
+        {
+          "height": 3456,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106149007824742793344/photos\">Steve Hindman</a>"
+          ],
+          "width": 4608
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107530002267002619111/photos\">Michael Towne</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112163558251413006250/photos\">Carbo Kuo</a>"
+          ],
+          "width": 4048
+        },
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112950385386748879323/photos\">Prateek Karandikar</a>"
+          ],
+          "width": 4048
+        },
+        {
+          "height": 1836,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102112232578136479912/photos\">Hieu Nguyen</a>"
+          ],
+          "width": 3264
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106041884412232980487/photos\">pedro romero</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108895438988053081560/photos\">Adam Braun</a>"
+          ],
+          "width": 4128
+        },
+        {
+          "height": 1991,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115770079482352181536/photos\">Nick Zi Chen</a>"
+          ],
+          "width": 2985
+        },
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107157143335471022427/photos\">Romit Jadhwani</a>"
+          ],
+          "width": 4048
+        },
+        {
+          "height": 2448,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108168375604417242756/photos\">Hsu Zephyr</a>"
+          ],
+          "width": 3264
+        }
+      ],
+      "place_id": "ChIJFQYlk9Z_j4AR2IMIzaEcYbc",
+      "plus_code": {
+        "compound_code": "QJG4+M3 SoMa, San Francisco, CA, United States",
+        "global_code": "849VQJG4+M3"
+      },
+      "rating": 4.1,
+      "reference": "ChIJFQYlk9Z_j4AR2IMIzaEcYbc",
+      "reviews": [
+        {
+          "author_name": "J.L. Williams",
+          "author_url": "https://www.google.com/maps/contrib/115946497738254200522/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh4.googleusercontent.com/-aVl8s6HIAWo/AAAAAAAAAAI/AAAAAAAAJ20/a_nDZepKFKc/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "in the last week",
+          "text": "Better than many stations in other cities, this is located in a very convenient  location. It is not large and extremely easy to navigate. Its open and exposed to the elements but all in all, not bad.\n\nTrains run ontime. So be prepared for that. Lines form fast and people can be quite rude. \n\nBullet trains to San Jose are nice. They do not stop often and the ride on these, old as they are, are relatively smooth. There is a lot to watch out tbe window down the Peninsula so time goes by fast. Conductors can be hot or cold. \n\nVery reliable system altogether and makes day tripping back and forth to Silicon Valley very easy. Very.",
+          "time": 1559246032
+        },
+        {
+          "author_name": "Cine philia",
+          "author_url": "https://www.google.com/maps/contrib/104736063491417085364/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh6.googleusercontent.com/-BV_vTCHeTBs/AAAAAAAAAAI/AAAAAAAAgYc/fxoByDDEBxI/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "6 months ago",
+          "text": "I'm visiting San Jose from DC and took a trip to San Francisco for the day. I accidentally bought the wrong ticket and a really nice gentleman that worked there was so polite, he walked me over to the machine and helped me purchase the correct one. I wish I knew his name because he was absolutely amazing. I know it was his job but its very rare that people actually do their jobs and are nice about it. Actually all of the customer service representatives were fantastic and made my trip very easy. Can't wait to visit California again!",
+          "time": 1543457605
+        },
+        {
+          "author_name": "fefi fofum",
+          "author_url": "https://www.google.com/maps/contrib/105465443686144339758/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh6.googleusercontent.com/-o6yQHXtzS30/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rd4wWfpiOfROUQIvHe33IVc6IrSCA/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+          "rating": 4,
+          "relative_time_description": "3 weeks ago",
+          "text": "Much safer than BART.\nNeed Electronic sign for SF arrivals and departures.",
+          "time": 1557879909
+        },
+        {
+          "author_name": "Nasa Rouf",
+          "author_url": "https://www.google.com/maps/contrib/117336166350415582196/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh4.googleusercontent.com/-nPtWBve6vGg/AAAAAAAAAAI/AAAAAAAAUWY/zTB2k_GpMA4/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "in the last week",
+          "text": "The connections nearby are getting better. Too bad Bart is a little far out from here",
+          "time": 1559795213
+        },
+        {
+          "author_name": "Dan Chen",
+          "author_url": "https://www.google.com/maps/contrib/116450060032367690951/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-LUCIlWLhXgY/AAAAAAAAAAI/AAAAAAAFTGM/3VTGz2pN9Cg/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+          "rating": 1,
+          "relative_time_description": "2 months ago",
+          "text": "The station is somewhat clean with a few shops inside. The station layout isn’t great, often times the departing passengers runs into arrival passengers. Sometimes people smokes near or in the station. In terms of Caltrain service, it’s just terrible... many delays, and very little information about the delays, or the information are inaccurate. The staffs are doing their best with the 19 century technology, I guess it frustrates them more then the customers...",
+          "time": 1553221312
+        }
+      ],
+      "scope": "GOOGLE",
+      "types": [
+        "train_station",
+        "transit_station",
+        "point_of_interest",
+        "establishment"
+      ],
+      "url": "https://maps.google.com/?cid=13213874262936945624",
+      "user_ratings_total": 283,
+      "utc_offset": -420,
+      "vicinity": "700 4th Street, San Francisco",
+      "website": "http://www.caltrain.com/",
+      "html_attributions": null
+    }
+  }
+}
