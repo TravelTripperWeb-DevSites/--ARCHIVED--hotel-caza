@@ -1,0 +1,146 @@
+{
+  "order": 5,
+  "name_localized": {
+    "en": "North Point Centre"
+  },
+  "category": "Shopping",
+  "seo_title_localized": {
+    "en": "North Point Centre"
+  },
+  "description_localized": {
+    "en": "<p>Shopping plaza with a supermarket, pharmacy, bank &amp; other essential chain &amp; independent stores.</p>"
+  },
+  "image": {
+    "name": "northpoint",
+    "content_type": "image/jpeg",
+    "date_added": "2019-06-06-073244",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1559820764/aplgiqvkvllspchk2m5s.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1559820764/aplgiqvkvllspchk2m5s.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1559820764/aplgiqvkvllspchk2m5s.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1559820764/aplgiqvkvllspchk2m5s.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1559820764/aplgiqvkvllspchk2m5s.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1559820764/aplgiqvkvllspchk2m5s.jpg",
+    "width": 408,
+    "height": 306,
+    "format": "jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1559820764/aplgiqvkvllspchk2m5s.jpg",
+    "resource_type": "image",
+    "size": 60408,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1559820764/aplgiqvkvllspchk2m5s.jpg",
+    "file_size": null,
+    "alt": "northpoint",
+    "caption": "",
+    "description": ""
+  },
+  "location": {
+    "name": "320 Bay St",
+    "address": "320 Bay St, San Francisco, CA 94133, USA",
+    "place_id": "ChIJadnnMvuAhYARxrW-Oqc-pPY",
+    "reference": "ChIJadnnMvuAhYARxrW-Oqc-pPY",
+    "latitude": 37.8060008,
+    "longitude": -122.41265520000002,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "320",
+          "short_name": "320",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Bay Street",
+          "short_name": "Bay St",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "North Beach",
+          "short_name": "North Beach",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94133",
+          "short_name": "94133",
+          "types": [
+            "postal_code"
+          ]
+        },
+        {
+          "long_name": "1902",
+          "short_name": "1902",
+          "types": [
+            "postal_code_suffix"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"street-address\">320 Bay St</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94133-1902</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "320 Bay St, San Francisco, CA 94133, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.8060008,
+          "lng": -122.41265520000002
+        },
+        "viewport": {
+          "south": 37.8045304697085,
+          "west": -122.41399233029153,
+          "north": 37.8072284302915,
+          "east": -122.41129436970851
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+      "id": "2c7e41a98d249852f94f3da81b7715d683299554",
+      "name": "320 Bay St",
+      "place_id": "ChIJadnnMvuAhYARxrW-Oqc-pPY",
+      "plus_code": {
+        "compound_code": "RH4P+CW North Beach, San Francisco, CA, United States",
+        "global_code": "849VRH4P+CW"
+      },
+      "reference": "ChIJadnnMvuAhYARxrW-Oqc-pPY",
+      "scope": "GOOGLE",
+      "types": [
+        "street_address"
+      ],
+      "url": "https://maps.google.com/?q=320+Bay+St,+San+Francisco,+CA+94133,+USA&ftid=0x808580fb32e7d969:0xf6a43ea73abeb5c6",
+      "utc_offset": -420,
+      "vicinity": "San Francisco",
+      "html_attributions": null
+    }
+  }
+}
