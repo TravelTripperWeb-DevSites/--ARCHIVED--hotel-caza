@@ -385,6 +385,14 @@
       .h2 {
         margin-bottom: 20px;
       }
+        &__smaller {
+          @include media-breakpoint-up(lg) {
+            @include make-col(6);
+          }
+          @include media-breakpoint-up(xl) {
+            @include make-col(6.4);
+          }
+        }
     }
 
     &__right {
@@ -402,6 +410,17 @@
         margin-top: 0;
         margin-left: auto;
       }
+        &__bigger{
+          @include media-breakpoint-up(lg) {
+            @include make-col(6);
+          }
+
+          @include media-breakpoint-up(xl) {
+            @include make-col(4.6);
+            margin-top: 0;
+            margin-left: auto;
+          }
+        }
     }
   }
 
