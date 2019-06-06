@@ -31,7 +31,7 @@ permalink: /blog/search/
           "title": "{{ post.title | xml_escape }}",
           "date" : "{{ post.date | date: '%b %d, %Y' }}",
           "image": "{{ post.image.url_small }}",
-          "category": "{{ post.blog_category | xml_escape }}",
+          "category": "{{ post.blog_category.category_title | xml_escape }}",
           "content": {{ post.post_content | strip_html | strip_newlines | jsonify }},
           "excerpt": {{ post.post_excerpt_localized.en | strip_html | strip_newlines | jsonify }},
           "url": "{{ post.url_friendly_name | xml_escape }}"

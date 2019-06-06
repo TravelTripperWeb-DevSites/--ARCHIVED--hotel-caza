@@ -16,7 +16,7 @@
           <a href="/blog/?c={{ category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category.category_title }}
             {% assign count = 0 %}
             {% for postcount in site.data._models.posts %}
-              {% if postcount.blog_category == category.category_title %}
+              {% if postcount.blog_category.category_title == category.category_title %}
                 {% capture count  %}
                   {{ count  | plus: '1' }}
                 {% endcapture %}

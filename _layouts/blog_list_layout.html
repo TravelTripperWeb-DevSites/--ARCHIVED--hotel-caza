@@ -9,17 +9,21 @@ layout: generic
   <div class="blog__container">
     <div class="blog__row">
       <div class="blog__list">
-        <div class="blog__category-heading">
-          <h2 class="h2">Hotel Caza News<h2>
-          <p>Keep up with the latest Hotel Caza scoop, from special offers to the funnest amenities offered at our San Francisco retreat. Be the first to experience all that Hotel Caza has to offer with news, local explore guides, and more!</p>
 
-          <h2 class="h2">Hotel Caza News<h2>
-          <p>Keep up with the latest Hotel Caza scoop, from special offers to the funnest amenities offered at our San Francisco retreat. Be the first to experience all that Hotel Caza has to offer with news, local explore guides, and more!</p>
+        <div class="blog__category-heading">
+          {% assign categories = site.data._models.blog_category %}
+          {% for category in categories %}
+          <div class="category-desctiotion" style="display: none" id="catDes_{{ category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
+            <h2 class="h2">{{category.category_title}}<h2>
+              <p>{{category.category_description}}</p>
+          </div>
+          {% endfor %}
         </div>
+
         {% assign blog-posts = site.data._models.posts | sort: 'date' | reverse %}
         {% for post in blog-posts %}
 
-        <div class="blog__item filter-item" data-filter="{{ post.blog_category[0].category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
+        <div class="blog__item filter-item" data-filter="{{ post.blog_category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
           <figure class="blog__image">
             <a href="/blog/{{ post.url_friendly_name }}" tabindex="-1">
               <img src="{{ post.image.url_medium }}" alt="{{ post.title }}">
@@ -33,7 +37,7 @@ layout: generic
               <span class="blog__date" tabindex="0">
                 {{ post.date | date: '%B %d, %Y' }}
               </span>
-              <a href="/blog/?c={{ post.blog_category[0].category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category[0].category_title }}</a>
+              <a href="/blog/?c={{ post.blog_category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category.category_title }}</a>
             </div>
             <div tabindex="0">
               {% assign excerpt = post.post_excerpt %}
