@@ -1,0 +1,116 @@
+{
+  "order": 7,
+  "name_localized": {
+    "en": "SHN Golden Gate Theatre"
+  },
+  "location": {
+    "name": "1 Taylor St",
+    "address": "1 Taylor St, San Francisco, CA 94102, USA",
+    "place_id": "ChIJRekVF4WAhYARwmfL0JUbhzo",
+    "reference": "ChIJRekVF4WAhYARwmfL0JUbhzo",
+    "latitude": 37.78250500000001,
+    "longitude": -122.41107999999997,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "1",
+          "short_name": "1",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Taylor Street",
+          "short_name": "Taylor St",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Tenderloin",
+          "short_name": "Tenderloin",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94102",
+          "short_name": "94102",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"street-address\">1 Taylor St</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94102</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "1 Taylor St, San Francisco, CA 94102, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.78250500000001,
+          "lng": -122.41107999999997
+        },
+        "viewport": {
+          "south": 37.7811805197085,
+          "west": -122.41221363029149,
+          "north": 37.7838784802915,
+          "east": -122.40951566970853
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+      "id": "d012e21a18f16073f1525e79d29973a842348836",
+      "name": "1 Taylor St",
+      "place_id": "ChIJRekVF4WAhYARwmfL0JUbhzo",
+      "plus_code": {
+        "compound_code": "QHMQ+2H Tenderloin, San Francisco, CA, United States",
+        "global_code": "849VQHMQ+2H"
+      },
+      "reference": "ChIJRekVF4WAhYARwmfL0JUbhzo",
+      "types": [
+        "street_address"
+      ],
+      "url": "https://maps.google.com/?q=1+Taylor+St,+San+Francisco,+CA+94102,+USA&ftid=0x808580851715e945:0x3a871b95d0cb67c2",
+      "utc_offset": -420,
+      "vicinity": "San Francisco",
+      "html_attributions": null
+    }
+  },
+  "description_localized": {
+    "en": "<p>Grand art deco theater owned by SHN theater company hosts touring Broadway musicals &amp; more</p>"
+  },
+  "category": "Entertainment",
+  "seo_title_localized": {
+    "en": "SHN Golden Gate Theatre"
+  }
+}
