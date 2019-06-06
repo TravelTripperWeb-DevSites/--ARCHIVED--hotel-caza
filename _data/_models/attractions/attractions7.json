@@ -31,5 +31,109 @@
     "alt": "ferry",
     "caption": "",
     "description": ""
+  },
+  "location": {
+    "name": "1 The Embarcadero",
+    "address": "1 The Embarcadero, San Francisco, CA 94105, USA",
+    "place_id": "ChIJaWE772aAhYARIA0BS3dOF84",
+    "reference": "ChIJaWE772aAhYARIA0BS3dOF84",
+    "latitude": 37.79587739999999,
+    "longitude": -122.39387469999997,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "1",
+          "short_name": "1",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "The Embarcadero",
+          "short_name": "The Embarcadero",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Embarcadero",
+          "short_name": "Embarcadero",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94105",
+          "short_name": "94105",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"street-address\">1 The Embarcadero</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94105</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "1 The Embarcadero, San Francisco, CA 94105, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.79587739999999,
+          "lng": -122.39387469999997
+        },
+        "viewport": {
+          "south": 37.7944428197085,
+          "west": -122.39543438029148,
+          "north": 37.79714078029149,
+          "east": -122.39273641970851
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+      "id": "5e8e486f48d50ed04f79b6036e71d8a9fa17b481",
+      "name": "1 The Embarcadero",
+      "place_id": "ChIJaWE772aAhYARIA0BS3dOF84",
+      "plus_code": {
+        "compound_code": "QJW4+9F Embarcadero, San Francisco, CA, United States",
+        "global_code": "849VQJW4+9F"
+      },
+      "reference": "ChIJaWE772aAhYARIA0BS3dOF84",
+      "scope": "GOOGLE",
+      "types": [
+        "street_address"
+      ],
+      "url": "https://maps.google.com/?q=1+The+Embarcadero,+San+Francisco,+CA+94105,+USA&ftid=0x80858066ef3b6169:0xce174e774b010d20",
+      "utc_offset": -420,
+      "vicinity": "San Francisco",
+      "html_attributions": null
+    }
   }
 }
