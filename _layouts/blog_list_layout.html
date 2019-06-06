@@ -19,7 +19,7 @@ layout: generic
         {% assign blog-posts = site.data._models.posts | sort: 'date' | reverse %}
         {% for post in blog-posts %}
 
-        <div class="blog__item filter-item" data-filter="{{ post.blog_category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
+        <div class="blog__item filter-item" data-filter="{{ post.blog_category[0].category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">
           <figure class="blog__image">
             <a href="/blog/{{ post.url_friendly_name }}" tabindex="-1">
               <img src="{{ post.image.url_medium }}" alt="{{ post.title }}">
@@ -33,7 +33,7 @@ layout: generic
               <span class="blog__date" tabindex="0">
                 {{ post.date | date: '%B %d, %Y' }}
               </span>
-              <a href="/blog/?c={{ post.blog_category | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category }}</a>
+              <a href="/blog/?c={{ post.blog_category[0].category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category[0].category_title }}</a>
             </div>
             <div tabindex="0">
               {% assign excerpt = post.post_excerpt %}

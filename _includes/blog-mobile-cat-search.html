@@ -10,13 +10,13 @@
     </ul>
     <div class="categories-wrap filter-item hidden" data-filter="categories">
       <ul class="categories-list">
-        {% assign categories = site.data._definition_options.blog_categories %}
+        {% assign categories = site.data._models.blog_category %}
         {% for category in categories %}
         <li>
-          <a href="/blog/?c={{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category }}
+          <a href="/blog/?c={{ category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category.category_title }}
             {% assign count = 0 %}
             {% for postcount in site.data._models.posts %}
-              {% if postcount.blog_category == category %}
+              {% if postcount.blog_category == category.category_title %}
                 {% capture count  %}
                   {{ count  | plus: '1' }}
                 {% endcapture %}

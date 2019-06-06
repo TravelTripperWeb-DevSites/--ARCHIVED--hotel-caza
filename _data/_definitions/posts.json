@@ -40,7 +40,8 @@
     "localizable": true
   },
   "blog_category": {
-    "type": "open_select",
-    "options": "blog_categories"
+    "type": "model",
+    "display_field": "category_title",
+    "model_name": "blog_category"
   }
 }

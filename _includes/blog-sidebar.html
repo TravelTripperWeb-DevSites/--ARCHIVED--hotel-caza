@@ -79,10 +79,10 @@
     {% endfor %}
   </div>
 
-  <select class="custom-select form-control" id="js-categoryfilter" style="display:none;">
+  <select class="custom-select form-control" style="display:none;">
     <option selected value="all">Choose a Category</option>
-    {% for category in site.data._definition_options.blog_categories %}
-    <option value="{{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">category</option>
+    {% for category in site.data._models.blog_category %}
+    <option value="{{ category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{category.category_title}}</option>
     {% endfor %}
   </select>
 
@@ -92,13 +92,13 @@
     <h4 class="blog-sidebar-heading" tabindex="0">Categories</h4>
 
     <ul class="categories-list">
-      {% assign categories = site.data._definition_options.blog_categories %}
+      {% assign categories = site.data._models.blog_category %}
       {% for category in categories %}
       <li>
-        <a href="/blog/?c={{ category | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category }}
+        <a href="/blog/?c={{ category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category.category_title }}
           {% assign count = 0 %}
           {% for postcount in site.data._models.posts %}
-            {% if postcount.blog_category == category %}
+            {% if postcount.blog_category == category.category_title %}
               {% capture count  %}
                 {{ count  | plus: '1' }}
               {% endcapture %}
