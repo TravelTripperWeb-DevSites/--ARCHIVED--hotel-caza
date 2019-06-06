@@ -1,0 +1,409 @@
+{
+  "order": 7,
+  "name_localized": {
+    "en": "Fort Mason"
+  },
+  "description_localized": {
+    "en": "<p></p>"
+  },
+  "category": "Attractions",
+  "seo_title_localized": {
+    "en": "Fort Mason"
+  },
+  "image": {
+    "name": "fort",
+    "content_type": "image/jpeg",
+    "date_added": "2019-06-06-050414",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1559811854/s3jvhbtsuwlufg4nfwab.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1559811854/s3jvhbtsuwlufg4nfwab.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1559811854/s3jvhbtsuwlufg4nfwab.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1559811854/s3jvhbtsuwlufg4nfwab.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1559811854/s3jvhbtsuwlufg4nfwab.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1559811854/s3jvhbtsuwlufg4nfwab.jpg",
+    "width": 408,
+    "height": 306,
+    "format": "jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1559811854/s3jvhbtsuwlufg4nfwab.jpg",
+    "resource_type": "image",
+    "size": 39359,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1559811854/s3jvhbtsuwlufg4nfwab.jpg",
+    "file_size": null,
+    "alt": "fort",
+    "caption": "",
+    "description": ""
+  },
+  "location": {
+    "name": "Fort Mason Center for Arts & Culture",
+    "address": "2 Marina Blvd Building C, Room 260, San Francisco, CA 94123, USA",
+    "phone": "(415) 345-7500",
+    "place_id": "ChIJzQPIbdiAhYARnDRdcGf_4xI",
+    "reference": "ChIJzQPIbdiAhYARnDRdcGf_4xI",
+    "latitude": 37.80556489999999,
+    "longitude": -122.43183599999998,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "Building C, Room 260",
+          "short_name": "Building C, Room 260",
+          "types": [
+            "subpremise"
+          ]
+        },
+        {
+          "long_name": "2",
+          "short_name": "2",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Marina Boulevard",
+          "short_name": "Marina Blvd",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Marina District",
+          "short_name": "Marina District",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94123",
+          "short_name": "94123",
+          "types": [
+            "postal_code"
+          ]
+        },
+        {
+          "long_name": "1284",
+          "short_name": "1284",
+          "types": [
+            "postal_code_suffix"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"street-address\">2 Marina Blvd Building C, Room 260</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94123-1284</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "2 Marina Blvd Building C, Room 260, San Francisco, CA 94123, USA",
+      "formatted_phone_number": "(415) 345-7500",
+      "geometry": {
+        "location": {
+          "lat": 37.80556489999999,
+          "lng": -122.43183599999998
+        },
+        "viewport": {
+          "south": 37.80439915,
+          "west": -122.43300463029152,
+          "north": 37.80760095000001,
+          "east": -122.4303066697085
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "international_phone_number": "+1 415-345-7500",
+      "name": "Fort Mason Center for Arts & Culture",
+      "opening_hours": {
+        "open_now": false,
+        "periods": [
+          {
+            "close": {
+              "day": 1,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560150000000
+            },
+            "open": {
+              "day": 0,
+              "time": "0630",
+              "hours": 6,
+              "minutes": 30,
+              "nextDate": 1560087000000
+            }
+          },
+          {
+            "close": {
+              "day": 2,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560236400000
+            },
+            "open": {
+              "day": 1,
+              "time": "0630",
+              "hours": 6,
+              "minutes": 30,
+              "nextDate": 1560173400000
+            }
+          },
+          {
+            "close": {
+              "day": 3,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560322800000
+            },
+            "open": {
+              "day": 2,
+              "time": "0630",
+              "hours": 6,
+              "minutes": 30,
+              "nextDate": 1560259800000
+            }
+          },
+          {
+            "close": {
+              "day": 4,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560409200000
+            },
+            "open": {
+              "day": 3,
+              "time": "0630",
+              "hours": 6,
+              "minutes": 30,
+              "nextDate": 1560346200000
+            }
+          },
+          {
+            "close": {
+              "day": 5,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1559890800000
+            },
+            "open": {
+              "day": 4,
+              "time": "0630",
+              "hours": 6,
+              "minutes": 30,
+              "nextDate": 1559827800000
+            }
+          },
+          {
+            "close": {
+              "day": 6,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1559977200000
+            },
+            "open": {
+              "day": 5,
+              "time": "0630",
+              "hours": 6,
+              "minutes": 30,
+              "nextDate": 1559914200000
+            }
+          },
+          {
+            "close": {
+              "day": 0,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560063600000
+            },
+            "open": {
+              "day": 6,
+              "time": "0630",
+              "hours": 6,
+              "minutes": 30,
+              "nextDate": 1560000600000
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 6:30 am – 12:00 am",
+          "Tuesday: 6:30 am – 12:00 am",
+          "Wednesday: 6:30 am – 12:00 am",
+          "Thursday: 6:30 am – 12:00 am",
+          "Friday: 6:30 am – 12:00 am",
+          "Saturday: 6:30 am – 12:00 am",
+          "Sunday: 6:30 am – 12:00 am"
+        ]
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100297789121333945731/photos\">Marie-Andrée Ouimet</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108072474696540241493/photos\">Wisdom d&#39;Almeida</a>"
+          ],
+          "width": 4000
+        },
+        {
+          "height": 3492,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102200100071771009608/photos\">Chris Capps</a>"
+          ],
+          "width": 4656
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114030559053938061562/photos\">Prameet Shah</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112562601972124487031/photos\">Liz McLean-Knight</a>"
+          ],
+          "width": 3120
+        },
+        {
+          "height": 1836,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117318134146138369459/photos\">Arlete Meneguette</a>"
+          ],
+          "width": 3264
+        },
+        {
+          "height": 1960,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111467775428933330035/photos\">Christine Lipardo</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 1960,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105988955866132799074/photos\">patrick fennell</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 2267,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117107993687332191872/photos\">Charles Walker</a>"
+          ],
+          "width": 3035
+        },
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113164522623902898022/photos\">Dhairav Vakil</a>"
+          ],
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJzQPIbdiAhYARnDRdcGf_4xI",
+      "plus_code": {
+        "compound_code": "RH49+67 Marina District, San Francisco, CA, United States",
+        "global_code": "849VRH49+67"
+      },
+      "rating": 4.5,
+      "reference": "ChIJzQPIbdiAhYARnDRdcGf_4xI",
+      "reviews": [
+        {
+          "author_name": "Ian S.",
+          "author_url": "https://www.google.com/maps/contrib/108003473123595614785/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh3.googleusercontent.com/-DeSW1tohY4s/AAAAAAAAAAI/AAAAAAAAddc/4oMrt5T8ji8/s128-c0x00000000-cc-rp-mo/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a month ago",
+          "text": "Awesome place to stay. Came with my wife and baby, got a private room because of the baby. People were nice and the cafe was convenient for late snacks. Atmosphere was quiet. Great view from our room of Alcatraz and the Golden gate bridge. Never stayed at a hostel before, would definitely stay here again.",
+          "time": 1555894104
+        },
+        {
+          "author_name": "Georgia Metcalfe",
+          "author_url": "https://www.google.com/maps/contrib/114036104122132746079/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-SM9OMCuV9V8/AAAAAAAAAAI/AAAAAAAAR3A/gnpGSJAh6y4/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a month ago",
+          "text": "We’ve had SO many wonderful memories at Fort Mason — beer festival, craft markets and just walking along the Forrest paths by the harbour. If there’s an event on you MUST GO! And if there’s not go anyway and take in the beauty of the water and nature walk nearby. 😍😍😍",
+          "time": 1555649382
+        },
+        {
+          "author_name": "Molly Cogan",
+          "author_url": "https://www.google.com/maps/contrib/100691964322571194795/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh3.googleusercontent.com/-CJYV1KQjeMQ/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rfL1UEiGU-1BIH7IoCvhuvj5FaPFQ/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "in the last week",
+          "text": "The gardens are slowly being restored to their full glory.  I look forward to the median at the end of Franklin as you enter upper Ft. Mason being a future focus.  There is so much great history and spectacular views to see from Ft. Mason.",
+          "time": 1559592049
+        },
+        {
+          "author_name": "Mark Bosch",
+          "author_url": "https://www.google.com/maps/contrib/111747657257481747820/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh4.googleusercontent.com/-otKLTHJJNCQ/AAAAAAAAAAI/AAAAAAAAAkU/2_nd13FpdEM/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "2 months ago",
+          "text": "Great used bookstore. Greens restaurant located here but book one month ahead for dinner. Several arts organizations and performing arts here. Good place to hang for awhile. Coffee and snacks. Several  festivals throughout the year. Check the web for dates, etc.",
+          "time": 1554510127
+        },
+        {
+          "author_name": "Brendan S",
+          "author_url": "https://www.google.com/maps/contrib/112148579140949223447/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh6.googleusercontent.com/--sKmWHL4i58/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reqXCdop1xgQqroOto-NZDHZmQcGA/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 4,
+          "relative_time_description": "a week ago",
+          "text": "Great beer and service. The only thing that could have made it better would be serving sizes. The food is very tasty though",
+          "time": 1559063632
+        }
+      ],
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "url": "https://maps.google.com/?cid=1361212332127892636",
+      "user_ratings_total": 2542,
+      "utc_offset": -420,
+      "vicinity": "2 Marina Boulevard Building C, Room 260, San Francisco",
+      "website": "https://www.fortmason.org/",
+      "html_attributions": null
+    }
+  }
+}
