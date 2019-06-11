@@ -29,3 +29,15 @@
     }
   }
 }
+
+.statement {
+  @include make-container;
+  max-width: 1012px;
+  p {
+    margin-bottom: 0;
+    text-align: center;
+    a {
+      color: $primary;
+    }
+  }
+}
