@@ -55,38 +55,22 @@
       <div class="room-amenities">
         <h2 class="h4" tabindex="0">Amenities</h2>
         <ul class="amenities" tabindex="0">
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256617/qmrlzvjj7ggeh1p9i88m.png" alt="Hi-speed Wifi">
-            <span>Hi-speed<br> Wifi</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256615/tx6olwfeamyu9fpxshk5.png" alt="Minibar & Snacks">
-            <span>Minibar<br>& Snacks</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/xpd0um4hcmnbspghs0gc.png" alt="Luxury Toiletries">
-            <span>Luxury<br>Toiletries</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/ilzxbtoo2wrjbyshy29q.png" alt="Walk-in Rainshower">
-            <span>Walk-in<br>Rainshower</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256617/qmrlzvjj7ggeh1p9i88m.png" alt="Hi-speed Wifi">
-            <span>Hi-speed<br> Wifi</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256615/tx6olwfeamyu9fpxshk5.png" alt="Minibar & Snacks">
-            <span>Minibar<br>& Snacks</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/xpd0um4hcmnbspghs0gc.png" alt="Luxury Toiletries">
-            <span>Luxury<br>Toiletries</span>
-          </li>
-          <li>
-            <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553256616/ilzxbtoo2wrjbyshy29q.png" alt="Walk-in Rainshower">
-            <span>Walk-in<br>Rainshower</span>
-          </li>
+        <li>
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238274/ijggx1zg8jaua1gatpaw.png" alt="Wifi">
+          <span>Wifi</span>
+        </li>
+        <li>
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238274/vlwhdjcna2rzl4tsi2fy.png" alt="Luxury Bath Products">
+          <span>Luxury Bath <br>Products</span>
+        </li>
+        <li>
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238275/lwmu10fdlqo39cxtjnut.png" alt="55" Flat Panel HDTV">
+          <span>55" Flat <br>Panel HDTV</span>
+        </li>
+        <li>
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238273/f8xzqtigvthqybqhixdh.png" alt="Workstation with desk">
+          <span>Workstation <br>with desk</span>
+        </li>
         </ul>
       </div>
     </div>
