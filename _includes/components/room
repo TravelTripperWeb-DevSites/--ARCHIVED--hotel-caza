@@ -18,7 +18,7 @@
 
 {% endcomment %}
 
-<div class="c-room filter-item" data-filter="{{ room.bed_types[0].name | replace:" ","_" }}" data-reztrip-room-id="{{room.reztrip_room_id}}">
+<div class="c-room filter-item" data-filter="{{room.room_category | replace:" ","_"}}" data-reztrip-room-id="{{room.reztrip_room_id}}">
   <div class="c-room__text-group">
     <div class="c-room__text-group__wrap">
       <div class="c-room__name">
@@ -48,9 +48,10 @@
       {% include components/image image=featured_image max_width=600 %}
     </div>
     <div class="c-room__images">
-      {% assign sliderImages = room.images %}
-      {% assign sliderId = "room" | append: room.id | append: "slider" %}
-      {% include components/slider id=sliderId %}
+      <a href="{{ room.id | permalink: model_dir: 'rooms' }}">
+        {% assign sliderImage = room.images[0].url %}
+        <img class="objectfit" src="{{sliderImage}}" alt="{{ room.name }}">
+      </a>
     </div>
   </div>
 </div>
