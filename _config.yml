@@ -3,12 +3,11 @@ title: Bedrock
 title_separator: "|"
 name: Hotel Property Name
 description: Site default description.
-url:
-repository:
+url: 
+repository: 
 default_lang: en
 languages:
 - en
-#- es
 include:
 - _ttio_templates/bedrock/_permanent_pages
 - _pages
@@ -67,7 +66,7 @@ sass:
   - _sass
   style: compressed
 permalink: pretty
-timezone:
+timezone: 
 page_gen:
 - data: rooms
   template: room_layout
@@ -75,9 +74,9 @@ page_gen:
 - data: offers
   template: offer_layout
   dir: offers
-- data: 'posts'
-  template: 'blog_layout'
-  dir: 'blog'
+- data: posts
+  template: blog_layout
+  dir: blog
 plugins_dir:
 - _plugins-38
 - _plugins
