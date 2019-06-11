@@ -16,10 +16,18 @@ layout: generic
     {% for room in rooms %}
       {% include components/room %}
     {% endfor %}
+
+    <div class="statement" tabindex="0">
+      {% regionblock statement_info, type:text %}
+      <p>Please note that our rooms and suites are ADA compliant under the Department of Justice ADA Title III Regulation 28 CFR Part 36, 1991. ADA rooms are available. We also invite you to view our <a href="/accessibility/">Accessibility Statement</a> </p>
+      {% endregionblock %}
+    </div>
   </div>
 </section>
 
 {{ content }}
+
+
 
 {% comment %}
 
