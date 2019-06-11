@@ -4,7 +4,7 @@
     "en": " Grand Opening Package"
   },
   "url_friendly_name_localized": {
-    "en": "offers3"
+    "en": ""
   },
   "short_description_localized": {
     "en": "Be among the first to stay with Hotel Caza for special savings."
@@ -13,25 +13,25 @@
     "en": "<p>Experience the perfect stay in Fisherman&rsquo;s Wharf. We plan your fun-filled day and give you the morning sustenance to get started.</p>\n<ul>\n<li>Includes a grab-and-go breakfast for two and a curated one-day itinerary of the best things Fisherman&rsquo;s Wharf has to offer.</li>\n</ul>\n<p>For stay dates September 10 - December 31, 2019. Offer based on availability. Blackout dates apply. Offer cannot be combined with any other offer or group/negotiated rates. Applies to new reservations.</p>"
   },
   "image": {
-    "name": "Fishermans-Wharf-San-Francisco",
+    "name": "hotel-caza-grand-opening",
     "content_type": "image/jpeg",
-    "date_added": "2019-03-27-072933",
-    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1553686173/vm7s7apdrmnkgcgd66uq.jpg",
-    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1553686173/vm7s7apdrmnkgcgd66uq.jpg",
-    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1553686173/vm7s7apdrmnkgcgd66uq.jpg",
-    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1553686173/vm7s7apdrmnkgcgd66uq.jpg",
-    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1553686173/vm7s7apdrmnkgcgd66uq.jpg",
-    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1553686173/vm7s7apdrmnkgcgd66uq.jpg",
-    "width": 1800,
-    "height": 1199,
+    "date_added": "2019-06-11-061619",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1560248180/yqims0kuxbzetznhjp1d.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1560248180/yqims0kuxbzetznhjp1d.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1560248180/yqims0kuxbzetznhjp1d.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1560248180/yqims0kuxbzetznhjp1d.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1560248180/yqims0kuxbzetznhjp1d.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1560248180/yqims0kuxbzetznhjp1d.jpg",
+    "width": 900,
+    "height": 608,
     "format": "jpg",
-    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1553686173/vm7s7apdrmnkgcgd66uq.jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1560248180/yqims0kuxbzetznhjp1d.jpg",
     "resource_type": "image",
-    "size": 378402,
-    "git_file_name": "_assets/image_data/Fishermans-Wharf-San-Francisco.jpg.json",
-    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1553686173/vm7s7apdrmnkgcgd66uq.jpg",
+    "size": 246166,
+    "git_file_name": "_assets/image_data/hotel-caza-grand-opening.jpg.json",
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1560248180/yqims0kuxbzetznhjp1d.jpg",
     "file_size": null,
-    "alt": "Fishermans-Wharf-San-Francisco",
+    "alt": "Hotel Caza Grand Opening",
     "caption": "",
     "description": ""
   }
