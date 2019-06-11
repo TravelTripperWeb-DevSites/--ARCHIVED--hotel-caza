@@ -12,8 +12,8 @@ address:
   zip_code: '94133'
 default_currency: USD
 default_timezone: America/New_York
-_hotel_id: TTDEMO
-_portal_id: demo
+_hotel_id: SFOCZA
+_portal_id: hotelcaza
 _root_path: https://rt3api-prd.ttaws.com
 _ttweb_plugins_version: v3.2.2
 __EDITABLE_FIELDS__:
