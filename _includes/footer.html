@@ -1,0 +1,55 @@
+{% comment %} Intentionally left blank. But do not override - we may add system-wide footer content here later.{% endcomment %}
+
+<div class="footer__container">
+  <div class="footer__row">
+    <div class="footer__newsletter">
+      <div class="footer__newsletter__content">
+        <p tabindex="0">Subscribe, follow & stay updated</p>
+        {% include forms/jotform/newsletter.html %}
+      </div>
+    </div>
+    <div class="footer__address">
+      <p><span class="subheading" tabindex="0">Address</span><span><a href="{{ site.data.hotel_settings.get_directions_url }}" rel="nofollow" target="_blank">{{ site.data.hotel_settings.address.street1 }} {{ site.data.hotel_settings.address.state }},<br>{{ site.data.hotel_settings.address.city }}, {{ site.data.hotel_settings.address.zip_code }}</a></span></p>
+      <p><span class="subheading" tabindex="0">Email</span><span><a href="mailto:{{ site.data.hotel_settings.email }}">{{ site.data.hotel_settings.email }}</a></span></p>
+      <p><span class="subheading" tabindex="0">Phone</span><span><a href="tel:{{ site.data.hotel_settings.phone_number }}">{{ site.data.hotel_settings.phone_number }}</a></span></p>
+    </div>
+    <div class="footer__links">
+      {% assign footer-items = site.data._menus.footer.items %}
+        <ul>
+          {% for item in footer-items %}
+            {% assign url = item.url %}
+            {% assign text = item.label %}
+            <li><a href="{{url}}" {% if url contains 'http' %}target="_blank"{% endif %}>{{text}}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer__secondary">
+  <div class="footer__container">
+    <div class="footer__secondary__row">
+      <div class="footer__copyrights">
+        <p tabindex="0">&copy; {{ "now" | date: "%Y" }} {{ site.data.hotel_settings.name }}. All Rights Reserved.</p>
+        {% assign footer-items = site.data._menus.footer-bottom.items %}
+          <ul class="footer__links-bottom">
+            {% for item in footer-items %}
+              {% assign url = item.url %}
+              {% assign text = item.label %}
+              <li><a href="{{url}}" {% if url contains 'http' %}target="_blank"{% endif %}>{{text}}</a></li>
+            {% endfor %}
+          </ul>
+      </div>
+      <div class="footer__highgate">
+        <a href="https://highgate.com/" target="_blank">
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553021440/ppor2hnpkbqjvjoppluh.png" alt="Highgate">
+        </a>
+      </div>
+      <div class="footer__credit">
+        <a href="">
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553021542/skmtbhrr6afjecuk5ssd.png" alt="WCAG 2.1 ADA Compliant Powered by Travel Tripper">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

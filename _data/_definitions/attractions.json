@@ -1,0 +1,54 @@
+{
+    "name":
+    {
+      "required": true,
+      "localizable": true
+    },
+    "sub_title":
+    {
+      "localizable": true
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "enum",
+      "options": [ "Attractions",
+        "Entertainment",
+        "Eat & Drink",
+        "Shopping"
+        ]
+    },
+	 "seo_title":
+    {
+      "label": "Seo Title",
+      "localizable": true
+    },
+	 "seo_description":
+    {
+      "label": "Seo Description",
+      "localizable": true
+    },
+    "website_url":
+    {
+      "label": "External website url"
+    },
+    "description":
+    {
+       "label": "Short Description",
+       "type": "richtext",
+       "localizable": true
+    },
+    "image":
+    {
+      "type": "image",
+	    "label": "Attractions Image"
+    },
+    "location": {
+      "type": "location"
+    },
+    "order":
+    {
+      "type": "order"
+    }
+}

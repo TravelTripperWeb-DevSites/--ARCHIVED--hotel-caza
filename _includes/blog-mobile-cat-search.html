@@ -1,0 +1,41 @@
+<!-- Categories and Search for mobile divices -->
+  <div class="mobile-cat-search">
+    <ul class="nav--filter mobile-cat-search__tabs">
+      <li>
+        <a data-filter="categories" class="filter--option" title="Blog Categories"><span>Categories</span><i class="fal fa-chevron-down"></i></a>
+      </li>
+      <li>
+        <a data-filter="search" class="filter--option" title="Blog Search"><span>Search</span><i class="fal fa-chevron-down"></i></a>
+      </li>
+    </ul>
+    <div class="categories-wrap filter-item hidden" data-filter="categories">
+      <ul class="categories-list">
+        {% assign categories = site.data._models.blog_category %}
+        {% for category in categories %}
+        <li>
+          <a href="/blog/?c={{ category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}">{{ category.category_title }}
+            {% assign count = 0 %}
+            {% for postcount in site.data._models.posts %}
+              {% if postcount.blog_category.category_title == category.category_title %}
+                {% capture count  %}
+                  {{ count  | plus: '1' }}
+                {% endcapture %}
+              {% endif %}
+            {% endfor %}
+            <span>({{count}})</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="blog__search-wrap filter-item hidden" data-filter="search">
+      <div class="blog__search">
+        <form class="search-form" action="/blog/search/" method="get">
+          <input type="text" class="blog__search__box" name="query" id="search-box" placeholder="Enter search keyword(s)" aria-label="Search blogs">
+          <button type="submit" class="blog__search__btn" aria-label="Click to search">
+            <i class="fal fa-search"></i>
+          </button>
+      </form>
+      </div>
+    </div>
+  </div>

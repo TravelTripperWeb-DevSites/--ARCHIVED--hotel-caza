@@ -1,0 +1,156 @@
+.btn, .btn:active, .btn:focus {
+  // height: auto;
+  width: auto;
+  background-color: transparent;
+  border-radius: 0;
+
+  + .btn {
+    margin-left: $grid-gutter-width;
+  }
+}
+
+.btn {
+  &--primary {
+    min-width: 145px;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: $primary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $button-color;
+    border: solid 1px $button-color;
+
+    &:hover, &:focus, &:active {
+      color: $button-color;
+      text-decoration: none;
+      background-color: $primary;
+      border-color: $primary;
+      box-shadow: none;
+    }
+  }
+
+  &--white {
+    min-width: 145px;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: $secondary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $white;
+    border: solid 1px $white;
+
+    &:hover, &:focus, &:active {
+      color: $primary;
+      background-color: $button-color;
+      border-color: $button-color;
+      box-shadow: none;
+    }
+  }
+
+  &--outline  {
+    min-width: 104px;
+    padding: 4px 15px;
+    font-family: $family-primary;
+    color: $button-color;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: solid 2px $button-color;
+
+    &:hover, &:focus, &:active {
+      color: $primary;
+      background-color: $button-color;
+      box-shadow: none;
+    }
+
+    @include media-breakpoint-up(md) {
+      min-width: 145px;
+      padding: 6px 15px;
+    }
+  }
+
+  &--tertiary {
+    min-width: 104px;
+    padding: 6px 15px;
+    font-family: $family-secondary;
+    font-size: 12px;
+    font-weight: 600;
+    color: $primary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: solid 1px $primary;
+
+    &:hover, &:focus, &:active {
+      color: $primary;
+      background-color: $button-color;
+      border-color: $button-color;
+      box-shadow: none;
+    }
+  }
+
+  &--secondary {
+    position: relative;
+    padding: 2px 0;
+    overflow: hidden;
+    font-family: $family-secondary;
+    font-size: 12px;
+    font-weight: 600;
+    color: $secondary;
+    text-transform: uppercase;
+    letter-spacing: .86px;
+    border: 0;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+
+    &:before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      height: 2px;
+      content: '';
+      background: $secondary;
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-duration: .3s;
+      transition-duration: .3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+
+    &:hover {
+      color: $primary;
+      background-color: transparent;
+
+      &:before {
+        background: $button-color;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+
+    &:active, &:focus {
+      color: $secondary !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+
+    &.white {
+      color: $white;
+
+      &:before {
+        background: $white;
+      }
+
+      &:hover {
+        &:before {
+          background: $white;
+        }
+      }
+    }
+  }
+}

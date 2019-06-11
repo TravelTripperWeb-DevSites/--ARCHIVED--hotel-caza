@@ -10,10 +10,17 @@
 //    $gray-900: #212529 !default;
 //
 //    // colors
-//    $primary: #007bff !default;
-//    $secondary: $gray-600;
-//    $black: #16141a;
-//    $white: #fff;
+      $primary: #354e93 !default;
+      $secondary: #373635;
+      $button-color: #ffd621;
+      $cross-sell-bg: #fab898;
+      $beige: #8f6936;
+      $grey: #afafae;
+      $light-grey: #f4f4f4;
+      $light-green: #ecf5e9;
+      $light-orange: #fdeadf;
+      $black: #000;
+      $white: #fff;
 //
 //    $green: #28a745 !default;
 //    $cyan: #17a2b8 !default;
@@ -43,8 +50,8 @@
 //    );
 //
 //    $body-bg: $white;
-//    $base-text-color: $black;
-//    $secondary-hover: #1e1c23;
+//    $base-text-color: $secondary;
+//    $secondary-hover: $primary;
 //    $background-gray: $gray-100;
 //    $footer-color: $black;
 //    $form-border-color: $base-text-color;
@@ -67,9 +74,9 @@
 //    $link-hover-decoration: underline !default;
 //
 //    // Fonts
-//    $family-primary: "Open Sans", sans-serif;
-//    $family-secondary: "Playfair Display", serif;
-//    $family-terciary: "Roboto", sans-serif;
+      $family-primary: "FreightNeo W05 Medium";
+      $family-secondary: "Source Sans Pro", sans-serif;
+      $family-terciary: "FreightNeo W05 Semi";
 //
 //    $base-font-color: $base-text-color;
 //    $base-body-font: $family-primary;
@@ -112,12 +119,12 @@
 //      xl: 1200px
 //    ) !default;
 //
-//    $container-max-widths: (
-//      sm: 540px,
-//      md: 720px,
-//      lg: 960px,
-//      xl: 1310px
-//    ) !default;
+   $container-max-widths: (
+     sm: 540px,
+     md: 720px,
+     lg: 960px,
+     xl: 1224px
+   ) !default;
 //
 //    //using 1310 to get max of 1280 (with 30px total side padding)
 //
@@ -426,8 +433,8 @@
 //    //navbar
 //    $navbar-z: 30 !default;
 //    $navbar-fixed-z: 30 !default;
-//    $navbar-main-height: 124px;
-//    $navbar-device-height: 88px;
+      $navbar-main-height: 112px;
+      $navbar-device-height: 64px;
 //    $navbar-background: transparent;
 //    $navbar-sticky-background: $white;
 //    $navbar-padding-y: ($spacer / 2) !default;

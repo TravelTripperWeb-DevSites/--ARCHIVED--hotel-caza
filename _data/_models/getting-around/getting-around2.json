@@ -1,0 +1,31 @@
+{
+  "order": 1,
+  "name_localized": {
+    "en": "Ride a bike"
+  },
+  "description_localized": {
+    "en": "Discover the brilliance of cycle-friendly San Francisco when you saddle up on a bike rental for a fun spin."
+  },
+  "images": {
+    "name": "Icon-cyclist@2x",
+    "content_type": "image/png",
+    "date_added": "2019-04-02-074608",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1554205568/ynita019shwcbhupdjq1.png",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1554205568/ynita019shwcbhupdjq1.png",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1554205568/ynita019shwcbhupdjq1.png",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1554205568/ynita019shwcbhupdjq1.png",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1554205568/ynita019shwcbhupdjq1.png",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1554205568/ynita019shwcbhupdjq1.png",
+    "width": 204,
+    "height": 200,
+    "format": "png",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1554205568/ynita019shwcbhupdjq1.png",
+    "resource_type": "image",
+    "size": 17130,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1554205568/ynita019shwcbhupdjq1.png",
+    "file_size": null,
+    "alt": "Icon-cyclist@2x",
+    "caption": "",
+    "description": ""
+  }
+}

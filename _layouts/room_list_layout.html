@@ -1,0 +1,63 @@
+---
+layout: generic
+---
+
+{% assign rooms = site.data._models.rooms | sort:"order" %}
+
+ <section>
+   <div class="room-filter nav--filter">
+     <p class="h4">Select A Room Type</p>
+     <ul class="">
+       {% comment %}
+       {% assign categories = site.data._models.rooms | sort:"order" %}
+       {% for item in categories %}
+       <li><a href="javascript:;" data-rel="{{ filter.name | replace:" ","_"  }}"  data-filter="{{ filter.name | replace:" ","_"  }}" class="filter filter--option">{{ filter.name }}</a></li>
+       {% endfor %}
+       {% endcomment %}
+
+       <li><a href="javascript:;" data-rel="all"  data-filter="all" class="filter filter--option ">All Rooms</a></li>
+       <li><a href="javascript:;" data-rel="Deluxe"  data-filter="Deluxe" class="filter filter--option">Deluxe</a></li>
+       <li><a href="javascript:;" data-rel="City_View"  data-filter="City_View" class="filter filter--option">City View</a></li>
+       <li><a href="javascript:;" data-rel="Partial_Bay_View"  data-filter="Partial_Bay_View" class="filter filter--option">Partial Bay View</a></li>
+       <li><a href="javascript:;" data-rel="Suite"  data-filter="Suite" class="filter filter--option">Suite</a></li>
+       <li><a href="javascript:;" data-rel="Accessible"  data-filter="Accessible" class="filter filter--option">Accessible</a></li>
+
+
+     </ul>
+   </div>
+  <div class="c-room-list tb-padding">
+    {% for room in rooms %}
+      {% include components/room %}
+    {% endfor %}
+
+    <div class="statement" tabindex="0">
+      {% regionblock statement_info, type:text %}
+      <p>Please note that our rooms and suites are ADA compliant under the Department of Justice ADA Title III Regulation 28 CFR Part 36, 1991. ADA rooms are available. We also invite you to view our <a href="/accessibility/">Accessibility Statement</a> </p>
+      {% endregionblock %}
+    </div>
+  </div>
+</section>
+
+{{ content }}
+
+
+
+{% comment %}
+
+  Name:
+
+    Room List Page
+
+  Description:
+
+    Displays a list of room models enhanced with dynamic data from reztrip.
+    Allows user editable regions via the generic layout.
+
+  Usage:
+
+    To customize the rendering of each room model, create your own _includes/components/room file.
+    In general, use the editable regions available from the "generic" layout to add content above and below the rooms list.
+    To add custom components/content to the page, write that content in the body of the page that uses this layout and it will be included after the room list.
+
+
+{% endcomment %}

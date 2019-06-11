@@ -1,0 +1,53 @@
+---
+latitude: '37.8071385'
+longitude: "-122.4185254"
+
+map_zoom: 13
+
+name: Hotel Caza
+email: res-hi-sf-wharf@ihg.com
+phone_number: 0861 444 435
+address:
+  street1: 495 Beach Street San Francisco
+  state: 'CA'
+  city: San Francisco
+  zip_code: 94133
+default_currency: USD
+default_timezone: America/New_York
+
+
+hotel_id: TTDEMO #SNBOX #KEY24N #HODE
+portal_id: demo #sandbox #demo
+root_path: https://rt3api-prd.ttaws.com
+ttweb_plugins_version: "v3.2.2"
+
+
+
+__EDITABLE_FIELDS__:
+  name:
+    required: true
+  logo:
+    type: image
+  email:
+    type: "string"
+  phone:
+    type: "string"
+  default_currency:
+    required: true
+  address:
+    type: complex
+    fields:
+      street1:
+        type: string
+      state:
+        type: string
+      city:
+        type: string
+      zip_code:
+        type: string
+  map_zoom:
+    type: integer
+  latitude:
+    type: float
+  longitude:
+    type: float

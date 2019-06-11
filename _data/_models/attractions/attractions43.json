@@ -1,0 +1,410 @@
+{
+  "order": 1,
+  "name_localized": {
+    "en": "Ghirardelli Square"
+  },
+  "category": "Shopping",
+  "seo_title_localized": {
+    "en": "Ghirardelli Square"
+  },
+  "description_localized": {
+    "en": "<p>Shops and restaurants fill this 3-level landmark former chocolate factory near Fisherman's Wharf.</p>"
+  },
+  "seo_description_localized": {
+    "en": " Shops and restaurants fill this 3-level landmark former chocolate factory near Fisherman's Wharf."
+  },
+  "image": {
+    "name": "market",
+    "content_type": "image/jpeg",
+    "date_added": "2019-06-06-072710",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1559820430/dzhod1oiv30tk9qweqbr.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1559820430/dzhod1oiv30tk9qweqbr.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1559820430/dzhod1oiv30tk9qweqbr.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1559820430/dzhod1oiv30tk9qweqbr.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1559820430/dzhod1oiv30tk9qweqbr.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1559820430/dzhod1oiv30tk9qweqbr.jpg",
+    "width": 408,
+    "height": 306,
+    "format": "jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1559820430/dzhod1oiv30tk9qweqbr.jpg",
+    "resource_type": "image",
+    "size": 51355,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1559820430/dzhod1oiv30tk9qweqbr.jpg",
+    "file_size": null,
+    "alt": "market",
+    "caption": "",
+    "description": ""
+  },
+  "location": {
+    "name": "The Original Ghirardelli Ice Cream & Chocolate Shop at Ghirardelli Square",
+    "address": "900 North Point St Suite 52, San Francisco, CA 94109, USA",
+    "phone": "(415) 474-3938",
+    "place_id": "ChIJvXl2weCAhYARjSxnhzrBfNc",
+    "reference": "ChIJvXl2weCAhYARjSxnhzrBfNc",
+    "latitude": 37.8056561,
+    "longitude": -122.42249129999999,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "Suite 52",
+          "short_name": "Suite 52",
+          "types": [
+            "subpremise"
+          ]
+        },
+        {
+          "long_name": "900",
+          "short_name": "900",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "North Point Street",
+          "short_name": "North Point St",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Fisherman's Wharf",
+          "short_name": "Fisherman's Wharf",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94109",
+          "short_name": "94109",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"street-address\">900 North Point St Suite 52</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94109</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "900 North Point St Suite 52, San Francisco, CA 94109, USA",
+      "formatted_phone_number": "(415) 474-3938",
+      "geometry": {
+        "location": {
+          "lat": 37.8056561,
+          "lng": -122.42249129999999
+        },
+        "viewport": {
+          "south": 37.8046454697085,
+          "west": -122.4241250802915,
+          "north": 37.8073434302915,
+          "east": -122.42142711970848
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "2f70cd55b81baa18c971c28117f8a246dbec3c83",
+      "international_phone_number": "+1 415-474-3938",
+      "name": "The Original Ghirardelli Ice Cream & Chocolate Shop at Ghirardelli Square",
+      "opening_hours": {
+        "open_now": false,
+        "periods": [
+          {
+            "close": {
+              "day": 0,
+              "time": "2300",
+              "hours": 23,
+              "minutes": 0,
+              "nextDate": 1560146400000
+            },
+            "open": {
+              "day": 0,
+              "time": "0900",
+              "hours": 9,
+              "minutes": 0,
+              "nextDate": 1560096000000
+            }
+          },
+          {
+            "close": {
+              "day": 1,
+              "time": "2300",
+              "hours": 23,
+              "minutes": 0,
+              "nextDate": 1560232800000
+            },
+            "open": {
+              "day": 1,
+              "time": "0900",
+              "hours": 9,
+              "minutes": 0,
+              "nextDate": 1560182400000
+            }
+          },
+          {
+            "close": {
+              "day": 2,
+              "time": "2300",
+              "hours": 23,
+              "minutes": 0,
+              "nextDate": 1560319200000
+            },
+            "open": {
+              "day": 2,
+              "time": "0900",
+              "hours": 9,
+              "minutes": 0,
+              "nextDate": 1560268800000
+            }
+          },
+          {
+            "close": {
+              "day": 3,
+              "time": "2300",
+              "hours": 23,
+              "minutes": 0,
+              "nextDate": 1560405600000
+            },
+            "open": {
+              "day": 3,
+              "time": "0900",
+              "hours": 9,
+              "minutes": 0,
+              "nextDate": 1560355200000
+            }
+          },
+          {
+            "close": {
+              "day": 4,
+              "time": "2300",
+              "hours": 23,
+              "minutes": 0,
+              "nextDate": 1559887200000
+            },
+            "open": {
+              "day": 4,
+              "time": "0900",
+              "hours": 9,
+              "minutes": 0,
+              "nextDate": 1559836800000
+            }
+          },
+          {
+            "close": {
+              "day": 6,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1559977200000
+            },
+            "open": {
+              "day": 5,
+              "time": "0900",
+              "hours": 9,
+              "minutes": 0,
+              "nextDate": 1559923200000
+            }
+          },
+          {
+            "close": {
+              "day": 0,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560063600000
+            },
+            "open": {
+              "day": 6,
+              "time": "0900",
+              "hours": 9,
+              "minutes": 0,
+              "nextDate": 1560009600000
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 9:00 am – 11:00 pm",
+          "Tuesday: 9:00 am – 11:00 pm",
+          "Wednesday: 9:00 am – 11:00 pm",
+          "Thursday: 9:00 am – 11:00 pm",
+          "Friday: 9:00 am – 12:00 am",
+          "Saturday: 9:00 am – 12:00 am",
+          "Sunday: 9:00 am – 11:00 pm"
+        ]
+      },
+      "photos": [
+        {
+          "height": 1200,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115257961674141181198/photos\">Bernard Poli</a>"
+          ],
+          "width": 1600
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114630671667224047886/photos\">Jeff Hales</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 2710,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101742036553016665845/photos\">Cherry Kate</a>"
+          ],
+          "width": 2410
+        },
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102375252953993577353/photos\">santi santiago</a>"
+          ],
+          "width": 3024
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115518135307025828532/photos\">Napol Kaewkascholkul</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117965275723051606252/photos\">황보승우</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 2370,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113009510426860732742/photos\">Srikanth Vishnuvajhala</a>"
+          ],
+          "width": 1708
+        },
+        {
+          "height": 3768,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103203269507753666305/photos\">Alec Truitt</a>"
+          ],
+          "width": 2612
+        },
+        {
+          "height": 2448,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102310247385495452450/photos\">Miguel G.</a>"
+          ],
+          "width": 3264
+        },
+        {
+          "height": 1365,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112075540529931125474/photos\">VJ</a>"
+          ],
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJvXl2weCAhYARjSxnhzrBfNc",
+      "plus_code": {
+        "compound_code": "RH4H+72 Fisherman's Wharf, San Francisco, CA, United States",
+        "global_code": "849VRH4H+72"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJvXl2weCAhYARjSxnhzrBfNc",
+      "reviews": [
+        {
+          "author_name": "Kruthi Murali",
+          "author_url": "https://www.google.com/maps/contrib/108773265291194697330/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh3.googleusercontent.com/-VngWvSP7LuE/AAAAAAAAAAI/AAAAAAAAAAA/0qkW1c2RKpk/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 2,
+          "relative_time_description": "in the last week",
+          "text": "I might be the only one who's not a fan of this place. Always crowded. No place to sit once inside. The portion sizes are too big and the preparations too sweet. Unless you have an extreme sweet tooth, you may not be able to do justice to the portion sizes. As I have observed, most visitors end up wasting a large portion of their ice creams. \nThe only plus side - thankfully, parking has never been an issue!\nIf you want to save yourself some grief, do visit the Stockton location. You get all the same menu items without the rush and SF traffic!",
+          "time": 1559224770
+        },
+        {
+          "author_name": "Sally T",
+          "author_url": "https://www.google.com/maps/contrib/106360888136538806819/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-mkWoMYU-vRo/AAAAAAAAAAI/AAAAAAAAhuw/8rwuZd3-lYw/s128-c0x00000000-cc-rp-mo-ba7/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "2 weeks ago",
+          "text": "This store and all of it's contents are delicious. If you have a sweet tooth this place is a must. We had a lovely look around here and were able to see the chocolate making process. Of course we bought chocolates to indulge during our holiday in San Francisco. There are so many different flavours. We also had a snack and coffee. Some of the children travelling with us had ice creams which looked amazing. Well worth a looksee.",
+          "time": 1558326219
+        },
+        {
+          "author_name": "Erica Houghton",
+          "author_url": "https://www.google.com/maps/contrib/100024631333013071161/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-JNuCjYKtinA/AAAAAAAAAAI/AAAAAAAACaw/eMeTjcGJU_E/s128-c0x00000000-cc-rp-mo/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "2 months ago",
+          "text": "We enjoyed strolling through Ghirardelli Square and Marketplace despite the rain. The greenery was lush and vibrant and the string lights added to the ambience. Inside the Marketplace we explored the huge selection of Ghirardelli chocolate. We bought and sampled several flavors we’ve never before seen in stores. (They sell individual squares—perfect for sampling!) By visiting on a drizzly, cool morning we very nearly had the place to ourselves.",
+          "time": 1552360971
+        },
+        {
+          "author_name": "Hannah Juliano",
+          "author_url": "https://www.google.com/maps/contrib/100350180320333588358/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh4.googleusercontent.com/-rADT57MFnnw/AAAAAAAAAAI/AAAAAAAAAAw/9KgBJqGCmeY/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 4,
+          "relative_time_description": "2 weeks ago",
+          "text": "Ghirardelli Square is filled with boutiques, restaurants, a beer garden and the Ghirardelli Chocolate Shop. On arrival into the shop you are offered a complimentray chocolate square. Yum! There are a variety of goods and souvenirs around the shop, as well as baking needs. My favorite part of this shop is the amazing variety of ice cream dishes that are offered. The place packs up fast, so seating is very difficult to find. Some tables have views of the gorgeous San Francisco Bay and Alcatraz. I ordered the Famous Hot Fudge Sundae and a chocolate chip cookie ( requesting it warmed up), it was heaven. There is a smaller ice cream shop on the street level that is also Ghirardelli. Parking is convenient in the garage as well.",
+          "time": 1558452756
+        },
+        {
+          "author_name": "Jathan Good",
+          "author_url": "https://www.google.com/maps/contrib/100672983785231178087/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-FppSWWceR0g/AAAAAAAAAAI/AAAAAAAAGzs/2rf1hBd0E0Y/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+          "rating": 4,
+          "relative_time_description": "a month ago",
+          "text": "The chocolate is amazing, of course, but pretty expensive. The lawn/park out front is wonderful, and the small beach is very cool, too. Fun to watch swimmers doing laps in the ocean water. And it's a fun walk down fisherman's wharf, too. And then there's the pier where you can take a tour of old boats. A very nice place to spend an afternoon.",
+          "time": 1556412977
+        }
+      ],
+      "scope": "GOOGLE",
+      "types": [
+        "shopping_mall",
+        "food",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "url": "https://maps.google.com/?cid=15527498072390577293",
+      "user_ratings_total": 14912,
+      "utc_offset": -420,
+      "vicinity": "900 North Point Street Suite 52, San Francisco",
+      "website": "https://www.ghirardelli.com/StoreLocations-SanFrancisco-Original",
+      "html_attributions": null
+    }
+  }
+}

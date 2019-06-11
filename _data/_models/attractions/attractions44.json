@@ -1,0 +1,398 @@
+{
+  "order": 2,
+  "name_localized": {
+    "en": "City Lights Booksellers & Publishers"
+  },
+  "category": "Shopping",
+  "seo_title_localized": {
+    "en": "City Lights Booksellers & Publishers"
+  },
+  "description_localized": {
+    "en": "<p>A North Beach standby, this 3-level shop with Beat-era roots stocks art, poetry &amp; mainstream book</p>"
+  },
+  "image": {
+    "name": "book-market",
+    "content_type": "image/jpeg",
+    "date_added": "2019-06-06-072854",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1559820534/qjtccno709ci0oudliwf.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1559820534/qjtccno709ci0oudliwf.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1559820534/qjtccno709ci0oudliwf.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1559820534/qjtccno709ci0oudliwf.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1559820534/qjtccno709ci0oudliwf.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1559820534/qjtccno709ci0oudliwf.jpg",
+    "width": 275,
+    "height": 183,
+    "format": "jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1559820534/qjtccno709ci0oudliwf.jpg",
+    "resource_type": "image",
+    "size": 17324,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1559820534/qjtccno709ci0oudliwf.jpg",
+    "file_size": null,
+    "alt": "book-market",
+    "caption": "",
+    "description": ""
+  },
+  "location": {
+    "name": "City Lights Booksellers & Publishers",
+    "address": "261 Columbus Ave, San Francisco, CA 94133, USA",
+    "phone": "(415) 362-8193",
+    "place_id": "ChIJ9W7ofPSAhYARPkhgF24V8KI",
+    "reference": "ChIJ9W7ofPSAhYARPkhgF24V8KI",
+    "latitude": 37.79760519999999,
+    "longitude": -122.40659959999999,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "261",
+          "short_name": "261",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Columbus Avenue",
+          "short_name": "Columbus Ave",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Chinatown",
+          "short_name": "Chinatown",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94133",
+          "short_name": "94133",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"street-address\">261 Columbus Ave</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94133</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "261 Columbus Ave, San Francisco, CA 94133, USA",
+      "formatted_phone_number": "(415) 362-8193",
+      "geometry": {
+        "location": {
+          "lat": 37.79760519999999,
+          "lng": -122.40659959999999
+        },
+        "viewport": {
+          "south": 37.79631201970849,
+          "west": -122.40789053029152,
+          "north": 37.79900998029149,
+          "east": -122.4051925697085
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "4940ace2168084b83e414d7565e7912eb9a67806",
+      "international_phone_number": "+1 415-362-8193",
+      "name": "City Lights Booksellers & Publishers",
+      "opening_hours": {
+        "open_now": false,
+        "periods": [
+          {
+            "close": {
+              "day": 1,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560150000000
+            },
+            "open": {
+              "day": 0,
+              "time": "1000",
+              "hours": 10,
+              "minutes": 0,
+              "nextDate": 1560099600000
+            }
+          },
+          {
+            "close": {
+              "day": 2,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560236400000
+            },
+            "open": {
+              "day": 1,
+              "time": "1000",
+              "hours": 10,
+              "minutes": 0,
+              "nextDate": 1560186000000
+            }
+          },
+          {
+            "close": {
+              "day": 3,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560322800000
+            },
+            "open": {
+              "day": 2,
+              "time": "1000",
+              "hours": 10,
+              "minutes": 0,
+              "nextDate": 1560272400000
+            }
+          },
+          {
+            "close": {
+              "day": 4,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560409200000
+            },
+            "open": {
+              "day": 3,
+              "time": "1000",
+              "hours": 10,
+              "minutes": 0,
+              "nextDate": 1560358800000
+            }
+          },
+          {
+            "close": {
+              "day": 5,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1559890800000
+            },
+            "open": {
+              "day": 4,
+              "time": "1000",
+              "hours": 10,
+              "minutes": 0,
+              "nextDate": 1559840400000
+            }
+          },
+          {
+            "close": {
+              "day": 6,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1559977200000
+            },
+            "open": {
+              "day": 5,
+              "time": "1000",
+              "hours": 10,
+              "minutes": 0,
+              "nextDate": 1559926800000
+            }
+          },
+          {
+            "close": {
+              "day": 0,
+              "time": "0000",
+              "hours": 0,
+              "minutes": 0,
+              "nextDate": 1560063600000
+            },
+            "open": {
+              "day": 6,
+              "time": "1000",
+              "hours": 10,
+              "minutes": 0,
+              "nextDate": 1560013200000
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 10:00 am – 12:00 am",
+          "Tuesday: 10:00 am – 12:00 am",
+          "Wednesday: 10:00 am – 12:00 am",
+          "Thursday: 10:00 am – 12:00 am",
+          "Friday: 10:00 am – 12:00 am",
+          "Saturday: 10:00 am – 12:00 am",
+          "Sunday: 10:00 am – 12:00 am"
+        ]
+      },
+      "photos": [
+        {
+          "height": 1152,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110107804411643831568/photos\">Ria Pal</a>"
+          ],
+          "width": 2048
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102915892594879067500/photos\">Kelsie Senuta</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 2592,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114997161406496735719/photos\">Javier Alcácer</a>"
+          ],
+          "width": 4608
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108130964105100419337/photos\">Mike Laan</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100563269190378145991/photos\">Kylee Hale</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 2848,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104821790922590586552/photos\">Vivek Veeramani</a>"
+          ],
+          "width": 4272
+        },
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111197619245087609010/photos\">Sanghun Woo</a>"
+          ],
+          "width": 3024
+        },
+        {
+          "height": 3456,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103982452249385610607/photos\">Ebrahman Ebrahman</a>"
+          ],
+          "width": 4608
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107192332325575737171/photos\">Heather Steele</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112684036565185630996/photos\">Theresa Pualei Guy</a>"
+          ],
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ9W7ofPSAhYARPkhgF24V8KI",
+      "plus_code": {
+        "compound_code": "QHXV+29 Financial District, San Francisco, CA, United States",
+        "global_code": "849VQHXV+29"
+      },
+      "rating": 4.7,
+      "reference": "ChIJ9W7ofPSAhYARPkhgF24V8KI",
+      "reviews": [
+        {
+          "author_name": "Erica Fung",
+          "author_url": "https://www.google.com/maps/contrib/105875711809862561053/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh6.googleusercontent.com/-HWfxG5eESmQ/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rfKhoOCdMT419LOf6HcNxrPCm62Jg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 4,
+          "relative_time_description": "2 weeks ago",
+          "text": "Small little bookstore in the middle of downtown San Francisco! There are 3 levels. I can easily spend the entire afternoon hanging out here. It is very quiet. There are limited seating throughout the store. The building is old, historical, and full of characters. They do not have a large collection of books, but good enough. They also included “staff pick” as recommendation for good reads! \n\nWill come back for sure!",
+          "time": 1558598863
+        },
+        {
+          "author_name": "Jason Tomczak",
+          "author_url": "https://www.google.com/maps/contrib/107300743487653800360/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-uelrYRXXz7M/AAAAAAAAAAI/AAAAAAAAC0c/601szE5PHTA/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a month ago",
+          "text": "One of my all-time favorite bookstores. This place has a long history and has been a pillar of the North Beach scene since the 1950s. They host events and talks quite often. \n\nThe bookstore itself has a great selection. It's not expansive, and it's actually fairly small despite its fame. There are three stories – the top floor is the small poetry room, the ground floor holds mostly fiction with some non-fiction, and the downstairs is all non-fiction. The staff are great and provide top-notch recommendations. I highly, highly recommend this bookstore.",
+          "time": 1556997571
+        },
+        {
+          "author_name": "Carolina K",
+          "author_url": "https://www.google.com/maps/contrib/110258018665864062922/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh4.googleusercontent.com/-tQ3XisYsMFA/AAAAAAAAAAI/AAAAAAAAAmI/wTHt4DVs4ss/s128-c0x00000000-cc-rp-mo/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a month ago",
+          "text": "What a lovely little bookstore! Unfortunately a little overrun by tourists and hardly the quiet, somber bookstore kind of experience, but definitely a great historical part of San Francisco. It's quirky and fun, though maybe an ideal place to pick up a postcard rather than your next good read.",
+          "time": 1556209561
+        },
+        {
+          "author_name": "Miles Sergeant",
+          "author_url": "https://www.google.com/maps/contrib/112557884859979893421/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh3.googleusercontent.com/-_aNEMrIqD8E/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdMadftgCsCiIQ6aB0Rk36hKzH5qw/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a month ago",
+          "text": "Spiritual center of the North Beach Beat Scene of the late 50's and 60 up to the current day. Lawrence Ferlinghetti (founder and owner) is still very much involved with the day to day operations of the bookstore, he turned 100!!! this year (2019). On a personal note I bought my first poetry book (paperback) Mr. Ferlinghetti's own 'Coney Island of the Mind' in this same store in 1967 I was 17 and it was the Summer of Love.",
+          "time": 1555757692
+        },
+        {
+          "author_name": "Caleb Persia",
+          "author_url": "https://www.google.com/maps/contrib/109029169786812268899/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh6.googleusercontent.com/-A4aucieKXjg/AAAAAAAAAAI/AAAAAAAADv0/fw62CeDrSLM/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a week ago",
+          "text": "The best little bookstore I have had the privilege of visiting. So much crammed into a small space. A cool place to stop for anyone visiting San Francisco, and a must see for book worms. Lots of obscure books/genres are stocked on the shelves as well.",
+          "time": 1558736596
+        }
+      ],
+      "scope": "GOOGLE",
+      "types": [
+        "book_store",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "url": "https://maps.google.com/?cid=11740907791137654846",
+      "user_ratings_total": 1705,
+      "utc_offset": -420,
+      "vicinity": "261 Columbus Avenue, San Francisco",
+      "website": "http://www.citylights.com/",
+      "html_attributions": null
+    }
+  }
+}

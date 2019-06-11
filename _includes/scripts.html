@@ -1,0 +1,20 @@
+{% comment %}
+TODO: Evaluate use of script vs CSS. If using CSS, should it go here?
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+{% endcomment %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
+{% comment %}bedrock.min.js includes all of zom.min.js {% endcomment %}
+<script src="/ttio_templates/bedrock/assets/js/bedrock.min.js"></script>
+<script src="/assets/js/main.min.js"></script>
+
+{% comment %} This include does the base include & setup for TTWeb plugins{% endcomment %}
+
+{% include reztrip/setup-ttweb-plugins.html %}
+
+{% comment %}Pull any site-specific scripts here {% endcomment %}
+{% include scripts/custom.html %}

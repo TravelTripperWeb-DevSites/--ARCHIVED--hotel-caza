@@ -1,0 +1,294 @@
+{
+  "order": 4,
+  "name_localized": {
+    "en": "Magic Theatre"
+  },
+  "image": {
+    "name": "magic",
+    "content_type": "image/jpeg",
+    "date_added": "2019-06-06-052756",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1559813276/w9ltqoabwjhjqud1a1c4.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1559813276/w9ltqoabwjhjqud1a1c4.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1559813276/w9ltqoabwjhjqud1a1c4.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1559813276/w9ltqoabwjhjqud1a1c4.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1559813276/w9ltqoabwjhjqud1a1c4.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1559813276/w9ltqoabwjhjqud1a1c4.jpg",
+    "width": 250,
+    "height": 177,
+    "format": "jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1559813276/w9ltqoabwjhjqud1a1c4.jpg",
+    "resource_type": "image",
+    "size": 9060,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1559813276/w9ltqoabwjhjqud1a1c4.jpg",
+    "file_size": null,
+    "alt": "magic",
+    "caption": "",
+    "description": ""
+  },
+  "description_localized": {
+    "en": "<p>A local institution staging highly acclaimed plays &amp; nurturing talents like David Mamet since 1967.</p>"
+  },
+  "category": "Entertainment",
+  "seo_title_localized": {
+    "en": "Magic Theatre"
+  },
+  "location": {
+    "name": "Magic Theatre",
+    "address": "Fort Mason Center, 2 Marina Boulevard, Building D, San Francisco, CA 94123, USA",
+    "phone": "(415) 441-8822",
+    "place_id": "ChIJx77KXieBhYAR0Hl0PxsNCX4",
+    "reference": "ChIJx77KXieBhYAR0Hl0PxsNCX4",
+    "latitude": 37.807047,
+    "longitude": -122.43076559999997,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Marina District",
+          "short_name": "Marina District",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "94123",
+          "short_name": "94123",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "adr_address": "Fort Mason Center, <span class=\"street-address\">2 Marina Boulevard, Building D</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span> <span class=\"postal-code\">94123</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "Fort Mason Center, 2 Marina Boulevard, Building D, San Francisco, CA 94123, USA",
+      "formatted_phone_number": "(415) 441-8822",
+      "geometry": {
+        "location": {
+          "lat": 37.807047,
+          "lng": -122.43076559999997
+        },
+        "viewport": {
+          "south": 37.8057077697085,
+          "west": -122.43203713029152,
+          "north": 37.8084057302915,
+          "east": -122.4293391697085
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "ca33ba19c4103c488cce3c9e8ee2b4f44ceedb0c",
+      "international_phone_number": "+1 415-441-8822",
+      "name": "Magic Theatre",
+      "opening_hours": {
+        "open_now": false,
+        "periods": [
+          {
+            "close": {
+              "day": 0,
+              "time": "1700",
+              "hours": 17,
+              "minutes": 0,
+              "nextDate": 1560124800000
+            },
+            "open": {
+              "day": 0,
+              "time": "1200",
+              "hours": 12,
+              "minutes": 0,
+              "nextDate": 1560106800000
+            }
+          },
+          {
+            "close": {
+              "day": 2,
+              "time": "1700",
+              "hours": 17,
+              "minutes": 0,
+              "nextDate": 1560297600000
+            },
+            "open": {
+              "day": 2,
+              "time": "1100",
+              "hours": 11,
+              "minutes": 0,
+              "nextDate": 1560276000000
+            }
+          },
+          {
+            "close": {
+              "day": 3,
+              "time": "1700",
+              "hours": 17,
+              "minutes": 0,
+              "nextDate": 1560384000000
+            },
+            "open": {
+              "day": 3,
+              "time": "1100",
+              "hours": 11,
+              "minutes": 0,
+              "nextDate": 1560362400000
+            }
+          },
+          {
+            "close": {
+              "day": 4,
+              "time": "1700",
+              "hours": 17,
+              "minutes": 0,
+              "nextDate": 1559865600000
+            },
+            "open": {
+              "day": 4,
+              "time": "1100",
+              "hours": 11,
+              "minutes": 0,
+              "nextDate": 1559844000000
+            }
+          },
+          {
+            "close": {
+              "day": 6,
+              "time": "1700",
+              "hours": 17,
+              "minutes": 0,
+              "nextDate": 1560038400000
+            },
+            "open": {
+              "day": 5,
+              "time": "2300",
+              "hours": 23,
+              "minutes": 0,
+              "nextDate": 1559973600000
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: Closed",
+          "Tuesday: 11:00 am – 5:00 pm",
+          "Wednesday: 11:00 am – 5:00 pm",
+          "Thursday: 11:00 am – 5:00 pm",
+          "Friday: 11:00 pm – 12:00 am",
+          "Saturday: 12:00 am – 5:00 pm",
+          "Sunday: 12:00 – 5:00 pm"
+        ]
+      },
+      "photos": [
+        {
+          "height": 300,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105677187773583462259/photos\">Magic Theatre</a>"
+          ],
+          "width": 940
+        },
+        {
+          "height": 377,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105677187773583462259/photos\">Magic Theatre</a>"
+          ],
+          "width": 377
+        }
+      ],
+      "place_id": "ChIJx77KXieBhYAR0Hl0PxsNCX4",
+      "plus_code": {
+        "compound_code": "RH49+RM Marina District, San Francisco, CA, United States",
+        "global_code": "849VRH49+RM"
+      },
+      "rating": 4.7,
+      "reference": "ChIJx77KXieBhYAR0Hl0PxsNCX4",
+      "reviews": [
+        {
+          "author_name": "Michael L",
+          "author_url": "https://www.google.com/maps/contrib/109570436854496156523/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh6.googleusercontent.com/-CAj_EzoPwBc/AAAAAAAAAAI/AAAAAAAABZE/nyy0BnRhhwM/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "7 months ago",
+          "text": "Wonderful theater space. Resting place was very well done... You should see it!",
+          "time": 1540989433
+        },
+        {
+          "author_name": "Cristina Mitra",
+          "author_url": "https://www.google.com/maps/contrib/113386738351893250716/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh3.googleusercontent.com/-VrtSqpj_zlw/AAAAAAAAAAI/AAAAAAAAK9Q/1wt77HmlPr8/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 4,
+          "relative_time_description": "a year ago",
+          "text": "I've come to 2 plays at The Magic Theater, both by Jessica Hagedorn, and both really high quality. Excellent sound and set design and I like the black box feel as an audience member. Really appreciate that they do Filipino-themed works! Just wish you didn't have to pay for evening parking in Fort Mason... Adds another $10 to your evening.",
+          "time": 1525205457
+        },
+        {
+          "author_name": "Casey Loufek",
+          "author_url": "https://www.google.com/maps/contrib/100299965085869432987/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh3.googleusercontent.com/-CTFCEJrGDd0/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rd7UWB0lyCRPY8eI3pWp3mOJAnbzA/s128-c0x00000000-cc-rp-mo/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "7 months ago",
+          "text": "Great new plays in a very nice theater.",
+          "time": 1540443392
+        },
+        {
+          "author_name": "Sandy Handley",
+          "author_url": "https://www.google.com/maps/contrib/111293212559412577390/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-deF3dZyN-_4/AAAAAAAAAAI/AAAAAAAAACg/_XNiJKykIXs/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a week ago",
+          "text": "Love. Love the Magic.",
+          "time": 1558796216
+        },
+        {
+          "author_name": "Lorna Reed",
+          "author_url": "https://www.google.com/maps/contrib/114734490977756949082/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-m6mO64F2_eE/AAAAAAAAAAI/AAAAAAAAgJ0/LZQ9vdED8OQ/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a year ago",
+          "text": "One of my favorite small independent theaters in San Francisco.",
+          "time": 1526530309
+        }
+      ],
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "url": "https://maps.google.com/?cid=9081804534249191888",
+      "user_ratings_total": 19,
+      "utc_offset": -420,
+      "vicinity": "Fort Mason Center, 2 Marina Boulevard, Building D, San Francisco",
+      "website": "http://www.magictheatre.org/",
+      "html_attributions": null
+    }
+  }
+}

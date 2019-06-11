@@ -1,0 +1,46 @@
+{
+  "title": {
+    "required": true,
+    "label": "Offer Title"
+  },
+  "banner-text": {
+    "required": true,
+    "label": "Banner Text"
+  },
+  "banner-text-color": {
+    "required": true,
+    "type": "color",
+    "label": "Banner Text Color"
+  },
+  "button-text": {
+    "required": true,
+    "label": "Button Text"
+  },
+  "button-text-color": {
+    "required": true,
+    "type": "color",
+    "label": "Button Text Color"
+  },
+  "button-link": {
+    "required": true,
+    "label": "Button Link"
+  },
+  "button-background-color": {
+    "required": true,
+    "type": "color",
+    "label": "Button Background Color"
+  },
+  "button-border-color": {
+    "required": true,
+    "type": "color",
+    "label": "Button Border Color"
+  },
+  "background-color": {
+    "type": "color",
+    "label": "Background Color"
+  },
+  "featured": {
+    "type": "boolean",
+    "label": "Activate banner?"
+  }
+}

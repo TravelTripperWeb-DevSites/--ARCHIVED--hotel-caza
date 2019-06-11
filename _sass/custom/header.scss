@@ -1,0 +1,243 @@
+.navbar {
+  width: auto;
+  height: 112px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: $primary;
+
+  @media (min-width: 1440px) {
+    padding-right: 108px;
+    padding-left: 108px;
+
+  }
+
+  &.is-fixed-top {
+    height: 64px;
+    transition: all .3s;
+
+    @include media-breakpoint-up(md) {
+      height: 84px;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 112px;
+    }
+  }
+
+  &+.main {
+    padding-top: 64px;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 84px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 112px;
+    }
+  }
+
+  .navbar-brand {
+    max-width: 84px;
+    transition: all .3s;
+
+    @include media-breakpoint-up(md) {
+      max-width: 116px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .nav__logo {
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  .nav {
+    &__link {
+      position: relative;
+      margin: 0 20px;
+      padding: 2px 0;
+      overflow: hidden;
+      font-family: $family-primary;
+      font-size: 14px;
+      color: $white !important;
+      letter-spacing: .58px;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+
+      &:before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        height: 2px;
+        content: '';
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+
+      &:hover, &.active {
+        color: $white;
+        text-decoration: none;
+        background-color: transparent;
+
+        &:before {
+          background: $button-color;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &--device {
+      &.is-active {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        height: 100vh;
+        background-color: $primary;
+
+        @include media-breakpoint-up(md) {
+          top: 84px;
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin: 0 12px;
+        background-color: $white;
+        border-radius: 50%;
+
+        &:hover {
+          text-decoration: none !important;
+          background-color: $button-color;
+        }
+
+        i {
+          font-size: 22px;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &.sticky {
+    height: 64px;
+    background-color: $primary;
+
+    @include media-breakpoint-up(md) {
+      height: 84px;
+    }
+
+    .navbar-brand {
+      max-width: 84px;
+    }
+
+    .nav {
+      &__link {
+        color: $white;
+
+        &:hover {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__burger {
+    margin-right: 7px;
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    span {
+      left: calc(50% - 16px);
+      width: 32px;
+      height: 2px;
+      color: $white;
+
+      &:nth-child(1) {
+        top: calc(50% - 10px);
+      }
+      &:nth-child(3) {
+        top: calc(50% - -8px);
+      }
+    }
+
+    &.is-active {
+      background-color: transparent;
+
+      span {
+        &:nth-child(1) {
+          transform: translateY(10px) rotate(45deg);
+        }
+      }
+      span {
+        &:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &.nav--active {
+    background-color: $primary;
+
+    .nav--device {
+      padding: 15px 0 0;
+
+      .nav__item {
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav__link {
+        margin: 0;
+        padding: 14px 15px;
+        font-size: 22px;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+
+        &:hover {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  padding-top: 64px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 84px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 112px;
+  }
+}
