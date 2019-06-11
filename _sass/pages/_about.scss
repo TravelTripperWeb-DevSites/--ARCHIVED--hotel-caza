@@ -137,25 +137,25 @@
     }
 
     &__list {
-      ul{
+      ul {
         max-width: 372px;
-        text-align: left;
         margin: auto;
         padding: 0;
-        li{
-          color: $primary;
+        text-align: left;
+        li {
           line-height: 24px;
+          color: $primary;
         }
       }
     }
     &__slider {
       z-index: 2;
       display: block;
-      padding: 20px 35px 40px;
+      padding: 80px 35px 40px;
       overflow: hidden;
       text-align: center;
       @include media-breakpoint-up(md) {
-        padding: 20px 55px;
+        padding: 100px 55px 20px;
       }
 
       img {
