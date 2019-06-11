@@ -3,8 +3,8 @@ title: Bedrock
 title_separator: "|"
 name: Hotel Property Name
 description: Site default description.
-url: 
-repository: 
+url: https://www.hotelcaza.com
+repository:
 default_lang: en
 languages:
 - en
@@ -66,7 +66,7 @@ sass:
   - _sass
   style: compressed
 permalink: pretty
-timezone: 
+timezone:
 page_gen:
 - data: rooms
   template: room_layout

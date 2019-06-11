@@ -3,36 +3,40 @@
 
 .room-filter {
   @include make-container;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   position: relative;
-  margin: 0;
   z-index: 3;
   max-width: 1012px;
   margin: -56px auto 0;
   padding: 24px 15px;
   text-align: center;
-  background-color: $white;
   list-style-type: none;
+  background-color: $white;
 
   p {
     flex: 100%;
   }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 5px 21px;
+      list-style: none;
+    }
 
-  li {
-    padding: 5px 21px;
-  }
+    a {
+      padding: 5px 0;
+      font-size: 12px;
+      color: $black;
+      text-transform: uppercase;
 
-  a {
-    font-size: 12px;
-    padding: 5px 0;
-    color: $black;
-    text-transform: uppercase;
-
-    &.active,
-    &:hover {
-      text-decoration: underline;
+      &.active,
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

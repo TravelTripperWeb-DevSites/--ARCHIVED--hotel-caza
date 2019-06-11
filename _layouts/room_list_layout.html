@@ -5,24 +5,26 @@ layout: generic
 {% assign rooms = site.data._models.rooms | sort:"order" %}
 
  <section>
-  <ul class="room-filter nav--filter">
-    <p class="h4">Select A Room Type</p>
-    {% comment %}
-      {% assign categories = site.data._models.rooms | sort:"order" %}
-      {% for item in categories %}
-      <li><a href="javascript:;" data-rel="{{ filter.name | replace:" ","_"  }}"  data-filter="{{ filter.name | replace:" ","_"  }}" class="filter filter--option">{{ filter.name }}</a></li>
-      {% endfor %}
-    {% endcomment %}
+   <div class="room-filter nav--filter">
+     <p class="h4">Select A Room Type</p>
+     <ul class="">
+       {% comment %}
+       {% assign categories = site.data._models.rooms | sort:"order" %}
+       {% for item in categories %}
+       <li><a href="javascript:;" data-rel="{{ filter.name | replace:" ","_"  }}"  data-filter="{{ filter.name | replace:" ","_"  }}" class="filter filter--option">{{ filter.name }}</a></li>
+       {% endfor %}
+       {% endcomment %}
 
-    <li><a href="javascript:;" data-rel="all"  data-filter="all" class="filter filter--option ">All Rooms</a></li>
-    <li><a href="javascript:;" data-rel="Deluxe"  data-filter="Deluxe" class="filter filter--option">Deluxe</a></li>
-    <li><a href="javascript:;" data-rel="City_View"  data-filter="City_View" class="filter filter--option">City View</a></li>
-    <li><a href="javascript:;" data-rel="Partial_Bay_View"  data-filter="Partial_Bay_View" class="filter filter--option">Partial Bay View</a></li>
-    <li><a href="javascript:;" data-rel="Suite"  data-filter="Suite" class="filter filter--option">Suite</a></li>
-    <li><a href="javascript:;" data-rel="Accessible"  data-filter="Accessible" class="filter filter--option">Accessible</a></li>
+       <li><a href="javascript:;" data-rel="all"  data-filter="all" class="filter filter--option ">All Rooms</a></li>
+       <li><a href="javascript:;" data-rel="Deluxe"  data-filter="Deluxe" class="filter filter--option">Deluxe</a></li>
+       <li><a href="javascript:;" data-rel="City_View"  data-filter="City_View" class="filter filter--option">City View</a></li>
+       <li><a href="javascript:;" data-rel="Partial_Bay_View"  data-filter="Partial_Bay_View" class="filter filter--option">Partial Bay View</a></li>
+       <li><a href="javascript:;" data-rel="Suite"  data-filter="Suite" class="filter filter--option">Suite</a></li>
+       <li><a href="javascript:;" data-rel="Accessible"  data-filter="Accessible" class="filter filter--option">Accessible</a></li>
 
 
-  </ul>
+     </ul>
+   </div>
   <div class="c-room-list tb-padding">
     {% for room in rooms %}
       {% include components/room %}

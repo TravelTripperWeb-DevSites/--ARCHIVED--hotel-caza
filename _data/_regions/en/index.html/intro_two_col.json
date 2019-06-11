@@ -1,6 +1,6 @@
 [
   {
-    "content": "<h1 class=\"h2\">YOUR GATEWAY TO SAN FRANCISCO AT HOTEL CAZA</h1>\n<p>Hotel Caza is a family-friendly hotel in the heart of historic Fisherman’s Wharf that embodies the spirit of California, full of fun, warmth, and bold choices to enhance your vacation experience. No hype. No frills. Just authentic San Francisco in a perfect location.</p>\n<p><a class=\"btn btn--secondary\" href=\"about/\">Learn More</a></p>",
+    "content": "<h1 class=\"h2\">YOUR GATEWAY TO SAN FRANCISCO AT HOTEL CAZA</h1>\n<p>Hotel Caza is a family-friendly hotel in the heart of historic Fisherman’s Wharf that embodies the spirit of California, full of fun, warmth, and bold choices to enhance your vacation experience. No hype. No frills. Just authentic San Francisco in a perfect location.</p>\n<p><a class=\"btn btn--secondary\" href=\"/about/\">Learn More</a></p>",
     "_template": "html"
   }
 ]
