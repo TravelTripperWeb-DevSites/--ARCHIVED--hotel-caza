@@ -3,10 +3,10 @@
     "en": "Partial Bay View King- Mobility Accessible"
   },
   "short_description_localized": {
-    "en": "Partial Bay View King- Mobility Accessible"
+    "en": "Take in partial views of the San Francisco bay in this 330-square-foot room with mobility-accessible features and a king bed.  \r\n"
   },
   "description_localized": {
-    "en": "Partial Bay View King- Mobility Accessible"
+    "en": "A plush king bed and mobility-accessible features in 330 square feet of space are rounded out by a partial view of the beautiful San Francisco bay, for a convenient, comfortable stay in the city.<br/><br/>\r\nOne king bed - Mobility-accessible features - Luxury comfort bedding - WiFi - 55\" Flat Panel HDTV w/streaming  - Workstation with desk - Portable hearing impaired kits, lowered peephole, bed shaker alarm, visual strobe alarm, folding seat, ADA compliant phone, TTY Device, door bell\r\n"
   },
   "amenities": [
 
@@ -36,7 +36,7 @@
     }
   ],
   "reztrip_room_id": "BVKGA",
-  "order": 14,
+  "order": 12,
   "guest_size_max": 3,
   "size": "330 ft<sup>2</sup>",
   "room_category": "Accessible",

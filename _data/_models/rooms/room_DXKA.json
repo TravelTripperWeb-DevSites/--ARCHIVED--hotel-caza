@@ -3,10 +3,10 @@
     "en": "Deluxe King Mobility Accessible "
   },
   "short_description_localized": {
-    "en": "Deluxe King Mobility Accessible "
+    "en": "Mobility-accessible features, a plush king bed and 330 square feet of space make this room comfortable and convenient for a great stay in San Francisco. \r\n\r\n\r\n"
   },
   "description_localized": {
-    "en": "Deluxe King Mobility Accessible "
+    "en": "Enjoy a plush king bed and the convenience of mobility-accessible features in this 330-square foot room with all the comforts of home; all in a perfect San Francisco location.<br/><br/>\r\nOne king bed - Mobility-accessible features - Luxury comfort bedding - WiFi - 55\" Flat Panel HDTV w/streaming  - Workstation with desk - Portable hearing impaired kits, lowered peephole, bed shaker alarm, visual strobe alarm, folding seat, ADA compliant phone, TTY Device, door bell \r\n"
   },
   "amenities": [
 
@@ -36,7 +36,7 @@
     }
   ],
   "reztrip_room_id": "DXKA",
-  "order": 12,
+  "order": 10,
   "guest_size_max": 3,
   "size": "330 ft<sup>2</sup>",
   "room_category": "Accessible",
