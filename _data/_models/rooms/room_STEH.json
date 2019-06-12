@@ -3,10 +3,10 @@
     "en": "Caza Suite Hearing Accessible"
   },
   "short_description_localized": {
-    "en": "Caza Suite Hearing Accessible"
+    "en": "With 560 square feet of space, hearing-accessible features and a king bed, our Caza Suite has it all, for the most comfortable stay in San Francisco.  \r\n\r\n\r\n"
   },
   "description_localized": {
-    "en": "Caza Suite Hearing Accessible"
+    "en": "Delight in this spacious 560-square-foot suite and enjoy a plush king bed, hearing-accessible features and great amenities to help you make the most of your time in San Francisco.<br/><br/>One king bed - Phone w/visual indicator- 1 fire alarm strobe in guest room - 1 fire alarm strobe in bathroom - Hardwired doorbell w/visual indicator - Luxury comfort bedding - WiFi - 65\" Flat Panel HDTV w/streaming  - Workstation with desk - Max. 3 people. *Please note that our Hearing Accessible rooms are not Mobility Accessible. \r\n\r\n"
   },
   "amenities": [
     "room_amenities7"
@@ -39,8 +39,8 @@
   "order": 15,
   "guest_size_max": 3,
   "size": "560 ft<sup>2</sup>",
-  "room_category": "Suite",
-  "ada_room": false,
+  "room_category": "Accessible",
+  "ada_room": true,
   "bed_types": [
     "bed_type_KNG"
   ]

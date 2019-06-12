@@ -3,10 +3,10 @@
     "en": "Deluxe Two Queens Mobility Accessible"
   },
   "short_description_localized": {
-    "en": "Deluxe Two Queens Mobility Accessible"
+    "en": "Stretch out and relax on two queen beds in 330 square feet of comfortable, convenient space with mobility-accessible features. \r\n"
   },
   "description_localized": {
-    "en": "Deluxe Two Queens Mobility Accessible"
+    "en": "Enjoy your stay in San Francisco to the fullest in this 330-square-foot mobility-accessible space with two queen beds and comfortable amenities to make you feel at home.<br/><br/>\r\nTwo queen beds - Mobility-accessible features - Luxury comfort bedding - WiFi - 55\" Flat Panel HDTV w/streaming  - Workstation with desk - Portable hearing impaired kits, lowered peephole, bed shaker alarm, visual strobe alarm, folding seat, ADA compliant phone, TTY Device, door bell\r\n"
   },
   "amenities": [
 
@@ -36,7 +36,7 @@
     }
   ],
   "reztrip_room_id": "D2QA",
-  "order": 13,
+  "order": 11,
   "guest_size_max": 4,
   "size": "330 ft<sup>2</sup>",
   "room_category": "Accessible",
