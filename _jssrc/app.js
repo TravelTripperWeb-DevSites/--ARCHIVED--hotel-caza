@@ -209,7 +209,7 @@ document.ready(() => {
     var instagramWrap = document.getElementsByClassName("photo-list")[0];
     if (!instagramWrap.children.length) {
       document.getElementsByClassName("c-instagram-feed__list")[0].style.height = 0;
-    }    
+    }
   }, 1500);
 
 });

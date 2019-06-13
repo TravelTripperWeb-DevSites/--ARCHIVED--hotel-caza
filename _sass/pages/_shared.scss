@@ -974,6 +974,13 @@
   }
 }
 
+#common-amenities {
+  &:target {
+    margin-top: -124px;
+    padding-top: 124px;
+  }
+}
+
 // Icon fonts
 
 @font-face {
