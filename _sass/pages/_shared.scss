@@ -254,6 +254,7 @@
 
 // Instagram
 .c-instagram-feed {
+  height: auto !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding-top: 40px;
@@ -901,7 +902,6 @@
 
       img {
         max-width: 32px;
-
       }
 
       span {
@@ -909,6 +909,66 @@
         margin: 12px auto 0;
         font-size: 12px;
         line-height: 16px;
+      }
+    }
+  }
+}
+
+.common-amenities-listing {
+
+  .h4 {
+    font-size: 20px;
+  }
+
+  .col-lg-9 {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 3%;
+      bottom: 0;
+      left: auto;
+      display: none;
+      width: 1px;
+      height: 100%;
+      content: '';
+      background: $gray-400;
+
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+  }
+
+  .rooms {
+    width: 100%;
+    padding: 0;
+
+    li {
+      width: 100%;
+      margin: 5px 18px;
+      font-size: 12px;
+      line-height: normal;
+
+      @include media-breakpoint-up(lg) {
+        width: 29%;
+        margin: 5px 2%;
+      }
+    }
+  }
+
+  .suites {
+    padding: 0;
+
+    li {
+      width: 100%;
+      margin: 5px 18px;
+      font-size: 12px;
+      line-height: normal;
+
+      @include media-breakpoint-up(lg) {
+        width: 80%;
       }
     }
   }

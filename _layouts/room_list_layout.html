@@ -6,6 +6,14 @@ layout: generic
 
  <section>
    <div class="room-filter nav--filter">
+     <div tabindex="0">
+       {% regionblock rooms_listing_intro, type:text %}
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       {% endregionblock %}
+     </div>
+     {% regionblock amenities_cta, type:mixed %}
+     <a class="btn btn--secondary mb-4" href="/about/">View Amenities</a>
+     {% endregionblock %}
      <p class="h4">Select A Room Type</p>
      <ul class="">
        {% comment %}
@@ -38,26 +46,39 @@ layout: generic
   </div>
 </section>
 
-{{ content }}
+<div class="common-amenities">
+  <div class="common-amenities-container">
+    <div class="row common-amenities-listing">
+      <div class="col-lg-9">
+        <h2 class="h4 mb-2" tabindex="0">Room Amenities:</h2>
+        {% regionblock room_amenities, type:html %}
+        <ul class="rooms d-lg-flex flex-lg-wrap" tabindex="0">
+          <li>55 inch Flat Panel HDTV (stream content from your favorite services to the guestroom TV)</li>
+          <li>In-Room Lap Top Size Safe</li>
+          <li>Pillows: Down, Feather and Foam Available</li>
+          <li>High Speed Wi-Fi – Unlimited Device Connections (included in the  Destination Fee)</li>
+          <li>Luxury Bath Amenities</li>
+          <li>Mini Refrigerator (Available for a Fee  $20/Stay)</li>
+          <li>Workstation with Desk</li>
+          <li>100% Cotton 250 Thread Count Linens, Triple Sheeting</li>
+          <li>Rollaway Bed (Available for a Fee  $25/Stay)</li>
+          <li>USB Ports</li>
+          <li>Individual Climate Control</li>
+          <li>Garment Steamer</li>
+          <li>Hair Dryer</li>
+        </ul>
+        {% endregionblock %}
+      </div>
+      <div class="col-lg-3">
+        <h2 class="h4 mb-2" tabindex="0">Suite Amenities:</h2>
+        {% regionblock suite_amenities, type:html %}
+        <ul class="suites" tabindex="0">
+          <li>65 inch Flat Panel HDTV (stream content from your favorite services to the guestroom TV)</li>
+        </ul>
+        {% endregionblock %}
+      </div>
+    </div>
+  </div>
+</div>
 
-
-
-{% comment %}
-
-  Name:
-
-    Room List Page
-
-  Description:
-
-    Displays a list of room models enhanced with dynamic data from reztrip.
-    Allows user editable regions via the generic layout.
-
-  Usage:
-
-    To customize the rendering of each room model, create your own _includes/components/room file.
-    In general, use the editable regions available from the "generic" layout to add content above and below the rooms list.
-    To add custom components/content to the page, write that content in the body of the page that uses this layout and it will be included after the room list.
-
-
-{% endcomment %}
+{% include offers-cross-sell.html %}

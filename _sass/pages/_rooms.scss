@@ -304,7 +304,7 @@
     z-index: -1;
     content: '';
     background-color: $white;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       right: 108px;
     }
   }
