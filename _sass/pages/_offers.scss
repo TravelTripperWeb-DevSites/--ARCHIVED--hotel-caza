@@ -14,7 +14,11 @@
     @include make-container-max-widths;
 
     &--mw-990 {
-      max-width: 990px;
+      max-width: 720px;
+
+      @include media-breakpoint-up(lg) {
+        max-width: 990px;
+      }
     }
 
     &__wrap {
