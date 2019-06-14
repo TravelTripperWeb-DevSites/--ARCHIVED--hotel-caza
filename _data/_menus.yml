@@ -10,8 +10,8 @@ main:
       label: Offers
     - page_id: _pages/location.html
       label: Location
-    - page_id: _pages/blog.html
-      label: Blog
+    # - page_id: _pages/blog.html
+    #   label: Blog
     - page_id: _pages/gallery.html
       label: Gallery
     - page_id: _pages/contact.html
@@ -32,9 +32,9 @@ footer:
     - page_id: _pages/location.html
       label: Location
       url: /location/
-    - page_id: _pages/blog.html
-      label: Blog
-      url: /blog/
+    # - page_id: _pages/blog.html
+    #   label: Blog
+    #   url: /blog/
     - page_id: _pages/gallery.html
       label: Gallery
       url: /gallery/
