@@ -9,7 +9,7 @@
 <section class="c-instagram-feed">
   <div class="container-fluid  c-instagram-feed__container">
     <div class="row c-instagram-feed__tag-link">
-      <a href="https://www.instagram.com/explore/tags/{{handle}}/" target="_blank" title="#{{handle}}">{% t 'instagram.tag_link', handle:handle %}</a>
+      <a href="https://www.instagram.com/explore/tag{{handle}}/" target="_blank" title="#{{handle}}">{% t 'instagram.tag_link', handle:handle %}</a>
     </div>
     <div class="row  c-instagram-feed__profile-link">
       <a href="https://www.instagram.com/{{handle}}/" target="_blank" title="@{{handle}}">

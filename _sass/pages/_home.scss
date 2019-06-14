@@ -41,3 +41,19 @@
     }
   }
 }
+
+// Booking widget css
+
+.ttweb-slide-out-widget__title {
+  background-color: $primary;
+}
+
+.ttweb-booking-widget a {
+  &.ttweb-booking-widget__submit {
+    background-color: $primary;
+  }
+}
+
+.ttweb-calendar-month .ttweb-calendar-month__grid .ttweb-day--in-selection {
+  background-color: $primary;
+}

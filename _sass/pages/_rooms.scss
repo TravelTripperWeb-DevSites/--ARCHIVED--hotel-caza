@@ -286,6 +286,7 @@
   margin-bottom: 40px;
   padding-top: 50px;
   padding-bottom: 30px;
+
   @include media-breakpoint-up(md) {
     margin-bottom: 72px;
   }
@@ -304,7 +305,7 @@
     z-index: -1;
     content: '';
     background-color: $white;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       right: 108px;
     }
   }
