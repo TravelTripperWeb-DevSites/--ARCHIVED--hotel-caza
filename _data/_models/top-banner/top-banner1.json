@@ -1,11 +1,12 @@
 {
   "featured": true,
-  "title": "TAKE YOUR SAN FRANCISCO GETAWAY TO THE NEXT LEVEL. BOOK DIRECT FOR EXCLUSIVE SAVINGS",
-  "banner-text": "TAKE YOUR SAN FRANCISCO GETAWAY TO THE NEXT LEVEL. BOOK DIRECT FOR EXCLUSIVE SAVINGS",
+  "title": "BE AMONG THE FIRST TO STAY AT HOTEL CAZA AND RECEIVE SPECIAL SAVINGS",
+  "banner-text": "BE AMONG THE FIRST TO STAY AT HOTEL CAZA AND RECEIVE SPECIAL SAVINGS",
   "banner-text-color": "#8f6936",
-  "button-text": "Unlock Offer",
+  "button-text": "Book Now",
   "button-text-color": "#ffffff",
   "background-color": "#ffffff",
   "button-border-color": "#ffffff",
-  "button-link": "#"
+  "button-link": "offers/offer_grand/",
+  "button-background-color": "#8f6936"
 }
