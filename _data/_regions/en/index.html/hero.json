@@ -30,7 +30,7 @@
     },
     "_template": "hero",
     "hero_html": {
-      "content": "<p class=\"h1\">MAKE CALIFORNIA<br />DREAMIN’ A REALITY</p>\n<p><a class=\"btn btn--primary\" href=\"/offers/\"> View Specials</a></p>"
+      "content": "<p class=\"h1\">swing over to fun side</p>\n<p class=\"h1\">of san francisco</p>\n<p><a class=\"btn btn--primary\" href=\"offers/\"> View Specials</a></p>"
     },
     "skip_h1": true
   }
