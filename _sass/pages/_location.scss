@@ -137,6 +137,9 @@
       }
     }
   }
+  &:target {
+    padding-top: 100px;
+  }
 }
 
 .location-slider {
@@ -225,5 +228,5 @@
   padding-bottom: 42px !important;
   @include media-breakpoint-up(md) {
     padding-bottom: 102px !important;
-  } 
+  }
 }

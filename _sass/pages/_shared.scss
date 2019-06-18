@@ -388,6 +388,10 @@
     @include make-container;
     @include make-container-max-widths;
 
+    @include media-breakpoint-up(xl) {
+      max-width: 1100px;
+    }
+
     &__left {
       @include make-col-ready;
       padding-right: 24px;
@@ -403,14 +407,17 @@
       .h2 {
         margin-bottom: 20px;
       }
-        &__smaller {
-          @include media-breakpoint-up(lg) {
-            @include make-col(6);
-          }
-          @include media-breakpoint-up(xl) {
-            @include make-col(6.4);
-          }
+      &__smaller {
+        @include media-breakpoint-down(xs) {
+          padding: 0 24px 20px;
         }
+        @include media-breakpoint-up(lg) {
+          @include make-col(6);
+        }
+        @include media-breakpoint-up(xl) {
+          @include make-col(6.4);
+        }
+      }
     }
 
     &__right {
@@ -428,17 +435,20 @@
         margin-top: 0;
         margin-left: auto;
       }
-        &__bigger{
-          @include media-breakpoint-up(lg) {
-            @include make-col(6);
-          }
-
-          @include media-breakpoint-up(xl) {
-            @include make-col(4.6);
-            margin-top: 0;
-            margin-left: auto;
-          }
+      &__bigger {
+        @include media-breakpoint-down(xs) {
+          padding: 0 24px;
         }
+        @include media-breakpoint-up(lg) {
+          @include make-col(6);
+        }
+
+        @include media-breakpoint-up(xl) {
+          @include make-col(4.6);
+          margin-top: 0;
+          margin-left: auto;
+        }
+      }
     }
   }
 
@@ -895,6 +905,10 @@
       margin-bottom: 20px;
       text-align: center;
       list-style-type: none;
+
+      @include media-breakpoint-down(xs) {
+        margin-right: 18px;
+      }
 
       &:last-child {
         margin-right: 0;

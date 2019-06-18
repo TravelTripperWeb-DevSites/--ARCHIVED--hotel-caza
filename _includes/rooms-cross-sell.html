@@ -6,7 +6,7 @@
     <div class="rooms-slider__image" data-reztrip-room-id="{{room.reztrip_room_id}}" role="option">
       <div class="rooms-slider__photo">
         {% assign featured_image = room.featured_image | default: room.images[0] %}
-        {% include components/image image=featured_image max_width=600 %}
+        {% include components/image image=featured_image max_width=1800 %}
       </div>
       <div class="rooms-slider__info">
         <p class="h3" tabindex="0">{{ room.name }}</p>
