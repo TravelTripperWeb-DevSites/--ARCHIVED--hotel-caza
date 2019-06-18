@@ -30,7 +30,7 @@ meta_tags:
 
 {% assign attractions = site.data._models.attractions | sort:'id' %}
 
-<div class="c-map">
+<div class="c-map" id="mapLocations">
   <div class="attractions__heading">
     {% regionblock attractions_heading, type:header %}
     <p class="h2" tabindex="0"><span>Things to do near Hotel caza:</span></p>
@@ -118,13 +118,13 @@ meta_tags:
         <a id="attractions_active" data-category="Attractions" data-filter="attractions" class="filter--option"><i class="icon-attractions" aria-hidden="true"></i><span>See & Do</span></a>
       </li>
       <li>
-        <a data-category="Entertainment" data-filter="entertainment" class="filter--option"><i class="icon-entertainment" aria-hidden="true"></i><span>Entertainment</span></a>
+        <a id="entertainment_active" data-category="Entertainment" data-filter="entertainment" class="filter--option"><i class="icon-entertainment" aria-hidden="true"></i><span>Entertainment</span></a>
       </li>
       <li>
-        <a data-category="Eat & Drink" data-filter="eat-drink" class="filter--option"><i class="icon-eat-drink" aria-hidden="true"></i><span>Eat & Drink</span></a>
+        <a id="eat-drink_active" data-category="Eat & Drink" data-filter="eat-drink" class="filter--option"><i class="icon-eat-drink" aria-hidden="true"></i><span>Eat & Drink</span></a>
       </li>
       <li>
-        <a data-category="Shopping" data-filter="shopping" class="filter--option"><i class="icon-shopping" aria-hidden="true"></i><span>Shopping</span></a>
+        <a id="shopping_active" data-category="Shopping" data-filter="shopping" class="filter--option"><i class="icon-shopping" aria-hidden="true"></i><span>Shopping</span></a>
       </li>
     </ul>
 
@@ -373,6 +373,12 @@ meta_tags:
        }
      }
       setTimeout(function() {
-        document.getElementById('attractions_active').click();
-      },3000);
+
+        let url = new URL(location.href);
+        let searchParams = new URLSearchParams(url.search);
+        var currentActiveElement = url.searchParams.get("id");
+
+        currentActiveElement ? document.getElementById(currentActiveElement+'_active').click() : document.getElementById('attractions_active').click()
+
+      },2000);
   </script>
