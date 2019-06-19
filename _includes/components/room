@@ -8,7 +8,8 @@
       </div>
       <div class="c-room__availability" ttweb-room-component="ScarcityMessage"></div>
       <div class="c-room__rate" tabindex="0">
-        Tonight’s Rate: <span ttweb-room-component="CrossOutRateContainer" data-tt-show-error="true">$RATE {% t 'rooms.price_per_night', editable:true %}</span>
+         <span ttweb-room-component="CrossOutRate" data-tt-pre-html="Tonight’s Rate:" data-tt-post-html="{% t 'rooms.price_per_night', editable:false %}"> </span>
+        <div ttweb-room-component="CrossOutRateError">Check Availability</div>
       </div>
       <div class="c-room__size" tabindex="0">
         <span><i class="fal fa-bed"></i> {{ room.bed_types[0].name }}</span>
@@ -19,9 +20,7 @@
         <span>
           <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary">View</a>
         </span>
-        <span data-reztrip-room-book-now>
-          <a href="#" class="btn btn--secondary">Book Room</a>
-        </span>
+
         <div data-tt-class-name="btn" ttweb-room-component="BookingButton">
         {% t 'rooms.buttons.book' %}
       </div>
