@@ -18,7 +18,7 @@
 
       <div class="c-room__select">
         <span>
-          <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary">View</a>
+          <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary">{% t 'rooms.buttons.view' %}</a>
         </span>
 
         <div data-tt-class-name="btn" ttweb-room-component="BookingButton">
