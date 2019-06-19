@@ -9,7 +9,6 @@
       <div class="c-item-detail__text-group__headings">
         <h1 class="h2" {% if sync %}ttweb-offer-component="OfferTitle"{% endif %} tabindex="0">{{ offer.name }}</h1>
         <p class="h4" {% if sync %}ttweb-offer-component="OfferShortDescription"{% endif %} tabindex="0">{{ offer.short_description }}</p>
-        <div class="c-offer__rate" ttweb-offer-component="CrossOutRateError">No Offers Available.</div>
         <div class="c-offer__rate" ttweb-offer-component="CrossOutRate" data-tt-pre-html="<span class='c-offer__rate-pre-label'>avg.</span>" data-tt-post-html="<span class='c-offer__rate-post-label'> / night</span>"></div>
       </div>
 

@@ -162,6 +162,35 @@
 
     &__select {
       padding-top: 16px;
+
+      @include media-breakpoint-up(md) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      span {
+        display: block;
+
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+        }
+      }
+
+      .ttweb-booking-button-offer {
+        .ttweb-booking-button {
+          max-height: 23px;
+        }
+
+        &__unavailable-message {
+          max-width: 100%;
+          margin-left: 0;
+          padding: 3px 0;
+
+          @include media-breakpoint-up(md) {
+            margin-left: 1.5rem;
+          }
+        }
+      }
     }
 
     &__rate {
