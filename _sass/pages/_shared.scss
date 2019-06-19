@@ -862,6 +862,13 @@
       left: 28px;
     }
 
+    .ttweb-booking-button-offer {
+      &__unavailable-message {
+        margin-left: 0;
+        color: rgba(255,255,255,.5);
+      }
+    }
+
     .h3 {
       margin-bottom: 10px;
       color: $white;

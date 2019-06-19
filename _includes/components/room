@@ -1,31 +1,15 @@
-{% comment %}
+{% assign sync = include.sync_content %}
 
-  Name:
-
-      Room with live rate
-
-  Description:
-
-      Display content from a room model with live-rates from reztrip
-
-  Usage:
-
-      Pass provider and video id through the include to render on page.
-          {% assign room = *RoomModelInstance* %}
-      eg. {% include components/room %}
-
-  TODO: Add microdata?
-
-{% endcomment %}
-
-<div class="c-room filter-item" data-filter="{{room.room_category | replace:" ","_"}}" data-reztrip-room-id="{{room.reztrip_room_id}}">
+<div class="c-room filter-item" ttweb-component="Room" data-tt-selected-room="{{room.reztrip_room_id}}" data-filter="{{room.room_category | replace:" ","_"}}">
   <div class="c-room__text-group">
     <div class="c-room__text-group__wrap">
       <div class="c-room__name">
-        <a class="h2" href="{{ room.id | permalink: model_dir: 'rooms' }}">{{ room.name }}</a>
+        <a class="h2" href="{{ room.id | permalink: model_dir: 'rooms' }}" {% if sync %}ttweb-room-component="RoomName"{% endif %}>{{ room.name }}</a>
       </div>
+      <div class="c-room__availability" ttweb-room-component="ScarcityMessage"></div>
       <div class="c-room__rate" tabindex="0">
-        Tonight’s Rate: <span  data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span>
+         <span ttweb-room-component="CrossOutRate" data-tt-pre-html="Tonight’s Rate:" data-tt-post-html="{% t 'rooms.price_per_night', editable:false %}"> </span>
+        <div ttweb-room-component="CrossOutRateError">Check Availability</div>
       </div>
       <div class="c-room__size" tabindex="0">
         <span><i class="fal fa-bed"></i> {{ room.bed_types[0].name }}</span>
@@ -34,22 +18,23 @@
 
       <div class="c-room__select">
         <span>
-          <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary">View</a>
+          <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary">{% t 'rooms.buttons.view' %}</a>
         </span>
-        <span data-reztrip-room-book-now>
-          <a href="#" class="btn btn--secondary">Book Room</a>
-        </span>
+
+        <div data-tt-class-name="btn" ttweb-room-component="BookingButton">
+        {% t 'rooms.buttons.book' %}
+        </div>
       </div>
     </div>
   </div>
   <div class="c-room__image-group">
-    <div class="c-room__featured-image">
+    <div class="c-room__featured-image" {% if sync %}ttweb-room-component="RoomPrimaryImage"{% endif %}>
       {% assign featured_image = room.featured_image | default: room.images[0] %}
       {% include components/image image=featured_image max_width=600 %}
     </div>
-    <div class="c-room__images">
+    <div class="c-room__images" {% if sync %}ttweb-room-component="RoomImageList"{% endif %}>
       <a href="{{ room.id | permalink: model_dir: 'rooms' }}">
-        {% assign sliderImage = room.images[0].url %}
+        {% assign sliderImage = room.images[0].url_xlarge %}
         <img class="objectfit" src="{{sliderImage}}" alt="{{ room.name }}">
       </a>
     </div>

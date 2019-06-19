@@ -154,3 +154,18 @@
     }
   }
 }
+
+.ttweb-booking-button-offer {
+  &__unavailable-message {
+    display: block;
+    max-width: 200px;
+    margin-left: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    color: $gray-600;
+
+    @include media-breakpoint-up(md) {
+      margin-left: 1.5rem;
+    }
+  }
+}

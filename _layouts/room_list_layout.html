@@ -2,8 +2,8 @@
 layout: generic
 ---
 
+{% if site.data._models.rooms %}
 {% assign rooms = site.data._models.rooms | sort:"order" %}
-
  <section>
    <div class="room-filter nav--filter">
      <div tabindex="0">
@@ -16,26 +16,17 @@ layout: generic
      {% endregionblock %}
      <p class="h4">Select A Room Type</p>
      <ul class="">
-       {% comment %}
-       {% assign categories = site.data._models.rooms | sort:"order" %}
-       {% for item in categories %}
-       <li><a href="javascript:;" data-rel="{{ filter.name | replace:" ","_"  }}"  data-filter="{{ filter.name | replace:" ","_"  }}" class="filter filter--option">{{ filter.name }}</a></li>
-       {% endfor %}
-       {% endcomment %}
-
        <li><a href="javascript:;" data-rel="all"  data-filter="all" class="filter filter--option ">All Rooms</a></li>
        <li><a href="javascript:;" data-rel="Deluxe"  data-filter="Deluxe" class="filter filter--option">Deluxe</a></li>
        <li><a href="javascript:;" data-rel="City_View"  data-filter="City_View" class="filter filter--option">City View</a></li>
        <li><a href="javascript:;" data-rel="Partial_Bay_View"  data-filter="Partial_Bay_View" class="filter filter--option">Partial Bay View</a></li>
        <li><a href="javascript:;" data-rel="Suite"  data-filter="Suite" class="filter filter--option">Suite</a></li>
        <li><a href="javascript:;" data-rel="Accessible"  data-filter="Accessible" class="filter filter--option">Accessible</a></li>
-
-
      </ul>
    </div>
   <div class="c-room-list tb-padding">
     {% for room in rooms %}
-      {% include components/room %}
+      {% include components/room sync_content=page.sync_room_content %}
     {% endfor %}
 
     <div class="statement" tabindex="0">
@@ -45,6 +36,11 @@ layout: generic
     </div>
   </div>
 </section>
+{% else %}
+  {% regionblock no_list_items, type:html %}
+    {% t 'rooms.none' %}
+  {% endregionblock %}
+{% endif %}
 
 <section id="common-amenities">
   <div class="common-amenities">

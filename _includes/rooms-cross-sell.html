@@ -3,18 +3,26 @@
 
 <div class="rooms-slider" role="listbox">
   {% for room in rooms %}
-    <div class="rooms-slider__image" data-reztrip-room-id="{{room.reztrip_room_id}}" role="option">
-      <div class="rooms-slider__photo">
+    {% assign sync = page.sync_room_content %}
+    <div class="rooms-slider__image" ttweb-component="Room" data-tt-selected-room="{{room.reztrip_room_id}}" role="option">
+      <div class="rooms-slider__photo" {% if sync %}ttweb-room-component="RoomPrimaryImage"{% endif %}>
         {% assign featured_image = room.featured_image | default: room.images[0] %}
         {% include components/image image=featured_image max_width=1800 %}
       </div>
       <div class="rooms-slider__info">
-        <p class="h3" tabindex="0">{{ room.name }}</p>
-        <div class="tonight" tabindex="0">Tonight’s Rate <span data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span></div>
+        <p class="h3" {% if sync %}ttweb-room-component="RoomName"{% endif %} tabindex="0">{{ room.name }}</p>
+        <!-- <div class="tonight" tabindex="0">Tonight’s Rate <span data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span></div> -->
+        <div class="tonight" tabindex="0">
+          <span ttweb-room-component="CrossOutRate" data-tt-pre-html="Tonight’s Rate:" data-tt-post-html="{% t 'rooms.price_per_night', editable:false %}"> </span>
+          <div ttweb-room-component="CrossOutRateError">Check Availability</div>
+        </div>
         <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary white">View</a>
-        <span data-reztrip-room-book-now>
+        <!-- <span data-reztrip-room-book-now>
           <a href="" class="btn btn--secondary white">Book Now</a>
-        <span>
+        <span> -->
+        <div data-tt-class-name="btn" ttweb-room-component="BookingButton">
+        {% t 'rooms.buttons.book' %}
+        </div>
       </div>
     </div>
     {% endfor %}
