@@ -77,7 +77,7 @@
       </div>
     </div>
   </div>
-
+</div>
   <section class="rooms-cs">
     <div class="rooms-cs__intro">
       <div class="rooms-cs__row">
@@ -96,5 +96,3 @@
 
   {% include offers-cross-sell.html %}
   {% include cross-sell.html %}
-
-</div>
