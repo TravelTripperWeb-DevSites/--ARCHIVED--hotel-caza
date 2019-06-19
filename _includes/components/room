@@ -23,7 +23,7 @@
 
         <div data-tt-class-name="btn" ttweb-room-component="BookingButton">
         {% t 'rooms.buttons.book' %}
-      </div>
+        </div>
       </div>
     </div>
   </div>

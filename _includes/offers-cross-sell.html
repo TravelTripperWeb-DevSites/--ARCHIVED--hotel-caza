@@ -18,12 +18,13 @@
       <div class="offers-cs__slider">
         <div class="offers-cs__slideitems" role="listbox">
         {% for offer in offers %}
-          <div class="offers-cs__slider__item" role="option">
-            <div class="offers-cs__slider__pic">
+          {% assign sync = page.sync_offer_content %}
+          <div class="offers-cs__slider__item" data-tt-rate-code="{{offer.reztrip_offer_id}}" ttweb-component="Offer" role="option">
+            <div class="offers-cs__slider__pic" {% if sync %}ttweb-offer-component="OfferImage"{% endif %}>
             {% include components/image image=offer.image %}
             </div>
             <div class="offers-cs__info">
-              <p class="h3" tabindex="0">{{ offer.name }}</p>
+              <p class="h3" {% if sync %}ttweb-offer-component="OfferTitle"{% endif %} tabindex="0">{{ offer.name }}</p>
               <a href="/offers/{{ offer.id | downcase }}/" class="btn btn--secondary white">Details</a>
               <a target="_blank" href="https://{{ site.data.hotel_settings._portal_id }}.reztrip.com/en/special_offer?rate_code={{offer.reztrip_offer_id}}" class="btn btn--secondary white">Book Offer</a>
             </div>
