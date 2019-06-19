@@ -20,7 +20,12 @@ published_localized:
       <div class="col-img-detail__detail">
         <div class="box">
           <h2 class="h4" tabindex="0">Our Address</h2>
-          <p tabindex="0">{{ site.data.hotel_settings.address.street1 }}, {{ site.data.hotel_settings.address.state }}, {{ site.data.hotel_settings.address.city }}, {{ site.data.hotel_settings.address.zip_code }}</p>
+          <p tabindex="0">
+            {{ site.data.hotel_settings.address.street1 }}<br>
+            {{ site.data.hotel_settings.address.state }},
+            {{ site.data.hotel_settings.address.city }}
+            {{ site.data.hotel_settings.address.zip_code }}
+          </p>
           <p><a href="{{ site.data.hotel_settings.get_directions_url }}" rel="nofollow" target="_blank" class="btn--primary">get directions</a></p>
 
           <h2 class="h4" tabindex="0">Airport Directions</h2>
