@@ -5,13 +5,17 @@
 body {
   font-family: $family-secondary;
   font-size: 16px;
-  line-height: 24px;
+  line-height: normal;
   color: $secondary;
   background-color: $light-grey;
 }
 
 .text-light {
   color: $black;
+}
+
+p {
+  line-height: 24px;
 }
 
 .h1 {
