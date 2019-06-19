@@ -49,7 +49,7 @@
     </div>
     <div class="c-room__images">
       <a href="{{ room.id | permalink: model_dir: 'rooms' }}">
-        {% assign sliderImage = room.images[0].url %}
+        {% assign sliderImage = room.images[0].url_xlarge %}
         <img class="objectfit" src="{{sliderImage}}" alt="{{ room.name }}">
       </a>
     </div>
