@@ -1,13 +1,18 @@
 ---
 layout: generic
 ---
-
+{% if site.data._models.offers %}
 {% assign offers = site.data._models.offers | sort:"order" %}
 <section class="c-offer-list tb-padding">
     {% for offer in offers %}
-      {% include components/offer.html %}
+      {% include components/offer sync_content=page.sync_offer_content %}
     {% endfor %}
 </section>
+{% else %}
+  {% regionblock no_list_items, type:html %}
+    {% t 'offers.none' %}
+  {% endregionblock %}
+{% endif %}
 
 {{ content }}
 

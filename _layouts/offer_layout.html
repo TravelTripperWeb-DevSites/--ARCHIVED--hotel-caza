@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign offer = page.data %}
-{% include components/offer-detail.html %}
+{% include components/offer-detail sync_content=true %}
 
 {% include offers-cross-sell-variant.html %}
 
