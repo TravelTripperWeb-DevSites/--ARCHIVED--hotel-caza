@@ -183,7 +183,9 @@
   padding-bottom: 0 !important;
 
   .c-offer-item {
-    @include make-row;
+    .ttweb-offer {
+      @include make-row;
+    }
 
     &__text-group {
       display: flex;
