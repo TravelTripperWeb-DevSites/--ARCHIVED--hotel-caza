@@ -1,3 +1,5 @@
+{% assign sync = include.sync_content %}
+
 {% assign room_detail = page.data %}
 
 {% comment %} Room images Slider {% endcomment %}
@@ -24,25 +26,27 @@
 
 </div>
 
-<div data-reztrip-room-id="{{room_detail.reztrip_room_id}}">
+<div ttweb-component="Room" data-tt-selected-room="{{room.reztrip_room_id}}">
 
 <div class="c-item-detail__text-group">
   <div class="c-item-detail__text-group__wrap  tb-padding">
     <div class="c-item-detail__text-group__headings">
-      <h1 class="h2" tabindex="0">{{ room_detail.name }}</h1>
-      <p class="h4" tabindex="0">Tonight’s Rate <span data-reztrip-room-attribute="rate">$RATE {% t 'rooms.price_per_night', editable:true %}</span></p>
+      <h1 class="h2" {% if sync %}ttweb-room-component="RoomName"{% endif %} tabindex="0">{{ room_detail.name }}</h1>
+      <div class="c-room__availability" ttweb-room-component="ScarcityMessage"></div>
+      <p class="h4" tabindex="0">Tonight’s Rate <span ttweb-room-component="CrossOutRateContainer" data-tt-show-error="true">$RATE {% t 'rooms.price_per_night', editable:true %}</span></p>
     </div>
 
     <div class="c-item-detail__text-group__text">
-      <div class="room-info" tabindex="0"><span><i class="fal fa-bed"></i> 1 King</span><span><i class="fal fa-arrows"></i> 300 sqft / 28 sqm</span></div>
+      <div class="room-info" tabindex="0"><span><i class="fal fa-bed"></i> {{ room_detail.bed_types[0].name }}</span><span><i class="fal fa-arrows"></i> {{ room_detail.size }}</span></div>
 
-      <p tabindex="0">{{ room_detail.description }}</p>
+      <p {% if sync %}ttweb-room-component="RoomDescription"{% endif %} tabindex="0">{{ room_detail.description }}</p>
     </div>
 
     <div class="c-item-detail__text-group__selector">
       <span data-reztrip-room-book-now>
        <a href="#" class="btn btn--primary ml-md-3">{% t 'rooms.buttons.check_availability' %}</a>
       </span>
+      <div data-tt-class-name="btn" ttweb-room-component="BookingButton">Book Now</div>
     </div>
 
   </div>
