@@ -95,12 +95,12 @@
 
       &__wrap {
         z-index: 2;
-        padding: 24px;
+        padding: 24px 24px 48px;
         background-color: $white;
         @include media-breakpoint-up(lg) {
           margin-right: 80px;
           margin-left: -80px;
-          padding: 39px 48px;
+          padding: 39px 48px 70px;
         }
       }
     }
@@ -161,6 +161,7 @@
     }
 
     &__select {
+      position: relative;
       padding-top: 16px;
 
       @include media-breakpoint-up(md) {
@@ -177,18 +178,19 @@
       }
 
       .ttweb-booking-button-offer {
+
         .ttweb-booking-button {
           max-height: 23px;
         }
 
         &__unavailable-message {
+          position: absolute;
+          bottom: -25px;
+          left: 0;
+          display: block;
           max-width: 100%;
           margin-left: 0;
           padding: 3px 0;
-
-          @include media-breakpoint-up(md) {
-            margin-left: 1.5rem;
-          }
         }
       }
     }
