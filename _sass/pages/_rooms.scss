@@ -50,6 +50,12 @@
       padding-bottom: 72px;
     }
 
+    &.filter-item {
+      &.hidden {
+        display: none !important;
+      }
+    }
+
     .ttweb-booking-button {
       @extend .btn--secondary;
       margin-left: 24px;
