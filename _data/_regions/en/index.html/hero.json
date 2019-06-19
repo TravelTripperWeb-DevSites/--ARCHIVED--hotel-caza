@@ -30,7 +30,7 @@
     },
     "_template": "hero",
     "hero_html": {
-      "content": "<p class=\"h1\">swing over to fun side</p>\n<p class=\"h1\">of san francisco</p>\n<p><a class=\"btn btn--primary\" href=\"offers/\"> View Specials</a></p>"
+      "content": "<p class=\"h1\">swing over to THE fun side</p>\n<p class=\"h1\">of san francisco</p>\n<p class=\"h1 h3\">&nbsp;</p>\n<p class=\"h1 h3\">now accepting reservations for SEPTEMBER 10, 2019 AND BEYOND!</p>\n<p><a class=\"btn btn--primary\" href=\"offers/\"> View Specials</a></p>"
     },
     "skip_h1": true
   }
