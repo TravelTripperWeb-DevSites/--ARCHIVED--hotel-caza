@@ -33,7 +33,7 @@
     <div class="c-item-detail__text-group__headings">
       <h1 class="h2" {% if sync %}ttweb-room-component="RoomName"{% endif %} tabindex="0">{{ room_detail.name }}</h1>
       <div class="c-room__availability" ttweb-room-component="ScarcityMessage"></div>
-      <p class="h4" tabindex="0">Tonight’s Rate <span ttweb-room-component="CrossOutRateContainer" data-tt-show-error="true">$RATE {% t 'rooms.price_per_night', editable:true %}</span></p>
+      <p class="h4" tabindex="0">Tonight’s Rate <span ttweb-room-component="CrossOutRateContainer" data-tt-show-error="true" >Check Availability</span></p>
     </div>
 
     <div class="c-item-detail__text-group__text">
@@ -43,9 +43,7 @@
     </div>
 
     <div class="c-item-detail__text-group__selector">
-      <span data-reztrip-room-book-now>
-       <a href="#" class="btn btn--primary ml-md-3">{% t 'rooms.buttons.check_availability' %}</a>
-      </span>
+
       <div data-tt-class-name="btn" ttweb-room-component="BookingButton">Book Now</div>
     </div>
 
