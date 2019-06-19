@@ -1,0 +1,35 @@
+{% assign container_style = '' %}
+
+
+{% assign mask_html = '' %}
+{% assign background_image = item.hero_image.image %}
+{% if background_image %}
+  {% assign bg_image_url = background_image.url_xlarge %}
+  {% if bg_image_url == nil %}
+    {% assign bg_image_url = background_image.url %}
+  {% endif %}
+
+  {% capture container_style %} style="background-image: url('{{bg_image_url}}');"  {% endcapture %}
+  {% if item.hero_image.mask_color and item.hero_image.mask_opacity  %}
+    {% capture container_style %}{{container_style}} data-has-mask {% endcapture %}
+    {% capture mask_html %}<div class='mask' style="background-color: {{item.hero_image.mask_color}}; opacity: {{item.hero_image.mask_opacity}};"></div>{% endcapture %}
+  {% endif %}
+{% endif %}
+
+
+{% capture title_tag %}<h1 class='h1'  data-live-editable-type='header' data-live-editable-key='hero_title'>{% endcapture %}
+{% capture title_tag_end %}</h1>{% endcapture %}
+{% if item.skip_h1 %}
+  {% capture title_tag %}<p class='h1'  data-live-editable-type='header' data-live-editable-key='hero_title'>{% endcapture %}
+  {% capture title_tag_end %}</p>{% endcapture %}
+{% endif %}
+
+<section class="hero {{item.advanced_options.custom_classes}}" {% if item.advanced_options.custom_id and item.advanced_options.custom_id != "" %}id="{{item.advanced_options.custom_id}}"{% endif %}  {{container_style}} >
+  {{mask_html}}
+  <div class="hero__title">
+    {{title_tag}}{{ item.hero_title.content}}{{title_tag_end}}
+  </div>
+  <div class="hero__body" data-live-editable-type='html' data-live-editable-key='hero_html'>
+    {{ item.hero_html.content}}
+  </div>
+</section>

@@ -1,0 +1,80 @@
+{% comment %}
+
+  pass in an image to the include
+
+  optionally pass in max_width
+
+  optionally pass in no_source to prevent an initial source value from being populated (and use JS to dynamically load the appropriate image size)
+
+  TODO: pass in class names
+
+
+  version :large do
+    process resize_to_fit: [1200, 1200]
+  end
+
+  version :medium do
+    process resize_to_fit: [992, 992]
+  end
+
+  version :small do
+    process resize_to_fit: [768, 768]
+  end
+
+  version :xsmall do
+    process resize_to_fit: [300, 300]
+  end
+
+  version :thumb do
+    process resize_to_fill: [140, 140]
+  end
+
+{% endcomment %}
+
+{% assign image = include.image %}
+
+{% assign src = '' %}
+{% if include.no_source != true %}
+  {% assign src = image.url_xsmall %}
+
+  {% if include.max_width && include.max_width != ''%}
+    {% if include.max_width > 1200 %}
+      {% assign src = image.url_xlarge %}
+    {% elsif include.max_width > 992 %}
+      {% assign src = image.url_large %}
+    {% elsif include.max_width > 768 %}
+      {% assign src = image.url_medium %}
+    {% elsif include.max_width > 300 %}
+      {% assign src = image.url_small %}
+    {% else %}
+      {% assign src = image.url_xsmall %}
+    {% endif %}
+  {% endif %}
+
+  {% if src == nil or src == "" %}
+    {% assign src=image.url %}
+  {% endif %}
+{% endif %}
+
+{% assign alt = image.alt %}
+{% if alt == nil || src == '' %}
+  {% assign alt=image.description %}
+{% endif %}
+{% if alt == nil || src == '' %}
+  {% assign alt=image.caption %}
+{% endif %}
+
+<picture>
+  <source media="(min-width: 300px)" srcset="{{image.url_small}}" />
+  <source media="(min-width: 768px)" srcset="{{image.url_medium}}" />
+  <source media="(min-width: 992px)" srcset="{{image.url_large}}" />
+  <source media="(min-width: 1200px)" srcset="{{image.url_xlarge}}" />
+  <img src="{{src}}" alt="{{alt}}" class="objectfit img-fluid"
+    data-image-original="{{image.url}}"
+    data-image-xlarge="{{image.url_xlarge}}"
+    data-image-large="{{image.url_large}}"
+    data-image-medium="{{image.url_medium}}"
+    data-image-small="{{image.url_small}}"
+    data-image-xsmall="{{image.url_xsmall}}"
+    data-image-thumb="{{image.url_thumb}}" />
+</picture>
