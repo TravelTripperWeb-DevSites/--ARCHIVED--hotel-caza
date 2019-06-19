@@ -19,7 +19,7 @@
 
       <div class="c-item-detail__text-group__selector">
         <span>
-         <a target="_blank" href="https://{{ site.data.hotel_settings._portal_id }}.reztrip.com/en/special_offer?rate_code={{offer.reztrip_offer_id}}" class="btn btn--primary ml-md-3">Book Offer</a>
+         <a target="_blank" href="https://{{ site.data.hotel_settings._portal_id }}.reztrip.com/en/special_offer?rate_code={{offer.reztrip_offer_id}}" class="btn btn--primary ml-md-3" ttweb-offer-component="OfferBookingButton">Book Offer</a>
         </span>
       </div>
 
