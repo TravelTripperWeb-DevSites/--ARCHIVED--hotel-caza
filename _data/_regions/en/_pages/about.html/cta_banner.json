@@ -31,7 +31,7 @@
     "skip_h1": true,
     "_template": "hero",
     "hero_html": {
-      "content": "<h6 class=\"h1\">THE FUN STARTS HERE</h6>\n<p><a class=\"btn btn--white\" href=\"JavaScript:void(0);\"  show-booking-widget>Book Now</a></p>"
+      "content": "<h6 class=\"h1\">THE FUN STARTS HERE</h6>\n<p><a class=\"btn btn--primary\" href=\"https://hotelcaza.reztrip.com/search?arrival_date=2019-09-12&amp;departure_date=2019-09-13&amp;adults%5B%5D=1&amp;children%5B%5D=1&amp;currency=USD&amp;locale=en\">BOOK NOW</a></p>"
     }
   }
 ]
