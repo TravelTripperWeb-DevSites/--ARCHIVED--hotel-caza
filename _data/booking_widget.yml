@@ -1,5 +1,5 @@
 ---
-show_rates: true
+show_rates: false
 show_offer_code: true
 show_specials: true
 __EDITABLE_FIELDS__:
