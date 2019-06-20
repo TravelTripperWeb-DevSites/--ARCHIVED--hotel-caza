@@ -310,6 +310,7 @@
   &__profile-link {
     position: relative;
     z-index: 9;
+    display: block;
     img {
       width: 120px;
     }
@@ -318,6 +319,7 @@
   &__tag-link {
     position: relative;
     z-index: 9;
+    display: block;
     @extend .h2;
     margin: 10px 0 40px !important;
     font-weight: 400;

@@ -41,12 +41,12 @@ footer:
     - page_id: _pages/contact.html
       label: Contact
       url: /contact/
-    - page_id: _pages/press.html
-      label: Press
-      url: /press/
-    - page_id: _pages/reviews.html
-      label: Reviews
-      url: /reviews/
+    # - page_id: _pages/press.html
+    #   label: Press
+    #   url: /press/
+    # - page_id: _pages/reviews.html
+    #   label: Reviews
+    #   url: /reviews/
     - page_id: _pages/Accessibility.html
       label: Accessibility
       url: /accessibility/
