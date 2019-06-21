@@ -62,6 +62,19 @@
       background-color: transparent !important;
     }
 
+    .ttweb-cross-out-rate {
+      display: inline-block;
+      padding: 0 0 0 10px;
+
+      &__crossout {
+        opacity: .6;
+      }
+
+      &__actual {
+        font-weight: bold;
+      }
+    }
+
     &__image-group {
       margin-bottom: -6px;
       padding: 0 24px !important;
