@@ -33,7 +33,7 @@
     <div class="c-item-detail__text-group__headings">
       <h1 class="h2" {% if sync %}ttweb-room-component="RoomName"{% endif %} tabindex="0">{{ room_detail.name }}</h1>
       <div class="c-room__availability" ttweb-room-component="ScarcityMessage"></div>
-      <p class="h4" tabindex="0">Tonight’s Rate <span ttweb-room-component="CrossOutRateContainer" data-tt-show-error="true" >Check Availability</span></p>
+      <p class="h4" tabindex="0">Tonight’s Rate <span ttweb-room-component="CrossOutRateContainer" data-tt-show-error="true">Check Availability</span></p>
     </div>
 
     <div class="c-item-detail__text-group__text">
