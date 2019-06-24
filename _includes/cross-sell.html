@@ -1,8 +1,9 @@
-<div class="hero cta-banner" style="background-image: url('//res.cloudinary.com/traveltripperweb/image/upload/v1552907341/fbqbc8pcosedfqrsnnzv.jpg');"   >
+<div class="hero cta-banner" style="background-image: url('//res.cloudinary.com/traveltripperweb/image/upload/v1552907341/fbqbc8pcosedfqrsnnzv.jpg');" ttweb-component="Room" data-tt-selected-room="{{room.reztrip_room_id}}">
   <div class="hero__title">
     <p class="h1" tabindex="0">go to your fun place</p>
   </div>
   <div class="hero__body">
-    <p><a class="btn btn--white" href="/rooms/">Book Now</a></p>
+    <!-- <p data-reztrip-room-book-now><a class="btn btn--white" href="#">Book Now</a></p> -->
+    <div data-tt-class-name="btn" ttweb-room-component="BookingButton" class="btn btn--white">Book Now</div>
   </div>
 </div>

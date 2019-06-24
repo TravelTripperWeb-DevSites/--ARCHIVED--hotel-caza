@@ -6,7 +6,7 @@
       <div class="c-room__name">
         <a class="h2" href="{{ room.id | permalink: model_dir: 'rooms' }}" {% if sync %}ttweb-room-component="RoomName"{% endif %}>{{ room.name }}</a>
       </div>
-      <div class="c-room__availability" ttweb-room-component="ScarcityMessage"></div>
+      <div class="c-room__availability" ttweb-room-component="ScarcityMessage" data-tt-max-rooms-available="500"></div>
       <div class="c-room__rate" tabindex="0">
          <span ttweb-room-component="CrossOutRate" data-tt-pre-html="Tonight’s Rate:" data-tt-post-html="{% t 'rooms.price_per_night', editable:false %}"> </span>
         <div ttweb-room-component="CrossOutRateError">Check Availability</div>

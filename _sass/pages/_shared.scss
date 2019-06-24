@@ -240,6 +240,12 @@
   @include media-breakpoint-up(md) {
     height: 600px;
   }
+
+  &.hero {
+    &:before {
+      z-index: -1;
+    }
+  }
   .hero__body {
     order: 2;
   }

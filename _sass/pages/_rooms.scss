@@ -58,8 +58,29 @@
 
     .ttweb-booking-button {
       @extend .btn--secondary;
-      margin-left: 24px;
+      margin-top: 10px;
+      margin-left: 0;
       background-color: transparent !important;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+        margin-left: 24px;
+      }
+    }
+
+    .ttweb-cross-out-rate {
+      display: inline-block;
+      padding: 0 5px 0 10px;
+
+      &__crossout {
+        opacity: .6;
+      }
+
+      &__actual {
+        padding-left: 5px;
+        font-size: 20px;
+        font-weight: bold;
+      }
     }
 
     &__image-group {
