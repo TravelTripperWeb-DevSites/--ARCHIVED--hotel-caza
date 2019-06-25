@@ -1,9 +1,10 @@
 
 {% assign rooms = site.data._models.rooms | sort:"order" %}
+{% assign sync = true %}
 
 <div class="rooms-slider" role="listbox">
   {% for room in rooms %}
-    {% assign sync = page.sync_room_content %}
+
     <div class="rooms-slider__image" ttweb-component="Room" data-tt-selected-room="{{room.reztrip_room_id}}" role="option">
       <div class="rooms-slider__photo" {% if sync %}ttweb-room-component="RoomPrimaryImage"{% endif %}>
         {% assign featured_image = room.featured_image | default: room.images[0] %}

@@ -26,13 +26,14 @@
       rootPath: rootPath,
       defaultLocale: locale,
       defaultCurrency: defaultCurrency,
-      defaultTimezone: defaultTimezone
+      defaultTimezone: defaultTimezone,
+      defaultNumChildren: 1
     });
 
     if(ttwebHotel.UserData.globalSearchEmpty) {
       var  defaultSearch = ttwebHotel.bookingSearch({
-            'arrivalDate': '2019-09-10',
-            'departureDate': '2019-09-11',
+            'arrivalDate': '2019-09-16',
+            'departureDate': '2019-09-17',
             'children' : 1
           }, ttwebHotel.UserData.globalSearchName);
       ttwebHotel.globalSearch = defaultSearch;

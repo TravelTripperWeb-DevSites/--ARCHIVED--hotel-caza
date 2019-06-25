@@ -1,6 +1,7 @@
 ---
 layout: default
+sync_room_content: true
 ---
 
 {% assign room = page.data %}
-{% include components/room-details %}
+{% include components/room-details sync_content=page.sync_room_content %}

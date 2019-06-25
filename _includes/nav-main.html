@@ -43,8 +43,4 @@
     </div>
   </ul>
 </nav>
-<div ttweb-component="BookingWidget"
-  data-tt-show-rates="{{ site.data.booking_widget.show_rates}}" 
-  data-tt-show-offer-code="{{ site.data.booking_widget.show_offer_code}}" 
-  data-tt-show-specials="{{ site.data.booking_widget.show_specials}}" >  
-</div>  
+{% include components/booking-widget %}
