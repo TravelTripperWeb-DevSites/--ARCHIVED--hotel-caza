@@ -1,4 +1,4 @@
-{% assign sync = include.sync_content %}
+{% assign sync = true %}
 
 <div class="c-item-detail" data-tt-rate-code="{{offer.reztrip_offer_id}}" ttweb-component="Offer">
   <div class="c-item-detail__image-group" {% if sync %}ttweb-offer-component="OfferImage"{% endif %}>

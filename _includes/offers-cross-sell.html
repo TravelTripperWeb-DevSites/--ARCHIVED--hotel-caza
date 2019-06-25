@@ -1,4 +1,5 @@
 {% assign offers = site.data._models.offers | sort:"order" %}
+{% assign sync = true %}
 <div class="offers-cs">
   <div class="offers-cs__inner">
     <div class="offers-cs__row">
@@ -18,7 +19,6 @@
       <div class="offers-cs__slider">
         <div class="offers-cs__slideitems" role="listbox">
         {% for offer in offers %}
-          {% assign sync = page.sync_offer_content %}
           <div class="offers-cs__slider__item" data-tt-rate-code="{{offer.reztrip_offer_id}}" ttweb-component="Offer" role="option">
             <div class="offers-cs__slider__pic" {% if sync %}ttweb-offer-component="OfferImage"{% endif %}>
             {% include components/image image=offer.image %}
