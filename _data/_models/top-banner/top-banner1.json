@@ -1,12 +1,12 @@
 {
   "featured": true,
-  "title": "BE AMONG THE FIRST TO STAY AT HOTEL CAZA AND RECEIVE SPECIAL SAVINGS",
-  "banner-text": "BE AMONG THE FIRST TO STAY AT HOTEL CAZA AND RECEIVE SPECIAL SAVINGS",
+  "title": "NOW ACCEPTING RESERVATIONS FOR SEPTEMBER  16th AND BEYOND!",
+  "banner-text": "NOW ACCEPTING RESERVATIONS FOR SEPTEMBER  16th AND BEYOND!",
   "banner-text-color": "#8f6936",
   "button-text": "Book Now",
   "button-text-color": "#ffffff",
   "background-color": "#ffffff",
   "button-border-color": "#ffffff",
-  "button-link": "/offers/offer_tourst/",
+  "button-link": "https://hotelcaza.reztrip.com",
   "button-background-color": "#8f6936"
 }
