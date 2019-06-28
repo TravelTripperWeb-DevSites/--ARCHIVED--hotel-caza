@@ -27,7 +27,7 @@
         "description": ""
       },
       "mask_opacity": ".15",
-      "mask_color": "#000000"
+      "mask_color": "#4a90e2"
     },
     "_template": "hero",
     "hero_html": {
