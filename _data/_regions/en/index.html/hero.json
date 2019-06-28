@@ -26,8 +26,8 @@
         "caption": "",
         "description": ""
       },
-      "mask_opacity": ".33",
-      "mask_color": "#000000"
+      "mask_opacity": ".25",
+      "mask_color": "#4a90e2"
     },
     "_template": "hero",
     "hero_html": {
