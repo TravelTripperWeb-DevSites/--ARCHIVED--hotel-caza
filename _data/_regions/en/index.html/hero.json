@@ -25,7 +25,8 @@
         "alt": "Welcome to Hotel Caza",
         "caption": "",
         "description": ""
-      }
+      },
+      "mask_opacity": "25"
     },
     "_template": "hero",
     "hero_html": {
