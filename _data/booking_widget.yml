@@ -2,6 +2,8 @@
 show_rates: true
 show_offer_code: true
 show_specials: true
+arrival_date:
+departure_date:
 __EDITABLE_FIELDS__:
   show_rates:
     type: boolean
@@ -9,3 +11,7 @@ __EDITABLE_FIELDS__:
     type: boolean
   show_specials:
     type: boolean
+  arrival_date:
+    type: date
+  departure_date:
+    type: date
