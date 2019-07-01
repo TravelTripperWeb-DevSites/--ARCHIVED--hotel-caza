@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ site.active_lang | slice: 0,2 | default: "en" }}" class="no-js">
+
+{% comment %}
+This default layout should generally not be overridden.
+It contains all of the page structure that should work for any site and ensures SEO properties and scripts are properly included.
+{% endcomment %}
+
+<head>
+  {% include head.html %}
+
+  {% include scripts.html %}
+
+  {% include head/custom.html %}
+
+</head>
+
+<body>
+  
+  {% if site.data.analytics.gtm_tracking_id and page.analytics != false %}
+      {% include analytics/gtm-body.html %}
+  {% endif %}
+
+  {% if site.data.analytics.custom_body and page.analytics != false %}
+    {% comment %}Drop the _data/analytics.yml specified code directly here {% endcomment %}
+    {{ site.data.analytics.custom_body  }}
+  {% endif %}
+
+  <a class="skip-main" href="#main">Skip to main content</a>
+
+  {% include nav-main.html %}
+  {% if page.url == '/' %}
+    {% include top-banner.html %}
+  {% endif %}
+
+  <div class='main' id="main">
+    {{ content }}
+  </div>
+
+  {% include components/instagram %}
+
+  <footer class="footer">
+    {% include footer.html %}
+    {% include footer/custom.html %}
+  </footer>
+
+
+</body>
+
+</html>

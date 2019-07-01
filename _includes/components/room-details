@@ -1,0 +1,98 @@
+{% assign sync = include.sync_content %}
+
+{% assign room_detail = page.data %}
+
+{% comment %} Room images Slider {% endcomment %}
+
+<div class="room-image-carousel">
+  <div class="banner-carousel">
+    <!-- Slideshow -->
+    {% for pic in room_detail.images %}
+      <div>
+        <img src="{{ pic.url_xlarge }}" alt="{{ room_detail.name }}">
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="slider-control">
+    <div class="slide-prev" id="bannerSliderPrev"><span></span></div>
+    <div class="slider-nav" id="bannerSlider">
+      {% for pic in room_detail.images %}
+      <span></span>
+      {% endfor %}
+    </div>
+    <div class="slide-next" id="bannerSliderNext"><span></span></div>
+  </div>
+
+</div>
+
+<div ttweb-component="Room" data-tt-selected-room="{{room.reztrip_room_id}}">
+
+<div class="c-item-detail__text-group">
+  <div class="c-item-detail__text-group__wrap  tb-padding">
+    <div class="c-item-detail__text-group__headings">
+      <h1 class="h2" {% if sync %}ttweb-room-component="RoomName"{% endif %} tabindex="0">{{ room_detail.name }}</h1>
+      <div class="c-room__availability" ttweb-room-component="ScarcityMessage" data-tt-max-rooms-available="500"></div>
+      <p class="h4" tabindex="0">Tonight’s Rate <span ttweb-room-component="CrossOutRateContainer" data-tt-show-error="true">Check Availability</span></p>
+    </div>
+
+    <div class="c-item-detail__text-group__text">
+      <div class="room-info" tabindex="0"><span><i class="fal fa-bed"></i> {{ room_detail.bed_types[0].name }}</span><span><i class="fal fa-arrows"></i> {{ room_detail.size }}</span></div>
+
+      <p {% if sync %}ttweb-room-component="RoomDescription"{% endif %} tabindex="0">{{ room_detail.description }}</p>
+    </div>
+
+    <div class="c-item-detail__text-group__selector">
+
+      <div data-tt-class-name="btn" ttweb-room-component="BookingButton">Book Now</div>
+    </div>
+
+  </div>
+</div>
+
+  {% comment %} Room Amenities {% endcomment %}
+
+  <div class="common-amenities">
+    <div class="common-amenities-container">
+      <div class="room-amenities">
+        <h2 class="h4" tabindex="0">Amenities</h2>
+        <ul class="amenities" tabindex="0">
+        <li>
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238274/ijggx1zg8jaua1gatpaw.png" alt="Wifi">
+          <span>Wifi</span>
+        </li>
+        <li>
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238274/vlwhdjcna2rzl4tsi2fy.png" alt="Luxury Bath Products">
+          <span>Luxury Bath <br>Products</span>
+        </li>
+        <li>
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238275/lwmu10fdlqo39cxtjnut.png" alt="55" Flat Panel HDTV">
+          <span>55" Flat <br>Panel HDTV</span>
+        </li>
+        <li>
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238273/f8xzqtigvthqybqhixdh.png" alt="Workstation with desk">
+          <span>Workstation <br>with desk</span>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <section class="rooms-cs">
+    <div class="rooms-cs__intro">
+      <div class="rooms-cs__row">
+        <div class="rooms-cs__intro__left">
+          <h3 class="h2 mb-0" tabindex="0">More rooms & suites</h3>
+        </div>
+        <div class="rooms-cs__intro__right">
+          <a href="/rooms/" class="btn btn--secondary">View All Rooms</a>
+        </div>
+      </div>
+    </div>
+
+    {% include rooms-cross-sell.html %}
+
+  </section>
+
+  {% include offers-cross-sell.html %}
+  {% include cross-sell.html %}

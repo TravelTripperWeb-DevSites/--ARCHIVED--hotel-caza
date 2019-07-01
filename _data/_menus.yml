@@ -2,27 +2,62 @@ main:
   depth: 1
   name: Top Menu
   items:
-    - page_id: index.html
     - page_id: _pages/about.html
+      label: Our Hotel
     - page_id: _pages/rooms.html
+      label: Rooms
     - page_id: _pages/offers.html
+      label: Offers
+    - page_id: _pages/location.html
+      label: Location
+    # - page_id: _pages/blog.html
+    #   label: Blog
     - page_id: _pages/gallery.html
+      label: Gallery
     - page_id: _pages/contact.html
-    # - url_localized:
-    #     en: https://www.google.com
-    #     es: https://www.google.es
-    #   label_localized:
-    #     en: g-US
-    #     es: g-ES
-    #   target: _NEW
-    # - label_localized:
-    #     en: Group
-    #     es: Group (ES)
-    #   folder: true
-    #   items:
-    #     - page_id: _pages/about.html
-    #     - url: /test/
-    #       label_localized:
-    #         en: Test
-    #         es: Prueba
-    
+      label: Contact
+footer:
+  depth: 1
+  name: Footer Menu
+  items:
+    - page_id: _pages/about.html
+      label: Our Hotel
+      url: /about/
+    - page_id: _pages/rooms.html
+      label: Rooms
+      url: /rooms/
+    - page_id: _pages/offers.html
+      label: Offers
+      url: /offers/
+    - page_id: _pages/location.html
+      label: Location
+      url: /location/
+    # - page_id: _pages/blog.html
+    #   label: Blog
+    #   url: /blog/
+    - page_id: _pages/gallery.html
+      label: Gallery
+      url: /gallery/
+    - page_id: _pages/contact.html
+      label: Contact
+      url: /contact/
+    # - page_id: _pages/press.html
+    #   label: Press
+    #   url: /press/
+    # - page_id: _pages/reviews.html
+    #   label: Reviews
+    #   url: /reviews/
+    - page_id: _pages/Accessibility.html
+      label: Accessibility
+      url: /accessibility/
+
+footer-bottom:
+  depth: 1
+  name: Footer Bottom Menu
+  items:
+    - page_id: _pages/privacy.html
+      label: Privacy Policy
+      url: /privacy/
+    - page_id: _pages/terms.html
+      label: Terms & Conditions
+      url: /terms/

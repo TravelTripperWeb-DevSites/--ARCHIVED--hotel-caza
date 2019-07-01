@@ -1,0 +1,39 @@
+{% comment %}
+
+  Name:
+
+      Slider of images. Optionally include Title and Subtitle overlays
+
+  Description:
+
+    HTML content for carousel of imagse
+
+  Usage:
+
+      Set slides list and pass an optional ID
+
+      eg.
+      {% assign sliderImages = site.data._galleries.my_gallery.photos %}
+      {% include components/slider id="my-slider" %}
+
+{% endcomment %}
+
+{% capture div_id %}{{ include.id }}{% endcapture %}
+{% if include.staticHeight != nil %}
+  {% capture itemStyle %}style="height: {{include.staticHeight}}"{% endcapture %}
+{% endif %}
+
+{% comment %}
+TODO: Add data-attrs to the top level markup to use as options
+{% endcomment %}
+
+
+{% capture slide_list %}
+  {% for image in sliderImages %}
+    <div class="item" {{itemStyle}}>
+      {% include components/image image=image max_width=1201 %}
+    </div>
+  {% endfor %}
+{% endcapture %}
+
+{% include _jekyll_includes/slider.html id=div_id slide_list=slide_list controls=false autoplay=false nav=true autoplay_button_output=false%}

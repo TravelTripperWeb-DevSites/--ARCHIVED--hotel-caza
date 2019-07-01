@@ -1,0 +1,59 @@
+{% if site.data.hotel_settings._hotel_id != nil && site.data.hotel_settings._hotel_id != '' %}
+  <script src="https://plugins.traveltripper.io/{{site.data.ttweb_plugins.version}}/rt3api.min.js" charset="UTF-8"></script>
+  <script type="text/javascript">
+
+    var rootPath = '{{site.data.ttweb_plugins.root_path}}';
+    if (rootPath == '') {
+      rootPath = null;
+    }
+    var defaultTimezone = '{{site.data.hotel_settings.default_timezone}}';
+    if (defaultTimezone == '') {
+      defaultTimezone = 'America/New_York';
+    }
+    var defaultCurrency = '{{site.data.hotel_settings.default_currency}}';
+    if (defaultCurrency == '') {
+      defaultCurrency = 'USD';
+    }
+
+    var locale = '{{site.active_lang}}';
+    if (locale == '') {
+      locale = 'en';
+    }
+
+    var ttwebHotel = new TTWebHotel({
+      hotelId: '{{site.data.hotel_settings._hotel_id}}',
+      portalId: '{{site.data.hotel_settings._portal_id}}',
+      rootPath: rootPath,
+      defaultLocale: locale,
+      defaultCurrency: defaultCurrency,
+      defaultTimezone: defaultTimezone,
+      defaultNumChildren: 1
+    });
+    var bwDefaultOptions = {
+      'children' : 1
+    }
+
+    {% if site.data.booking_widget.arrival_date != nil && site.data.booking_widget.arrival_date != '' %}
+      bwDefaultOptions['arrivalDate'] = ttwebHotel.Utility.reztripDateFormat('{{site.data.booking_widget.arrival_date}}');
+    {% endif %}
+
+    {% if site.data.booking_widget.departure_date != nil && site.data.booking_widget.departure_date != '' %}
+      bwDefaultOptions['departureDate'] = ttwebHotel.Utility.reztripDateFormat('{{site.data.booking_widget.departure_date}}');
+    {% endif %}
+
+    if(ttwebHotel.UserData.globalSearchEmpty) {
+      var  defaultSearch = ttwebHotel.bookingSearch(bwDefaultOptions, ttwebHotel.UserData.globalSearchName);
+      ttwebHotel.globalSearch = defaultSearch;
+    }
+    TTRender.initComponents(ttwebHotel);
+
+  </script>
+{% endif %}
+
+{% comment %}
+
+  To use conversion plus instead of brg, follow these steps:
+  1. Rename _data/conversion_plus.yml to _data/brg_configuration.yml
+      (This is a file that turns OFF configuration settings)
+  3. TODO: Determine where to load conversion plus in template.
+{% endcomment %}

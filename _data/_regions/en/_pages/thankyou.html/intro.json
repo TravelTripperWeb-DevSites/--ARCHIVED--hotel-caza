@@ -1,0 +1,11 @@
+[
+  {
+    "_template": "1_col",
+    "advanced_options": {
+    },
+    "container_classes": "",
+    "html": {
+      "content": "<p class=\"h3 my-4\" style=\"text-align: center;\">We will get back to you soon.</p>"
+    }
+  }
+]

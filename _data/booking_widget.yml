@@ -1,0 +1,17 @@
+---
+show_rates: true
+show_offer_code: true
+show_specials: true
+__EDITABLE_FIELDS__:
+  show_rates:
+    type: boolean
+  show_offer_code:
+    type: boolean
+  show_specials:
+    type: boolean
+  arrival_date:
+    type: date
+  departure_date:
+    type: date
+arrival_date: '2019-10-01T00:00:00.000Z'
+departure_date:

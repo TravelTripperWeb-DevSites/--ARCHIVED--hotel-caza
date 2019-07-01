@@ -1,0 +1,251 @@
+{
+  "order": 2,
+  "name_localized": {
+    "en": "Golden Gate Bridge"
+  },
+  "category": "Attractions",
+  "seo_title_localized": {
+    "en": "Golden Gate Bridge"
+  },
+  "seo_description_localized": {
+    "en": "Golden Gate Bridge"
+  },
+  "description_localized": {
+    "en": "<p></p>"
+  },
+  "image": {
+    "name": "Golden Bridge",
+    "content_type": "image/jpeg",
+    "date_added": "2019-03-27-073456",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1553686496/ve3gq3ka2xjqop0m1hz3.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1553686496/ve3gq3ka2xjqop0m1hz3.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1553686496/ve3gq3ka2xjqop0m1hz3.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1553686496/ve3gq3ka2xjqop0m1hz3.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1553686496/ve3gq3ka2xjqop0m1hz3.jpg",
+    "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1553686496/ve3gq3ka2xjqop0m1hz3.jpg",
+    "width": 2520,
+    "height": 1356,
+    "format": "jpg",
+    "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1553686496/ve3gq3ka2xjqop0m1hz3.jpg",
+    "resource_type": "image",
+    "size": 212562,
+    "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1553686496/ve3gq3ka2xjqop0m1hz3.jpg",
+    "file_size": null,
+    "alt": "Golden Bridge",
+    "caption": "",
+    "description": ""
+  },
+  "location": {
+    "name": "Golden Gate Bridge",
+    "address": "Golden Gate Bridge, San Francisco, CA, USA",
+    "phone": "(415) 921-5858",
+    "place_id": "ChIJw____96GhYARCVVwg5cT7c0",
+    "reference": "ChIJw____96GhYARCVVwg5cT7c0",
+    "latitude": 37.8199286,
+    "longitude": -122.47825510000001,
+    "google_place": {
+      "address_components": [
+        {
+          "long_name": "Golden Gate Bridge",
+          "short_name": "Golden Gate Bridge",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "San Francisco",
+          "short_name": "SF",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "San Francisco County",
+          "short_name": "San Francisco County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "adr_address": "<span class=\"street-address\">Golden Gate Bridge</span>, <span class=\"locality\">San Francisco</span>, <span class=\"region\">CA</span>, <span class=\"country-name\">USA</span>",
+      "formatted_address": "Golden Gate Bridge, San Francisco, CA, USA",
+      "formatted_phone_number": "(415) 921-5858",
+      "geometry": {
+        "location": {
+          "lat": 37.8199286,
+          "lng": -122.47825510000001
+        },
+        "viewport": {
+          "south": 37.79509019999999,
+          "west": -122.48379654999997,
+          "north": 37.84491060000001,
+          "east": -122.47297315000003
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "2213bf496e53a020f356d0274a5a75a4a98907fa",
+      "international_phone_number": "+1 415-921-5858",
+      "name": "Golden Gate Bridge",
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101038132272255550519/photos\">Matt Dzurka</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 2268,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116702130420872927885/photos\">diego suarez poch</a>"
+          ],
+          "width": 4032
+        },
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105689128692270117442/photos\">Henry Bond</a>"
+          ],
+          "width": 4048
+        },
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114425292318948376165/photos\">Loïc M.</a>"
+          ],
+          "width": 5312
+        },
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105369283516487107196/photos\">Juan Quintero</a>"
+          ],
+          "width": 2268
+        },
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110587013709521112614/photos\">Ashish Yadav</a>"
+          ],
+          "width": 3024
+        },
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106904943269453453360/photos\">Denis Vergnani</a>"
+          ],
+          "width": 1960
+        },
+        {
+          "height": 4608,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112950793421114647416/photos\">mikael lövgren</a>"
+          ],
+          "width": 2592
+        },
+        {
+          "height": 3120,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104125391191631105055/photos\">Edwin Lim</a>"
+          ],
+          "width": 4160
+        },
+        {
+          "height": 2160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112229695013288464465/photos\">Mike Coulston</a>"
+          ],
+          "width": 2160
+        }
+      ],
+      "place_id": "ChIJw____96GhYARCVVwg5cT7c0",
+      "plus_code": {
+        "compound_code": "RG9C+XM Presidio, San Francisco, CA, United States",
+        "global_code": "849VRG9C+XM"
+      },
+      "rating": 4.8,
+      "reference": "ChIJw____96GhYARCVVwg5cT7c0",
+      "reviews": [
+        {
+          "author_name": "Viacheslav Elikov",
+          "author_url": "https://www.google.com/maps/contrib/115490095826152311613/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh5.googleusercontent.com/-4xDpypsuGkg/AAAAAAAAAAI/AAAAAAAANB4/I9XTGXPCFAw/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "2 weeks ago",
+          "text": "Amazing place. One of the my favorite. I love to look at golden gate bridge from the bottom. There's a spot, called something like fort, under the golden gate bridge from San Francisco side. I love this place. But anywhere you take a picture it would be still perfect",
+          "time": 1552062422
+        },
+        {
+          "author_name": "Parijat Sil",
+          "author_url": "https://www.google.com/maps/contrib/103808850828448615999/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh4.googleusercontent.com/-HfmtUY93GDA/AAAAAAAAAAI/AAAAAAAADns/S74AZ4RjDYw/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "in the last week",
+          "text": "If you are lucky to be here on a lovely sunny San Francisco day, the experience is unforgettable. There are several hikes around that lead you to the beach and add to your experience. If you have time, highly recommended walking down the beach and enjoying the changing views of the bay. If possible, do make an attempt to visit the place close to sunset.",
+          "time": 1553397656
+        },
+        {
+          "author_name": "Valeria Palmerin",
+          "author_url": "https://www.google.com/maps/contrib/113530438694156420128/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh3.googleusercontent.com/-ANkWkqVzmXg/AAAAAAAAAAI/AAAAAAAAAQc/hJc6TFjpw4Q/s128-c0x00000000-cc-rp-mo/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a week ago",
+          "text": "Very impressive bridge! Its lovely to go see this up in person its huge! We biked there and it was lots of fun but this would probably take about the whole day for you!Once you’re biking on the bridge it can be pretty nerve wracking since there is lots of people biking back and towards the ends of the bridge so  be careful ! Overall the view is great and its a very fun time!",
+          "time": 1552858122
+        },
+        {
+          "author_name": "A.F.M. Saniul Haq",
+          "author_url": "https://www.google.com/maps/contrib/116122510907096937752/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh4.googleusercontent.com/-s0ZaiRQPQsY/AAAAAAAAAAI/AAAAAAAAB2g/Kc-YDvEAmdk/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "a month ago",
+          "text": "What a beautiful structure! So elegant, so huge and architectural marvel. From either end it looks so beautiful. The welcome center has number of smaller models and samples of the bridge. History and architecture of the bridge is summarized in pictures and models. must watch if you are in SF.",
+          "time": 1550090922
+        },
+        {
+          "author_name": "Rado",
+          "author_url": "https://www.google.com/maps/contrib/110422334736210538817/reviews",
+          "language": "en",
+          "profile_photo_url": "https://lh3.googleusercontent.com/-1bAGiv5sJT0/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rfrSm1gaMBAzLJlmL2jhkjeXuwF1A/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+          "rating": 5,
+          "relative_time_description": "2 weeks ago",
+          "text": "It's hard to appreciate how massive the bridge is, just from the pictures, until you actually drive over it yourself. It was pretty cool to see this iconic bridge from up close and also the same angles as it is shown on many featured photos. To think that such an enormous structure has been balancing here for >80 years is pretty impressive.",
+          "time": 1552153919
+        }
+      ],
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "url": "https://maps.google.com/?cid=14838537888721818889",
+      "user_ratings_total": 29187,
+      "utc_offset": -420,
+      "vicinity": "Golden Gate Bridge",
+      "website": "http://www.goldengatebridge.org/",
+      "html_attributions": null
+    }
+  }
+}

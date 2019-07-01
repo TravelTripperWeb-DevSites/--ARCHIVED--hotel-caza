@@ -1,0 +1,38 @@
+{% assign sync = true %}
+
+<div class="c-room filter-item" ttweb-component="Room" data-tt-selected-room="{{room.reztrip_room_id}}" data-filter="{{room.room_category | replace:" ","_"}}">
+  <div class="c-room__text-group">
+    <div class="c-room__text-group__wrap">
+      <div class="c-room__name">
+        <a class="h2" href="{{ room.id | permalink: model_dir: 'rooms' }}" {% if sync %}ttweb-room-component="RoomName"{% endif %}>{{ room.name }}</a>
+      </div>
+      <div class="c-room__availability" ttweb-room-component="ScarcityMessage" data-tt-max-rooms-available="500"></div>
+      <div class="c-room__rate" tabindex="0">
+         <span ttweb-room-component="CrossOutRate" data-tt-pre-html="Tonight’s Rate:" data-tt-post-html="{% t 'rooms.price_per_night', editable:false %}"> </span>
+        <div ttweb-room-component="CrossOutRateError">Check Availability</div>
+      </div>
+      <div class="c-room__size" tabindex="0">
+        <span><i class="fal fa-bed"></i> {{ room.bed_types[0].name }}</span>
+        <span><i class="fal fa-arrows"></i> {{ room.size }}</span>
+      </div>
+
+      <div class="c-room__select">
+        <span>
+          <a href="/rooms/{{ room.id | downcase }}/" class="btn btn--secondary">{% t 'rooms.buttons.view' %}</a>
+        </span>
+
+        <div data-tt-class-name="btn" ttweb-room-component="BookingButton">
+        {% t 'rooms.buttons.book' %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="c-room__image-group">
+    <div class="c-room__images" {% if sync %}ttweb-room-component="RoomPrimaryImage"{% endif %}>
+      <a href="{{ room.id | permalink: model_dir: 'rooms' }}">
+        {% assign sliderImage = room.images[0].url_xlarge %}
+        <img class="objectfit" src="{{sliderImage}}" alt="{{ room.name }}">
+      </a>
+    </div>
+  </div>
+</div>

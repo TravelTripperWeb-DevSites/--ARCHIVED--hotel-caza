@@ -1,0 +1,59 @@
+// Home Page Elements
+// ==========================================================================
+
+.hero {
+  &--home {
+    height: calc(100vh - 64px);
+
+    @include media-breakpoint-up(md) {
+      height: calc(100vh - 112px);
+    }
+
+    .btn {
+      margin-top: 24px;
+    }
+  }
+}
+
+.home-intro {
+  .decorative {
+    position: absolute;
+    top: -90px;
+    left: -55%;
+    z-index: 0;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    img {
+      max-width: 470px;
+    }
+  }
+}
+
+.statement {
+  @include make-container;
+  max-width: 1012px;
+  p {
+    margin-bottom: 0;
+    text-align: center;
+    a {
+      color: $primary;
+    }
+  }
+}
+
+// Booking widget css
+
+.ttweb-slide-out-widget__title {
+  background-color: $primary;
+}
+
+.ttweb-booking-widget a {
+  &.ttweb-booking-widget__submit {
+    background-color: $primary;
+  }
+}
+
+.ttweb-calendar-month .ttweb-calendar-month__grid .ttweb-day--in-selection {
+  background-color: $primary;
+}

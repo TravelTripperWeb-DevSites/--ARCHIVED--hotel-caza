@@ -1,6 +1,6 @@
 ---
 layout: home
-title_localized: 
+title_localized:
   en: Home
 meta_description:
 permalink:
@@ -8,11 +8,224 @@ meta_tags:
   robots:
 ---
 
-<section class='container'>
-  <div class='row text-center'>
-    <div class='col '>
-      <h1 class="h3">Edit this file</h1>
-      <p>This content is written directly into the index.html home page. You should replace it with editable regions and/or standard components</p>
+<div class="light-bg tb-padding home-intro">
+  <div class="col-img-detail">
+    <div class="col-img-detail__wrap">
+      <div class="col-img-detail__detail">
+        <div class="box" tabindex="0">
+          {% region intro_two_col, type:html %}
+        </div>
+        <div class="decorative">
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png" alt="Dumplings">
+        </div>
+      </div>
+      <div class="col-img-detail__image">
+        {% region intro_two_col_image, type:image %}
+      </div>
     </div>
   </div>
+</div>
+
+<section class="rooms-cs">
+  <div class="rooms-cs__intro">
+    <div class="rooms-cs__row">
+      <div class="rooms-cs__intro__left__smaller">
+        {% regionblock rooms_intro_title, type:header %}
+        <p class="h2" tabindex="0">Welcome to your happy place</p>
+        {% endregionblock %}
+        {% regionblock rooms_intro_description, type:text %}
+        <p tabindex="0">Hotel Caza offers relaxed and sophisticated accommodations with hospitality so warm and friendly you’ll feel at home the moment you walk in.</p>
+        {% endregionblock %}
+        {% regionblock rooms_intro_button, type:text %}
+        <a href="/rooms/" class="btn btn--secondary">View All Rooms</a>
+        {% endregionblock %}
+      </div>
+      <div class="rooms-cs__intro__right__bigger">
+        <div class="room-amenities">
+          {% regionblock room_amenities_title, type:header %}
+          <div class="h4" tabindex="0">Amenities</div>
+          {% endregionblock %}
+          <ul class="amenities">
+            <li>
+              <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238274/ijggx1zg8jaua1gatpaw.png" alt="Wifi">
+              <span>Wifi</span>
+            </li>
+            <li>
+              <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238274/vlwhdjcna2rzl4tsi2fy.png" alt="Luxury Bath Products">
+              <span>Luxury Bath <br>Products</span>
+            </li>
+            <li>
+              <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238275/lwmu10fdlqo39cxtjnut.png" alt="55" Flat Panel HDTV">
+              <span>55" Flat <br>Panel HDTV</span>
+            </li>
+            <li>
+              <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1560238273/f8xzqtigvthqybqhixdh.png" alt="Workstation with desk">
+              <span>Workstation <br>with desk</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include rooms-cross-sell.html %}
+
 </section>
+
+{% assign amenities = site.data._models.amenities | sort: order %}
+<div class="col-amenities">
+  <div class="panache-bg">
+    <div class="logo-amenities">
+        <img src="/assets/img/logo-dark.png" alt="Hotel Caza" class="logo-amenities">
+    </div>
+    <div class="col-amenities__items home-amenities">
+      <div class="col-amenities__items__wrap">
+        <div class="col-amenities__items__heading">
+          {% regionblock amenities_title, type:header %}
+          <p class="h2" tabindex="0">FUN AMENITIES MAKE THE HOTEL CAZA EXPERIENCE UNIQUE</p>
+          {% endregionblock %}
+        </div>
+        <div class="col-amenities__items__slider">
+          <div class="amenities-slider">
+            {% assign fun_amenities = amenities | where: 'category', 'fun' %}
+            {% for amenity in fun_amenities %}
+              <div class="slide-item1">
+               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+               <p class="h3" tabindex="0">{{ amenity.name }}</p>
+               <p tabindex="0">{{ amenity.description }}</p>
+              </div>
+             {% endfor %}
+          </div>
+          <div class="slider-control">
+            <div class="slide-prev"><span></span></div>
+            <div class="slide-nav" style="display:block !important;">
+              {% for amenity in fun_amenities %}
+              <span></span>
+               {% endfor %}
+               <div class="viewall">
+                 <a href="/about/#amenities" class="btn btn--secondary">View All Amenities</a>
+               </div>
+            </div>
+            <div class="slide-next"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="attractions">
+  <div class="attractions__heading">
+    {% regionblock attractions_title, type:header %}
+    <p class="h2" tabindex="0"><span>Things to do near Hotel caza:</span></p>
+    {% endregionblock %}
+  </div>
+  <ul class="attractions-mobile">
+    <li>
+      <a href="javascript:void(0);" class="attractions-mobile__link active"><i class="icon-attractions"></i>See & Do <div class="toggler"><small>Less</small> <span class="fal fa-minus"></span></div></a>
+      <div class="attractions-mobile__content active">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions-mobile__info">
+          <p class="h3" tabindex="0">See & Do</p>
+          <p tabindex="0">Looking for something to do in San Francisco? Get inspired with our roundup of top destinations. From Fisherman’s Wharf to North Beach, fun is only steps from our front door.</p>
+          <a href="/location/#mapLocations" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-entertainment"></i>Entertainment<div class="toggler"><small>More</small> <span class="fal fa-plus"></span></div></a>
+      <div class="attractions-mobile__content">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions-mobile__info">
+          <p class="h3" tabindex="0">Entertainment</p>
+          <p tabindex="0">San Francisco has a thriving entertainment scene with shows every night of the week. Just a quick trip from Oracle Park and the new Chase Center, Hotel Caza is the perfect destination for sports fans.</p>
+          <a href="/location/#mapLocations" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-eat-drink"></i>Eat & Drink<div class="toggler"><small>More</small> <span class="fal fa-plus"></span></div></a>
+      <div class="attractions-mobile__content">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions-mobile__info">
+          <p class="h3" tabindex="0">Eat & Drink</p>
+          <p tabindex="0">Dine on creative, inspired San Francisco cuisine and find the best place to grab a drink at nearby bars and eateries.</p>
+          <a href="/location/#mapLocations" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-shopping"></i>Shopping<div class="toggler"><small>More</small> <span class="fal fa-plus"></span></div></a>
+        <div class="attractions-mobile__content">
+          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+          <div class="attractions-mobile__info">
+            <p class="h3" tabindex="0">Shopping</p>
+            <p tabindex="0">From indie shops to the landmark Ghirardelli Square, the best of San Francisco’s retail world awaits you.</p>
+            <a href="/location/#mapLocations" class="btn btn--secondary">Discover More</a>
+          </div>
+        </div>
+    </li>
+  </ul>
+  <div class="attractions__list">
+    <ul class="nav--filter attractions__nav">
+      <li>
+        <a data-filter="attractions" class="filter--option active"><i class="icon-attractions"></i><span>See & Do</span></a>
+      </li>
+      <li>
+        <a data-filter="entertainment" class="filter--option"><i class="icon-entertainment"></i><span>Entertainment</span></a>
+      </li>
+      <li>
+        <a data-filter="eat-drink" class="filter--option"><i class="icon-eat-drink"></i><span>Eat & Drink</span></a>
+      </li>
+      <li>
+        <a data-filter="shopping" class="filter--option"><i class="icon-shopping"></i><span>Shopping</span></a>
+      </li>
+    </ul>
+    <div class="attractions__content">
+      <div class="filter-item attractions__item" data-filter="attractions">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions__copy">
+          <p class="h3" tabindex="0">See & Do</p>
+          <p tabindex="0">Looking for something to do in San Francisco? Get inspired with our roundup of top destinations. From Fisherman’s Wharf to North Beach, fun is only steps from our front door.</p>
+          <a href="/location/?id=attractions#mapLocations" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
+      <div class="filter-item hidden attractions__item" data-filter="entertainment">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions__copy">
+          <p class="h3" tabindex="0">Entertainment</p>
+          <p tabindex="0">San Francisco has a thriving entertainment scene with shows every night of the week. Just a quick trip from Oracle Park and the new Chase Center, Hotel Caza is the perfect destination for sports fans.</p>
+          <a href="/location/?id=entertainment#mapLocations" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
+      <div class="filter-item hidden attractions__item" data-filter="eat-drink">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions__copy">
+          <p class="h3"> Eat & Drink</p>
+          <p>Dine on creative, inspired San Fancisco cuisine and find the best place to grab a drink at nearby bars and eateries.</p>
+          <a href="/location/?id=eat-drink#mapLocations" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
+      <div class="filter-item hidden attractions__item" data-filter="shopping">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553601636/e3uuj2abdvym25t1g9wz.jpg" alt="Attractions">
+        <div class="attractions__copy">
+          <p class="h3" tabindex="0">Shopping</p>
+          <p tabindex="0">From indie shops to the landmark Ghirardelli Square, the best of San Francisco’s retail world awaits you.</p>
+          <a href="/location/?id=shopping#mapLocations" class="btn btn--secondary">Discover More</a>
+        </div>
+      </div>
+
+      <div class="decorative">
+        <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553606408/cozxdl8yxbqcxm88fcj0.png" alt="Vespa">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="statement mt-4 pt-2" tabindex="0">
+  {% regionblock statement_info, type:text %}
+  <p>Hotel Caza welcomes guests of all abilities. Our property descriptions aim to allow any visitor to make an informed decision on whether the hotel is an appropriate choice for their needs. For more information, please see our <a href="/accessibility/">Accessibility Statement</a> </p>
+  {% endregionblock %}
+</div>
+
+{% include offers-cross-sell.html %}

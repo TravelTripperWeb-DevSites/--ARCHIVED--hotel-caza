@@ -1,0 +1,50 @@
+---
+en:
+  instagram:
+    tag_link: "Follow Us@%{handle}"
+    profile_link: Our Instagram
+  book_now: Book Now
+  search: Search
+  find_rooms: Find Rooms
+  cta:
+    learn_more: Learn More
+    read_more: Read More
+    book_now: Book Now
+    select: Select
+  page_not_found:
+    header: Page Not Found
+  language_name: English
+  header:
+    book_now_button: Book Now
+    language: Language
+    language_name: English
+  brg:
+    label: Best Rate
+    tonights_rate: Tonight's Rate
+  rooms:
+    guest_size_max: Max %{size} Adults
+    accessible: Accessible Rooms
+    price_per_night: / Night
+    buttons:
+      book: Book This Room
+      view: View This Room
+      check_availability: Check Availability
+  dining:
+    buttons:
+      make_a_reservation: Make a Reservation
+      view_menu: View Menu
+      view_all: View All Dining Options
+  offers:
+    cross_sell:
+      title: Featured Offers
+      description: Explore our one-of-a-kind offers
+      link: View All Offers
+    buttons:
+      book_now: Book Offer
+      view_all: View All Special Offers
+  galleries:
+    filters:
+      all: All
+  carousels:
+    next: "Next"
+    previous:  "Prev"

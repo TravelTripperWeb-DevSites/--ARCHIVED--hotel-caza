@@ -1,0 +1,83 @@
+---
+layout: generic
+sync_room_content: true
+---
+
+{% if site.data._models.rooms %}
+{% assign rooms = site.data._models.rooms | sort:"order" %}
+ <section>
+   <div class="room-filter nav--filter">
+     <div tabindex="0">
+       {% regionblock rooms_listing_intro, type:text %}
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       {% endregionblock %}
+     </div>
+     {% regionblock amenities_cta, type:mixed %}
+     <a class="btn btn--secondary mb-4" href="#common-amenities">View Amenities</a>
+     {% endregionblock %}
+     <p class="h4">Select A Room Type</p>
+     <ul class="">
+       <li><a href="javascript:;" data-rel="all"  data-filter="all" class="filter filter--option ">All Rooms</a></li>
+       <li><a href="javascript:;" data-rel="Deluxe"  data-filter="Deluxe" class="filter filter--option">Deluxe</a></li>
+       <li><a href="javascript:;" data-rel="City_View"  data-filter="City_View" class="filter filter--option">City View</a></li>
+       <li><a href="javascript:;" data-rel="Partial_Bay_View"  data-filter="Partial_Bay_View" class="filter filter--option">Partial Bay View</a></li>
+       <li><a href="javascript:;" data-rel="Suite"  data-filter="Suite" class="filter filter--option">Suite</a></li>
+       <li><a href="javascript:;" data-rel="Accessible"  data-filter="Accessible" class="filter filter--option">Accessible</a></li>
+     </ul>
+   </div>
+  <div class="c-room-list tb-padding">
+    {% for room in rooms %}
+      {% include components/room sync_content=page.sync_room_content %}
+    {% endfor %}
+
+    <div class="statement" tabindex="0">
+      {% regionblock statement_info, type:text %}
+      <p>Please note that our rooms and suites are ADA compliant under the Department of Justice ADA Title III Regulation 28 CFR Part 36, 1991. ADA rooms are available. We also invite you to view our <a href="/accessibility/">Accessibility Statement</a> </p>
+      {% endregionblock %}
+    </div>
+  </div>
+</section>
+{% else %}
+  {% regionblock no_list_items, type:html %}
+    {% t 'rooms.none' %}
+  {% endregionblock %}
+{% endif %}
+
+<section id="common-amenities">
+  <div class="common-amenities">
+    <div class="common-amenities-container">
+      <div class="row common-amenities-listing">
+        <div class="col-lg-9">
+          <h2 class="h4 mb-2" tabindex="0">Room Amenities:</h2>
+          {% regionblock room_amenities, type:html %}
+          <ul class="rooms d-lg-flex flex-lg-wrap" tabindex="0">
+            <li>55 inch Flat Panel HDTV (stream content from your favorite services to the guestroom TV)</li>
+            <li>In-Room Lap Top Size Safe</li>
+            <li>Pillows: Down, Feather and Foam Available</li>
+            <li>High Speed Wi-Fi – Unlimited Device Connections (included in the  Destination Fee)</li>
+            <li>Luxury Bath Amenities</li>
+            <li>Mini Refrigerator (Available for a Fee  $20/Stay)</li>
+            <li>Workstation with Desk</li>
+            <li>100% Cotton 250 Thread Count Linens, Triple Sheeting</li>
+            <li>Rollaway Bed (Available for a Fee  $25/Stay)</li>
+            <li>USB Ports</li>
+            <li>Individual Climate Control</li>
+            <li>Garment Steamer</li>
+            <li>Hair Dryer</li>
+          </ul>
+          {% endregionblock %}
+        </div>
+        <div class="col-lg-3">
+          <h2 class="h4 mb-2" tabindex="0">Suite Amenities:</h2>
+          {% regionblock suite_amenities, type:html %}
+          <ul class="suites" tabindex="0">
+            <li>65 inch Flat Panel HDTV (stream content from your favorite services to the guestroom TV)</li>
+          </ul>
+          {% endregionblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include offers-cross-sell.html %}

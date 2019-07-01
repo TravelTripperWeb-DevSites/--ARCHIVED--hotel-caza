@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+{% assign post = page.data %}
+
+<section class="hero hero--blog" style="background-image: url('{{ post.image.url_xlarge }}');"></section>
+<section class="blog blog--single">
+  <div class="blog__container">
+    <div class="blog__row">
+      <div class="blog__list">
+        <div class="blog__item">
+          <h1 class="h2" tabindex="0">{{ post.title }}</h1>
+          <div class="blog__info">
+            <span class="blog__date" tabindex="0">
+              {% assign d = post.date | date: "%-d" %}
+              {{ post.date | date: "%B" }}
+              {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+              {{ post.date | date: "%Y" }}
+            </span>
+  					{% if post.blog_category.category_title %}
+  					<a href="/blog/?c={{ post.blog_category.category_title | replace: ' ', '-' | replace: '&', 'and' | downcase }}" class="blog__category">{{ post.blog_category.category_title }}</a>
+  					{% endif %}
+          </div>
+
+          <div tabindex="0">
+            {{ post.post_content }}
+          </div>
+
+          <div class="blog--single__social">
+            <div class="blog__share">
+              {% include social-share.html %}
+            </div>
+
+            <div class="btn-holder">
+              <a href="/blog/" class="btn btn--secondary">See all blog posts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog__aside">
+        {% include blog-sidebar.html %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="blog blog--related d-none d-md-block">
+  <div class="blog__container">
+    <p class="blog-sidebar-heading" tabindex="0">Related Stories</p>
+    <div class="blog__related">
+      {% assign relatedposts = site.data._models.posts | sort: 'date' | reverse %}
+      {% assign count = 0 %}
+      {% for relatedpost in relatedposts %}
+      {% if relatedpost.blog_category.category_title == post.blog_category.category_title and count < 6 %}
+      {% if relatedpost.url_friendly_name != post.url_friendly_name %}
+      {% assign count = count | plus: 1 %}
+      <div class="blog__related__item">
+        <a href="/blog/{{relatedpost.url_friendly_name }}/" tabindex="-1">
+          <figure style="background-image:url('{{relatedpost.image.url_xsmall}}');" class="bg-cover"></figure>
+          <div class="blog__related__item__right">
+            <p class="blog-subtitle" tabindex="0">{{relatedpost.title  | truncate: 35 }}</p>
+            <div class="blog__info">
+              <span class="blog__date" tabindex="0">
+                {% assign d = relatedpost.date | date: "%-d" %}
+                {{ relatedpost.date | date: "%B" }}
+                {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+                {{ relatedpost.date | date: "%Y" }}
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include offers-cross-sell.html %}

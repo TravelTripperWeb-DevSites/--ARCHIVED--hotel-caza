@@ -1,0 +1,19 @@
+<form name="newsletterForm" id="newsletterForm">
+  <input type="hidden" id="formID" name="formID" value="5838D01E-40C1-4073-8EE6-4BF07B4B1210">
+  <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="Enter your email address" aria-label="Enter your email address" required>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input custom-control-input" id="agree_terms" name="q2_iAgree[]" aria-label="Select checkbox to agree the Terms of Use & Privacy Policy" value="Agree" required>
+    <label class="form-check-label custom-control-label" for="agree_terms" tabindex="0">I agree to the <a href="/terms/">Terms of Use</a> & <a href="/privacy/">Privacy Policy</a></label>
+  </div>
+  <div class="submit-social">
+    <button type="submit" class="btn btn--tertiary">Subscribe</button>
+    <div class="social">
+      {% if site.data.social.instagram.username %}
+      <a href="https://www.instagram.com/{{ site.data.social.instagram.username }}/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      {% endif %}
+      {% if site.data.social.facebook.username %}
+      <a href="https://www.facebook.com/{{ site.data.social.facebook.username }}/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      {% endif %}
+    </div>
+  </div>
+</form>

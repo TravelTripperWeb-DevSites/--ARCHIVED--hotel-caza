@@ -1,11 +1,69 @@
 ---
-layout: contact_layout
-title_localized: 
+layout: generic
+title_localized:
   en: Contact
 meta_description_localized:
-  en: 
-permalink_localized: 
-  en: /contact/
+  en:
+permalink_localized:
+  en: "/contact/"
 meta_tags:
   robots:
+published_localized:
+  en: true
+  es: true
+
 ---
+
+<div class="light-bg tb-padding home-intro contact-intro">
+  <div class="col-img-detail">
+    <div class="col-img-detail__wrap">
+      <div class="col-img-detail__detail">
+        <div class="box">
+          <h2 class="h4" tabindex="0">Our Address</h2>
+          <p tabindex="0">
+            {{ site.data.hotel_settings.address.street1 }}<br>
+            {{ site.data.hotel_settings.address.state }},
+            {{ site.data.hotel_settings.address.city }}
+            {{ site.data.hotel_settings.address.zip_code }}
+          </p>
+          <p><a href="{{ site.data.hotel_settings.get_directions_url }}" rel="nofollow" target="_blank" class="btn--primary">get directions</a></p>
+
+          <h2 class="h4" tabindex="0">Airport Directions</h2>
+          <p class="pt-1"><a href="https://bit.ly/31EyE7O" rel="nofollow" target="_blank" class="btn--primary">SFO Directions</a> &nbsp; &nbsp; <a href="https://bit.ly/2wZWe0m" rel="nofollow" target="_blank" class="btn--primary">OAK Directions</a></p>
+
+          <div class="contact-info">
+            <span><p class="h4" tabindex="0">Reservations</p>
+            <a href="tel:{{ site.data.hotel_settings.phone_number }}">{{ site.data.hotel_settings.phone_number }}</a></span>
+            <span><p class="h4" tabindex="0">email</p>
+            <a href="mailto:{{ site.data.hotel_settings.email }}">{{ site.data.hotel_settings.email }}</a></span>
+          </div>
+          {% regionblock contact_form_info, type:text %}
+          <p tabindex="0">For further assistance feel free to fill out the form below or call the hotel directly</p>
+          {% endregionblock %}
+          <div tabindex="0" class="mt-3">
+            {% regionblock statement_info, type:text %}
+            <p>You can also find detailed information about accessibility in our <a href="/accessibility/">Accessibility Statement</a> </p>
+            {% endregionblock %}
+          </div>
+        </div>
+      </div>
+      <div class="col-img-detail__image">
+        <a href="{{ site.data.hotel_settings.get_directions_url }}" title="Get Directions" target="_blank">
+        {% region intro_two_col_image, type:image %}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-form">
+  <div class="contact-form__full-col">
+    {% regionblock contact_form_heading, type:header %}
+    <h3 class="h2" tabindex="0">contact form</h3>
+    {% endregionblock %}
+    {% regionblock contact_form_note, type:text %}
+    <p tabindex="0">Required fields are marked *</p>
+    {% endregionblock %}
+  </div>
+  {% include forms/jotform/contact.html %}
+</div>
