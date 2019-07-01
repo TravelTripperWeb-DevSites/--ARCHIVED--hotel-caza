@@ -9,3 +9,9 @@ __EDITABLE_FIELDS__:
     type: boolean
   show_specials:
     type: boolean
+  arrival_date:
+    type: date
+  departure_date:
+    type: date
+arrival_date: '2019-10-01T00:00:00.000Z'
+departure_date:
