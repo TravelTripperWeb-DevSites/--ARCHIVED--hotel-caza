@@ -1,0 +1,54 @@
+default_title: "Hotel Caza"
+title_separator: "|"
+default_description: "Hotel Caza is a fun, fresh and stylish new member of the San Francisco hotel scene. It’s a warm, relaxing place to stay in a perfect location on Fisherman’s Wharf."
+default_author:
+  name:
+  avatar:
+  bio:
+  location:
+  email:
+  facebook:
+  google_plus:
+  instagram:
+  pinterest:
+  twitter:
+  youtube:
+
+
+__EDITABLE_FIELDS__:
+  default_title:
+    type: string
+    hint: Default value for page title
+  title_separator:
+    type: string
+    hint: "Usually a '|'"
+  default_description:
+    type: string
+    hint: Default value for meta description
+  default_author:
+    label: Default Author
+    type: nested
+    multiple: false
+    fields:
+      name:
+        type: string
+      avatar:
+        type: image
+      bio:
+        type: text
+      location:
+        type: text
+      email:
+        type: string
+      facebook:
+        type: string
+      google_plus:
+        type: string
+      instagram:
+        type: string
+      pinterest:
+        type: string
+      twitter:
+        type: string
+      youtube:
+        type: string
