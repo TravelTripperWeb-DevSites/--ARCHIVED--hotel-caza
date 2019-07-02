@@ -1,9 +1,9 @@
 ---
 layout: default
 title_localized:
- en: Our Hotel
+ en: Hotel Caza Amenities | Best Hotels in San Francisco
 meta_description_localized:
-  en:
+  en: With a curated list of amenities focused on fun, relaxation and exploring the essence of the city, Hotel Caza is among the best hotels in San Francisco.
 permalink_localized:
   en: /about/
 meta_tags:
@@ -30,13 +30,14 @@ meta_tags:
 {% assign amenities = site.data._models.amenities | sort: order %}
 <div class="col-amenities" id="amenities">
   <div class="logo-amenities">
-      <img src="/assets/img/logo-dark.png" alt="hotel logo" class="logo-amenities">
+    <img alt="hotel logo" class="logo-amenities" src="/assets/img/logo-dark.png">
   </div>
   <div class="col-amenities__items">
     <div class="col-amenities__items__wrap">
       <div class="col-amenities__items__heading" tabindex="0">
         {% regionblock amenities_title_one, type:header %}
-        <p class="h2">FUN AMENITIES MAKE THE HOTEL CAZA EXPERIENCE UNIQUE </p>
+        <p class="h2">FUN AMENITIES MAKE THE HOTEL CAZA EXPERIENCE UNIQUE
+        </p>
         {% endregionblock %}
       </div>
       <div class="col-amenities__items__slider">
@@ -44,20 +45,24 @@ meta_tags:
           {% assign fun_amenities = amenities | where: 'category', 'fun' %}
           {% for amenity in fun_amenities %}
             <div class="slide-item1">
-             <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-             <p class="h3" tabindex="0">{{ amenity.name }}</p>
-             <p tabindex="0">{{ amenity.description }}</p>
+              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+              <p class="h3" tabindex="0">{{ amenity.name }}</p>
+              <p tabindex="0">{{ amenity.description }}</p>
             </div>
-           {% endfor %}
+          {% endfor %}
         </div>
         <div class="slider-control">
-          <div class="slide-prev"><span></span></div>
-          <div class="slider-nav">
-              {% for amenity in fun_amenities %}
-              <span></span>
-              {% endfor %}
+          <div class="slide-prev">
+            <span></span>
           </div>
-          <div class="slide-next"><span></span></div>
+          <div class="slider-nav">
+            {% for amenity in fun_amenities %}
+              <span></span>
+            {% endfor %}
+          </div>
+          <div class="slide-next">
+            <span></span>
+          </div>
         </div>
       </div>
     </div>
@@ -76,20 +81,24 @@ meta_tags:
             {% assign hotel_amenities = amenities | where: 'category', 'hotel' %}
             {% for amenity in hotel_amenities %}
               <div class="slide-item1">
-               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-               <p class="h3">{{ amenity.name }}</p>
-               <p>{{ amenity.description }}</p>
+                <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+                <p class="h3">{{ amenity.name }}</p>
+                <p>{{ amenity.description }}</p>
               </div>
-             {% endfor %}
+            {% endfor %}
           </div>
           <div class="slider-control">
-            <div class="slide-prev"><span></span></div>
-            <div class="slider-nav">
-                {% for amenity in hotel_amenities %}
-                <span></span>
-                {% endfor %}
+            <div class="slide-prev">
+              <span></span>
             </div>
-            <div class="slide-next"><span></span></div>
+            <div class="slider-nav">
+              {% for amenity in hotel_amenities %}
+                <span></span>
+              {% endfor %}
+            </div>
+            <div class="slide-next">
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -109,63 +118,60 @@ meta_tags:
             {% assign business_amenities = amenities | where: 'category', 'business' %}
             {% for amenity in business_amenities %}
               <div class="slide-item1">
-               <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-               <p class="h3" tabindex="0">{{ amenity.name }}</p>
-               <p tabindex="0">{{ amenity.description }}</p>
+                <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+                <p class="h3" tabindex="0">{{ amenity.name }}</p>
+                <p tabindex="0">{{ amenity.description }}</p>
               </div>
-             {% endfor %}
+            {% endfor %}
           </div>
           <div class="slider-control">
-            <div class="slide-prev"><span></span></div>
-            <div class="slider-nav">
-                {% for amenity in business_amenities %}
-                <span></span>
-                {% endfor %}
+            <div class="slide-prev">
+              <span></span>
             </div>
-            <div class="slide-next"><span></span></div>
+            <div class="slider-nav">
+              {% for amenity in business_amenities %}
+                <span></span>
+              {% endfor %}
+            </div>
+            <div class="slide-next">
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-</div>
-
-<div class="light-bg pb-4 pb-md-5 px-2">
-  <div class="c-item-detail__text-group c-item-detail__text-group--mw-990">
-    <div class="c-item-detail__text-group__wrap  tb-padding pb-0">
-      <div class="c-item-detail__text-group__headings">
-        {% regionblock amenities_title_four, type:header %}
-        <h1 class="h2" tabindex="0">DESTINATION FEE</h1>
-        {% endregionblock %}
-        {% regionblock amenities_tagline_four, type:text %}
-        <p class="h4" tabindex="0">Elevate your San Francisco experience</p>
-        {% endregionblock %}
-      </div>
-
-      <div class="c-item-detail__text-group__text c-item-detail__text-group__text--wider">
-        {% regionblock amenities_destination_fee, type:text %}
-        <p tabindex="0">Guests of Hotel Caza can enjoy all the comforts of home and more for a $25 plus tax daily Destination Fee. Services included with Destination Fee:</p>
-        <ul tabindex="0">
-          <li>High-speed WiFi – unlimited device connections</li>
-          <li>Complimentary water stations</li>
-          <li>Complimentary morning coffee in the lobby</li>
-          <li>Complimentary local calls and toll-free calls</li>
-          <li>Complimentary access to our indoor and outdoor Games and Activities</li>
-          <li>Complimentary use of our 24-hour fitness center</li>
-          <li>VIP discounts on select tours, attractions, and eateries in Fisherman’s Wharf</li>
-        </ul>
-        {% endregionblock %}
-      </div>
-
+</div></div><div class="light-bg pb-4 pb-md-5 px-2">
+<div class="c-item-detail__text-group c-item-detail__text-group--mw-990">
+  <div class="c-item-detail__text-group__wrap  tb-padding pb-0">
+    <div class="c-item-detail__text-group__headings">
+      {% regionblock amenities_title_four, type:header %}
+      <h1 class="h2" tabindex="0">DESTINATION FEE</h1>
+      {% endregionblock %}
+      {% regionblock amenities_tagline_four, type:text %}
+      <p class="h4" tabindex="0">Elevate your San Francisco experience</p>
+      {% endregionblock %}
     </div>
+
+    <div class="c-item-detail__text-group__text c-item-detail__text-group__text--wider">
+      {% regionblock amenities_destination_fee, type:text %}
+      <p tabindex="0">Guests of Hotel Caza can enjoy all the comforts of home and more for a $25 plus tax daily Destination Fee. Services included with Destination Fee:</p>
+      <ul tabindex="0">
+        <li>High-speed WiFi – unlimited device connections</li>
+        <li>Complimentary water stations</li>
+        <li>Complimentary morning coffee in the lobby</li>
+        <li>Complimentary local calls and toll-free calls</li>
+        <li>Complimentary access to our indoor and outdoor Games and Activities</li>
+        <li>Complimentary use of our 24-hour fitness center</li>
+        <li>VIP discounts on select tours, attractions, and eateries in Fisherman’s Wharf</li>
+      </ul>
+      {% endregionblock %}
+    </div>
+
   </div>
-</div>
-
-<div class="statement mb-4 pb-2" tabindex="0">
-  {% regionblock statement_info, type:text %}
-  <p>Hotel Caza is ADA compliant under the Department of Justice ADA Title III Regulation 28 CFR Part 36, 1991. For information about accessible features, please view our <a href="/accessibility/">Accessibility Statement</a> </p>
-  {% endregionblock %}
-</div>
-
-{% region cta_banner, type:hero %}
+</div></div><div class="statement mb-4 pb-2" tabindex="0">
+{% regionblock statement_info, type:text %}
+<p>Hotel Caza is ADA compliant under the Department of Justice ADA Title III Regulation 28 CFR Part 36, 1991. For information about accessible features, please view our
+  <a href="/accessibility/">Accessibility Statement</a>
+</p>
+{% endregionblock %}</div>{% region cta_banner, type:hero %}
