@@ -1,9 +1,9 @@
 ---
 layout: generic
 title_localized:
-  en: Location
+  en: Hotel Caza | Fisherman’s Wharf San Francisco Hotels
 meta_description_localized:
-  en:
+  en: Hotel Caza is a Fisherman’s Wharf San Francisco Hotel near Pier 39, the Financial District,  Golden Gate Park and within easy driving distance of SFO.
 permalink_localized:
   en: /location/
 meta_tags:
@@ -18,7 +18,7 @@ meta_tags:
           {% region intro_two_col, type:html %}
         </div>
         <div class="decorative">
-          <img src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png" alt="Dumplings">
+          <img alt="Dumplings" src="//res.cloudinary.com/traveltripperweb/image/upload/v1553069158/qfwhf4sgchn9cfiot0ae.png">
         </div>
       </div>
       <div class="col-img-detail__image">
@@ -33,12 +33,20 @@ meta_tags:
 <div class="c-map" id="mapLocations">
   <div class="attractions__heading">
     {% regionblock attractions_heading, type:header %}
-    <p class="h2" tabindex="0"><span>Things to do near Hotel caza:</span></p>
+    <p class="h2" tabindex="0">
+      <span>Things to do near Hotel caza:</span>
+    </p>
     {% endregionblock %}
   </div>
   <ul class="attractions-mobile">
     <li>
-      <a href="javascript:void(0);" class="attractions-mobile__link active"><i class="icon-attractions"></i>Attractions <div class="toggler"><small>Less</small> <span class="fal fa-minus"></span></div></a>
+      <a class="attractions-mobile__link active" href="javascript:void(0);">
+        <i class="icon-attractions"></i>Attractions
+        <div class="toggler">
+          <small>Less</small>
+          <span class="fal fa-minus"></span>
+        </div>
+      </a>
       <div class="attractions-mobile__content active" role="listbox">
         {% for attraction in attractions %}
           {% if attraction.category == "Attractions" %}
@@ -48,7 +56,7 @@ meta_tags:
               </figure>
               <div class="c-map__list-view__detail">
                 <p class="h3" tabindex="0">{{ attraction.name }}</p>
-                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
+                <a class="btn btn--secondary" href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" rel="nofollow" target="_blank">Get Directions</a>
               </div>
             </div>
           {% endif %}
@@ -56,7 +64,12 @@ meta_tags:
       </div>
     </li>
     <li>
-      <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-entertainment"></i>Entertainment<div class="toggler"><small>More</small> <span class="fal fa-plus"></span></div></a>
+      <a class="attractions-mobile__link" href="javascript:void(0);">
+        <i class="icon-entertainment"></i>Entertainment<div class="toggler">
+          <small>More</small>
+          <span class="fal fa-plus"></span>
+        </div>
+      </a>
       <div class="attractions-mobile__content" role="listbox">
         {% for attraction in attractions %}
           {% if attraction.category == "Entertainment" %}
@@ -66,7 +79,7 @@ meta_tags:
               </figure>
               <div class="c-map__list-view__detail">
                 <p class="h3" tabindex="0">{{ attraction.name }}</p>
-                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
+                <a class="btn btn--secondary" href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" rel="nofollow" target="_blank">Get Directions</a>
               </div>
             </div>
           {% endif %}
@@ -74,7 +87,12 @@ meta_tags:
       </div>
     </li>
     <li>
-      <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-eat-drink"></i>Eat & Drink<div class="toggler"><small>More</small> <span class="fal fa-plus"></span></div></a>
+      <a class="attractions-mobile__link" href="javascript:void(0);">
+        <i class="icon-eat-drink"></i>Eat & Drink<div class="toggler">
+          <small>More</small>
+          <span class="fal fa-plus"></span>
+        </div>
+      </a>
       <div class="attractions-mobile__content" role="listbox">
         {% for attraction in attractions %}
           {% if attraction.category == "Eat & Drink" %}
@@ -84,7 +102,7 @@ meta_tags:
               </figure>
               <div class="c-map__list-view__detail">
                 <p class="h3" tabindex="0">{{ attraction.name }}</p>
-                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
+                <a class="btn btn--secondary" href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" rel="nofollow" target="_blank">Get Directions</a>
               </div>
             </div>
           {% endif %}
@@ -92,196 +110,228 @@ meta_tags:
       </div>
     </li>
     <li>
-      <a href="javascript:void(0);" class="attractions-mobile__link"><i class="icon-shopping"></i>Shopping<div class="toggler"><small>More</small> <span class="fal fa-plus"></span></div></a>
-        <div class="attractions-mobile__content" role="listbox">
-          {% for attraction in attractions %}
-            {% if attraction.category == "Shopping" %}
-              <div class="c-map__list-view" role="option">
-                <figure>
-                  <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
-                </figure>
-                <div class="c-map__list-view__detail">
-                  <p class="h3" tabindex="0">{{ attraction.name }}</p>
-                  <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
-                </div>
-              </div>
-            {% endif %}
-          {% endfor %}
+      <a class="attractions-mobile__link" href="javascript:void(0);">
+        <i class="icon-shopping"></i>Shopping<div class="toggler">
+          <small>More</small>
+          <span class="fal fa-plus"></span>
         </div>
+      </a>
+      <div class="attractions-mobile__content" role="listbox">
+        {% for attraction in attractions %}
+          {% if attraction.category == "Shopping" %}
+            <div class="c-map__list-view" role="option">
+              <figure>
+                <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+              </figure>
+              <div class="c-map__list-view__detail">
+                <p class="h3" tabindex="0">{{ attraction.name }}</p>
+                <a class="btn btn--secondary" href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" rel="nofollow" target="_blank">Get Directions</a>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
     </li>
   </ul>
   <div class="c-map__wrap">
-    <div class="c-map__leaflet" id="leafletmap" data-attractions="show" tabindex="-1"></div>
+    <div class="c-map__leaflet" data-attractions="show" id="leafletmap" tabindex="-1"></div>
     <div class="c-map__tabs">
       <ul class="nav--filter">
-      <li>
-        <a id="attractions_active" data-category="Attractions" data-filter="attractions" class="filter--option"><i class="icon-attractions" aria-hidden="true"></i><span>See & Do</span></a>
-      </li>
-      <li>
-        <a id="entertainment_active" data-category="Entertainment" data-filter="entertainment" class="filter--option"><i class="icon-entertainment" aria-hidden="true"></i><span>Entertainment</span></a>
-      </li>
-      <li>
-        <a id="eat-drink_active" data-category="Eat & Drink" data-filter="eat-drink" class="filter--option"><i class="icon-eat-drink" aria-hidden="true"></i><span>Eat & Drink</span></a>
-      </li>
-      <li>
-        <a id="shopping_active" data-category="Shopping" data-filter="shopping" class="filter--option"><i class="icon-shopping" aria-hidden="true"></i><span>Shopping</span></a>
-      </li>
-    </ul>
+        <li>
+          <a class="filter--option" data-category="Attractions" data-filter="attractions" id="attractions_active">
+            <i aria-hidden="true" class="icon-attractions"></i>
+            <span>See & Do</span>
+          </a>
+        </li>
+        <li>
+          <a class="filter--option" data-category="Entertainment" data-filter="entertainment" id="entertainment_active">
+            <i aria-hidden="true" class="icon-entertainment"></i>
+            <span>Entertainment</span>
+          </a>
+        </li>
+        <li>
+          <a class="filter--option" data-category="Eat & Drink" data-filter="eat-drink" id="eat-drink_active">
+            <i aria-hidden="true" class="icon-eat-drink"></i>
+            <span>Eat & Drink</span>
+          </a>
+        </li>
+        <li>
+          <a class="filter--option" data-category="Shopping" data-filter="shopping" id="shopping_active">
+            <i aria-hidden="true" class="icon-shopping"></i>
+            <span>Shopping</span>
+          </a>
+        </li>
+      </ul>
 
+      <div class="c-map__tabs__content-group">
+        <div class="filter-item c-map__tabs__content" data-filter="attractions">
+          <div class="location-slider" id="attraction_slider">
+            {% assign indexitem = 0 %}
+            {% for attraction in attractions %}
+              {% if attraction.category == "Attractions" %}
+                <div class="location-slider__item" data-slider-index="{{ indexitem }}" data-mappable-category="Attractions" data-mappable-item="{{ forloop.index0 }}">
+                  <div class="location-slider__item__image">
+                    <img data-mappable-category="Attractions" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+                  </div>
+                  <div class="location-slider__item__detail">
+                    <p class="h3" tabindex="0">{{ attraction.name }}</p>
+                    <div tabindex="0">{{ attraction.description }}</div>
+                    <p>
+                      <a data-mappable-category="Attractions" data-mappable-item="{{ indexitem }}" class="btn btn--secondary">Show on Map</a>
+                      <a class="btn btn--secondary" href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" rel="nofollow" target="_blank">Get Directions</a>
+                    </p>
+                  </div>
+                </div>
+                {% assign indexitem = indexitem | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+          </div>
 
-    <div class="c-map__tabs__content-group">
-      <div class="filter-item c-map__tabs__content"  data-filter="attractions">
-        <div class="location-slider" id="attraction_slider">
-          {% assign indexitem = 0 %}
-          {% for attraction in attractions %}
-          {% if attraction.category == "Attractions" %}
-          <div class="location-slider__item" data-slider-index="{{ indexitem }}" data-mappable-category="Attractions" data-mappable-item="{{ forloop.index0 }}">
-            <div class="location-slider__item__image">
-              <img data-mappable-category="Attractions" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          <div class="slider-control location-slider-control">
+            <div class="slide-prev">
+              <span tabindex="0"></span>
             </div>
-            <div class="location-slider__item__detail">
-              <p class="h3" tabindex="0">{{ attraction.name }}</p>
-              <div tabindex="0">{{ attraction.description }}</div>
-              <p>
-                <a data-mappable-category="Attractions" data-mappable-item="{{ indexitem }}" class="btn btn--secondary">Show on Map</a>
-                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
-              </p>
+            <div class="slider-nav">
+              {% for attraction in attractions %}
+                {% if attraction.category == "Attractions" %}
+                  <span></span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="slide-next">
+              <span tabindex="0"></span>
             </div>
           </div>
-          {% assign indexitem = indexitem | plus: 1 %}
-          {% endif %}
-          {% endfor %}
         </div>
-
-        <div class="slider-control location-slider-control">
-          <div class="slide-prev"><span tabindex="0"></span></div>
-          <div class="slider-nav">
-           {% for attraction in attractions %}
-           {% if attraction.category == "Attractions" %}
-           <span></span>
-           {% endif %}
-           {% endfor %}
+        <div class="filter-item c-map__tabs__content hidden" data-filter="entertainment">
+          <div class="location-slider" id="entertainment_slider">
+            {% assign indexitem = 0 %}
+            {% for attraction in attractions %}
+              {% if attraction.category == "Entertainment" %}
+                <div class="location-slider__item" data-slider-index="{{ indexitem }}" data-category="Entertainment" data-mappable-item="{{ forloop.index0 }}">
+                  <div class="location-slider__item__image">
+                    <img data-mappable-category="Entertainment" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+                  </div>
+                  <div class="location-slider__item__detail">
+                    <p class="h3">{{ attraction.name }}</p>
+                    <div tabindex="0">{{ attraction.description }}</div>
+                    <p>
+                      <a data-mappable-category="Entertainment" data-mappable-item="{{ indexitem }}" tabindex="-1" rel="nofollow" class="btn btn--secondary">Show on Map</a>
+                      <a class="btn btn--secondary" href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" rel="nofollow" target="_blank">Get Directions</a>
+                    </p>
+                  </div>
+                </div>
+                {% assign indexitem = indexitem | plus: 1 %}
+              {% endif %}
+            {% endfor %}
           </div>
-          <div class="slide-next"><span tabindex="0"></span></div>
+
+          <div class="slider-control location-slider-control">
+            <div class="slide-prev">
+              <span tabindex="0"></span>
+            </div>
+            <div class="slider-nav">
+              {% for attraction in attractions %}
+                {% if attraction.category == "Entertainment" %}
+                  <span></span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="slide-next">
+              <span tabindex="0"></span>
+            </div>
+          </div>
+        </div>
+        <div class="filter-item c-map__tabs__content hidden" data-filter="eat-drink">
+          <div class="location-slider" id="eatdrink_slider">
+            {% assign indexitem = 0 %}
+            {% for attraction in attractions %}
+              {% if attraction.category == "Eat & Drink" %}
+                <div class="location-slider__item" data-slider-index="{{ indexitem }}" data-category="Entertainment" data-mappable-item="{{ forloop.index0 }}">
+                  <div class="location-slider__item__image">
+                    <img data-mappable-category="Eat & Drink" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+                  </div>
+                  <div class="location-slider__item__detail">
+                    <p class="h3" tabindex="0">{{ attraction.name }}</p>
+                    <div tabindex="0">{{ attraction.description }}</div>
+                    <p>
+                      <a data-mappable-category="Eat & Drink" data-mappable-item="{{ indexitem }}" tabindex="-1" rel="nofollow" class="btn btn--secondary">Show on Map</a>
+                      <a class="btn btn--secondary" href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" rel="nofollow" target="_blank">Get Directions</a>
+                    </p>
+                  </div>
+                </div>
+                {% assign indexitem = indexitem | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <div class="slider-control location-slider-control">
+            <div class="slide-prev">
+              <span tabindex="0"></span>
+            </div>
+            <div class="slider-nav">
+              {% for attraction in attractions %}
+                {% if attraction.category == "Eat & Drink" %}
+                  <span></span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="slide-next">
+              <span tabindex="0"></span>
+            </div>
+          </div>
+        </div>
+        <div class="filter-item c-map__tabs__content hidden" data-filter="shopping">
+          <div class="location-slider" id="shopping_slider">
+            {% assign indexitem = 0 %}
+            {% for attraction in attractions %}
+              {% if attraction.category == "Shopping" %}
+                <div class="location-slider__item" data-category="Shopping" data-mappable-item="{{ forloop.index0 }}">
+                  <div class="location-slider__item__image">
+                    <img data-mappable-category="Shopping" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+                  </div>
+                  <div class="location-slider__item__detail">
+                    <p class="h3" tabindex="0">{{ attraction.name }}</p>
+                    <div tabindex="0">{{ attraction.description }}</div>
+                    <p>
+                      <a data-mappable-category="Shopping" data-mappable-item="{{ indexitem }}" tabindex="-1" rel="nofollow" class="btn btn--secondary">Show on Map</a>
+                      <a class="btn btn--secondary" href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" rel="nofollow" target="_blank">Get Directions</a>
+                    </p>
+                  </div>
+                </div>
+                {% assign indexitem = indexitem | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <div class="slider-control location-slider-control">
+            <div class="slide-prev">
+              <span tabindex="0"></span>
+            </div>
+            <div class="slider-nav">
+              {% for attraction in attractions %}
+                {% if attraction.category == "Shopping" %}
+                  <span></span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="slide-next">
+              <span tabindex="0"></span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="filter-item c-map__tabs__content hidden"  data-filter="entertainment">
-        <div class="location-slider" id="entertainment_slider">
-          {% assign indexitem = 0 %}
-          {% for attraction in attractions %}
-          {% if attraction.category == "Entertainment" %}
-          <div class="location-slider__item" data-slider-index="{{ indexitem }}" data-category="Entertainment" data-mappable-item="{{ forloop.index0 }}">
-            <div class="location-slider__item__image">
-              <img data-mappable-category="Entertainment" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
-            </div>
-            <div class="location-slider__item__detail">
-              <p class="h3">{{ attraction.name }}</p>
-              <div tabindex="0">{{ attraction.description }}</div>
-              <p>
-                <a data-mappable-category="Entertainment" data-mappable-item="{{ indexitem }}" tabindex="-1" rel="nofollow" class="btn btn--secondary">Show on Map</a>
-                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
-              </p>
-            </div>
-          </div>
-          {% assign indexitem = indexitem | plus: 1 %}
-          {% endif %}
-          {% endfor %}
-        </div>
-
-        <div class="slider-control location-slider-control">
-          <div class="slide-prev"><span tabindex="0"></span></div>
-          <div class="slider-nav">
-           {% for attraction in attractions %}
-           {% if attraction.category == "Entertainment" %}
-           <span></span>
-           {% endif %}
-           {% endfor %}
-          </div>
-          <div class="slide-next"><span tabindex="0"></span></div>
-        </div>
-      </div>
-      <div class="filter-item c-map__tabs__content hidden"  data-filter="eat-drink">
-        <div class="location-slider" id="eatdrink_slider">
-          {% assign indexitem = 0 %}
-          {% for attraction in attractions %}
-          {% if attraction.category == "Eat & Drink" %}
-          <div class="location-slider__item" data-slider-index="{{ indexitem }}" data-category="Entertainment" data-mappable-item="{{ forloop.index0 }}">
-            <div class="location-slider__item__image">
-              <img data-mappable-category="Eat & Drink" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
-            </div>
-            <div class="location-slider__item__detail">
-              <p class="h3" tabindex="0">{{ attraction.name }}</p>
-              <div tabindex="0">{{ attraction.description }}</div>
-              <p>
-                <a data-mappable-category="Eat & Drink" data-mappable-item="{{ indexitem }}" tabindex="-1" rel="nofollow" class="btn btn--secondary">Show on Map</a>
-                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
-              </p>
-            </div>
-          </div>
-          {% assign indexitem = indexitem | plus: 1 %}
-          {% endif %}
-          {% endfor %}
-        </div>
-
-        <div class="slider-control location-slider-control">
-          <div class="slide-prev"><span tabindex="0"></span></div>
-          <div class="slider-nav">
-           {% for attraction in attractions %}
-           {% if attraction.category == "Eat & Drink" %}
-           <span></span>
-           {% endif %}
-           {% endfor %}
-          </div>
-          <div class="slide-next"><span tabindex="0"></span></div>
-        </div>
-      </div>
-      <div class="filter-item c-map__tabs__content hidden"  data-filter="shopping">
-        <div class="location-slider" id="shopping_slider">
-          {% assign indexitem = 0 %}
-          {% for attraction in attractions %}
-          {% if attraction.category == "Shopping" %}
-          <div class="location-slider__item" data-category="Shopping" data-mappable-item="{{ forloop.index0 }}">
-            <div class="location-slider__item__image">
-              <img  data-mappable-category="Shopping" data-mappable-item="{{ indexitem }}" src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
-            </div>
-            <div class="location-slider__item__detail">
-              <p class="h3" tabindex="0">{{ attraction.name }}</p>
-              <div tabindex="0">{{ attraction.description }}</div>
-              <p>
-                <a data-mappable-category="Shopping" data-mappable-item="{{ indexitem }}" tabindex="-1" rel="nofollow" class="btn btn--secondary">Show on Map</a>
-                <a href="https://www.google.com/maps/dir/?api=1&origin={{ attraction.location.latitude }},{{ attraction.location.longitude }}&destination={{ site.data.hotel_settings.latitude }},{{ site.data.hotel_settings.longitude }}" target="_blank" rel="nofollow" class="btn btn--secondary">Get Directions</a>
-              </p>
-            </div>
-          </div>
-          {% assign indexitem = indexitem | plus: 1 %}
-          {% endif %}
-          {% endfor %}
-        </div>
-
-        <div class="slider-control location-slider-control">
-          <div class="slide-prev"><span tabindex="0"></span></div>
-          <div class="slider-nav">
-           {% for attraction in attractions %}
-           {% if attraction.category == "Shopping" %}
-           <span></span>
-           {% endif %}
-           {% endfor %}
-          </div>
-          <div class="slide-next"><span tabindex="0"></span></div>
-        </div>
-      </div>
-    </div>
     </div>
   </div>
 </div>
-
-
 
 {% assign around = site.data._models.getting-around | sort: order %}
 <div class="col-amenities location-around light-bg" id="amenities">
   <div class="logo-amenities">
     {% regionblock amenities_heading, type:header %}
-      <p class="h2" tabindex="0"><span>Getting Around</span></p>
+    <p class="h2" tabindex="0">
+      <span>Getting Around</span>
+    </p>
     {% endregionblock %}
   </div>
   <div class="col-amenities__items">
@@ -291,27 +341,29 @@ meta_tags:
         <div class="amenities-slider">
           {% for amenity in around %}
             <div class="slide-item1">
-             <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
-             <p class="h3" tabindex="0">{{ amenity.name }}</p>
-             <p tabindex="0">{{ amenity.description }}</p>
+              <img src="{{ amenity.images.url_xsmall }}" alt="{{ amenity.images.alt }}">
+              <p class="h3" tabindex="0">{{ amenity.name }}</p>
+              <p tabindex="0">{{ amenity.description }}</p>
             </div>
-           {% endfor %}
+          {% endfor %}
         </div>
         <div class="slider-control">
-          <div class="slide-prev"><span tabindex="0"></span></div>
-          <div class="slider-nav">
-              {% for amenity in around %}
-              <span></span>
-              {% endfor %}
+          <div class="slide-prev">
+            <span tabindex="0"></span>
           </div>
-          <div class="slide-next"><span tabindex="0"></span></div>
+          <div class="slider-nav">
+            {% for amenity in around %}
+              <span></span>
+            {% endfor %}
+          </div>
+          <div class="slide-next">
+            <span tabindex="0"></span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
 
 <script type="text/javascript">
 {% assign mapitems = site.data._models.attractions | sort: 'id' %}

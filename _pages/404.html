@@ -1,7 +1,7 @@
 ---
 layout: generic
 title_localized:
-  en: Page not Found
+  en: Hotel Caza | Page not Found
 meta_description_localized:
   en:
 permalink_localized:
@@ -12,11 +12,13 @@ meta_tags:
 
 <div class="sitemap-links">
   {% assign footer-items = site.data._menus.footer.items %}
-    <ul>
-      {% for item in footer-items %}
-        {% assign url = item.url %}
-        {% assign text = item.label %}
-        <li><a href="{{url}}" {% if url contains 'http' %}target="_blank"{% endif %}>{{text}}</a></li>
-      {% endfor %}
-    </ul>
+  <ul>
+    {% for item in footer-items %}
+      {% assign url = item.url %}
+      {% assign text = item.label %}
+      <li>
+        <a href="{{url}}" {% if url contains 'http' %} target="_blank" {% endif %}>{{text}}</a>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
