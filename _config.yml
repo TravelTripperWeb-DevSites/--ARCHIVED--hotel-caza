@@ -1,17 +1,28 @@
----
+# Site Settings
 title: Hotel Caza
 title_separator: "|"
 name: Hotel Caza
-description: Hotel Caza is a fun, fresh and stylish new member of the San Francisco hotel scene. It’s a warm, relaxing place to stay in a perfect location on Fisherman’s Wharf.
+description: Hotel Caza is a fun, fresh and stylish new member of the San Francisco
+  hotel scene. It’s a warm, relaxing place to stay in a perfect location on Fisherman’s
+  Wharf.
 url: https://www.hotelcaza.com
 repository:
+
+# Language Settings
 default_lang: en
 languages:
 - en
+
+# Reading Files
 include:
-- _ttio_templates/bedrock/_permanent_pages
+- _ttio_templates
 - _pages
 exclude:
+- _ttio_templates/zom
+- _ttio_templates/bedrock/assets
+- _ttio_templates/bedrock/node_modules
+- _ttio_templates/bedrock/*.md
+- _ttio_templates/bedrock/*.json
 - "*.sublime-project"
 - "*.sublime-workspace"
 - ".asset-cache"
@@ -39,7 +50,7 @@ exclude:
 - tmp
 - vendor
 keep_files:
-- ".git"
+- .git
 - assets
 - ttio_templates/bedrock/assets
 - ttio_templates/zom/assets
@@ -47,11 +58,16 @@ rsync_copy:
 - _assets
 - _ttio_templates/bedrock/assets
 - _ttio_templates/zom/assets
-encoding: utf-8
-markdown_ext: markdown,mkdown,mkdn,mkd,md
+
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
 markdown: kramdown
 excerpt_separator: "\n\n"
 incremental: false
+
+# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -61,12 +77,17 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+
+# Sass/SCSS
 sass:
   load_paths:
   - _sass
   style: compressed
+
+# Outputting
 permalink: pretty
-timezone:
+timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
 page_gen:
 - data: rooms
   template: room_layout
@@ -77,18 +98,23 @@ page_gen:
 - data: posts
   template: blog_layout
   dir: blog
+
 plugins_dir:
 - _plugins-38
 - _plugins
+
 i18n_dir:
 - _ttio_templates/bedrock/_locales
 - _locales
+
 layouts_dir:
 - _ttio_templates/bedrock/_layouts
 - _layouts
+
 data_dir:
 - _ttio_templates/bedrock/_data
 - _data
+
 includes_dir:
 - _includes
 - _ttio_templates/bedrock/_includes
