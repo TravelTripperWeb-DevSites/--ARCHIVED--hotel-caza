@@ -2,9 +2,11 @@
 title: Hotel Caza
 title_separator: "|"
 name: Hotel Caza
-description: Hotel Caza is a fun, fresh and stylish new member of the San Francisco hotel scene. It’s a warm, relaxing place to stay in a perfect location on Fisherman’s Wharf.
+description: Hotel Caza is a fun, fresh and stylish new member of the San Francisco
+  hotel scene. It’s a warm, relaxing place to stay in a perfect location on Fisherman’s
+  Wharf.
 url: https://www.hotelcaza.com
-repository:
+repository: 
 default_lang: en
 languages:
 - en
@@ -66,7 +68,7 @@ sass:
   - _sass
   style: compressed
 permalink: pretty
-timezone:
+timezone: 
 page_gen:
 - data: rooms
   template: room_layout
