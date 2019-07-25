@@ -1,0 +1,110 @@
+<!-- begin _includes/seo.html -->
+{% if site.url %}
+  {% assign seo_url = site.url %}
+{% endif %}
+
+{% if page.name_localized.en %}
+  {% assign seo_title = page.name_localized.en | normalize_whitespace | escape_once %}
+{% elsif page.title %}
+  {% assign seo_title = page.title | normalize_whitespace | escape_once %}
+{% else %}
+  {% assign seo_title = site.data.seo.default_title | append: " " | append: site.data.seo.title_separator | append: " " | append: site.data.hotel_settings.name %}
+{% endif %}
+
+{% if site.url %}
+  {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
+{% endif %}
+
+<title>{{ seo_title }}</title>
+
+{% if page.short_description_localized.en %}
+  {% assign seo_description = page.short_description_localized.en | normalize_whitespace | escape_once %}
+{% else %}
+  {% assign seo_description = page.meta_description | default: site.data.seo.default_description %}
+{% endif %}
+  
+{% if seo_description %}
+  {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | normalize_whitespace | escape_once %}
+{% endif %}
+
+<meta name="description" content="{{ seo_description }}">
+<meta property="og:description" content="{{ seo_description }}">
+<meta property="og:locale" content="{{ site.active_lang | replace: "-", "_" | default: "en_US" }}">
+<meta property="og:site_name" content="{{ site.data.seo.default_title }}">
+<meta property="og:title" content="{{ page.title | default: site.data.seo.default_title | escape_once }}">
+
+{% if seo_url %}
+  {% if site.active_lang == site.default_lang %}
+    <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
+  {% else %}
+    <link rel="canonical" href="{{ page.url | prepend: site.active_lang | prepend: "/" | prepend: seo_url | replace: "/index.html", "/" }}">
+  {% endif %}
+  <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
+{% endif %}
+
+{% if site.data.social.twitter.username %}
+  <meta name="twitter:site" content="@{{ site.data.social.twitter.username | replace: "@", "" }}">
+  <meta name="twitter:title" content="{{ page.title | default: site.data.seo.default_title | escape_once }}">
+  <meta name="twitter:description" content="{{ seo_description }}">
+  <meta name="twitter:url" content="{{ canonical_url }}">
+  <meta name="twitter:card" content="summary">
+
+  {% if site.data.social.og_image %}
+    <meta name="twitter:image" content="{{ site.data.social.og_image | absolute_url }}">
+  {% endif %}
+{% endif %}
+
+{% if site.data.social.facebook %}
+  {% if site.data.social.facebook.publisher %}
+    <meta property="article:publisher" content="{{ site.data.social.facebook.publisher }}">
+  {% endif %}
+
+  {% if site.data.social.facebook.app_id %}
+    <meta property="fb:app_id" content="{{ site.data.social.facebook.app_id }}">
+  {% endif %}
+{% endif %}
+
+{% if site.data.social.og_image %}
+  <meta property="og:image" content="{% if site.data.social.og_image contains "://" %}{{ site.data.social.og_image }}{% else %}{{ site.data.social.og_image | absolute_url }}{% endif %}">
+{% endif %}
+
+{% if page.date %}
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% endif %}
+
+{% if site.data.social.og_image %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": {{ seo_url | jsonify }},
+      "logo": {{ site.data.social.og_image | absolute_url | jsonify }}
+    }
+  </script>
+{% endif %}
+
+{% if site.data.social %}
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "{% if site.data.social.type %}{{ site.data.social.type }}{% else %}Person{% endif %}",
+      "name" : "{{ site.data.social.name | default: site.data.hotel_settings.name }}",
+      "url" : {{ seo_url | jsonify }},
+      "sameAs" : {{ site.data.social.links | jsonify }}
+    }
+  </script>
+{% endif %}
+
+<meta http-equiv="Content-Language" content="{{ site.active_lang }}">
+<link rel="alternate" hreflang="{{ site.default_lang }}" href="{{ site.url }}{{ page.permalink }}">
+{% for lang in site.languages %}
+  {% unless lang == site.default_lang %}
+    <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}/{{ lang }}{{ page.permalink }}">
+  {% endunless %}
+{% endfor %}
+
+{% if page.meta_tags.robots %}
+  <meta name="robots" content="{{ page.meta_tags.robots }}">
+{% endif %}
+<!-- end _includes/seo.html -->
