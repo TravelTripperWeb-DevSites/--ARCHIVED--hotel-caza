@@ -66,8 +66,8 @@ readyDoc(() => {// If DOM is ready
   if(document.getElementsByClassName("offers-cs__slideitems")[0]) {
     var offerSlider = tns({
       container: '.offers-cs__slideitems',
-      "items": 1.1,
-      "slideBy": "page",
+      "items": 1,
+      "slideBy": 1,
       "gutter": 12,
       "mouseDrag": true,
       "swipeAngle": false,
