@@ -375,5 +375,8 @@
     "alt": "prie-arch",
     "caption": "",
     "description": ""
+  },
+  "description_localized": {
+    "en": "<p>Built in 1914 to serve the Belt Railroad, Pier 43 and has a decorated hoisting tower for loading rail cars onto ferries.</p>"
   }
 }
