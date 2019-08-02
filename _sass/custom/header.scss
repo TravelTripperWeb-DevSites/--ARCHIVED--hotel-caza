@@ -12,6 +12,7 @@
   }
 
   &.is-fixed-top {
+    z-index: 9999;
     height: 64px;
     transition: all .3s;
 
