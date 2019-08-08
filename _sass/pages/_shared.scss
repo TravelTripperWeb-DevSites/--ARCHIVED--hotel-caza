@@ -126,10 +126,23 @@
     background-color: $grey;
     transition: all .3s ease-in-out;
 
+    @media (min-width: 992px) and (max-width: 1500px) {
+      margin: 4px 3px;
+    }
+
+    @include media-breakpoint-only(md) {
+      margin: 1px;
+    }
+
     &.tns-nav-active {
       width: 13px;
       height: 13px;
       background-color: $secondary;
+
+      @include media-breakpoint-down(lg) {
+        width: 11px;
+        height: 11px;
+      }
     }
   }
 }
