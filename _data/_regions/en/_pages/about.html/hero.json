@@ -6,7 +6,7 @@
     },
     "_template": "hero",
     "hero_html": {
-      "content": ""
+      "content": "<p>Our Hotel</p>"
     },
     "advanced_options": {
     },
