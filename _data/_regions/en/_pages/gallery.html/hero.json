@@ -32,7 +32,7 @@
       "content": "<h1 class=\"h3\">PHOTO GALLERY</h1>"
     },
     "hero_title": {
-      "content": "let&rsquo;s get visual!",
+      "content": "TAKE A VISUAL TOUR",
       "_template": "header"
     },
     "skip_h1": true
