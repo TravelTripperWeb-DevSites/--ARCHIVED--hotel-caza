@@ -5,24 +5,25 @@
     },
     "hero_image": {
       "image": {
-        "name": "Homepage new",
+        "name": "hotel-caza-home-hero",
         "content_type": "image/jpeg",
-        "date_added": "2019-06-19-182206",
-        "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1560982927/gyryga7cowve84raq3zh.jpg",
-        "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1560982927/gyryga7cowve84raq3zh.jpg",
-        "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1560982927/gyryga7cowve84raq3zh.jpg",
-        "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1560982927/gyryga7cowve84raq3zh.jpg",
-        "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1560982927/gyryga7cowve84raq3zh.jpg",
-        "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1560982927/gyryga7cowve84raq3zh.jpg",
-        "width": 1800,
-        "height": 1200,
+        "date_added": "2019-08-19-040111",
+        "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1566201671/kf8iuno41flbejtu5zrn.jpg",
+        "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1566201671/kf8iuno41flbejtu5zrn.jpg",
+        "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1566201671/kf8iuno41flbejtu5zrn.jpg",
+        "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1566201671/kf8iuno41flbejtu5zrn.jpg",
+        "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1566201671/kf8iuno41flbejtu5zrn.jpg",
+        "url_xlarge": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1566201671/kf8iuno41flbejtu5zrn.jpg",
+        "url": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_2500,w_2500/v1566201671/kf8iuno41flbejtu5zrn.jpg",
+        "width": 1920,
+        "height": 798,
         "format": "jpg",
-        "url": "//res.cloudinary.com/traveltripperweb/image/upload/v1560982927/gyryga7cowve84raq3zh.jpg",
+        "url_raw": "//res.cloudinary.com/traveltripperweb/image/upload/v1566201671/kf8iuno41flbejtu5zrn.jpg",
         "resource_type": "image",
-        "size": 2024461,
-        "path": "//res.cloudinary.com/traveltripperweb/image/upload/v1560982927/gyryga7cowve84raq3zh.jpg",
+        "size": 340968,
+        "path": "//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_2500,w_2500/v1566201671/kf8iuno41flbejtu5zrn.jpg",
         "file_size": null,
-        "alt": "Welcome to Hotel Caza",
+        "alt": "hotel-caza-home-hero",
         "caption": "",
         "description": ""
       },
@@ -31,7 +32,7 @@
     },
     "_template": "hero",
     "hero_html": {
-      "content": "<p class=\"h1\">swing over to THE fun side</p>\n<p class=\"h1\">of san francisco</p>\n<p class=\"h1 h3\">&nbsp;</p>\n<p class=\"h3\">be among the first to stay at hotel caza and receive special savings!</p>\n<p><a class=\"btn btn--primary\" href=\"offers/offer_tourst/\"> View GRAND OPENING SPECIAL PACKAGE</a></p>"
+      "content": "<p class=\"h1\">FUN IN SAN FRANCISCO STARTS AT HOTEL CAZA</p>\n<p>&nbsp;</p>\n<p class=\"h3\">be among the first to stay at hotel caza and receive special savings!</p>\n<p><a class=\"btn btn--primary\" href=\"offers/offer_tourst/\"> View GRAND OPENING SPECIAL PACKAGE</a></p>"
     },
     "skip_h1": true
   }

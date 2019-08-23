@@ -1,7 +1,7 @@
 {
   "order": 4,
   "name_localized": {
-    "en": "Get your scoot on"
+    "en": "Get Your Scoot On"
   },
   "description_localized": {
     "en": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
@@ -28,5 +28,5 @@
     "caption": "",
     "description": ""
   },
-  "category": ""
+  "category": "other"
 }
