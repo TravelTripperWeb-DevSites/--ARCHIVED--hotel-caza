@@ -6,7 +6,7 @@
     },
     "_template": "hero",
     "hero_html": {
-      "content": "<h1 class=\"h3\">Our Hotel</h1>"
+      "content": "<h1 class=\"h3\">about</h1>"
     },
     "advanced_options": {
     },
