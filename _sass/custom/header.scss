@@ -233,12 +233,12 @@
 }
 
 .main {
-  padding-top: 64px;
+  padding-top: 141px;
 
   @include media-breakpoint-up(md) {
-    padding-top: 84px;
+    padding-top: 125px;
   }
   @include media-breakpoint-up(lg) {
-    padding-top: 112px;
+    padding-top: 150px;
   }
 }
