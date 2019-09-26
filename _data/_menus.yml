@@ -41,6 +41,9 @@ footer:
     - page_id: _pages/contact.html
       label: Contact
       url: /contact/
+    - page_id: _pages/faq.html
+      label: FAQ
+      url: /faq/
     # - page_id: _pages/press.html
     #   label: Press
     #   url: /press/
