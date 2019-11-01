@@ -1219,3 +1219,9 @@
     }
   }
 }
+
+.ttweb-offer--not-found  {
+  &:after {
+    display: none;
+  }
+}
