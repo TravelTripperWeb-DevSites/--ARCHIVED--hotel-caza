@@ -1,4 +1,3 @@
-{% assign offers = site.data._models.offers | sort:"order" %}
 {% assign sync = true %}
 <div class="offers-cs offers-cs--more">
   <div class="offers-cs__inner">
@@ -7,28 +6,23 @@
       <a href="/offers/" class="btn btn--secondary">View all offers</a>
     </div>
     <div class="offers-cs__row">
-      <div class="offers-cs__slider">
-        <div class="offers-cs__slideitems" role="listbox">
-        {% for offer in offers %}
-
-          <div class="offers-cs__slider__item" data-tt-rate-code="{{offer.reztrip_offer_id}}" ttweb-component="Offer" role="option">
+      <div class="offers-cs__slider" ttweb-component="OfferList">
+        <div class="offers-cs__slideitems" role="listbox" >
+          <div class="offers-cs__slider__item"  role="option" data-tt-offer-template = "true" >
             <div class="offers-cs__slider__pic" {% if sync %}ttweb-offer-component="OfferImage"{% endif %}>
             {% include components/image image=offer.image %}
             </div>
             <div class="offers-cs__info">
               <p class="h3" {% if sync %}ttweb-offer-component="OfferTitle"{% endif %} tabindex="0">{{ offer.name }}</p>
-              <a href="/offers/{{ offer.id | downcase }}/" class="btn btn--secondary white">Details</a>
-              <a target="_blank" href="https://{{ site.data.hotel_settings._portal_id }}.reztrip.com/en/special_offer?rate_code={{offer.reztrip_offer_id}}" class="btn btn--secondary white" ttweb-offer-component="OfferBookingButton">Book Offer</a>
+              <a ttweb-offer-component="OfferViewButton" data-tt-url-format="/offers/offer#<offercode>" class="btn btn--secondary white">Details</a>
+              <a target="_blank" class="btn btn--secondary white" ttweb-offer-component="OfferBookingButton">Book Offer</a>
             </div>
           </div>
-        {% endfor %}
         </div>
         <div class="slider-control">
           <div class="slide-prev" id="offerSliderPrev"><span tabindex="0"></span></div>
           <div class="slider-nav" id="offerSlider">
-            {% for offer in offers %}
-            <span></span>
-            {% endfor %}
+            <span ></span>
           </div>
           <div class="slide-next" id="offerSliderNext"><span tabindex="0"></span></div>
         </div>

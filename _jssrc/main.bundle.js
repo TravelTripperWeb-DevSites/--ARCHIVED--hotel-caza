@@ -65,27 +65,6 @@ readyDoc(function () {
       }
     });
   }
-  if (document.getElementsByClassName("offers-cs__slideitems")[0]) {
-    var offerSlider = tns({
-      container: '.offers-cs__slideitems',
-      "items": 1,
-      "slideBy": 1,
-      "gutter": 12,
-      "mouseDrag": true,
-      "swipeAngle": false,
-      "speed": 400,
-      "edgePadding": 0,
-      navContainer: "#offerSlider",
-      prevButton: "#offerSliderPrev",
-      nextButton: "#offerSliderNext",
-      responsive: {
-        640: {
-          "items": 1.5,
-          gutter: 24
-        }
-      }
-    });
-  }
 
   if (document.getElementsByClassName("banner-carousel")[0]) {
     var bannerSlider = tns({
@@ -172,6 +151,63 @@ readyDoc(function () {
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(data);
   }
+
+  ttwebHotel.ready(function () {
+    // dynamic offer details
+    if (window.location.href.indexOf('/offers/offer/#') != -1) {
+      var dynamicOfferCode = window.location.hash.toString().replace("#", "");
+      var offerDetailComponentDivs = document.querySelectorAll('[data-dynamic-offer-details=true]');
+      if (offerDetailComponentDivs && offerDetailComponentDivs.length > 0 && dynamicOfferCode && dynamicOfferCode != '') {
+        var offers = ttwebHotel.offersList;
+
+        var offerSlider = document.getElementById('offerSlider');
+        var offerSliderNav = offerSlider.innerHTML.trim();
+
+        if (offers.length > 1) {
+          var updatedNav = '';
+          for (var i = 0, ii = offers.length; i < ii; i++) {
+            updatedNav = updatedNav + offerSliderNav;
+          }
+          offerSlider.innerHTML = updatedNav;
+        }
+
+        for (var i = 0, ii = offerDetailComponentDivs.length; i < ii; i++) {
+          var props = {
+            hotel: ttwebHotel,
+            rateCode: dynamicOfferCode,
+            innerHTML: offerDetailComponentDivs[i].innerHTML
+          };
+          var offerItem = TTRender.e(TTRender.Offer, props);
+          TTRender.renderInElement(offerDetailComponentDivs[i], offerItem, runOfferSlider);
+        }
+
+        var nextOfferDetailComponentDivs = document.querySelectorAll('[data-dynamic-offer-next-details=true]');
+        for (var i = 0, ii = nextOfferDetailComponentDivs.length; i < ii; i++) {
+          if (nextOffer) {
+            var props = {
+              hotel: ttwebHotel,
+              rateCode: nextOffer.ratePlanCode,
+              innerHTML: nextOfferDetailComponentDivs[i].innerHTML
+            };
+            var offerItem = TTRender.e(TTRender.Offer, props);
+            TTRender.renderInElement(nextOfferDetailComponentDivs[i], offerItem);
+            window.setTimeout(function (e) {
+              var links = e.querySelectorAll(".ttweb-offer-view-button");
+              for (var k = 0, kk = links.length; k < kk; k++) {
+                links[k].addEventListener('click', function (event) {
+                  window.setTimeout(function () {
+                    window.location.reload();
+                  }, 500);
+                }, false);
+              }
+            }.bind(this, nextOfferDetailComponentDivs[i]), 1000);
+          } else {
+            nextOfferDetailComponentDivs[i].remove();
+          }
+        }
+      }
+    }
+  });
 }); // End of docready
 
 // Blog category filter
@@ -247,4 +283,28 @@ document.ready(function () {
 function pinterestShare(img, desc) {
   window.open("//www.pinterest.com/pin/create/button/" + "?url=" + window.location.href + "&media=" + img + "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
   return false;
+}
+
+function runOfferSlider() {
+  if (document.getElementsByClassName("offers-cs__slideitems")[0]) {
+    var offerSlider = tns({
+      container: '.offers-cs__slideitems',
+      "items": 1,
+      "slideBy": 1,
+      "gutter": 12,
+      "mouseDrag": true,
+      "swipeAngle": false,
+      "speed": 400,
+      "edgePadding": 0,
+      navContainer: "#offerSlider",
+      prevButton: "#offerSliderPrev",
+      nextButton: "#offerSliderNext",
+      responsive: {
+        640: {
+          "items": 1.5,
+          gutter: 24
+        }
+      }
+    });
+  }
 }
