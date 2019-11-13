@@ -66,30 +66,6 @@ readyDoc(function () {
     });
   }
 
-  if (document.getElementsByClassName("offers-cs__slideitems")[0]) {
-    setTimeout(function () {
-      var offerSlider = tns({
-        container: '.offers-cs__slideitems',
-        "items": 1,
-        "slideBy": 1,
-        "gutter": 12,
-        "mouseDrag": true,
-        "swipeAngle": false,
-        "speed": 400,
-        "edgePadding": 0,
-        navContainer: "#offerSlider",
-        prevButton: "#offerSliderPrev",
-        nextButton: "#offerSliderNext",
-        responsive: {
-          640: {
-            "items": 1.5,
-            gutter: 24
-          }
-        }
-      });
-    }, 2800);
-  }
-
   if (document.getElementsByClassName("banner-carousel")[0]) {
     var bannerSlider = tns({
       container: '.banner-carousel',
@@ -189,6 +165,13 @@ readyDoc(function () {
       }
       offerSlider.innerHTML = updatedNav;
     }
+    var crossSellOfferSlider = document.getElementById('offerCrossSell');
+
+    var offerListItem = TTRender.e(TTRender.OfferList, {
+      hotel: ttwebHotel,
+      innerHTML: crossSellOfferSlider.innerHTML
+    });
+    TTRender.renderInElement(crossSellOfferSlider, offerListItem, runOfferSlider);
     // dynamic offer details
     if (window.location.href.indexOf('/offers/offer/#') != -1) {
       var dynamicOfferCode = window.location.hash.toString().replace("#", "");
@@ -281,4 +264,30 @@ document.ready(function () {
 function pinterestShare(img, desc) {
   window.open("//www.pinterest.com/pin/create/button/" + "?url=" + window.location.href + "&media=" + img + "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
   return false;
+}
+
+function runOfferSlider() {
+  if (document.getElementsByClassName("offers-cs__slideitems")[0]) {
+    setTimeout(function () {
+      var offerSlider = tns({
+        container: '.offers-cs__slideitems',
+        "items": 1,
+        "slideBy": 1,
+        "gutter": 12,
+        "mouseDrag": true,
+        "swipeAngle": false,
+        "speed": 400,
+        "edgePadding": 0,
+        navContainer: "#offerSlider",
+        prevButton: "#offerSliderPrev",
+        nextButton: "#offerSliderNext",
+        responsive: {
+          640: {
+            "items": 1.5,
+            gutter: 24
+          }
+        }
+      });
+    }, 1000);
+  }
 }

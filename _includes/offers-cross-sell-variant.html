@@ -1,21 +1,23 @@
 {% assign sync = true %}
-<div class="offers-cs offers-cs--more">
+<div class="offers-cs offers-cs--more" id="offerCrossSell">
   <div class="offers-cs__inner">
     <div class="offers-cs__header">
       <p class="h2" tabindex="0">More Offers</p>
       <a href="/offers/" class="btn btn--secondary">View all offers</a>
     </div>
     <div class="offers-cs__row">
-      <div class="offers-cs__slider" ttweb-component="OfferList">
+      <div class="offers-cs__slider">
         <div class="offers-cs__slideitems" role="listbox" >
-          <div class="offers-cs__slider__item"  role="option" data-tt-offer-template = "true" >
-            <div class="offers-cs__slider__pic" {% if sync %}ttweb-offer-component="OfferImage"{% endif %}>
-            {% include components/image image=offer.image %}
-            </div>
-            <div class="offers-cs__info">
-              <p class="h3" {% if sync %}ttweb-offer-component="OfferTitle"{% endif %} tabindex="0">{{ offer.name }}</p>
-              <a ttweb-offer-component="OfferViewButton" data-tt-url-format="/offers/offer#<offercode>" class="btn btn--secondary white">Details</a>
-              <a target="_blank" class="btn btn--secondary white" ttweb-offer-component="OfferBookingButton">Book Offer</a>
+          <div data-tt-offer-template="true" data-tt-class-name="tns-item">
+            <div class="offers-cs__slider__item"  role="option" data-tt-offer-template = "true" >
+              <div class="offers-cs__slider__pic" {% if sync %}ttweb-offer-component="OfferImage"{% endif %}>
+              {% include components/image image=offer.image %}
+              </div>
+              <div class="offers-cs__info">
+                <p class="h3" {% if sync %}ttweb-offer-component="OfferTitle"{% endif %} tabindex="0">{{ offer.name }}</p>
+                <a ttweb-offer-component="OfferViewButton" data-tt-url-format="/offers/offer#<offercode>" class="btn btn--secondary white">Details</a>
+                <a target="_blank" class="btn btn--secondary white" ttweb-offer-component="OfferBookingButton">Book Offer</a>
+              </div>
             </div>
           </div>
         </div>
