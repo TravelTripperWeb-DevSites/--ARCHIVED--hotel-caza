@@ -1,27 +1,26 @@
 {% assign sync = include.sync_content %}
+  <div class="c-offer-item"  data-tt-offer-template = "true">
+    <div class="c-offer-item__image-group" {% if sync %}ttweb-offer-component="OfferImage"{% endif %}>
+      <img src="/assets/img/dummy.jpg" />
+    </div>
+    <div class="c-offer-item__text-group">
+      <div class="c-offer-item__text-group__wrap">
+        <div class="c-offer__name">
+          <a class="h2" ttweb-offer-component="OfferViewButton" data-tt-url-format="/offers/offer#<offercode>" ><span ttweb-offer-component="OfferTitle"></span></a>
+        </div>
 
-<div class="c-offer-item" data-tt-rate-code="{{offer.reztrip_offer_id}}" ttweb-component="Offer">
-  <div class="c-offer-item__image-group" {% if sync %}ttweb-offer-component="OfferImage"{% endif %}>
-    {% include components/image image=offer.image max_width=600 %}
-  </div>
-  <div class="c-offer-item__text-group">
-    <div class="c-offer-item__text-group__wrap">
-      <div class="c-offer__name">
-        <a class="h2" href="{{ offer.id | permalink: model_dir: 'offers'}}" {% if sync %}ttweb-offer-component="OfferTitle"{% endif %}>{{ offer.name }}</a>
-      </div>
-
-      <div class="c-offer__rate" ttweb-offer-component="CrossOutRate" data-tt-pre-html="<span class='c-offer__rate-pre-label'>Avg.</span>" data-tt-post-html="<span class='c-offer__rate-post-label'>/ night</span>"></div>
-      <div class="c-offer-item__description">
-        <p class="h4" {% if sync %}ttweb-offer-component="OfferShortDescription"{% endif %} tabindex="0">{{ offer.short_description }}</p>
-      </div>
-      <div class="c-offer-item__select">
-        <span>
-          <a href="/offers/{{ offer.id | downcase }}/" class="btn btn--secondary">View Offer</a>
-        </span>
-        <span>
-         <a target="_blank" href="https://{{ site.data.hotel_settings._portal_id }}.reztrip.com/en/special_offer?rate_code={{offer.reztrip_offer_id}}" class="btn btn--secondary ml-0 mt-2 mt-md-0 ml-md-3" ttweb-offer-component="OfferBookingButton" >Book Now</a>
-       </span>
+        <div class="c-offer__rate" ttweb-offer-component="CrossOutRate" data-tt-pre-html="<span class='c-offer__rate-pre-label'>Avg.</span>" data-tt-post-html="<span class='c-offer__rate-post-label'>/ night</span>"></div>
+        <div class="c-offer-item__description">
+          <p class="h4" {% if sync %}ttweb-offer-component="OfferShortDescription"{% endif %} tabindex="0">{{ offer.short_description }}</p>
+        </div>
+        <div class="c-offer-item__select">
+          <span>
+            <a ttweb-offer-component="OfferViewButton" data-tt-url-format="/offers/offer#<offercode>" class="btn btn--secondary">View Offer</a>
+          </span>
+          <span>
+           <a target="_blank" data-tt-class-name="btn btn--secondary ml-0 mt-2 mt-md-0 ml-md-3" ttweb-offer-component="OfferBookingButton" >Book Now</a>
+         </span>
+        </div>
       </div>
     </div>
   </div>
-</div>
