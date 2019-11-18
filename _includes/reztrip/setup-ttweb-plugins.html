@@ -20,7 +20,7 @@
       locale = 'en';
     }
 
-    var ttwebHotel = new TTWebHotel({
+    var ttwebHotel = new TTWebHotel(TTWebHotel.Reztrip, {
       hotelId: '{{site.data.hotel_settings._hotel_id}}',
       portalId: '{{site.data.hotel_settings._portal_id}}',
       rootPath: rootPath,
@@ -45,7 +45,9 @@
       var  defaultSearch = ttwebHotel.bookingSearch(bwDefaultOptions, ttwebHotel.UserData.globalSearchName);
       ttwebHotel.globalSearch = defaultSearch;
     }
-    TTRender.initComponents(ttwebHotel);
+    TTRender.initComponents(ttwebHotel,{
+      theme: 'base-theme'
+    });
 
   </script>
 {% endif %}
