@@ -56,7 +56,7 @@
       }
     }
 
-    .ttweb-booking-button {
+    .ttweb-booking-button, .ttweb-offer-booking-button {
       @extend .btn--secondary;
       margin-top: 10px;
       margin-left: 0;
@@ -197,6 +197,9 @@
           display: inline-block;
         }
       }
+      .ttweb-offer-booking-button {
+        max-height: 23px;
+      }
 
       .ttweb-booking-button-offer {
 
@@ -235,9 +238,9 @@
   padding-bottom: 0 !important;
 
   .c-offer-item {
-    .ttweb-offer {
-      @include make-row;
-    }
+    // .ttweb-offer {
+    @include make-row;
+    // }
 
     &__text-group {
       display: flex;
