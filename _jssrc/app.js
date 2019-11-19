@@ -63,27 +63,8 @@ readyDoc(() => {// If DOM is ready
       }
     });
   }
-  if(document.getElementsByClassName("offers-cs__slideitems")[0]) {
-    var offerSlider = tns({
-      container: '.offers-cs__slideitems',
-      "items": 1,
-      "slideBy": 1,
-      "gutter": 12,
-      "mouseDrag": true,
-      "swipeAngle": false,
-      "speed": 400,
-      "edgePadding": 0,
-      navContainer:"#offerSlider",
-      prevButton: "#offerSliderPrev",
-      nextButton: "#offerSliderNext",
-      responsive: {
-        640: {
-          "items": 1.5,
-          gutter: 24,
-        }
-      }
-    });
-  }
+
+
 
   if(document.getElementsByClassName("banner-carousel")[0]) {
     var bannerSlider = tns({
@@ -171,6 +152,43 @@ readyDoc(() => {// If DOM is ready
   request.send(data);
   }
 
+  ttwebHotel.ready(function() {
+    var offers = ttwebHotel.offersList;
+
+    var offerSlider    = document.getElementById('offerSlider');
+    var offerSliderNav = offerSlider.innerHTML.trim();
+
+    if (offers.length > 1) {
+      let updatedNav='';
+      for(var i=0,ii=offers.length;i<ii;i++) {
+        updatedNav = updatedNav + offerSliderNav
+      }
+      offerSlider.innerHTML = updatedNav;
+    }
+    var crossSellOfferSlider = document.getElementById('offerCrossSell');
+
+    var offerListItem = TTRender.e(TTRender.OfferList, {
+      hotel: ttwebHotel,
+      innerHTML: crossSellOfferSlider.innerHTML
+    })
+    TTRender.renderInElement(crossSellOfferSlider, offerListItem, runOfferSlider)
+  // dynamic offer details
+    if(window.location.href.indexOf('/offers/offer/#') != -1) {
+      var dynamicOfferCode = window.location.hash.toString().replace("#","");
+      var offerDetailComponentDivs = document.querySelectorAll('[data-dynamic-offer-details=true]');
+      if(offerDetailComponentDivs && offerDetailComponentDivs.length > 0 && dynamicOfferCode && dynamicOfferCode != '') {
+        for (var i=0,ii=offerDetailComponentDivs.length;i<ii;i++) {
+          var props = {
+            hotel: ttwebHotel,
+            rateCode: dynamicOfferCode,
+            innerHTML: offerDetailComponentDivs[i].innerHTML
+          }
+          var offerItem = TTRender.e(TTRender.Offer, props)
+          TTRender.renderInElement(offerDetailComponentDivs[i], offerItem)
+        }
+      }
+    }
+  });
 
 });// End of docready
 
@@ -251,4 +269,30 @@ function pinterestShare(img, desc) {
     "&media=" + img +
     "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
   return false;
+}
+
+function runOfferSlider() {
+  if(document.getElementsByClassName("offers-cs__slideitems")[0]) {
+    setTimeout(function() {
+      var offerSlider = tns({
+        container: '.offers-cs__slideitems',
+        "items": 1,
+        "slideBy": 1,
+        "gutter": 12,
+        "mouseDrag": true,
+        "swipeAngle": false,
+        "speed": 400,
+        "edgePadding": 0,
+        navContainer:"#offerSlider",
+        prevButton: "#offerSliderPrev",
+        nextButton: "#offerSliderNext",
+        responsive: {
+          640: {
+            "items": 1.5,
+            gutter: 24,
+          }
+        }
+      });
+    },1000)
+  }
 }
