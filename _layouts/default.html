@@ -16,7 +16,7 @@ It contains all of the page structure that should work for any site and ensures 
 </head>
 
 <body>
-  
+
   {% if site.data.analytics.gtm_tracking_id and page.analytics != false %}
       {% include analytics/gtm-body.html %}
   {% endif %}
@@ -29,9 +29,9 @@ It contains all of the page structure that should work for any site and ensures 
   <a class="skip-main" href="#main">Skip to main content</a>
 
   {% include nav-main.html %}
-  {% if page.url == '/' %}
+  {% unless page.url contains '/offers/' %}
     {% include top-banner.html %}
-  {% endif %}
+  {% endunless %}
 
   <div class='main' id="main">
     {{ content }}
